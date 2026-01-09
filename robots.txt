@@ -1,0 +1,28 @@
+# Robots.txt for L'artisan 2.0
+# https://lartisan20.fr
+
+User-agent: *
+Allow: /
+
+# AI Crawlers (ChatGPT, Perplexity, Claude, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap & LLMs.txt
+Sitemap: https://lartisan20.fr/sitemap.xml
+LLMs-Txt: https://lartisan20.fr/llms.txt
