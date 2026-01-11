@@ -1,0 +1,193 @@
+<script>
+    // Reveal on scroll
+    function reveal() {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('menu-toggle').checked = false;
+        });
+    });
+
+    // Keyboard navigation for dropdown
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (dropdown) {
+        const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        const menu = dropdown.querySelector('.nav-dropdown-menu');
+        const menuLinks = menu ? menu.querySelectorAll('a') : [];
+
+        // Escape key closes dropdown and returns focus to trigger
+        dropdown.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                trigger.focus();
+                trigger.blur();
+            }
+            // Arrow down from trigger opens menu and focuses first link
+            if (e.key === 'ArrowDown' && document.activeElement === trigger) {
+                e.preventDefault();
+                if (menuLinks.length > 0) menuLinks[0].focus();
+            }
+        });
+
+        // Arrow navigation within menu items
+        menuLinks.forEach((link, index) => {
+            link.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if (index < menuLinks.length - 1) menuLinks[index + 1].focus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (index > 0) menuLinks[index - 1].focus();
+                    else trigger.focus();
+                }
+            });
+        });
+    }
+
+    // Navigation scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Carrousel (prestations + réalisations)
+    document.querySelectorAll('.prestation-carousel, .realisation-slider').forEach(carousel => {
+        const slides = carousel.querySelector('.carousel-slides');
+        const slideItems = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const dotsContainer = carousel.querySelector('.carousel-dots');
+
+        if (!slides || slideItems.length === 0) return;
+
+        let currentIndex = 0;
+        const totalSlides = slideItems.length;
+
+        // Créer les dots
+        slideItems.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Image ${index + 1}`);
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = carousel.querySelectorAll('.carousel-dot');
+
+        function goToSlide(index) {
+            currentIndex = index;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            goToSlide((currentIndex + 1) % totalSlides);
+        }
+
+        function prevSlide() {
+            goToSlide((currentIndex - 1 + totalSlides) % totalSlides);
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+        // Auto-play uniquement pour les carousels prestations (pas les réalisations)
+        if (!carousel.classList.contains('realisation-slider')) {
+            setInterval(nextSlide, 5000);
+        }
+    });
+
+    // Retour en haut
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('main-content').focus({ preventScroll: true });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Lightbox : clic sur une photo des cartes réalisations
+    const lightboxEl = document.getElementById('lightbox');
+    if (lightboxEl) {
+        const imgNodes = document.querySelectorAll('.realisation-slider .carousel-slide img');
+        const images = Array.from(imgNodes).map(img => ({
+            src: img.currentSrc || img.src,
+            title: img.alt || ''
+        }));
+        const imgEl = lightboxEl.querySelector('.lightbox-img');
+        const captionEl = lightboxEl.querySelector('.lightbox-caption');
+        const prevBtn = lightboxEl.querySelector('.lightbox-prev');
+        const nextBtn = lightboxEl.querySelector('.lightbox-next');
+        const backdrop = lightboxEl.querySelector('.lightbox-backdrop');
+        const closeBtn = lightboxEl.querySelector('.lightbox-close');
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            imgEl.src = images[index].src;
+            imgEl.alt = images[index].title;
+            captionEl.textContent = images[index].title;
+            lightboxEl.removeAttribute('hidden');
+            prevBtn.style.visibility = images.length > 1 ? 'visible' : 'hidden';
+            nextBtn.style.visibility = images.length > 1 ? 'visible' : 'hidden';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxEl.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+        }
+
+        function goToPrev() {
+            openLightbox((currentIndex - 1 + images.length) % images.length);
+        }
+
+        function goToNext() {
+            openLightbox((currentIndex + 1) % images.length);
+        }
+
+        imgNodes.forEach((img, index) => {
+            img.classList.add('lightbox-trigger');
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(index);
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        if (backdrop) backdrop.addEventListener('click', closeLightbox);
+        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); goToPrev(); });
+        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); goToNext(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (lightboxEl.hasAttribute('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') goToPrev();
+            if (e.key === 'ArrowRight') goToNext();
+        });
+    }
+</script>
