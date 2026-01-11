@@ -1,0 +1,62 @@
+<nav role="navigation" aria-label="Navigation principale">
+    <a href="{{ site.baseurl }}/" class="logo">
+        <img src="{{ site.baseurl }}/images/logo_artisan_2-0_picto.svg" alt="L'artisan 2.0 - Électricien Paris Île-de-France" class="logo-img">
+        <span class="logo-text">
+            L'artisan
+            <span class="logo-version">2.0</span>
+        </span>
+    </a>
+    <ul class="nav-links">
+        <li class="nav-dropdown">
+            <a href="{{ site.baseurl }}/#services" class="nav-dropdown-trigger">
+                Prestations
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="nav-dropdown-menu">
+                <span class="nav-dropdown-category">Installations</span>
+                <a href="{{ site.baseurl }}/prestations/installation-electrique.html">Installation électrique résidentielle</a>
+                <a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique.html">Borne de recharge VE</a>
+                <span class="nav-dropdown-category">Rénovation & Dépannage</span>
+                <a href="{{ site.baseurl }}/prestations/renovation-mise-aux-normes.html">Rénovation & mise aux normes</a>
+                <a href="{{ site.baseurl }}/prestations/depannage-electrique.html">Dépannage</a>
+                <span class="nav-dropdown-category">Conseil & Optimisation</span>
+                <a href="{{ site.baseurl }}/prestations/suivi-intelligent-consommation.html">Suivi intelligent de consommation</a>
+                <a href="{{ site.baseurl }}/prestations/autonomie-autoconsommation.html">Autonomie & stockage</a>
+            </div>
+        </li>
+        <li><a href="{{ site.baseurl }}/realisations.html">Réalisations</a></li>
+        <li><a href="{{ site.baseurl }}/#approche">À propos</a></li>
+        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+    </ul>
+    <a href="{{ site.baseurl }}/contact.html" class="btn-contact desktop-only">Contact</a>
+
+    <!-- Menu Mobile -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div class="mobile-menu">
+        <div class="mobile-menu-section">
+            <span class="mobile-menu-title">Prestations</span>
+            <div class="mobile-menu-grid">
+                <a href="{{ site.baseurl }}/prestations/installation-electrique.html">🔌 Installation résidentielle</a>
+                <a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique.html">🚗 Borne VE</a>
+                <a href="{{ site.baseurl }}/prestations/renovation-mise-aux-normes.html">🔧 Rénovation</a>
+                <a href="{{ site.baseurl }}/prestations/depannage-electrique.html">⚡ Dépannage</a>
+                <a href="{{ site.baseurl }}/prestations/suivi-intelligent-consommation.html">📊 Suivi conso</a>
+                <a href="{{ site.baseurl }}/prestations/autonomie-autoconsommation.html">☀️ Autonomie</a>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="{{ site.baseurl }}/">Accueil</a>
+            <a href="{{ site.baseurl }}/realisations.html">Réalisations</a>
+            <a href="{{ site.baseurl }}/#approche">À propos</a>
+            <a href="{{ site.baseurl }}/blog/">Blog</a>
+        </div>
+        <a href="{{ site.baseurl }}/contact.html" class="mobile-cta">Me contacter</a>
+    </div>
+</nav>

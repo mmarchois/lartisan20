@@ -1,0 +1,76 @@
+---
+layout: default
+title: "Blog | L'artisan 2.0 - Ma vie d'électricien et mon parcours de reconversion"
+description: "Découvrez ma vie d'électricien : mon parcours de reconversion, mes expériences sur le terrain, mes chantiers, mes apprentissages et mon quotidien. De la formation CAP à la pratique, suivez mon aventure."
+keywords: "vie électricien, reconversion électricien, parcours reconversion, formation CAP électricien, expériences électricien, chantier électrique, quotidien électricien"
+og_title: "Blog - Ma vie d'électricien | L'artisan 2.0"
+og_description: "Ma vie d'électricien, mon parcours de reconversion, mes expériences sur le terrain et mon quotidien."
+---
+
+<section class="blog-hero">
+    <div class="blog-header reveal">
+        <a href="{{ site.baseurl }}/" class="back-link">← Retour à l'accueil</a>
+        <span class="section-tag">Blog</span>
+        <h1>Ma vie d'électricien</h1>
+        <p class="blog-intro">
+            Découvrez ma vie d'électricien : mon parcours de reconversion, mes expériences sur le terrain,
+            mes chantiers, mes apprentissages et mon quotidien. De la formation CAP à la pratique, suivez mon aventure au jour le jour.
+        </p>
+    </div>
+</section>
+
+<section class="blog-listing">
+    <div class="blog-container">
+        <div class="blog-articles">
+            {% for post in site.posts %}
+            <article class="blog-article reveal">
+                <a href="{{ site.baseurl }}{{ post.url }}" class="blog-article-link">
+                    {% if post.image %}
+                    <div class="blog-article-image">
+                        <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                    </div>
+                    {% endif %}
+                    <div class="blog-article-content">
+                        <div class="blog-article-header">
+                            <div class="blog-article-meta">
+                                {% if post.category %}
+                                <span class="blog-article-category">{{ post.category }}</span>
+                                {% endif %}
+                                {% assign month_num = post.date | date: "%-m" %}
+                                {% case month_num %}
+                                    {% when '1' %}{% assign month_fr = 'janvier' %}
+                                    {% when '2' %}{% assign month_fr = 'février' %}
+                                    {% when '3' %}{% assign month_fr = 'mars' %}
+                                    {% when '4' %}{% assign month_fr = 'avril' %}
+                                    {% when '5' %}{% assign month_fr = 'mai' %}
+                                    {% when '6' %}{% assign month_fr = 'juin' %}
+                                    {% when '7' %}{% assign month_fr = 'juillet' %}
+                                    {% when '8' %}{% assign month_fr = 'août' %}
+                                    {% when '9' %}{% assign month_fr = 'septembre' %}
+                                    {% when '10' %}{% assign month_fr = 'octobre' %}
+                                    {% when '11' %}{% assign month_fr = 'novembre' %}
+                                    {% when '12' %}{% assign month_fr = 'décembre' %}
+                                {% endcase %}
+                                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="blog-article-date">{{ post.date | date: "%-d" }} {{ month_fr }} {{ post.date | date: "%Y" }}</time>
+                            </div>
+                            <h2 class="blog-article-title">{{ post.title }}</h2>
+                            {% if post.excerpt %}
+                            <p class="blog-article-excerpt">{{ post.excerpt }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="blog-article-footer">
+                            <span class="blog-article-cta">
+                                Lire l'article
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M6.5 13.5L11.5 8.5L6.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-article-accent"></div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

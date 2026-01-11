@@ -1,0 +1,39 @@
+# L'artisan 2.0 - Configuration Jekyll
+title: L'artisan 2.0
+description: Électricien à Paris, Île-de-France et Lot. Installation, rénovation, mise aux normes, borne de recharge VE.
+url: "https://lartisan20.fr"
+baseurl: ""
+
+# Contact
+email: contact@lartisan20.fr
+linkedin: https://www.linkedin.com/company/l-artisan-2-0
+instagram: https://www.instagram.com/lartisan2.0
+
+# Zone d'intervention
+zone: Paris, Île-de-France & Lot (46)
+
+# Build settings
+markdown: kramdown
+future: true
+
+# Excludes
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "blog"
+      permalink: /blog/:year/:month/:day/:title/

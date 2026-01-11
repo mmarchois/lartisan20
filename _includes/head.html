@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="gSkPjLwUhR1cByPEHtklNrYqMAcrM6mM7y_RQ_XviAU">
+
+<!-- SEO Primary Meta Tags -->
+<title>{{ page.title | default: site.title }}</title>
+<meta name="title" content="{{ page.title | default: site.title }}">
+<meta name="description" content="{{ page.description | default: site.description }}">
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+<meta name="author" content="L'artisan 2.0">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.layout == 'blog' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+<meta property="og:image" content="{{ site.url }}{{ page.image | default: '/images/og-image.png' }}">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="L'artisan 2.0">
+{% if page.layout == 'blog' %}
+<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
+{% if page.category %}<meta property="article:section" content="{{ page.category }}">{% endif %}
+{% endif %}
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image | default: '/images/og-image.png' }}">
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="FR-IDF">
+<meta name="geo.placename" content="Paris">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="{{ site.baseurl }}/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ site.baseurl }}/styles/styles.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T322KZ9T');</script>
+<!-- End Google Tag Manager -->

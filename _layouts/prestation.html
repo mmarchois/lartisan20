@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% include head.html %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "{{ page.service_name }}",
+        "description": "{{ page.description }}",
+        "provider": {
+            "@type": "Electrician",
+            "name": "L'artisan 2.0",
+            "url": "{{ site.url }}"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Paris"
+            },
+            {
+                "@type": "State",
+                "name": "Île-de-France"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Lot (46)"
+            }
+        ],
+        "serviceType": "{{ page.service_type }}"
+    }
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T322KZ9T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include nav.html %}
+
+    <main id="main-content">
+        {{ content }}
+    </main>
+
+    {% include contact.html %}
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+</body>
+</html>

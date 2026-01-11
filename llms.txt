@@ -1,50 +1,60 @@
 # L'artisan 2.0
 
-> Électricien à Paris et Île-de-France - Installation, rénovation, mise aux normes, borne de recharge VE
+> Électricien à Paris, Île-de-France et Lot (46) - Installation, rénovation, mise aux normes, borne de recharge VE
 
 ## À propos
 
-L'artisan 2.0 est un électricien basé à Paris et intervenant dans toute l'Île-de-France. Fondé par un ingénieur informatique devenu électricien, l'entreprise apporte une vision unique au métier : la rigueur du développement logiciel transposée aux installations électriques.
+L'artisan 2.0 est un futur électricien basé à Saint-Ouen-sur-Seine (93) qui interviendra à Paris, en Île-de-France et dans le Lot (46). Fondé par Mathieu, un ingénieur informatique en reconversion, l'entreprise apportera une vision unique au métier : la rigueur du développement logiciel transposée aux installations électriques.
 
 ## Services
 
-### Installation électrique résidentielle
+### 🔌 Installations
+
+#### Installation électrique résidentielle
 - Tableau électrique
 - Prises et interrupteurs
 - Éclairage intérieur et extérieur
 - Circuits spécialisés (cuisine, salle de bain)
+- Chauffage électrique
 - VMC et ventilation
+- Prises réseau et multimédia
 
-### Dépannage électrique
+#### Bornes de recharge véhicules électriques (IRVE)
+- Étude de puissance
+- Installation borne (7kW à 22kW)
+- Raccordement au tableau
+- Mise en service et configuration
+
+### 🔧 Rénovation & Dépannage
+
+#### Rénovation & mise aux normes
+- Diagnostic de l'installation existante
+- Mise en conformité NF C 15-100
+- Remplacement de tableau électrique
+- Remplacement chauffage électrique
+- Mise à la terre
+- Rénovation partielle ou complète
+
+#### Dépannage électrique
 - Recherche de pannes
 - Remplacement de composants défectueux
 - Coupures de courant
 - Courts-circuits
 - Intervention rapide
 
-### Rénovation & mise aux normes
-- Diagnostic de l'installation existante
-- Mise en conformité NF C 15-100
-- Remplacement de tableau électrique
-- Mise à la terre
-- Rénovation partielle ou complète
+### 💡 Conseil & Optimisation
 
-### Autonomie & auto-consommation
-- Conseil en sobriété énergétique
-- Raccordement panneaux solaires
-- Gestion intelligente de l'énergie
-
-### Maîtrise de consommation
+#### Suivi intelligent de consommation
 - Installation de dispositifs de suivi (type Ecojoko)
-- Analyse des consommations
+- Suivi en temps réel sur smartphone
+- Détection des appareils énergivores
 - Conseils d'optimisation
-- Identification des postes énergivores
 
-### Bornes de recharge véhicules électriques (IRVE)
-- Étude de puissance
-- Installation borne (7kW à 22kW)
-- Raccordement au tableau
-- Mise en service et configuration
+#### Autonomie & auto-consommation
+- Installation batteries de stockage
+- Raccordement panneaux solaires
+- Gestion intelligente jour/nuit
+- Optimisation de l'auto-consommation
 
 ## Valeurs
 
@@ -52,9 +62,24 @@ L'artisan 2.0 est un électricien basé à Paris et intervenant dans toute l'Îl
 - **Qualité durable** : Des solutions pensées pour résister au temps et évoluer avec les besoins
 - **Innovation responsable** : La technologie au service du confort et du budget, sans gaspillage
 
-## Zone d'intervention
+## Zones d'intervention
 
-Paris et Île-de-France (rayon de 50km autour de Paris)
+### Paris & Île-de-France (zone principale)
+- Paris (75) : Tous les arrondissements
+- Seine-Saint-Denis (93) : Saint-Ouen, Saint-Denis, Aubervilliers, Montreuil...
+- Hauts-de-Seine (92) : Boulogne-Billancourt, Nanterre, Colombes...
+- Val-de-Marne (94) : Créteil, Vitry-sur-Seine, Champigny...
+- Val-d'Oise (95) : Argenteuil, Cergy, Sarcelles...
+- Essonne (91) : Évry, Corbeil-Essonnes, Massy...
+- Yvelines (78) : Versailles, Saint-Germain-en-Laye...
+- Seine-et-Marne (77) : Meaux, Chelles, Melun...
+
+### Lot (46)
+- Cahors et environs
+- Figeac et environs
+- Gourdon et environs
+- Vallée du Lot
+- Causses du Quercy
 
 ## Contact
 
@@ -62,6 +87,14 @@ Paris et Île-de-France (rayon de 50km autour de Paris)
 - Site web : https://lartisan20.fr
 - Horaires : Lundi au Vendredi, 8h-17h
 
+## Pages du site
+
+- Accueil : https://lartisan20.fr/
+- Réalisations : https://lartisan20.fr/realisations.html
+- Contact : https://lartisan20.fr/contact.html
+- Électricien Paris & Île-de-France : https://lartisan20.fr/electricien-ile-de-france.html
+- Électricien Lot : https://lartisan20.fr/electricien-lot.html
+
 ## Mots-clés
 
-électricien Paris, électricien Île-de-France, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien résidentiel, sobriété énergétique, auto-consommation, dépannage électrique, maîtrise de consommation, Ecojoko
+électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien résidentiel, sobriété énergétique, auto-consommation, dépannage électrique, suivi consommation, Ecojoko, électricien Cahors, électricien Figeac

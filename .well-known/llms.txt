@@ -8,43 +8,51 @@ L'artisan 2.0 est un électricien basé à Paris et intervenant dans toute l'Îl
 
 ## Services
 
-### Installation électrique résidentielle
+### 🔌 Installations
+
+#### Installation électrique résidentielle
 - Tableau électrique
 - Prises et interrupteurs
 - Éclairage intérieur et extérieur
 - Circuits spécialisés (cuisine, salle de bain)
+- Chauffage électrique
 - VMC et ventilation
 
-### Dépannage électrique
-- Recherche de pannes
-- Remplacement de composants défectueux
-- Coupures de courant
-- Courts-circuits
-- Intervention rapide
+#### Bornes de recharge véhicules électriques (IRVE)
+- Étude de puissance
+- Installation borne (7kW à 22kW)
+- Raccordement au tableau
+- Mise en service et configuration
 
-### Rénovation & mise aux normes
+### 🔧 Rénovation & Dépannage
+
+#### Rénovation & mise aux normes
 - Diagnostic de l'installation existante
 - Mise en conformité NF C 15-100
 - Remplacement de tableau électrique
 - Mise à la terre
 - Rénovation partielle ou complète
 
-### Autonomie & auto-consommation
-- Conseil en sobriété énergétique
-- Raccordement panneaux solaires
-- Gestion intelligente de l'énergie
+#### Dépannage électrique
+- Recherche de pannes
+- Remplacement de composants défectueux
+- Coupures de courant
+- Courts-circuits
+- Intervention rapide
 
-### Maîtrise de consommation
+### 💡 Conseil & Optimisation
+
+#### Suivi intelligent de consommation
 - Installation de dispositifs de suivi (type Ecojoko)
-- Analyse des consommations
+- Suivi en temps réel sur smartphone
+- Détection des appareils énergivores
 - Conseils d'optimisation
-- Identification des postes énergivores
 
-### Bornes de recharge véhicules électriques (IRVE)
-- Étude de puissance
-- Installation borne (7kW à 22kW)
-- Raccordement au tableau
-- Mise en service et configuration
+#### Autonomie & auto-consommation
+- Installation batteries de stockage
+- Raccordement panneaux solaires
+- Gestion intelligente jour/nuit
+- Optimisation de l'auto-consommation
 
 ## Valeurs
 
@@ -61,3 +69,7 @@ Paris et Île-de-France (rayon de 50km autour de Paris)
 - Email : contact@lartisan20.fr
 - Site web : https://lartisan20.fr
 - Horaires : Lundi au Vendredi, 8h-17h
+
+## Mots-clés
+
+électricien Paris, électricien Île-de-France, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien résidentiel, sobriété énergétique, auto-consommation, dépannage électrique, suivi consommation, Ecojoko
