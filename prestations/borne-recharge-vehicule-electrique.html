@@ -43,13 +43,35 @@ redirect_from:
                 la plus adaptée à votre véhicule et à vos usages.
             </p>
         </div>
-        <div class="prestation-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <p><strong>Photos à venir</strong>Chantiers en cours de documentation</p>
+        <!-- Carrousel images -->
+        <div class="prestation-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <figure class="carousel-slide">
+                        <img src="{{ site.baseurl }}/images/prestations/borne_ve/borne4.jpeg" alt="Wallbox Pulsar Plus installée sur mur extérieur" loading="lazy">
+                        <figcaption>Borne Wallbox Pulsar Plus installée</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="{{ site.baseurl }}/images/prestations/borne_ve/borne5.jpeg" alt="Installation borne de recharge en cours - préparation, fixation et raccordements" loading="lazy">
+                        <figcaption>Installation en cours : préparation et raccordements</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="{{ site.baseurl }}/images/prestations/borne_ve/borne1.jpeg" alt="Wallbox Pulsar Plus ouverte - câblage interne triphasé" loading="lazy">
+                        <figcaption>Câblage interne triphasé de la borne</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="{{ site.baseurl }}/images/prestations/borne_ve/borne2.jpeg" alt="Raccordement électrique de la borne de recharge au tableau" loading="lazy">
+                        <figcaption>Raccordement électrique au tableau</figcaption>
+                    </figure>
+                    <figure class="carousel-slide">
+                        <img src="{{ site.baseurl }}/images/prestations/borne_ve/borne3.jpeg" alt="Borne de recharge installée avec véhicule électrique en charge" loading="lazy">
+                        <figcaption>Premier lancement de charge</figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-btn carousel-prev" aria-label="Image précédente">‹</button>
+                <button class="carousel-btn carousel-next" aria-label="Image suivante">›</button>
+            </div>
+            <div class="carousel-dots"></div>
         </div>
     </div>
 
