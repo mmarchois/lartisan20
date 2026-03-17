@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <!-- Hexagone simple trait fin + éclair épais décalé -->
+  <g transform="translate(40,40)">
+    <polygon points="0,-28 24.2,-14 24.2,14 0,28 -24.2,14 -24.2,-14" fill="none" stroke="#000000" stroke-width="1.5"/>
+    <path d="M-5,-16 L-3,-2 L-8,0 L5,16 L3,2 L8,0 Z" fill="#000000"/>
+  </g>
+  <text x="78" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="38" fill="#000000" letter-spacing="2">Lumo.</text>
+</svg>
