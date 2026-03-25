@@ -8,10 +8,9 @@
         "@type": "Service",
         "name": "{{ page.service_name }}",
         "description": "{{ page.description }}",
+        "url": "{{ site.url }}{{ page.url }}",
         "provider": {
-            "@type": "Electrician",
-            "name": "L'artisan 2.0",
-            "url": "{{ site.url }}"
+            "@id": "{{ site.url }}/#organization"
         },
         "areaServed": [
             {
@@ -44,12 +43,6 @@
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Prestations",
-                "item": "{{ site.url }}/#services"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
                 "name": "{{ page.service_name }}",
                 "item": "{{ site.url }}{{ page.url }}"
             }

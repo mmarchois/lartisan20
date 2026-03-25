@@ -9,24 +9,19 @@
         "headline": "{{ page.title }}",
         "description": "{{ page.description }}",
         "author": {
-            "@type": "Person",
-            "name": "Mathieu - L'artisan 2.0"
+            "@id": "{{ site.url }}/#founder"
         },
         "publisher": {
-            "@type": "Organization",
-            "name": "L'artisan 2.0",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ site.url }}/images/logo_artisan_2-0.svg"
-            }
+            "@id": "{{ site.url }}/#organization"
         },
         "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
-        "dateModified": "{{ page.date | date: '%Y-%m-%d' }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date: '%Y-%m-%d' }}",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "{{ site.url }}{{ page.url }}"
         },
-        "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}"
+        "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}",
+        "inLanguage": "fr-FR"
     }
     </script>
     <script type="application/ld+json">

@@ -308,8 +308,8 @@ nav.scrolled {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     background: none;
     border: none;
     cursor: pointer;
@@ -579,6 +579,16 @@ nav.scrolled {
 
 .hero-trust-item--rating svg {
     color: #eab308;
+}
+
+a.hero-trust-item--phone {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+a.hero-trust-item--phone:hover {
+    color: var(--accent-primary);
 }
 
 .hero-trust-sep {
@@ -2923,8 +2933,8 @@ footer {
     .back-to-top {
         bottom: 1.25rem;
         right: 1.25rem;
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
     }
 
     .btn-primary,
@@ -6669,4 +6679,47 @@ a.service-card:hover {
         text-align: left;
     }
 
+}
+
+/* ===========================================
+   Page 404
+   =========================================== */
+.error-404 {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.error-404-code {
+    font-family: var(--font-mono);
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.error-404-content h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.error-404-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.error-404-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }

@@ -154,17 +154,32 @@ redirect_from:
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Electrician",
-    "name": "L'artisan 2.0 - Électricité résidentielle Paris & Île-de-France",
-    "description": "Électricité résidentielle à Paris et en Île-de-France. En formation CAP Électricien, déjà sur le terrain.",
+    "@type": "WebPage",
+    "name": "Électricité résidentielle Paris & Île-de-France",
     "url": "{{ site.url }}/electricien-ile-de-france/",
-    "telephone": "{{ site.phone }}",
-    "email": "contact@lartisan20.fr",
-    "areaServed": [
-        { "@type": "City", "name": "Paris" },
-        { "@type": "State", "name": "Île-de-France" }
-    ],
-    "serviceType": ["Installation électrique résidentielle", "Rénovation électrique", "Dépannage électrique"],
-    "priceRange": "€€"
+    "description": "Électricité résidentielle à Paris et en Île-de-France. En formation CAP Électricien, déjà sur le terrain.",
+    "mainEntity": {
+        "@id": "{{ site.url }}/#organization"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ site.url }}/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Paris & Île-de-France",
+            "item": "{{ site.url }}/electricien-ile-de-france/"
+        }
+    ]
 }
 </script>

@@ -114,14 +114,32 @@ redirect_from:
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Electrician",
-    "name": "L'artisan 2.0 - Électricité résidentielle Lot",
-    "description": "Électricité résidentielle dans le Lot (46). En formation CAP Électricien, déjà sur le terrain. Cahors, Figeac, Gourdon.",
+    "@type": "WebPage",
+    "name": "Électricité résidentielle Lot (46)",
     "url": "{{ site.url }}/electricien-lot/",
-    "telephone": "{{ site.phone }}",
-    "email": "contact@lartisan20.fr",
-    "areaServed": { "@type": "AdministrativeArea", "name": "Lot" },
-    "serviceType": ["Installation électrique résidentielle", "Rénovation électrique", "Dépannage électrique"],
-    "priceRange": "€€"
+    "description": "Électricité résidentielle dans le Lot (46). En formation CAP Électricien, déjà sur le terrain. Cahors, Figeac, Gourdon.",
+    "mainEntity": {
+        "@id": "{{ site.url }}/#organization"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ site.url }}/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Lot (46)",
+            "item": "{{ site.url }}/electricien-lot/"
+        }
+    ]
 }
 </script>

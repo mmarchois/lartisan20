@@ -30,6 +30,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
+# Includes (dossiers commençant par . normalement exclus par Jekyll)
+include:
+  - .well-known
+
 # Excludes
 exclude:
   - README.md
@@ -66,5 +70,9 @@ defaults:
       sitemap: false
   - scope:
       path: "CNAME"
+    values:
+      sitemap: false
+  - scope:
+      path: ".well-known/llms.txt"
     values:
       sitemap: false

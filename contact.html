@@ -89,11 +89,27 @@ redirect_from:
     "name": "Contact L'artisan 2.0",
     "url": "{{ site.url }}/contact/",
     "mainEntity": {
-        "@type": "Electrician",
-        "name": "L'artisan 2.0",
-        "email": "{{ site.email }}",
-        "telephone": "{{ site.phone | remove: ' ' }}",
-        "areaServed": ["Paris", "Île-de-France", "Lot"]
+        "@id": "{{ site.url }}/#organization"
     }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ site.url }}/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "{{ site.url }}/contact/"
+        }
+    ]
 }
 </script>

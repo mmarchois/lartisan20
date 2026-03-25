@@ -11,18 +11,26 @@ hide_contact: true
 {
     "@context": "https://schema.org",
     "@type": "Electrician",
+    "@id": "{{ site.url }}/#organization",
     "name": "L'artisan 2.0",
     "description": "En formation CAP Électricien, déjà sur le terrain. Installation électrique résidentielle, rénovation, mise aux normes, maison connectée, VMC, chauffage à Paris, Île-de-France et Lot.",
     "url": "{{ site.url }}",
-    "logo": "{{ site.url }}/images/logo_artisan_2-0.svg",
+    "logo": "{{ site.url }}/images/og-image.png",
     "image": "{{ site.url }}/images/og-image.png",
     "email": "contact@lartisan20.fr",
     "telephone": "{{ site.phone }}",
+    "founder": {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#founder",
+        "name": "Mathieu",
+        "jobTitle": "Électricien résidentiel"
+    },
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "55 rue Eugène Berthoud",
         "addressLocality": "Saint-Ouen-Sur-Seine",
         "postalCode": "93400",
+        "addressRegion": "Île-de-France",
         "addressCountry": "FR"
     },
     "geo": {
@@ -30,6 +38,14 @@ hide_contact: true
         "latitude": 48.9077,
         "longitude": 2.3345
     },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+        }
+    ],
     "areaServed": [
         {
             "@type": "City",
@@ -44,17 +60,42 @@ hide_contact: true
             "name": "Lot (46)"
         }
     ],
-    "serviceType": [
-        "Installation électrique résidentielle",
-        "Rénovation électrique",
-        "Mise aux normes NF C 15-100",
-        "Dépannage électrique",
-        "Borne de recharge véhicule électrique",
-        "Maison connectée",
-        "VMC et ventilation",
-        "Chauffage électrique",
-        "Autonomie et autoconsommation"
-    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations électricité résidentielle",
+        "itemListElement": [
+            {
+                "@type": "OfferCatalog",
+                "name": "Installation électrique résidentielle",
+                "url": "{{ site.url }}/prestations/installation-electrique/"
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Rénovation électrique et mise aux normes",
+                "url": "{{ site.url }}/prestations/renovation-mise-aux-normes/"
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Dépannage électrique",
+                "url": "{{ site.url }}/prestations/depannage-electrique/"
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Borne de recharge véhicule électrique",
+                "url": "{{ site.url }}/prestations/borne-recharge-vehicule-electrique/"
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Maison connectée",
+                "url": "{{ site.url }}/prestations/maison-connectee/"
+            },
+            {
+                "@type": "OfferCatalog",
+                "name": "Autonomie et autoconsommation",
+                "url": "{{ site.url }}/prestations/autonomie-autoconsommation/"
+            }
+        ]
+    },
     "sameAs": [
         "https://www.linkedin.com/company/l-artisan-2-0",
         "https://www.instagram.com/lartisan2.0",
@@ -67,7 +108,22 @@ hide_contact: true
         "worstRating": "1",
         "ratingCount": "{{ site.google_review_count }}",
         "reviewCount": "{{ site.google_review_count }}"
-    }
+    },
+    "priceRange": "$$"
+}
+</script>
+<!-- Schema.org WebSite -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website",
+    "name": "L'artisan 2.0",
+    "url": "{{ site.url }}",
+    "publisher": {
+        "@id": "{{ site.url }}/#organization"
+    },
+    "inLanguage": "fr-FR"
 }
 </script>
 
@@ -132,6 +188,11 @@ hide_contact: true
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     Devis gratuit sous 24h
                 </span>
+                <span class="hero-trust-sep" aria-hidden="true"></span>
+                <a href="tel:{{ site.phone }}" class="hero-trust-item hero-trust-item--phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    06 49 92 78 41
+                </a>
             </div>
         </div>
         <a href="#approche" class="hero-scroll-hint" aria-label="Défiler vers le bas">
@@ -267,28 +328,28 @@ hide_contact: true
             </p>
             <div class="about-gallery-grid">
                 <a href="{{ site.baseurl }}/realisations/#maison-3-etages-paris" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/prestations/renovation/img1.jpeg" alt="Rénovation électrique maison 3 étages à Paris - tableau et circuits aux normes" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/prestations/renovation/img1.jpeg" alt="Rénovation électrique maison 3 étages à Paris - tableau et circuits aux normes" loading="lazy" width="1134" height="2016">
                     <div class="gallery-item-content">
                         <span class="gallery-item-title">Maison 3 étages – Paris</span>
                         <span class="gallery-item-subtitle">Rénovation complète – mise aux normes NF C 15-100</span>
                     </div>
                 </a>
                 <a href="{{ site.baseurl }}/realisations/#volet-roulant-paris" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/prestations/vr/img1.jpeg" alt="Volet roulant Paris : remplacement de l'axe, ajout moteur, circuit de motorisation et branchement" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/prestations/vr/img1.jpeg" alt="Volet roulant Paris : remplacement de l'axe, ajout moteur, circuit de motorisation et branchement" loading="lazy" width="500" height="889">
                     <div class="gallery-item-content">
                         <span class="gallery-item-title">Volet roulant – Paris</span>
                         <span class="gallery-item-subtitle">Remplacement axe, installation moteur, circuit de motorisation</span>
                     </div>
                 </a>
                 <a href="{{ site.baseurl }}/realisations/#cave-saint-ouen" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/tshirt.png" alt="Aménagement électrique cave à Saint-Ouen - tableau secondaire" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/tshirt.png" alt="Aménagement électrique cave à Saint-Ouen - tableau secondaire" loading="lazy" width="1134" height="2016">
                     <div class="gallery-item-content">
                         <span class="gallery-item-title">Rénovation cave – Saint-Ouen</span>
                         <span class="gallery-item-subtitle">Tableau secondaire, lave-linge, prises</span>
                     </div>
                 </a>
                 <a href="{{ site.baseurl }}/realisations/#clavier-code-portail" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/tshirt.png" alt="Clavier à code portail en Île-de-France" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/tshirt.png" alt="Clavier à code portail en Île-de-France" loading="lazy" width="1134" height="2016">
                     <div class="gallery-item-content">
                         <span class="gallery-item-title">Clavier à code – Portail</span>
                         <span class="gallery-item-subtitle">Remplacement bouton par clavier filaire</span>
@@ -439,28 +500,28 @@ hide_contact: true
             <p class="brand-logos-label">Je travaille avec</p>
             <div class="brand-logos-row">
                 <a href="https://www.se.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Schneider Electric">
-                    <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy" width="312" height="64">
                 </a>
                 <a href="https://www.legrand.fr/" target="_blank" rel="noopener" class="brand-logo" title="Legrand">
-                    <img src="{{ site.baseurl }}/images/marques/legrand.png" alt="Legrand" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/legrand.png" alt="Legrand" loading="lazy" width="200" height="58">
                 </a>
                 <a href="https://www.shelly.com/" target="_blank" rel="noopener" class="brand-logo" title="Shelly">
-                    <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy" width="88" height="24">
                 </a>
                 <a href="https://www.somfy.fr/" target="_blank" rel="noopener" class="brand-logo" title="Somfy">
-                    <img src="{{ site.baseurl }}/images/marques/somfy.svg" alt="Somfy" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/somfy.svg" alt="Somfy" loading="lazy" width="127" height="32">
                 </a>
                 <a href="https://www.ecojoko.com/" target="_blank" rel="noopener" class="brand-logo" title="Ecojoko">
-                    <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy" width="100" height="19">
                 </a>
                 <a href="https://www.hager.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Hager">
-                    <img src="{{ site.baseurl }}/images/marques/hager.png" alt="Hager" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/hager.png" alt="Hager" loading="lazy" width="256" height="86">
                 </a>
                 <a href="https://www.sauter.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Sauter">
-                    <img src="{{ site.baseurl }}/images/marques/sauter.svg" alt="Sauter" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/sauter.svg" alt="Sauter" loading="lazy" width="200" height="63">
                 </a>
                 <a href="https://www.wallbox.com/fr_fr/" target="_blank" rel="noopener" class="brand-logo" title="Wallbox">
-                    <img src="{{ site.baseurl }}/images/marques/wallbox.jpg" alt="Wallbox" loading="lazy">
+                    <img src="{{ site.baseurl }}/images/marques/wallbox.jpg" alt="Wallbox" loading="lazy" width="300" height="75">
                 </a>
             </div>
         </div>

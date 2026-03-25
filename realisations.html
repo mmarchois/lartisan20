@@ -135,6 +135,65 @@ redirect_from:
     </div>
 </section>
 
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Réalisations - L'artisan 2.0",
+    "description": "Réalisations en électricité résidentielle. Installations, rénovations, tableaux électriques. Photos avant/après de chantiers.",
+    "url": "{{ site.url }}/realisations/",
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Maison 3 étages – Paris",
+                "url": "{{ site.url }}/realisations/#maison-3-etages-paris"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Motorisation volet roulant – Paris",
+                "url": "{{ site.url }}/realisations/#volet-roulant-paris"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Aménagement électrique cave",
+                "url": "{{ site.url }}/realisations/#cave-saint-ouen"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Clavier à code portail",
+                "url": "{{ site.url }}/realisations/#clavier-code-portail"
+            }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ site.url }}/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Réalisations",
+            "item": "{{ site.url }}/realisations/"
+        }
+    ]
+}
+</script>
+
 <!-- Lightbox galerie -->
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Agrandir l'image" hidden>
     <button type="button" class="lightbox-close" aria-label="Fermer">×</button>

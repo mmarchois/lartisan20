@@ -7,6 +7,40 @@ og_title: "Blog - Ma reconversion dans l'électricité | L'artisan 2.0"
 og_description: "Les coulisses de ma reconversion : formation CAP Électricien, chantiers terrain, apprentissages au quotidien."
 ---
 
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog - L'artisan 2.0",
+    "description": "Les coulisses de ma reconversion : formation CAP Électricien, chantiers terrain, apprentissages et quotidien.",
+    "url": "{{ site.url }}/blog/",
+    "publisher": {
+        "@id": "{{ site.url }}/#organization"
+    },
+    "inLanguage": "fr-FR"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ site.url }}/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "{{ site.url }}/blog/"
+        }
+    ]
+}
+</script>
+
 <section class="blog-hero">
     <div class="blog-header reveal">
         <a href="{{ site.baseurl }}/" class="back-link">← Retour à l'accueil</a>
