@@ -29,6 +29,11 @@ permalink: pretty
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-feed
+
+# RSS Feed
+feed:
+  excerpt_only: true
 
 # Includes (dossiers commençant par . normalement exclus par Jekyll)
 include:
