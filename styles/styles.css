@@ -3595,6 +3595,64 @@ footer {
     }
 }
 
+/* Encart article de blog dans prestation */
+.prestation-blog-callout {
+    margin-top: 2.5rem;
+    background: var(--accent-primary-light);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 0 12px 12px 0;
+    padding: 1.75rem 2rem;
+}
+
+.blog-callout-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+}
+
+.prestation-blog-callout h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.prestation-blog-callout p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.blog-callout-link {
+    display: inline-block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.blog-callout-link:hover {
+    color: var(--accent-primary-hover);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .prestation-blog-callout {
+        padding: 1.25rem 1.15rem;
+        margin-top: 1.75rem;
+    }
+
+    .prestation-blog-callout h3 {
+        font-size: 0.95rem;
+    }
+}
+
 /* Section services pleine largeur (sous intro+photos) */
 .prestation-services {
     margin-top: 3rem;
