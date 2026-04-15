@@ -2275,6 +2275,17 @@ section {
     color: #3c4043;
 }
 
+.review-read-more {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+.review-read-more:hover {
+    text-decoration: underline;
+}
+
 .review-meta {
     display: flex;
     align-items: center;
