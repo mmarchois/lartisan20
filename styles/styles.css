@@ -6533,6 +6533,11 @@ a.service-card:hover {
     text-align: center;
 }
 
+.blog-post-content figure.figure-large img {
+    max-width: 100%;
+    max-height: none;
+}
+
 .blog-post-content figcaption {
     margin-top: 0.75rem;
     font-size: 0.875rem;
