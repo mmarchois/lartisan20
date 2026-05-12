@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 191" width="1128" height="191">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#E8B547" stop-opacity="0.12"/>
+      <stop offset="55%" stop-color="#E8B547" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8B547" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#E8B547" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#E8B547" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background charbon -->
+  <rect width="1128" height="191" fill="#0f0f10"/>
+  <rect width="1128" height="191" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1128" height="1" fill="url(#topLine)"/>
+
+  <!-- Le logo carré de la page entreprise (~240×240) s'ancre en bas-gauche
+       et chevauche la bannière à partir d'environ x=40, y=140.
+       Toute info importante doit rester au-dessus de y=130 OU à droite de x=300. -->
+
+  <!-- Eyebrow -->
+  <text x="80" y="38"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="12" letter-spacing="3" font-weight="500"
+        fill="#9a9a98">L&#x2019;ARTISAN 2.0 &#x2014; ÉLECTRICITÉ RÉSIDENTIELLE</text>
+
+  <!-- Title : remonté pour rester au-dessus du logo qui chevauche le bas -->
+  <text x="80" y="86"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="34" font-weight="700" letter-spacing="-1.2"
+        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="#E8B547">artisan</tspan>, l&#x2019;exigence de l&#x2019;<tspan fill="#E8B547">ingénieur</tspan>.</text>
+
+  <!-- Gold rule -->
+  <rect x="80" y="104" width="60" height="2" fill="#E8B547"/>
+
+  <!-- Tagline & URL à droite, hors zone du logo -->
+  <text x="1068" y="160" text-anchor="end"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="15" font-weight="500" letter-spacing="-0.2"
+        fill="#fafaf7">Installation · Rénovation · Dépannage · Domotique</text>
+
+  <text x="1068" y="182" text-anchor="end"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="12" letter-spacing="2.5" font-weight="500"
+        fill="#E8B547">WWW.LARTISAN20.FR &#x2014; PARIS, IDF &amp; LOT (46)</text>
+</svg>

@@ -15,310 +15,178 @@ redirect_from:
   - /prestations/domotique.html
 ---
 
-<section class="prestation-hero">
-    <div class="prestation-header reveal">
-        <a href="{{ site.baseurl }}/#services" class="back-link">← Retour aux services</a>
-        <span class="section-tag">Domotique</span>
-        <h1>Domotique</h1>
-        <p class="prestation-intro">
-            <strong>Faites entrer votre maison dans l'ère du smart !</strong> Des modules discrets, installés proprement — Shelly, Schneider, Legrand, Somfy — pour piloter chauffe-eau, chauffage, volets, éclairage, VMC. Et un suivi de consommation Ecojoko pour voir où part l'énergie. Plus de confort, moins de gaspillage.
-        </p>
-        <p class="prestation-intro-note">Mon approche : <strong>uniquement ce qui a un vrai impact</strong> — sur la facture et le gaspillage, mais aussi sur le confort : lancer le chauffage au bon moment, fermer les volets à distance, adapter l'éclairage… Pas de suréquipement, pas de gadget inutile.</p>
-    </div>
-</section>
+<div class="page">
 
-<section class="prestation-content">
-    <div class="prestation-details reveal">
-        <div class="prestation-text">
-            <h2>Votre maison entre dans l'ère du smart</h2>
-            <p>
-                Votre installation électrique est déjà là. J'y ajoute des modules connectés — au tableau,
-                derrière un interrupteur, dans une boîte d'encastrement — pour piloter vos équipements à distance,
-                programmer des automatismes et <strong>reprendre le contrôle sur votre consommation</strong>.
+    <!-- HERO -->
+    <section class="page-hero page-hero--dark">
+        <div class="page-hero__inner">
+            <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/#services" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Prestations</a> &nbsp; · &nbsp; 04 / Domotique</p>
+
+            <h1 class="page-hero__title">Le strict <em>utile</em>. Sans gadget.</h1>
+
+            <hr class="page-hero__rule" aria-hidden="true">
+
+            <p class="page-hero__lead">
+                Modules discrets, installés proprement — <strong>Shelly, Schneider, Legrand, Somfy</strong>. Pilotage chauffe-eau, chauffage, volets, éclairage, VMC. Suivi Ecojoko pour voir où part l'énergie.
             </p>
-            <p>
-                Je travaille avec les marques adaptées à chaque projet : <strong>Shelly</strong> pour les modules
-                compacts et abordables, <strong>Schneider Wiser</strong> ou <strong>Legrand</strong> pour s'intégrer
-                dans un appareillage existant, <strong>Somfy</strong> pour les volets et stores. Côté suivi,
-                l'<strong>Ecojoko</strong> vous montre en temps réel ce que consomme chaque appareil, en euros.
+
+            <div class="page-hero__cta-row">
+                <a href="{{ site.baseurl }}/contact/" class="page-btn page-btn--primary">Discuter de mon projet <span aria-hidden="true">→</span></a>
+                <a href="#prestations-detail" class="page-btn page-btn--ghost">Voir le détail <span aria-hidden="true">↓</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 — Approche -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">02 / Approche</p>
+                <h2 class="page-section__title">Uniquement ce qui a un vrai impact.</h2>
+            </header>
+
+            <div class="reveal" style="display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,5vw,4rem);align-items:start;">
+                <div class="page-prose">
+                    <p>Votre installation électrique est déjà là. J'y ajoute des modules connectés — au tableau, derrière un interrupteur, dans une boîte d'encastrement — pour piloter vos équipements à distance, programmer des automatismes et <strong>reprendre le contrôle sur votre consommation</strong>.</p>
+                    <p>Pas de suréquipement, pas de gadget. Sur la facture (heures creuses, veilles, chauffage piloté) et sur le confort (volets, éclairage au bon moment). Chaque interrupteur continue de fonctionner normalement — <strong>la domotique se fait oublier</strong>.</p>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+                    <img src="{{ site.baseurl }}/images/blog/shelly.webp" alt="Application mobile Shelly" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+                    <img src="{{ site.baseurl }}/images/prestations/maitrise/img1.webp" alt="Afficheur Ecojoko - 144 W en temps réel" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+                    <img src="{{ site.baseurl }}/images/prestations/maitrise/img2.webp" alt="Répartition de consommation par appareil" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;">
+                    <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--hr-bg-light-alt);padding:2rem;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 — Détail -->
+    <section id="prestations-detail" class="page-section page-section--alt">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">03 / Ce que je pilote</p>
+                <h2 class="page-section__title">Six postes qui font la différence.</h2>
+            </header>
+
+            <ul class="page-list reveal">
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">01</span><h3 class="page-list__title">Chauffe-eau</h3><p class="page-list__desc">Pilotage intelligent en heures creuses, coupure en cas d'absence, mesure de la consommation réelle. Remplace le contacteur jour/nuit classique.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">02</span><h3 class="page-list__title">Chauffage</h3><p class="page-list__desc">Capteur de température + relais : le chauffage s'ajuste à la présence et à la température réelle. 1 °C de moins en absence = 7 % d'économie.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">03</span><h3 class="page-list__title">Volets roulants</h3><p class="page-list__desc">Module derrière chaque interrupteur. Ouverture au lever du soleil, fermeture au crépuscule ou à la chaleur. Confort + isolation thermique passive.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">04</span><h3 class="page-list__title">Éclairage</h3><p class="page-list__desc">Variateur connecté, ambiances programmées, allumage extérieur au crépuscule. Tout se pilote depuis l'interrupteur existant ou l'application.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">05</span><h3 class="page-list__title">VMC</h3><p class="page-list__desc">Pilotée par capteur d'humidité, ne tourne que quand c'est utile. Moins de bruit, moins de consommation, même efficacité.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">06</span><h3 class="page-list__title">Suivi de consommation</h3><p class="page-list__desc">Ecojoko (vue globale par appareil) ou Shelly Pro 3EM (mesure circuit par circuit au tableau). Voir ce qui consomme, en temps réel et en euros.</p><span></span></div></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 04 — Marques -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">04 / Marques</p>
+                <h2 class="page-section__title">Sept écosystèmes pro, choisis selon le projet.</h2>
+            </header>
+
+            <ul class="page-list reveal">
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">A</span><h3 class="page-list__title">Shelly</h3><p class="page-list__desc">Modules compacts, abordables, fonctionnement local. Au tableau ou derrière un interrupteur. Relais, variateurs, capteurs, compteurs d'énergie.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">B</span><h3 class="page-list__title">Schneider Wiser</h3><p class="page-list__desc">Gamme domotique Schneider Electric. Modules au tableau, thermostats connectés, appareillage intégré. Référence chez les électriciens.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">C</span><h3 class="page-list__title">Legrand with Netatmo</h3><p class="page-list__desc">Interrupteurs, prises et volets connectés dans la gamme Céliane ou Mosaic. Finitions soignées, intégration native.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">D</span><h3 class="page-list__title">Somfy</h3><p class="page-list__desc">Motorisation et pilotage de volets, stores, portails. Box TaHoma pour centraliser la gestion.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">E</span><h3 class="page-list__title">Sonoff</h3><p class="page-list__desc">Modules WiFi et Zigbee compacts. Alternative économique pour des projets simples.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">F</span><h3 class="page-list__title">NodOn</h3><p class="page-list__desc">Fabricant français. Micromodules Zigbee et EnOcean (sans pile) — idéal en rénovation.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">G</span><h3 class="page-list__title">Ecojoko</h3><p class="page-list__desc">Suivi de consommation en temps réel par appareil. Afficheur salon + application smartphone, en euros.</p><span></span></div></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Blog teaser -->
+    <section class="page-section page-section--alt" style="padding-top:2rem;padding-bottom:2rem;">
+        <div class="page-section__inner reveal" style="border-top:1px solid var(--hr-border-on-light);border-bottom:1px solid var(--hr-border-on-light);padding:2rem 0;">
+            <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;">
+                <span>Sur le blog</span>
+                <span style="color:var(--hr-accent);">—</span>
+                <a href="{{ site.baseurl }}/blog/2026/04/07/shelly-domotique-choix/" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-accent);font-family:var(--hr-display);font-size:1rem;font-weight:500;text-transform:none;letter-spacing:0;">Pourquoi j'ai choisi Shelly comme solution domotique <span aria-hidden="true">→</span></a>
             </p>
-            <p>
-                Le tout installé proprement, sans fil apparent. Chaque interrupteur continue
-                de fonctionner normalement — la domotique se fait oublier.
-            </p>
         </div>
-        <!-- Carrousel images -->
-        <div class="prestation-carousel">
-            <div class="carousel-container">
-                <div class="carousel-slides">
-                    <figure class="carousel-slide">
-                        <img src="{{ site.baseurl }}/images/blog/shelly.png" alt="Application mobile Shelly" loading="lazy">
-                        <figcaption>Application mobile Shelly</figcaption>
-                    </figure>
-                    <figure class="carousel-slide">
-                        <img src="{{ site.baseurl }}/images/prestations/maitrise/img1.jpeg" alt="Afficheur Ecojoko rond affichant 144 watts de consommation instantanée" loading="lazy">
-                        <figcaption>Afficheur Ecojoko - Consommation en temps réel</figcaption>
-                    </figure>
-                    <figure class="carousel-slide">
-                        <img src="{{ site.baseurl }}/images/prestations/maitrise/img2.jpeg" alt="Application Ecojoko montrant la répartition de consommation par appareil" loading="lazy">
-                        <figcaption>Répartition par appareil et coûts en euros</figcaption>
-                    </figure>
-                </div>
-                <button class="carousel-btn carousel-prev" aria-label="Image précédente">‹</button>
-                <button class="carousel-btn carousel-next" aria-label="Image suivante">›</button>
+    </section>
+
+    <!-- 05 — Processus -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">05 / Processus</p>
+                <h2 class="page-section__title">Quatre étapes. De l'échange aux automatismes.</h2>
+            </header>
+
+            <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hr-border-on-light);">
+                <div style="padding:2rem 1.5rem 0 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">01</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Échange sur vos besoins</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">On identifie ensemble vos postes de consommation, vos habitudes et vos objectifs : réduire la facture, piloter le chauffage, automatiser les volets…</p></div>
+                <div style="padding:2rem 1.5rem 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">02</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Choix du matériel</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">On sélectionne les modules et la marque adaptés à votre installation — uniquement ce qui a un vrai impact.</p></div>
+                <div style="padding:2rem 1.5rem 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">03</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Installation</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">Pose des modules au bon endroit. Raccordement propre, configuration WiFi et application.</p></div>
+                <div style="padding:2rem 0 0 1.5rem;"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">04</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Automatismes</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">Programmation des scénarios (heures creuses, crépuscule, seuils de température), prise en main de l'application, conseils d'optimisation.</p></div>
             </div>
-            <div class="carousel-dots"></div>
         </div>
-    </div>
+    </section>
 
-    <div class="prestation-services reveal">
-        <h3>Ce que je peux piloter chez vous</h3>
-        <ul class="prestation-list">
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/></svg>Chauffe-eau</strong>
-                <span>Pilotage intelligent en heures creuses, coupure en cas d'absence, mesure de la consommation réelle. Remplace le contacteur jour/nuit classique.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9a3 3 0 1 0 0 6m-8-3H2m3.3-5.7L4 5m5.7-1.3V2m5.7 1.7L17 2m3.7 3.3L22 4M22 12h-2m-1.3 5.7L20 19m-3.7 1.3V22m-5.7-1.7L9 22m-3.7-3.3L4 20"/></svg>Chauffage</strong>
-                <span>Capteur de température + relais : le chauffage s'ajuste à la présence et à la température réelle. 1 °C de moins en absence = 7 % d'économie.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20M8 4v4m8-4v4"/></svg>Volets roulants</strong>
-                <span>Module derrière chaque interrupteur. Ouverture au lever du soleil, fermeture au crépuscule ou à la chaleur. Confort + isolation thermique passive.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>Éclairage</strong>
-                <span>Variateur connecté, ambiances programmées, allumage extérieur au crépuscule. Tout se pilote depuis l'interrupteur existant ou l'application.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>VMC</strong>
-                <span>Pilotée par capteur d'humidité, ne tourne que quand c'est utile. Moins de bruit, moins de consommation, même efficacité.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Suivi de consommation</strong>
-                <span>Ecojoko (vue globale par appareil) ou Shelly Pro 3EM (mesure circuit par circuit au tableau). Voir ce qui consomme, en temps réel et en euros.</span>
-            </li>
-        </ul>
-    </div>
+    <!-- 06 — Bénéfices -->
+    <section class="page-section page-section--alt">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">06 / Bénéfices</p>
+                <h2 class="page-section__title">Trois raisons concrètes.</h2>
+            </header>
 
-    <div class="prestation-callout reveal">
-        <h3>Les marques avec lesquelles je travaille</h3>
-        <ul>
-            <li><strong>Shelly</strong><span>Modules compacts, abordables, fonctionnement local. Au tableau ou derrière un interrupteur. Relais, variateurs, capteurs, compteurs d'énergie.</span></li>
-            <li><strong>Schneider Wiser</strong><span>Gamme domotique Schneider Electric. Modules au tableau, thermostats connectés, appareillage intégré. Référence chez les électriciens.</span></li>
-            <li><strong>Legrand with Netatmo</strong><span>Interrupteurs, prises et volets connectés dans la gamme Céliane ou Mosaic. Finitions soignées, intégration native.</span></li>
-            <li><strong>Somfy</strong><span>Motorisation et pilotage de volets, stores, portails. Box TaHoma pour centraliser la gestion.</span></li>
-            <li><strong>Sonoff</strong><span>Modules WiFi et Zigbee compacts. Alternative économique pour des projets simples.</span></li>
-            <li><strong>NodOn</strong><span>Fabricant français de modules Zigbee et EnOcean. Micromodules au format compact, sans pile pour les solutions EnOcean — idéal en rénovation.</span></li>
-            <li><strong>Ecojoko</strong><span>Suivi de consommation en temps réel par appareil. Afficheur salon + application smartphone, en euros.</span></li>
-        </ul>
-        <p>Le choix dépend de votre installation, de votre budget et de vos attentes — on en discute ensemble.</p>
-    </div>
-
-    <div class="prestation-blog-callout reveal">
-        <div class="blog-callout-content">
-            <span class="blog-callout-tag">Article de blog</span>
-            <h3>Pourquoi j'ai choisi Shelly comme solution de domotique</h3>
-            <p>Open source, contrôle local, zéro dépendance cloud : j'explique en détail les raisons de ce choix — et pourquoi je le recommande à mes clients.</p>
-            <a href="{{ site.baseurl }}/blog/2026/04/07/shelly-domotique-choix/" class="blog-callout-link">Lire l'article →</a>
-        </div>
-    </div>
-
-    <!-- Process -->
-    <div class="prestation-process reveal">
-        <h3>Comment ça se passe ?</h3>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h4>Échange sur vos besoins</h4>
-                    <p>On identifie ensemble vos postes de consommation, vos habitudes et vos objectifs : réduire la facture, piloter le chauffage, automatiser les volets…</p>
+            <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Bénéfice 01</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Économies mesurables</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">10 à 25 % de réduction sur la facture en pilotant les bons postes aux bons moments.</p>
                 </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h4>Choix du matériel</h4>
-                    <p>On sélectionne les modules et la marque adaptés à votre installation (Shelly, Schneider, Legrand, Somfy…) — uniquement ce qui a un vrai impact. Pas de suréquipement.</p>
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Bénéfice 02</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Pro, pas gadget</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Shelly, Schneider, Legrand, Somfy : marques fiables, installation discrète, fonctionnement local — pas de dépendance internet.</p>
                 </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h4>Installation</h4>
-                    <p>Pose des modules au bon endroit — au tableau, derrière les interrupteurs ou à côté de l'appareillage. Raccordement propre, configuration WiFi et application.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h4>Configuration et automatismes</h4>
-                    <p>Programmation des scénarios (heures creuses, crépuscule, seuils de température…), prise en main de l'application, conseils d'optimisation.</p>
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Bénéfice 03</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Évolutif</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Commencez par un module, ajoutez-en au fil des besoins. Chaque module est indépendant.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Avantages -->
-    <div class="prestation-avantages reveal">
-        <h3>Les bénéfices concrets</h3>
-        <div class="avantages-grid">
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <ellipse cx="20" cy="36" rx="12" ry="5" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M8 36V32" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M32 36V32" stroke="#ffffff" stroke-width="2"/>
-                        <ellipse cx="20" cy="32" rx="12" ry="5" stroke="#ffffff" stroke-width="2"/>
-                        <circle cx="34" cy="18" r="8" stroke="#ffffff" stroke-width="2"/>
-                        <text x="34" y="22" font-size="10" fill="#ffffff" text-anchor="middle">€</text>
-                    </svg>
-                </div>
-                <h4>Économies mesurables</h4>
-                <p>10 à 25% de réduction sur la facture en pilotant les bons postes aux bons moments.</p>
-            </div>
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <rect x="8" y="8" width="32" height="32" rx="4" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M16 16H32" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M16 24H28" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M16 32H24" stroke="#ffffff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h4>Matériel pro, pas gadget</h4>
-                <p>Shelly, Schneider, Legrand, Somfy : des marques fiables, une installation discrète, un fonctionnement qui ne dépend pas d'internet.</p>
-            </div>
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <circle cx="24" cy="24" r="18" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M16 24L22 30L34 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <h4>Évolutif</h4>
-                <p>Commencez par un module, ajoutez-en au fil des besoins. Chaque module est indépendant.</p>
+    <!-- 07 — FAQ -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">07 / Questions fréquentes</p>
+                <h2 class="page-section__title">Vos questions, mes réponses.</h2>
+            </header>
+
+            <div class="reveal page-faq">
+                <details class="page-faq__item"><summary class="page-faq__q">Quelle marque choisir pour la domotique ?</summary><div class="page-faq__a"><p><strong>Shelly</strong> pour des modules compacts et abordables. <strong>Schneider Wiser</strong> et <strong>Legrand</strong> si vous avez déjà de l'appareillage de ces marques. <strong>Somfy</strong> pour les volets et stores. On choisit ensemble selon installation et budget.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Domotique et éco-conception : est-ce compatible ?</summary><div class="page-faq__a"><p>Oui, si on reste raisonnable. Uniquement ce qui a un vrai impact — sur la facture (chauffe-eau en heures creuses, chauffage piloté, veilles coupées) et sur le confort. Pas de suréquipement, pas de gadget. Les modules installés sont durables et fonctionnent en local.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Peut-on piloter chauffage et volets à distance ?</summary><div class="page-faq__a"><p>Oui. Lancer le chauffage avant d'arriver, ouvrir ou fermer les volets en déplacement, programmer des scénarios. Avec internet, le pilotage se fait depuis l'application sur smartphone.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Ça fonctionne sans internet ?</summary><div class="page-faq__a"><p>La plupart des modules (Shelly, Schneider Wiser…) fonctionnent <strong>en local</strong>. Les automatismes continuent même si votre box est en panne. Le pilotage à distance nécessite internet, mais ce n'est pas indispensable.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Faut-il un compteur Linky pour le suivi Ecojoko ?</summary><div class="page-faq__a"><p>Non, les capteurs Ecojoko fonctionnent aussi bien avec un Linky qu'avec un ancien compteur. Le capteur se pose sur le câble d'arrivée, sans modification.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Combien peut-on réellement économiser ?</summary><div class="page-faq__a"><p><strong>10 à 25 % d'économies</strong>, principalement en pilotant le chauffe-eau en heures creuses, en optimisant le chauffage selon la présence et en coupant les veilles. Le suivi en temps réel change aussi les comportements — souvent le premier levier.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Peut-on ajouter des modules progressivement ?</summary><div class="page-faq__a"><p>Absolument. Commencer par <strong>un seul poste</strong> — le chauffe-eau par exemple — puis ajouter les volets quelques mois plus tard. Chaque module est indépendant.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Compatible avec Home Assistant et les assistants vocaux ?</summary><div class="page-faq__a"><p>Oui. La plupart des modules sont compatibles avec <strong>Google Home, Alexa et Home Assistant</strong>. Si vous avez déjà un système, les modules s'intègrent facilement.</p></div></details>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- FAQ -->
-    <div class="prestation-faq reveal">
-        <h3>Questions fréquentes</h3>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary class="faq-question">Quelle marque choisir pour la domotique ?</summary>
-                <div class="faq-answer">
-                    <p>Ça dépend du projet. <strong>Shelly</strong> est idéal pour des modules compacts et abordables (derrière un interrupteur ou au tableau). <strong>Schneider Wiser</strong> et <strong>Legrand</strong> s'intègrent parfaitement si vous avez déjà de l'appareillage de ces marques. <strong>Somfy</strong> est la référence pour les volets et stores. On choisit ensemble la solution la plus adaptée à votre installation et votre budget.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Domotique et éco-conception : est-ce compatible ?</summary>
-                <div class="faq-answer">
-                    <p>Oui, si on reste raisonnable. Mon approche : <strong>uniquement ce qui a un vrai impact</strong> — sur la facture (chauffe-eau en heures creuses, chauffage piloté, veilles coupées) et sur le confort (volets, éclairage au bon moment). Pas de suréquipement, pas de gadget inutile. Les modules que j’installe (Shelly, Schneider, Legrand…) sont durables et fonctionnent en local. La domotique au service de l’efficience et du confort, pas l’inverse.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Peut-on piloter chauffage et volets à distance ?</summary>
-                <div class="faq-answer">
-                    <p>Oui. Lancer le chauffage avant d'arriver, fermer ou ouvrir les volets même en déplacement, programmer des scénarios (crépuscule, température, heures creuses)… Vous gardez la main sur le confort et la consommation, où que vous soyez. Avec internet, le pilotage se fait depuis l'application sur smartphone.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Ça fonctionne sans internet ?</summary>
-                <div class="faq-answer">
-                    <p>La plupart des modules (Shelly, Schneider Wiser…) fonctionnent en <strong>local sur votre réseau</strong>. Les automatismes (heures creuses, crépuscule, seuils de température) continuent de tourner même si votre box internet est en panne. Le pilotage à distance nécessite internet, mais ce n'est pas indispensable au quotidien.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Faut-il un compteur Linky pour le suivi Ecojoko ?</summary>
-                <div class="faq-answer">
-                    <p>Non, les capteurs Ecojoko fonctionnent aussi bien avec un <strong>compteur Linky</strong> qu'avec un ancien compteur. Le capteur se pose sur le câble d'arrivée, sans modification de votre installation.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Combien peut-on réellement économiser ?</summary>
-                <div class="faq-answer">
-                    <p>Les retours d'expérience montrent <strong>10 à 25% d'économies</strong>, principalement en pilotant le chauffe-eau en heures creuses, en optimisant le chauffage selon la présence, et en coupant les veilles inutiles. Le suivi de consommation en temps réel change aussi les comportements — c'est souvent le premier levier.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Peut-on ajouter des modules progressivement ?</summary>
-                <div class="faq-answer">
-                    <p>Absolument. On peut commencer par <strong>un seul poste</strong> — le chauffe-eau par exemple — puis ajouter les volets quelques mois plus tard, puis le suivi au tableau. Chaque module est indépendant, pas besoin de tout installer d'un coup.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">C'est compatible avec les assistants vocaux et Home Assistant ?</summary>
-                <div class="faq-answer">
-                    <p>Oui. La plupart des modules que j'installe sont compatibles avec <strong>Google Home, Alexa et Home Assistant</strong>. Si vous avez déjà un système domotique, les modules s'intègrent facilement. Sinon, chaque marque propose sa propre application pour tout piloter simplement.</p>
-                </div>
-            </details>
-        </div>
-    </div>
+</div>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Quelle marque choisir pour la domotique ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Shelly pour des modules compacts et abordables, Schneider Wiser ou Legrand pour s'intégrer dans un appareillage existant, Somfy pour les volets et stores. Le choix dépend de l'installation et du budget." }
-            },
-            {
-                "@type": "Question",
-                "name": "Domotique et éco-conception : est-ce compatible ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui, si on reste raisonnable : uniquement ce qui a un vrai impact sur la facture et le confort (chauffe-eau, chauffage, volets, éclairage), pas de suréquipement. Les modules installés sont durables et fonctionnent en local. La domotique au service de l'efficience et du confort." }
-            },
-            {
-                "@type": "Question",
-                "name": "Peut-on piloter chauffage et volets à distance ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Lancer le chauffage avant d'arriver, fermer ou ouvrir les volets à distance, programmer des scénarios (crépuscule, température, heures creuses). Le pilotage se fait depuis l'application sur smartphone quand vous avez internet." }
-            },
-            {
-                "@type": "Question",
-                "name": "La domotique fonctionne-t-elle sans internet ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui, la plupart des modules fonctionnent en local. Les automatismes continuent même sans internet. Le pilotage à distance nécessite internet mais n'est pas indispensable." }
-            },
-            {
-                "@type": "Question",
-                "name": "Combien peut-on économiser avec la domotique ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "10 à 25% d'économies en pilotant le chauffe-eau en heures creuses, en optimisant le chauffage et en coupant les veilles inutiles." }
-            },
-            {
-                "@type": "Question",
-                "name": "Peut-on ajouter des modules progressivement ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui, chaque module est indépendant. On peut commencer par un seul poste et en ajouter au fil des besoins." }
-            },
-            {
-                "@type": "Question",
-                "name": "La domotique est-elle compatible avec Home Assistant et les assistants vocaux ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui, la plupart des modules sont compatibles avec Home Assistant, Google Home, Alexa et d'autres systèmes." }
-            }
-        ]
-    }
-    </script>
-
-    <div class="prestation-brands reveal">
-        <p class="prestation-brands-label">Les marques avec lesquelles je travaille</p>
-        <div class="prestation-brands-row">
-            <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/legrand.png" alt="Legrand" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/somfy.svg" alt="Somfy" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/NodOn-Original.svg" alt="NodOn" loading="lazy">
-        </div>
-    </div>
-
-    <div class="prestation-cta reveal">
-        <h3>Envie de rendre votre installation plus intelligente ?</h3>
-        <p>On fait le point ensemble : vos besoins, vos équipements, et on choisit les modules adaptés — uniquement ce qui a un vrai impact.</p>
-        <div class="prestation-cta-buttons">
-            <a href="{{ site.baseurl }}/contact/" class="btn-primary">Me contacter</a>
-            <a href="{{ site.baseurl }}/realisations/" class="btn-secondary">Voir mes réalisations</a>
-        </div>
-    </div>
-</section>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        { "@type": "Question", "name": "Quelle marque choisir pour la domotique ?", "acceptedAnswer": { "@type": "Answer", "text": "Shelly pour des modules compacts et abordables, Schneider Wiser ou Legrand pour s'intégrer dans un appareillage existant, Somfy pour les volets et stores." } },
+        { "@type": "Question", "name": "La domotique fonctionne-t-elle sans internet ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, la plupart des modules fonctionnent en local. Les automatismes continuent même sans internet." } },
+        { "@type": "Question", "name": "Combien peut-on économiser avec la domotique ?", "acceptedAnswer": { "@type": "Answer", "text": "10 à 25% d'économies en pilotant le chauffe-eau en heures creuses, en optimisant le chauffage et en coupant les veilles inutiles." } },
+        { "@type": "Question", "name": "Peut-on ajouter des modules progressivement ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, chaque module est indépendant. On peut commencer par un seul poste et en ajouter au fil des besoins." } }
+    ]
+}
+</script>

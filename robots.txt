@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers (ChatGPT, Perplexity, Claude, Bing Copilot, etc.)
+# AI Crawlers (ChatGPT, Perplexity, Claude, Bing Copilot etc.)
 User-agent: GPTBot
 Allow: /
 
@@ -31,6 +31,9 @@ Allow: /
 
 User-agent: Amazonbot
 Allow: /
+
+# Exclusions
+Disallow: /redirects.json
 
 # Sitemap
 Sitemap: https://www.lartisan20.fr/sitemap.xml

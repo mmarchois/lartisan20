@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     {% include head.html %}
     <script type="application/ld+json">
@@ -8,20 +8,16 @@
         "@type": "BlogPosting",
         "headline": "{{ page.title }}",
         "description": "{{ page.description }}",
-        "author": {
-            "@id": "{{ site.url }}/#founder"
-        },
-        "publisher": {
-            "@id": "{{ site.url }}/#organization"
-        },
+        "author": { "@id": "{{ site.url }}/#founder" },
+        "publisher": { "@id": "{{ site.url }}/#organization" },
         "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
         "dateModified": "{{ page.last_modified_at | default: page.date | date: '%Y-%m-%d' }}",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ site.url }}{{ page.url }}"
-        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" },
         "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}",
-        "inLanguage": "fr-FR"
+        "inLanguage": "fr-FR",
+        "wordCount": {{ content | strip_html | number_of_words }}{% if page.keywords %},
+        "keywords": "{{ page.keywords }}"{% endif %}{% if page.category %},
+        "articleSection": "{{ page.category }}"{% endif %}
     }
     </script>
     <script type="application/ld+json">
@@ -29,121 +25,119 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Accueil",
-                "item": "{{ site.url }}/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Blog",
-                "item": "{{ site.url }}/blog/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "{{ page.title }}",
-                "item": "{{ site.url }}{{ page.url }}"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "{{ site.url }}{{ page.url }}" }
         ]
     }
     </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T322KZ9T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T322KZ9T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     {% include nav.html %}
 
+    {% assign month_num = page.date | date: "%-m" %}
+    {% case month_num %}
+        {% when '1' %}{% assign month_fr = 'janvier' %}
+        {% when '2' %}{% assign month_fr = 'février' %}
+        {% when '3' %}{% assign month_fr = 'mars' %}
+        {% when '4' %}{% assign month_fr = 'avril' %}
+        {% when '5' %}{% assign month_fr = 'mai' %}
+        {% when '6' %}{% assign month_fr = 'juin' %}
+        {% when '7' %}{% assign month_fr = 'juillet' %}
+        {% when '8' %}{% assign month_fr = 'août' %}
+        {% when '9' %}{% assign month_fr = 'septembre' %}
+        {% when '10' %}{% assign month_fr = 'octobre' %}
+        {% when '11' %}{% assign month_fr = 'novembre' %}
+        {% when '12' %}{% assign month_fr = 'décembre' %}
+    {% endcase %}
+
     <main id="main-content">
-        <article class="blog-post">
-            <div class="blog-post-wrapper">
-                <div class="blog-post-header">
-                    <a href="{{ site.baseurl }}/blog/" class="blog-post-back-link">
-                        ← Retour au blog
-                    </a>
-                    <div class="blog-post-meta">
-                        {% if page.chantier %}
-                        <span class="blog-post-category">Sur le terrain</span>
-                        <span class="blog-post-chantier">{{ page.chantier }}</span>
-                        {% elsif page.category %}
-                        <span class="blog-post-category">{{ page.category }}</span>
-                        {% endif %}
-                        {% assign month_num = page.date | date: "%-m" %}
-                        {% case month_num %}
-                            {% when '1' %}{% assign month_fr = 'janvier' %}
-                            {% when '2' %}{% assign month_fr = 'février' %}
-                            {% when '3' %}{% assign month_fr = 'mars' %}
-                            {% when '4' %}{% assign month_fr = 'avril' %}
-                            {% when '5' %}{% assign month_fr = 'mai' %}
-                            {% when '6' %}{% assign month_fr = 'juin' %}
-                            {% when '7' %}{% assign month_fr = 'juillet' %}
-                            {% when '8' %}{% assign month_fr = 'août' %}
-                            {% when '9' %}{% assign month_fr = 'septembre' %}
-                            {% when '10' %}{% assign month_fr = 'octobre' %}
-                            {% when '11' %}{% assign month_fr = 'novembre' %}
-                            {% when '12' %}{% assign month_fr = 'décembre' %}
-                        {% endcase %}
-                        <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="blog-post-date">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time>
-                    </div>
-                    <h1 class="blog-post-title">{{ page.title }}</h1>
-                    {% if page.excerpt %}<p class="blog-post-excerpt">{{ page.excerpt }}</p>{% endif %}
-                    {% if page.image %}
-                    <div class="blog-post-featured-image">
-                        <img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}" loading="eager" fetchpriority="high">
+        <div class="page">
+
+            <!-- HERO charbon -->
+            <section class="page-hero page-hero--dark">
+                <div class="page-hero__inner">
+                    <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/blog/" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Blog</a>
+                    {% if page.chantier %} &nbsp; · &nbsp; Sur le terrain — {{ page.chantier }}{% elsif page.category %} &nbsp; · &nbsp; {{ page.category }}{% endif %}
+                    &nbsp; · &nbsp; <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time></p>
+
+                    <h1 class="page-hero__title">{{ page.title }}</h1>
+
+                    <hr class="page-hero__rule" aria-hidden="true">
+
+                    {% if page.excerpt %}<p class="page-hero__lead">{{ page.excerpt | strip_html }}</p>{% endif %}
+                </div>
+            </section>
+
+            <!-- Featured image -->
+            {% if page.image %}
+            {% assign image_url = page.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
+            <section class="page-section page-section--light" style="padding-top:3rem;padding-bottom:0;">
+                <div class="page-section__inner reveal" style="max-width:70ch;margin:0 auto;">
+                    <img src="{{ site.baseurl }}{{ image_url }}" alt="{{ page.title }}" loading="eager" fetchpriority="high" style="width:100%;height:auto;max-height:60vh;object-fit:cover;display:block;">
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Contenu -->
+            <section class="page-section page-section--light">
+                <div class="page-section__inner">
+                    <article class="page-prose reveal" style="max-width:70ch;margin:0 auto;">
+                        {{ content }}
+                    </article>
+                </div>
+            </section>
+
+            <!-- Footer article : chantier + nav -->
+            <section class="page-section page-section--alt" style="padding-top:3rem;">
+                <div class="page-section__inner reveal">
+
+                    {% if page.chantier %}
+                    {% capture chantier_links %}
+                    {% for p in site.posts %}
+                    {% if p.chantier == page.chantier and p.url != page.url %}
+                    <li class="page-list__item"><a href="{{ site.baseurl }}{{ p.url }}" class="page-list__link"><span class="page-list__num">→</span><h3 class="page-list__title">{{ p.title }}</h3><p class="page-list__desc"></p><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endcapture %}
+                    {% if chantier_links != "" %}
+                    <div style="margin-bottom:3rem;">
+                        <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1.5rem;">Autres articles de ce chantier ({{ page.chantier }})</p>
+                        <ul class="page-list" style="border-top:1px solid var(--hr-border-on-light);">
+                            {{ chantier_links }}
+                        </ul>
                     </div>
                     {% endif %}
-                </div>
+                    {% endif %}
 
-            <div class="blog-post-content">
-                {{ content }}
-            </div>
-
-            <div class="blog-post-footer">
-                {% if page.chantier %}
-                {% capture chantier_links %}
-                {% for p in site.posts %}
-                {% if p.chantier == page.chantier and p.url != page.url %}
-                <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endcapture %}
-                {% if chantier_links != "" %}
-                <div class="blog-post-chantier-links">
-                    <p class="blog-post-chantier-links-title">Autres articles de ce chantier</p>
-                    <ul class="blog-post-chantier-links-list">
-                        {{ chantier_links }}
-                    </ul>
-                </div>
-                {% endif %}
-                {% endif %}
-                <div class="blog-post-navigation">
                     {% if page.previous or page.next %}
-                    <div class="blog-nav-articles">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;border-top:1px solid var(--hr-border-on-light);padding-top:2rem;">
                         {% if page.previous %}
-                        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="blog-nav-link blog-nav-prev">
-                            <span class="blog-nav-label">← Article précédent</span>
-                            <span class="blog-nav-title">{{ page.previous.title }}</span>
+                        <a href="{{ site.baseurl }}{{ page.previous.url }}" style="text-decoration:none;color:var(--hr-text-on-light);display:flex;flex-direction:column;gap:0.5rem;">
+                            <span style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);">← Article précédent</span>
+                            <span style="font-family:var(--hr-display);font-size:1.1rem;font-weight:600;letter-spacing:-0.015em;">{{ page.previous.title }}</span>
                         </a>
-                        {% endif %}
+                        {% else %}<span></span>{% endif %}
                         {% if page.next %}
-                        <a href="{{ site.baseurl }}{{ page.next.url }}" class="blog-nav-link blog-nav-next">
-                            <span class="blog-nav-label">Article suivant →</span>
-                            <span class="blog-nav-title">{{ page.next.title }}</span>
+                        <a href="{{ site.baseurl }}{{ page.next.url }}" style="text-decoration:none;color:var(--hr-text-on-light);display:flex;flex-direction:column;gap:0.5rem;text-align:right;">
+                            <span style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);">Article suivant →</span>
+                            <span style="font-family:var(--hr-display);font-size:1.1rem;font-weight:600;letter-spacing:-0.015em;">{{ page.next.title }}</span>
                         </a>
                         {% endif %}
                     </div>
                     {% endif %}
+
                 </div>
-            </div>
-        </article>
+            </section>
+
+        </div>
     </main>
+
+    {% include contact.html %}
 
     {% include footer.html %}
 

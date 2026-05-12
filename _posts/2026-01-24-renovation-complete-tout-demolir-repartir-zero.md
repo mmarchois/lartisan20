@@ -114,10 +114,10 @@ Les anciennes gaines finissent sans protection dans le sol. C'est dangereux, c'e
 
 Tout démonter pour tout refaire propre. C'est le seul moyen d'avoir une installation sécurisée et conforme.
 
-![Démontage des anciennes gaines](/images/blog/gainev1.png)
+![Démontage des anciennes gaines](/images/blog/gainev1.webp)
 *Les gaines s'arrêtent au niveau du trou, laissant les fils partir à nu dans le sol*
 
-![Démontage des circuits obsolètes](/images/blog/gainev2.png)
+![Démontage des circuits obsolètes](/images/blog/gainev2.webp)
 *Identification et retrait des gaines qui finissent sans protection - tout à refaire proprement*
 
 ### Reconstruction du réseau

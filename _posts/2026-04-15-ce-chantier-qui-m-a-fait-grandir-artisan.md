@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Ce chantier qui m'a fait grandir en tant qu'artisan"
-description: "Retour d'expérience personnel sur une rénovation électrique complète menée depuis janvier à raison d'une semaine par mois : ce que j'ai appris, ce que j'ai ressenti, et pourquoi ce chantier m'a confirmé que j'étais à ma place dans cette reconversion."
+description: "Retour d'expérience personnel sur une rénovation électrique complète menée depuis janvier à raison d'une semaine par mois : ce que j'ai appris, ce que j'ai ressenti et pourquoi ce chantier m'a confirmé que j'étais à ma place dans cette reconversion."
 keywords: "retour d'expérience chantier, reconversion électricien, rénovation maison 3 étages, première rénovation électrique complète, légitimité reconversion, syndrome imposteur reconversion, confirmation reconversion bâtiment"
 category: "Reconversion"
 chantier: "Rénovation maison 3 étages (Paris)"
@@ -17,7 +17,7 @@ image: /images/blog/tableau_avant_apres.jpeg
 
 Début janvier, quand on m'a confié la rénovation électrique de cette maison (trois étages, quatre niveaux avec les combles), j'avais une boule au ventre. Une vraie. Je suis encore en pleine reconversion, pas encore électricien à proprement parler, plutôt en formation par la pratique. Et voilà qu'on me tendait les clés d'une maison entière pour en refaire toute l'installation. Pas un petit dépannage, pas une pièce : toute la maison.
 
-La responsabilité, je l'ai sentie dès la première visite. Être électricien, ça impose de vraies responsabilités : une installation mal faite peut avoir des conséquences terribles. L'électricité, c'est le cœur d'une maison, et si ce cœur est défaillant, c'est toute la maison qui devient un problème. La petite voix dans ma tête, me répétait sans cesse : *t'es sûr de toi, là ?*
+La responsabilité, je l'ai sentie dès la première visite. Être électricien, ça impose de vraies responsabilités : une installation mal faite peut avoir des conséquences terribles. L'électricité, c'est le cœur d'une maison et si ce cœur est défaillant, c'est toute la maison qui devient un problème. La petite voix dans ma tête, me répétait sans cesse : *t'es sûr de toi, là ?*
 
 Je ne l'étais pas vraiment. Mais j'y suis allé quand même.
 
@@ -33,25 +33,25 @@ Il y a un petit moment sur cette fin de chantier dont j'ai envie de parler, parc
 
 Sauf que je n'avais jamais soudé de ma vie. Enfin… si, une fois, en cours de techno au collège, mais autant dire que ça ne compte plus (😅). Je reprenais donc un fer à souder pour la « première » fois.
 
-On m'a montré le geste : dénuder, torsader, chauffer, faire couler l'étain, attendre, gaine thermo. Je l'ai fait. Premier essai, ça a marché. Soudure propre, manchon rétracté, continuité impeccable. Un truc tout bête, mais j'étais fier comme un gamin. Et surtout, je me suis dit : *t'as appris ça en vingt minutes, t'y es arrivé, et ça, tu vas t'en resservir mille fois*. C'est ce qui résume bien ce chantier : se rendre compte qu'on est capable d'apprendre un geste nouveau sur le tas, et le réaliser proprement.
+On m'a montré le geste : dénuder, torsader, chauffer, faire couler l'étain, attendre, gaine thermo. Je l'ai fait. Premier essai, ça a marché. Soudure propre, manchon rétracté, continuité impeccable. Un truc tout bête, mais j'étais fier comme un gamin. Et surtout, je me suis dit : *t'as appris ça en vingt minutes, t'y es arrivé et ça, tu vas t'en resservir mille fois*. C'est ce qui résume bien ce chantier : se rendre compte qu'on est capable d'apprendre un geste nouveau sur le tas et le réaliser proprement.
 
 ## Avant / après : le tableau
 
 Si je devais montrer une seule image pour résumer ce chantier, ce serait celle-ci :
 
-![Tableau électrique avant et après rénovation](/images/blog/tableau_avant_apres.jpeg)
-*À gauche, l'ancien tableau, celui qu'on a trouvé en arrivant, et qui n'a pas tenu face au court-circuit un matin à 8h30. À droite, le nouveau : circuits repérés, protections conformes, architecture pensée pour durer.*
+![Tableau électrique avant et après rénovation](/images/blog/tableau_avant_apres.webp)
+*À gauche, l'ancien tableau, celui qu'on a trouvé en arrivant et qui n'a pas tenu face au court-circuit un matin à 8h30. À droite, le nouveau : circuits repérés, protections conformes, architecture pensée pour durer.*
 
 Cette photo en dit plus que tout ce que je pourrais écrire. Voilà ce que veut dire, concrètement, « repartir de zéro ».
 
 Pour donner une idée de l'ampleur du chantier côté câblage, voici tous les nouveaux circuits qui arrivaient en bas, juste avant que je ne pose le nouveau tableau :
 
-![Nouveaux circuits arrivant en bas du tableau avant installation](/images/blog/raccord_tableau.jpeg)
+![Nouveaux circuits arrivant en bas du tableau avant installation](/images/blog/raccord_tableau.webp)
 *Tous les circuits de la maison, tirés jusqu'au point de raccordement, en attente d'être connectés au nouveau tableau. Une photo qui résume à elle seule la quantité de câble qu'il a fallu passer dans cette maison.*
 
 ## Zéro erreur : la vraie fierté
 
-Je vais être honnête. Tout au long du chantier, j'ai eu une petite peur qui ne me lâchait pas : *et si j'avais fait une connerie quelque part ?* En électricité, tu ne le sais pas avant la mise sous tension. Tu peux câbler proprement pendant des semaines, et découvrir au moment d'enclencher le tableau que quelque chose cloche. Ça arrive à tout le monde.
+Je vais être honnête. Tout au long du chantier, j'ai eu une petite peur qui ne me lâchait pas : *et si j'avais fait une connerie quelque part ?* En électricité, tu ne le sais pas avant la mise sous tension. Tu peux câbler proprement pendant des semaines et découvrir au moment d'enclencher le tableau que quelque chose cloche. Ça arrive à tout le monde.
 
 À la mise sous tension de ce chantier, rien n'a disjoncté. Les circuits se sont allumés un par un, les va-et-vient ont fonctionné, les fils pilotes ont été reconnus, la VMC s'est lancée. Tout a marché du premier coup. **Zéro erreur de câblage** sur une installation de cette taille.
 
@@ -71,16 +71,16 @@ C'est pas de l'arrogance. C'est juste le fait d'être à sa place, sans avoir à
 
 Dernier truc que je voulais dire. Une fois l'électricité terminée, on m'a demandé si je voulais bien donner un coup de main à l'équipe qui attaquait l'enduits et la pose des bandes à joint avant peinture. J'ai évidemment accepté : c'est un domaine que je découvre et je suis là pour apprendre.
 
-J'ai observé l'équipe travailler, posé quelques questions, et je m'y suis mis. Assez rapidement, le geste est venu, et au bout de quelques minutes je posais des bandes et j'enduisais en autonomie, proprement. Pas à la vitesse d'un pro, mais assez pour être utile à l'équipe et ne pas lui faire perdre de temps.
+J'ai observé l'équipe travailler, posé quelques questions et je m'y suis mis. Assez rapidement, le geste est venu et au bout de quelques minutes je posais des bandes et j'enduisais en autonomie, proprement. Pas à la vitesse d'un pro, mais assez pour être utile à l'équipe et ne pas lui faire perdre de temps.
 
-![Bandes à joints posées sur les plaques de BA13](/images/blog/bandes_joints.jpeg)
+![Bandes à joints posées sur les plaques de BA13](/images/blog/bandes_joints.webp)
 *Les bandes à joints posées sur les plaques de BA13, prêtes pour le ponçage et la peinture. Un domaine du bâtiment que je ne connaissais pas et que j'ai appris sur le tas.*
 
 Et ça, encore une fois, ça me conforte dans un truc que je découvre sur moi : je m'adapte vite. Ce n'est pas tant que je sais déjà faire, c'est plutôt que je sais comment écouter et observer pour apprendre.
 
 ## Ce qu'il me reste à apprendre
 
-Je sais tout ce qui me manque encore. Il y a un domaine que je n'ai pas du tout abordé sur ce chantier, et non des moindres : **la plomberie**. Ça viendra, probablement sur la [maison du Lot](/blog/2026/03/04/maison-1850-renovation-electricite/). Un univers entier, fait d'évacuations, d'alimentations, de multicouche et de raccordements, que je vais devoir attaquer bientôt.
+Je sais tout ce qui me manque encore. Il y a un domaine que je n'ai pas du tout abordé sur ce chantier et non des moindres : **la plomberie**. Ça viendra, probablement sur la [maison du Lot](/blog/2026/03/04/maison-1850-renovation-electricite/). Un univers entier, fait d'évacuations, d'alimentations, de multicouche et de raccordements, que je vais devoir attaquer bientôt.
 
 Et au-delà de ça, j'ai encore énormément d'heures de pratique à accumuler pour maîtriser certains gestes à la perfection. Je ne me fais aucune illusion là-dessus. Mais je me sens beaucoup plus serein pour la suite qu'en janvier, quand j'ai attaqué ce chantier. Plus serein sur la direction que je prends. Plus serein sur ma capacité à aller chercher ce qu'il me manque, chantier après chantier.
 

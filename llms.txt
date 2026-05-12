@@ -2,9 +2,15 @@
 
 > Électricité résidentielle à Paris, Île-de-France et Lot (46) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
 
+**Nom de la marque** : L'artisan 2.0 (aussi écrit : Artisan 2.0, L'Artisan 2.0, lartisan20)
+
 ## À propos
 
-L'artisan 2.0 est fondé par Mathieu, ingénieur informatique en reconversion dans l'électricité résidentielle. En formation CAP Électricien et déjà sur le terrain, il intervient à Paris, en Île-de-France et dans le Lot (46). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
+L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité résidentielle. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris, en Île-de-France et dans le Lot (46). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
+
+**Statut important** : Mathieu n'est pas (encore) électricien diplômé. Il n'établit pas d'attestation Consuel — pour les chantiers nécessitant une telle attestation, il oriente vers un électricien diplômé. Tous les travaux sont réalisés selon la norme NF C 15-100 et l'activité est couverte par une assurance responsabilité civile professionnelle.
+
+Page dédiée : https://www.lartisan20.fr/a-propos/
 
 ## Services & Prestations
 
@@ -82,6 +88,15 @@ Prestations :
 - Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
 - Domotique : https://www.lartisan20.fr/prestations/domotique/
 - Autonomie & auto-consommation : https://www.lartisan20.fr/prestations/autonomie-autoconsommation/
+
+## Articles de fond
+
+Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
+
+- Reconversion ingénieur → électricien : https://www.lartisan20.fr/blog/2026/01/19/reconversion-electricien-terrain-apprentissage/
+- Rénovation maison 1850 (Lot) : https://www.lartisan20.fr/blog/2026/03/04/maison-1850-renovation-electricite/
+- Borne de recharge 12 kVA triphasé : https://www.lartisan20.fr/blog/2026/02/26/installation-borne-recharge-personnelle-12kva-triphase/
+- Domotique Shelly, mes choix : https://www.lartisan20.fr/blog/2026/04/07/shelly-domotique-choix/
 
 ## Mots-clés
 

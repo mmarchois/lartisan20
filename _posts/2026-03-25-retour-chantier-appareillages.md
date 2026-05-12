@@ -13,11 +13,11 @@ image: /images/blog/boite_deriv.jpg
 
 🛠️ **De retour sur le chantier. Ça m'avait manqué.**
 
-Cette semaine j'ai retrouvé le chantier de Paris 18e, et ça fait du bien. C'est ma première semaine terrain depuis que j'ai réorganisé mon temps en 80/20 — 80% métier de développeur, 20% chantier. En poussant la porte lundi matin, j'ai tout de suite senti que le terrain m'avait manqué.
+Cette semaine j'ai retrouvé le chantier de Paris 18e et ça fait du bien. C'est ma première semaine terrain depuis que j'ai réorganisé mon temps en 80/20 — 80% métier de développeur, 20% chantier. En poussant la porte lundi matin, j'ai tout de suite senti que le terrain m'avait manqué.
 
-Au programme de la semaine : les appareillages. Prises, interrupteurs, va-et-vient, commandes de volets roulants, radiateurs, et un bon paquet de boîtes de dérivation.
+Au programme de la semaine : les appareillages. Prises, interrupteurs, va-et-vient, commandes de volets roulants, radiateurs et un bon paquet de boîtes de dérivation.
 
-C'est un moment particulier dans la vie d'un chantier. On passe de murs pleins de gaines et de câbles à quelque chose qui ressemble enfin à un vrai logement. Tu poses une prise, tu recules d'un pas, et tu te dis "ok, ça prend forme".
+C'est un moment particulier dans la vie d'un chantier. On passe de murs pleins de gaines et de câbles à quelque chose qui ressemble enfin à un vrai logement. Tu poses une prise, tu recules d'un pas et tu te dis "ok, ça prend forme".
 
 Honnêtement, c'est un des moments les plus satisfaisants. Après les semaines de passage de câbles, de saignées, de gaines tirées dans tous les sens, là tu commences à voir le résultat. Le chantier prend vie. Et pour le client aussi, c'est le moment où il commence à se projeter — à voir son futur logement, pas juste un chantier.
 
@@ -49,7 +49,7 @@ C'est un point névralgique. Tout passe par là.
 
 Sans un repérage rigoureux, le raccordement devient une devinette. Quel câble alimente quoi ? Quel fil va où ? Quelle est l'arrivée, quel est le départ ?
 
-Et ce n'est pas seulement un problème au moment du raccordement. Le jour où il y a un dépannage ou un problème sur le réseau — et ce jour arrivera forcément — une boîte de dérivation non repérée, c'est un enfer. Tu ouvres la boîte, tu vois des câbles partout, et tu n'as aucune idée de ce qui fait quoi. Résultat : tu perds un temps fou à tout re-tester, circuit par circuit.
+Et ce n'est pas seulement un problème au moment du raccordement. Le jour où il y a un dépannage ou un problème sur le réseau — et ce jour arrivera forcément — une boîte de dérivation non repérée, c'est un enfer. Tu ouvres la boîte, tu vois des câbles partout et tu n'as aucune idée de ce qui fait quoi. Résultat : tu perds un temps fou à tout re-tester, circuit par circuit.
 
 ### Ma règle : repérer plus que nécessaire
 
@@ -61,26 +61,26 @@ C'est ce qui te permet d'être serein au moment de tout raccorder. Et c'est ce q
 
 Un bon repérage, c'est une marque de professionnalisme. C'est un investissement de quelques minutes qui épargne des heures de galère.
 
-![Boîte de dérivation avec repérage](/images/blog/boite_deriv.jpg)
+![Boîte de dérivation avec repérage](/images/blog/boite_deriv.webp)
 *Boîte de dérivation avec chaque circuit repéré — arrivées et départs identifiés pour un raccordement serein*
 
 ## Un cas concret : la boîte double prise qui fait office de dérivation
 
-Sur ce chantier, certaines boîtes d'appareillage servent aussi de point de dérivation. C'est le cas de cette double prise : en plus d'alimenter les deux prises, elle redistribue le circuit vers d'autres appareillages. Ça veut dire plus de fils dans la boîte, plus de raccordements, et donc encore plus de rigueur dans le repérage.
+Sur ce chantier, certaines boîtes d'appareillage servent aussi de point de dérivation. C'est le cas de cette double prise : en plus d'alimenter les deux prises, elle redistribue le circuit vers d'autres appareillages. Ça veut dire plus de fils dans la boîte, plus de raccordements et donc encore plus de rigueur dans le repérage.
 
-![Boîte double prise faisant office de dérivation](/images/blog/prise_double.jpg)
+![Boîte double prise faisant office de dérivation](/images/blog/prise_double.webp)
 *Double prise qui fait aussi office de boîte de dérivation — plusieurs circuits transitent par le même point*
 
 ## De la dérivation à la prise finie : le résultat en images
 
 Une fois le repérage fait et les raccordements effectués, on passe au câblage de l'appareillage. Chaque fil à sa place, chaque connexion bien serrée.
 
-![Double prise câblée](/images/blog/prise_double_cablee.jpg)
+![Double prise câblée](/images/blog/prise_double_cablee.webp)
 *La double prise câblée — chaque fil raccordé au bon endroit, prête pour les tests*
 
 Et une fois la plaque clipsée, le résultat final. Propre, net, fonctionnel. C'est ce moment-là qui fait plaisir — quand le mur passe de "chantier" à "fini".
 
-![Double prise finalisée](/images/blog/prise_double_terminee.jpg)
+![Double prise finalisée](/images/blog/prise_double_terminee.webp)
 *La double prise finalisée — le genre de détail qui change la perception du chantier*
 
 ## Test de continuité : vérifier sans courant
@@ -102,7 +102,7 @@ Tu parcours chaque appareillage du circuit, un par un :
 - **Un bip** → le circuit est bouclé, tout est bon. Le câblage entre le tableau et cet appareillage est correct.
 - **Pas de bip** → il y a un souci quelque part. Un fil mal serré, un raccordement oublié, un câble inversé. Et c'est maintenant qu'il faut le trouver — pas une fois les plaques posées et les murs peints.
 
-C'est méthodique, c'est rigoureux, et c'est indispensable. Un circuit non testé, c'est un circuit dont tu ne peux pas garantir le bon fonctionnement.
+C'est méthodique, c'est rigoureux et c'est indispensable. Un circuit non testé, c'est un circuit dont tu ne peux pas garantir le bon fonctionnement.
 
 ### Le petit moment de satisfaction
 

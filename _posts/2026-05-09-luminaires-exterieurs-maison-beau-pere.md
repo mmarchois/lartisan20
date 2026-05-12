@@ -21,7 +21,7 @@ Du **fil isolé au coton** d'abord. Pour ceux qui n'en ont jamais vu, c'est exac
 
 Sur la photo ci-dessous, une de ces boîtes de dérivation métal, déposée d'un des luminaires extérieurs : la rouille a tout mangé, l'étanchéité n'existe plus depuis longtemps et l'eau s'invite à l'intérieur à chaque pluie. Tu m'étonnes que plus rien ne fonctionnait.
 
-![Boîte de dérivation métal extérieure rongée par la corrosion](/images/blog/bernay/boite_derivation_metal.jpeg)
+![Boîte de dérivation métal extérieure rongée par la corrosion](/images/blog/bernay/boite_derivation_metal.webp)
 *La boîte de dérivation métal d'un des luminaires extérieurs, complètement rongée par la rouille et le temps. Quand l'étanchéité d'origine cède, l'eau s'invite et la corrosion fait le reste.*
 
 ## Composer avec l'existant : la contrainte numéro un
@@ -43,7 +43,7 @@ Et comme c'est une vieille installation, il y a en plus quelques **va-et-vient**
 C'est lent, c'est fastidieux, mais c'est le seul moyen sérieux de remettre une installation comme celle-ci en ordre. Et c'est ce que j'aime dans ce genre d'intervention : on enlève une couche, on documente ce qu'on trouve et petit à petit on redonne du sens à ce qui n'en avait plus.
 
 <figure class="figure-large">
-  <img src="/images/blog/bernay/luminaire_lartisan.jpeg" alt="Intervention sur un des luminaires extérieurs">
+  <img src="/images/blog/bernay/luminaire_lartisan.webp" alt="Intervention sur un des luminaires extérieurs">
   <figcaption><em>En intervention sur un des cinq luminaires. Sur ce type d'installation, chaque dépose se fait précautionneusement : on ne sait jamais ce qu'on va trouver derrière et il vaut mieux préserver l'existant tant qu'on peut.</em></figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Le principe est simple : on remplit la boîte de dérivation avec un gel de remp
 
 Sur les cinq points lumineux remis en service, c'est cette protection qui fait la différence entre un dépannage qui tient un hiver et une intervention qui tient sur la durée.
 
-![Boîte de dérivation extérieure remplie de gel d'étanchéité](/images/blog/bernay/boite_deriv_gel.jpeg)
+![Boîte de dérivation extérieure remplie de gel d'étanchéité](/images/blog/bernay/boite_deriv_gel.webp)
 *Une nouvelle boîte de dérivation extérieure, garnie de gel d'étanchéité. Les connexions et les Wago sont entièrement enrobés : plus d'humidité, plus d'oxygène libre autour des bornes, plus de corrosion possible.*
 
 ## Refaire les vitres cassées au plexiglas
@@ -70,10 +70,10 @@ Et c'est un atelier que j'ai pu faire avec ma femme, ma belle-sœur et beau-frè
 
 Au bout du compte, ce weekend a permis de remettre les cinq luminaires en état de marche. Le résultat est très concret : on peut désormais sortir de la maison la nuit, faire le tour du bâtiment, aller chercher quelque chose dans une dépendance, sans avoir à sortir une lampe torche et à faire attention où on met les pieds. C'est typiquement le genre d'amélioration qu'on n'imagine pas tant qu'on ne l'a pas et qu'on ne veut plus perdre dès qu'on l'a retrouvée.
 
-![Vue d'ensemble de deux luminaires extérieurs allumés](/images/blog/bernay/luminaires.jpeg)
+![Vue d'ensemble de deux luminaires extérieurs allumés](/images/blog/bernay/luminaires.webp)
 *Vue d'ensemble de deux des cinq luminaires une fois remis en service. L'éclairage extérieur, c'est un confort qu'on redécouvre vite quand il revient.*
 
-![Luminaire d'entrée remis en service](/images/blog/bernay/luminaire_entree.jpeg)
+![Luminaire d'entrée remis en service](/images/blog/bernay/luminaire_entree.webp)
 *Le luminaire d'entrée, remis en service lui aussi. C'est probablement celui qui change le plus la vie au quotidien : on n'arrive plus chez soi dans le noir.*
 
 ## Ce que je retiens de cette intervention

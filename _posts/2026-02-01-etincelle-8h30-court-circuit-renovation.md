@@ -15,7 +15,7 @@ image: /images/blog/disjoncteur-carbonise.jpg
 
 Dans [mon dernier article](/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/), je vous disais qu'on allait « repartir de zéro ». Ce que je n'avais pas vu venir — vraiment pas — c'est que l'ancienne installation partirait dans un dernier éclat… au sens propre. 🧨
 
-Je vous raconte cette matinée. Pas en mode rapport : ce que j'ai vécu, ce que j'ai ressenti, et ce que j'en retiens.
+Je vous raconte cette matinée. Pas en mode rapport : ce que j'ai vécu, ce que j'ai ressenti et ce que j'en retiens.
 
 ## Ce qu'on avait prévu ce matin-là
 
@@ -23,14 +23,14 @@ Ce jour-là, le plan était clair : **déposer les circuits un par un**, faire p
 
 Sauf qu'avec une vieille installation, rien n'est jamais simple. **Fils oxydés, dénudés, noircis par le temps** : chaque geste compte. Je ne tire pas, je ne force pas. Je repère, je coupe, je déconnecte avec précaution. C'est usant, mais c'est comme ça.
 
-![Tableau et installation avant l'incident](/images/blog/tableau-avant-incident.jpg)
+![Tableau et installation avant l'incident](/images/blog/tableau-avant-incident.webp)
 *Tableau et circuits avant le court-circuit — une installation vétuste, chaque geste compte.*
 
 C'est en manipulant un de ces disjoncteurs en fin de vie que ça arrive. En deux secondes. Pas le temps de réfléchir.
 
 ## L'étincelle et le noir
 
-**Le contact de trop.** Pas un geste brusque — juste un vieux matériel, des connexions dégradées, et un arc qui se forme.
+**Le contact de trop.** Pas un geste brusque — juste un vieux matériel, des connexions dégradées et un arc qui se forme.
 
 Énorme étincelle. Un claquement sec. Puis plus rien : **le noir complet**.
 
@@ -38,7 +38,7 @@ Je reste un instant comme ça. Court-circuit franc entre deux phases. Normalemen
 
 ## Les dégâts
 
-Le disjoncteur est **carbonisé**, marqué par l'arc. La photo en dit long. ![Disjoncteur carbonisé après le court-circuit](/images/blog/disjoncteur-carbonise2.jpg)
+Le disjoncteur est **carbonisé**, marqué par l'arc. La photo en dit long. ![Disjoncteur carbonisé après le court-circuit](/images/blog/disjoncteur-carbonise2.webp)
 *Le disjoncteur après l'arc entre deux phases — la protection n'a pas tenu.*
 
 J'essaie de réarmer le disjoncteur général. Rien.
@@ -63,7 +63,7 @@ Pendant la coupure, **aucun temps perdu**. Plus de tension au tableau = l'occasi
 
 Un chantier ne s'arrête pas parce que je suis bloqué. **Des branchements provisoires sur chaque étage** pour que plombiers, plaquistes et les autres puissent bosser : c'était ma priorité. Ne pas les faire attendre. Ne pas les laisser sans rien. Alimentation minimale, mais propre et sécurisée, le temps que le courant revienne. Quand le technicien Enedis est arrivé et que le courant est revenu, le **soulagement** était là : **personne n'avait perdu sa journée**. J'avais eu peur jusqu'au bout.
 
-![Branchements provisoires par étage](/images/blog/branchements-provisoires.jpg)
+![Branchements provisoires par étage](/images/blog/branchements-provisoires.webp)
 *Branchements provisoires sur chaque étage pour que les autres corps de métier puissent continuer à travailler.*
 
 ## 13h : le technicien Enedis et le verdict
@@ -72,7 +72,7 @@ Le technicien débarque vers **13h**. La **protection du Linky a grillé** — i
 
 En théorie, **mon disjoncteur d'abonné (le différentiel 500 mA en tête de tableau) aurait dû faire office de fusible** et sauter avant que la surintensité ne remonte jusqu'au compteur.
 
-![Disjoncteur d'abonné en tête de tableau](/images/blog/disjoncteur-abonne.jpg)
+![Disjoncteur d'abonné en tête de tableau](/images/blog/disjoncteur-abonne.webp)
 *Le disjoncteur d'abonné (différentiel 500 mA) : en théorie il protège ; usé, il ne réagit plus — la surintensité est remontée jusqu'au Linky.*
 
 S'il ne l'a pas fait, c'est qu'il était déjà **foutu, rongé par l'âge** : une coquille vide qui ne protégeait plus rien. Ce jour-là, l'installation vétuste m'a rappelé qu'elle était une **bombe à retardement**. Pas une image — une réalité.
@@ -81,7 +81,7 @@ S'il ne l'a pas fait, c'est qu'il était déjà **foutu, rongé par l'âge** : u
 
 ### Une installation vétuste, c'est dangereux. Point.
 
-Fils oxydés, dénudés, disjoncteurs et différentiels qui ne répondent plus : ce n'est pas « un peu limite », c'est **dangereux**. Ce matin-là me l'a rappelé dans la gorge. La **rénovation n'est pas un luxe**, c'est une nécessité. Pour les personnes, les biens, et le réseau.
+Fils oxydés, dénudés, disjoncteurs et différentiels qui ne répondent plus : ce n'est pas « un peu limite », c'est **dangereux**. Ce matin-là me l'a rappelé dans la gorge. La **rénovation n'est pas un luxe**, c'est une nécessité. Pour les personnes, les biens et le réseau.
 
 ### Garder la tête froide, c'est le vrai métier
 

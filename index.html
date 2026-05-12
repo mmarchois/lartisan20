@@ -2,7 +2,7 @@
 layout: default
 title: Électricien Paris, Île-de-France & Lot (46) | Installation, Rénovation, Dépannage - L'artisan 2.0
 description: "Électricien résidentiel à Paris, Île-de-France et dans le Lot (46). Installation, rénovation, mise aux normes, dépannage, domotique, VMC, chauffage. En formation CAP Électricien, déjà sur le terrain."
-keywords: électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, électricien Cahors, électricien Gourdon, électricien Figeac, installation électrique résidentielle, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, dépannage électrique, domotique, VMC, chauffage électrique
+keywords: L'artisan 2.0, Artisan 2.0, lartisan20, électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, électricien Cahors, électricien Gourdon, électricien Figeac, installation électrique résidentielle, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, dépannage électrique, domotique, VMC, chauffage électrique
 hide_contact: true
 ---
 
@@ -13,17 +13,32 @@ hide_contact: true
     "@type": "Electrician",
     "@id": "{{ site.url }}/#organization",
     "name": "L'artisan 2.0",
+    "alternateName": ["Artisan 2.0", "L'Artisan 2.0", "Artisan 2 point 0", "lartisan20"],
     "description": "En formation CAP Électricien, déjà sur le terrain. Installation électrique résidentielle, rénovation, mise aux normes, domotique, VMC, chauffage à Paris, Île-de-France et Lot.",
     "url": "{{ site.url }}",
     "logo": "{{ site.url }}/images/og-image.png",
     "image": "{{ site.url }}/images/og-image.png",
-    "email": "contact@lartisan20.fr",
-    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.phone_e164 }}",
     "founder": {
         "@type": "Person",
         "@id": "{{ site.url }}/#founder",
-        "name": "Mathieu",
-        "jobTitle": "Électricien résidentiel"
+        "name": "Mathieu Marchois",
+        "jobTitle": "Électricien résidentiel en reconversion",
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Électricien résidentiel",
+            "qualifications": "CAP Électricien en cours de formation, plus d'un an de pratique terrain"
+        },
+        "knowsAbout": [
+            "Installation électrique NF C 15-100",
+            "Rénovation électrique",
+            "Mise aux normes",
+            "Domotique",
+            "IRVE - borne de recharge véhicule électrique",
+            "VMC"
+        ],
+        "worksFor": { "@id": "{{ site.url }}/#organization" }
     },
     "address": {
         "@type": "PostalAddress",
@@ -47,53 +62,19 @@ hide_contact: true
         }
     ],
     "areaServed": [
-        {
-            "@type": "City",
-            "name": "Paris"
-        },
-        {
-            "@type": "State",
-            "name": "Île-de-France"
-        },
-        {
-            "@type": "AdministrativeArea",
-            "name": "Lot (46)"
-        }
+        { "@type": "City", "name": "Paris" },
+        { "@type": "State", "name": "Île-de-France" },
+        { "@type": "AdministrativeArea", "name": "Lot (46)" }
     ],
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Prestations électricité résidentielle",
         "itemListElement": [
-            {
-                "@type": "OfferCatalog",
-                "name": "Installation électrique résidentielle",
-                "url": "{{ site.url }}/prestations/installation-electrique/"
-            },
-            {
-                "@type": "OfferCatalog",
-                "name": "Rénovation électrique et mise aux normes",
-                "url": "{{ site.url }}/prestations/renovation-mise-aux-normes/"
-            },
-            {
-                "@type": "OfferCatalog",
-                "name": "Dépannage électrique",
-                "url": "{{ site.url }}/prestations/depannage-electrique/"
-            },
-            {
-                "@type": "OfferCatalog",
-                "name": "Borne de recharge véhicule électrique",
-                "url": "{{ site.url }}/prestations/borne-recharge-vehicule-electrique/"
-            },
-            {
-                "@type": "OfferCatalog",
-                "name": "Domotique",
-                "url": "{{ site.url }}/prestations/domotique/"
-            },
-            {
-                "@type": "OfferCatalog",
-                "name": "Autonomie et autoconsommation",
-                "url": "{{ site.url }}/prestations/autonomie-autoconsommation/"
-            }
+            { "@type": "OfferCatalog", "name": "Installation électrique résidentielle", "url": "{{ site.url }}/prestations/installation-electrique/" },
+            { "@type": "OfferCatalog", "name": "Rénovation électrique et mise aux normes", "url": "{{ site.url }}/prestations/renovation-mise-aux-normes/" },
+            { "@type": "OfferCatalog", "name": "Dépannage électrique", "url": "{{ site.url }}/prestations/depannage-electrique/" },
+            { "@type": "OfferCatalog", "name": "Borne de recharge véhicule électrique", "url": "{{ site.url }}/prestations/borne-recharge-vehicule-electrique/" },
+            { "@type": "OfferCatalog", "name": "Domotique", "url": "{{ site.url }}/prestations/domotique/" }
         ]
     },
     "sameAs": [
@@ -112,535 +93,416 @@ hide_contact: true
     "priceRange": "$$"
 }
 </script>
-<!-- Schema.org WebSite -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "{{ site.url }}/#website",
     "name": "L'artisan 2.0",
+    "alternateName": ["Artisan 2.0", "L'Artisan 2.0", "lartisan20"],
     "url": "{{ site.url }}",
-    "publisher": {
-        "@id": "{{ site.url }}/#organization"
-    },
+    "publisher": { "@id": "{{ site.url }}/#organization" },
     "inLanguage": "fr-FR"
 }
 </script>
 
-<!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-        <!-- Schéma électrique décoratif -->
-        <svg class="hero-circuit hero-circuit--left" aria-hidden="true" viewBox="0 0 200 500" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M180 0 V80 H120 V160 H180 V240" stroke-dasharray="8 4" opacity="0.5"/>
-            <path d="M120 160 H60 V280 H120" opacity="0.3"/>
-            <circle cx="180" cy="80" r="4" fill="currentColor" opacity="0.4"/>
-            <circle cx="120" cy="160" r="4" fill="currentColor" opacity="0.4"/>
-            <circle cx="60" cy="280" r="4" fill="currentColor" opacity="0.3"/>
-            <!-- Symbole disjoncteur -->
-            <rect x="168" y="230" width="24" height="32" rx="3" stroke-width="1.2" opacity="0.35"/>
-            <line x1="180" y1="240" x2="180" y2="252" stroke-width="1.5" opacity="0.35"/>
-            <!-- Symbole prise -->
-            <circle cx="60" cy="340" r="12" stroke-width="1" opacity="0.25"/>
-            <circle cx="55" cy="336" r="2" fill="currentColor" opacity="0.2"/>
-            <circle cx="65" cy="336" r="2" fill="currentColor" opacity="0.2"/>
-            <path d="M60 280 V328" opacity="0.25"/>
-        </svg>
-        <svg class="hero-circuit hero-circuit--right" aria-hidden="true" viewBox="0 0 200 500" fill="none" stroke="currentColor" stroke-width="1">
-            <path d="M20 40 V120 H80 V200 H20 V320" stroke-dasharray="8 4" opacity="0.5"/>
-            <path d="M80 200 H140 V320 H80" opacity="0.3"/>
-            <circle cx="20" cy="120" r="4" fill="currentColor" opacity="0.4"/>
-            <circle cx="80" cy="200" r="4" fill="currentColor" opacity="0.4"/>
-            <circle cx="140" cy="320" r="4" fill="currentColor" opacity="0.3"/>
-            <!-- Symbole interrupteur -->
-            <line x1="14" y1="310" x2="26" y2="290" stroke-width="1.5" opacity="0.35"/>
-            <circle cx="20" cy="312" r="3" opacity="0.3"/>
-            <!-- Fil terre -->
-            <line x1="130" y1="380" x2="150" y2="380" stroke-width="1.2" opacity="0.2"/>
-            <line x1="133" y1="386" x2="147" y2="386" stroke-width="1.2" opacity="0.2"/>
-            <line x1="136" y1="392" x2="144" y2="392" stroke-width="1.2" opacity="0.2"/>
-            <path d="M140 320 V380" opacity="0.25"/>
-        </svg>
+<div class="home">
 
-        <div class="hero-inner">
-            <p class="hero-baseline">Électricien · {{ site.zone }}</p>
+    <!-- 01 — HERO -->
+    <section class="home-hero" aria-labelledby="hero-title">
+        <div class="home-hero__inner">
+            <p class="home-hero__eyebrow"><span class="home-hero__eyebrow-prefix">L'artisan 2.0 — </span>Électricité Résidentielle <span class="home-hero__eyebrow-sep"> - </span>Île-de-France · Lot (46)</p>
 
-            <h1 id="hero-title">
-                Le savoir-faire de l'<span class="hero-highlight">artisan</span>,<br>
-                l'exigence de l'<span class="hero-highlight">ingénieur</span>.
+            <h1 id="hero-title" class="home-hero__title">
+                Le savoir-faire de l'<span class="em">artisan</span>,<br>
+                l'exigence de l'<span class="em">ingénieur</span>.
             </h1>
 
-            <p class="hero-description">
-                Installation, rénovation, dépannage, domotique — je prends votre projet en charge de A à Z.
+            <hr class="home-hero__rule" aria-hidden="true">
+
+            <p class="home-hero__tagline">
+                Installation, rénovation, dépannage, domotique. <strong>Un seul interlocuteur</strong>, du diagnostic à la mise en service.
             </p>
 
-            <div class="hero-cta">
-                <a href="{{ site.baseurl }}/contact/" class="btn-primary">Échanger sur votre projet</a>
-                <a href="#services" class="btn-secondary">Voir mes prestations</a>
+            <div class="home-hero__cta-row">
+                <a href="{{ site.baseurl }}/contact/" class="home-btn home-btn--primary">
+                    Parler à Mathieu
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="tel:{{ site.phone }}" class="home-hero__phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    06 49 92 78 41
+                </a>
             </div>
 
-            <div class="hero-trust-bar" aria-label="Éléments de confiance">
-                <span class="hero-trust-item hero-trust-item--rating">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    {{ site.google_rating }} sur Google
-                </span>
-                <span class="hero-trust-sep" aria-hidden="true"></span>
-                <span class="hero-trust-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    Réponse sous 24h
-                </span>
-                <span class="hero-trust-sep" aria-hidden="true"></span>
-                <a href="tel:{{ site.phone }}" class="hero-trust-item hero-trust-item--phone">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="home-hero__trust" aria-label="Éléments de confiance">
+                <span class="home-hero__trust-item"><span class="star">★</span> {{ site.google_rating }} Google · {{ site.google_review_count }} avis</span>
+                <span class="home-hero__trust-sep" aria-hidden="true">/</span>
+                <span class="home-hero__trust-item">Réponse sous 24 h</span>
+                <span class="home-hero__trust-sep" aria-hidden="true">/</span>
+                <span class="home-hero__trust-item">Conformité NF C 15-100</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 — À PROPOS -->
+    <section id="approche" class="home-section home-section--light">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">02 / À propos</p>
+                <h2 class="home-section__title">Mathieu, ingénieur passé au terrain.</h2>
+            </header>
+
+            <div class="home-about reveal">
+                <div class="home-about__media">
+                    <img src="{{ site.baseurl }}/images/profil.webp" alt="Mathieu - L'artisan 2.0, en formation CAP Électricien" width="640" height="800" loading="lazy">
+                </div>
+                <div class="home-about__content">
+                    <p class="home-about__lede">
+                        Je viens du logiciel et j'apporte la même méthodologie au chantier : <strong>tout penser en amont, rien laisser au hasard, vérifier avant de partir</strong>. C'est ce que mon ancien métier m'a appris — et c'est ce qui me sert le plus aujourd'hui. C'est l'idée derrière <strong>Artisan 2.0</strong> : la rigueur de l'ingénieur au service de l'artisanat.
+                    </p>
+
+                    <ul class="home-about__list">
+                        <li>
+                            <span class="home-about__list-label">Parcours</span>
+                            <span>15 ans en architecture logicielle, reconverti à l'électricité résidentielle.</span>
+                        </li>
+                        <li>
+                            <span class="home-about__list-label">Formation</span>
+                            <span>CAP Électricien en cours, déjà actif sur le terrain depuis plus d'un an.</span>
+                        </li>
+                        <li>
+                            <span class="home-about__list-label">Promesse</span>
+                            <span>Finitions soignées, matériaux adaptés, dimensionnement juste — zéro gaspillage.</span>
+                        </li>
+                    </ul>
+
+                    <div class="home-about__follow">
+                        <span class="home-about__follow-label">Suivre l'aventure —</span>
+                        <a href="{{ site.linkedin }}" target="_blank" rel="noopener" class="home-about__follow-link">LinkedIn</a>
+                        <a href="{{ site.instagram }}" target="_blank" rel="noopener" class="home-about__follow-link">Instagram</a>
+                        <a href="{{ site.facebook }}" target="_blank" rel="noopener" class="home-about__follow-link">Facebook</a>
+                        <a href="{{ site.baseurl }}/blog/" class="home-about__follow-link">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 — MÉTHODE -->
+    <section class="home-section home-section--alt">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">03 / Méthode</p>
+                <h2 class="home-section__title">Du premier échange à la mise en service.</h2>
+                <p class="home-section__lead">Un process simple et transparent. Vous savez à chaque étape où on en est.</p>
+            </header>
+
+            <div class="home-method reveal">
+                <div class="home-method__step">
+                    <div class="home-method__num">1</div>
+                    <h3 class="home-method__name">Diagnostic</h3>
+                    <p class="home-method__text">Je me déplace, j'écoute votre besoin et j'analyse l'existant sur place.</p>
+                </div>
+                <div class="home-method__step">
+                    <div class="home-method__num">2</div>
+                    <h3 class="home-method__name">Étude du projet</h3>
+                    <p class="home-method__text">On échange sur les détails — matériaux, approche, planning, budget.</p>
+                </div>
+                <div class="home-method__step">
+                    <div class="home-method__num">3</div>
+                    <h3 class="home-method__name">Réalisation</h3>
+                    <p class="home-method__text">Travaux soignés, chantier laissé propre, conformité vérifiée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 — PRESTATIONS -->
+    <section id="services" class="home-section home-section--light">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">04 / Prestations</p>
+                <h2 class="home-section__title">Cinq prestations. Un seul interlocuteur.</h2>
+                <p class="home-section__lead">Du diagnostic à la mise en service, sur tout le périmètre résidentiel. Conformité <strong>NF C 15-100</strong> systématique.</p>
+            </header>
+
+            <ul class="home-services reveal">
+                <li class="home-services__item">
+                    <a href="{{ site.baseurl }}/prestations/installation-electrique/" class="home-services__link">
+                        <span class="home-services__num">01</span>
+                        <h3 class="home-services__title">Installation électrique complète</h3>
+                        <p class="home-services__desc">Une installation pensée comme un système : sécurité, confort, évolutivité — jusqu'au repérage du tableau.</p>
+                        <span class="home-services__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+                <li class="home-services__item">
+                    <a href="{{ site.baseurl }}/prestations/renovation-mise-aux-normes/" class="home-services__link">
+                        <span class="home-services__num">02</span>
+                        <h3 class="home-services__title">Rénovation &amp; mise aux normes</h3>
+                        <p class="home-services__desc">Mise aux normes sans tout casser quand ce n'est pas nécessaire. Diagnostic d'abord, refonte ciblée.</p>
+                        <span class="home-services__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+                <li class="home-services__item">
+                    <a href="{{ site.baseurl }}/prestations/depannage-electrique/" class="home-services__link">
+                        <span class="home-services__num">03</span>
+                        <h3 class="home-services__title">Dépannage électrique</h3>
+                        <p class="home-services__desc">On identifie la cause, on remet en service. Diagnostic méthodique, sans devis surprise. Réponse sous 24 h.</p>
+                        <span class="home-services__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+                <li class="home-services__item">
+                    <a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique/" class="home-services__link">
+                        <span class="home-services__num">04</span>
+                        <h3 class="home-services__title">Borne de recharge VE <span class="home-services__badge">À venir</span></h3>
+                        <p class="home-services__desc">Recharger chez soi, sans surprise sur la facture ni sur le tableau. Étude de puissance incluse. Crédit d'impôt 300 €.</p>
+                        <span class="home-services__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+                <li class="home-services__item">
+                    <a href="{{ site.baseurl }}/prestations/domotique/" class="home-services__link">
+                        <span class="home-services__num">05</span>
+                        <h3 class="home-services__title">Domotique</h3>
+                        <p class="home-services__desc">Le strict utile, sans gadget. Pilotage simple, économies d'énergie réelles, écosystème pérenne.</p>
+                        <span class="home-services__arrow" aria-hidden="true">→</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="home-services__footer reveal">
+                <p class="home-services__footer-text">Un projet spécifique ? <a href="{{ site.baseurl }}/contact/">Parlons-en</a> — je m'adapte à votre demande.</p>
+                <div class="home-services__footer-cta">
+                    <a href="{{ site.baseurl }}/realisations/" class="home-btn home-btn--outline-dark">Voir mes réalisations <span aria-hidden="true">→</span></a>
+                    <a href="{{ site.baseurl }}/contact/" class="home-btn home-btn--dark">Me contacter <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 — ENGAGEMENTS -->
+    <section class="home-section home-section--alt">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">05 / Engagements</p>
+                <h2 class="home-section__title">Trois principes. Tenus à chaque chantier.</h2>
+            </header>
+
+            <div class="home-pillars reveal">
+                <div class="home-pillar">
+                    <p class="home-pillar__num">Engagement 01</p>
+                    <h3 class="home-pillar__title">Qualité du travail</h3>
+                    <ul class="home-pillar__list">
+                        <li>Câblage et repérage impeccables, repris par n'importe quel pro.</li>
+                        <li>Matériaux fiables, adaptés à votre usage réel.</li>
+                        <li>Travaux réalisés selon la norme NF C 15-100.</li>
+                    </ul>
+                </div>
+                <div class="home-pillar">
+                    <p class="home-pillar__num">Engagement 02</p>
+                    <h3 class="home-pillar__title">Suivi du chantier</h3>
+                    <ul class="home-pillar__list">
+                        <li>Rapport régulier avec photos avant / pendant / après.</li>
+                        <li>Joignable sur WhatsApp pour vos questions, à tout moment.</li>
+                        <li>Vous savez où on en est, sans avoir à demander.</li>
+                    </ul>
+                </div>
+                <div class="home-pillar">
+                    <p class="home-pillar__num">Engagement 03</p>
+                    <h3 class="home-pillar__title">Respect du lieu</h3>
+                    <ul class="home-pillar__list">
+                        <li>Bâches, aspirateur, ramassage — votre intérieur reste vivable.</li>
+                        <li>Chantier rangé et nettoyé à la fin de chaque journée.</li>
+                        <li>Livraison clé en main, rien à reprendre après mon départ.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin:4rem auto 0;max-width:60ch;text-align:center;">
+                <hr style="border:0;border-top:1px solid var(--hr-accent);width:60px;margin:0 auto 2rem;" aria-hidden="true">
+                <p style="font-family:var(--hr-display);font-style:italic;font-size:1.6rem;line-height:1.3;color:var(--hr-text-on-light);margin:0;">
+                    Chez la plupart des gens, le tableau électrique est une zone d'ombre. Chez vous, ce sera un dossier.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06 — SUR LE TERRAIN -->
+    <section class="home-section home-section--light">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">06 / Sur le terrain</p>
+                <h2 class="home-section__title">Quelques chantiers récents.</h2>
+                <p class="home-section__lead">Cliquez sur une vignette pour voir le détail sur la page <a href="{{ site.baseurl }}/realisations/" style="color:var(--hr-text-on-light);border-bottom:1px solid var(--hr-accent);text-decoration:none;">mes réalisations</a>.</p>
+            </header>
+
+            <div class="home-gallery reveal">
+                <a href="{{ site.baseurl }}/realisations/#maison-3-etages-paris" class="home-gallery__item">
+                    <div class="home-gallery__media">
+                        <img src="{{ site.baseurl }}/images/prestations/renovation/img1.webp" alt="Rénovation électrique maison 3 étages à Paris - tableau et circuits aux normes" loading="lazy" width="1134" height="2016">
+                    </div>
+                    <div class="home-gallery__caption">Paris · Rénovation complète</div>
+                    <h3 class="home-gallery__title">Maison 3 étages — mise aux normes NF C 15-100</h3>
+                </a>
+                <a href="{{ site.baseurl }}/realisations/#volet-roulant-paris" class="home-gallery__item">
+                    <div class="home-gallery__media">
+                        <img src="{{ site.baseurl }}/images/prestations/vr/img1.webp" alt="Volet roulant Paris : remplacement de l'axe, ajout moteur, circuit de motorisation et branchement" loading="lazy" width="500" height="889">
+                    </div>
+                    <div class="home-gallery__caption">Paris · Motorisation</div>
+                    <h3 class="home-gallery__title">Volet roulant — axe, moteur, circuit dédié</h3>
+                </a>
+                <a href="{{ site.baseurl }}/realisations/#ventilateurs-plafond-aubervilliers" class="home-gallery__item">
+                    <div class="home-gallery__media">
+                        <img src="{{ site.baseurl }}/images/prestations/ventilateur/ventilateur2.webp" alt="Installation ventilateurs de plafond CREATE à Aubervilliers - lumière et ventilation" loading="lazy">
+                    </div>
+                    <div class="home-gallery__caption">Aubervilliers · Confort été</div>
+                    <h3 class="home-gallery__title">3 ventilateurs CREATE avec éclairage</h3>
+                </a>
+                <a href="{{ site.baseurl }}/realisations/#luminaires-exterieurs-bernay" class="home-gallery__item">
+                    <div class="home-gallery__media">
+                        <img src="{{ site.baseurl }}/images/blog/bernay/luminaire_terrain_gris.webp" alt="Luminaires extérieurs remis en service à Seine et Marne sur installation des années 50" loading="lazy">
+                    </div>
+                    <div class="home-gallery__caption">Seine et Marne · Remise en service</div>
+                    <h3 class="home-gallery__title">5 luminaires extérieurs sur installation 1950</h3>
+                </a>
+            </div>
+
+            <p class="home-gallery__footer reveal">
+                J'écris aussi sur ma reconversion et mes chantiers — <a href="{{ site.baseurl }}/blog/">découvrez le blog</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- 07 — MARQUES -->
+    <section class="home-brands" aria-label="Marques utilisées">
+        <div class="home-brands__inner reveal">
+            <p class="home-brands__label">Je travaille avec —</p>
+            <div class="home-brands__row">
+                <a href="https://www.se.com/fr/" target="_blank" rel="noopener" title="Schneider Electric">
+                    <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy" width="156" height="32">
+                </a>
+                <a href="https://www.legrand.fr/" target="_blank" rel="noopener" title="Legrand">
+                    <img src="{{ site.baseurl }}/images/marques/legrand.webp" alt="Legrand" loading="lazy" width="100" height="29">
+                </a>
+                <a href="https://www.shelly.com/" target="_blank" rel="noopener" title="Shelly">
+                    <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy" width="88" height="24">
+                </a>
+                <a href="https://www.somfy.fr/" target="_blank" rel="noopener" title="Somfy">
+                    <img src="{{ site.baseurl }}/images/marques/somfy.svg" alt="Somfy" loading="lazy" width="100" height="25">
+                </a>
+                <a href="https://www.ecojoko.com/" target="_blank" rel="noopener" title="Ecojoko">
+                    <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy" width="90" height="17">
+                </a>
+                <a href="https://www.hager.com/fr/" target="_blank" rel="noopener" title="Hager">
+                    <img src="{{ site.baseurl }}/images/marques/hager.png" alt="Hager" loading="lazy" width="80" height="27">
+                </a>
+                <a href="https://www.sauter.com/fr/" target="_blank" rel="noopener" title="Sauter">
+                    <img src="{{ site.baseurl }}/images/marques/sauter.svg" alt="Sauter" loading="lazy" width="90" height="28">
+                </a>
+                <a href="https://www.wallbox.com/fr_fr/" target="_blank" rel="noopener" title="Wallbox">
+                    <img src="{{ site.baseurl }}/images/marques/wallbox.webp" alt="Wallbox" loading="lazy" width="110" height="28">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 — LUMO -->
+    <section id="lumo" class="home-lumo" aria-labelledby="lumo-title">
+        <div class="home-lumo__inner">
+            <p class="home-lumo__bridge reveal">
+                Ingénieur de formation, artisan sur le terrain — je code aussi les outils que j'aurais aimé avoir.
+            </p>
+            <div class="reveal">
+                <p class="home-lumo__num">08 / Lumo — produit</p>
+                <h2 id="lumo-title" class="home-lumo__title">Vous câblez,<br><em>Lumo</em> fait le reste.</h2>
+                <p class="home-lumo__lead">Gagnez du temps sur chaque chantier. Zéro doute sur la conformité NF C 15-100. Répartition, sélectivité, équilibrage, schéma unifilaire, étiquettes — tout est généré, prêt à poser.</p>
+                <div class="home-lumo__cta-row">
+                    <a href="https://getlumo.fr" target="_blank" rel="noopener" class="home-btn home-btn--primary">Découvrir Lumo <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09 — AVIS GOOGLE -->
+    <section id="reviews" class="home-section home-section--light">
+        <div class="home-section__inner">
+            <header class="home-section__head reveal">
+                <p class="home-section__num">09 / Avis clients</p>
+                <h2 class="home-section__title">Tous les clients mettent 5★.</h2>
+                <p class="home-section__lead">Ce que retiennent les clients après intervention : professionnalisme, réactivité, travail soigné. <span style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.1em;color:var(--hr-text-on-light-muted);">— {{ site.google_review_count }} avis Google · {{ site.google_rating }}/5</span></p>
+            </header>
+
+            <div class="home-reviews-grid reveal">
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Simon B.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« Nous devions installer une lumière/ventilateur au plafond et la plateforme de suspension ne correspondait pas. Il est intervenu très rapidement et en sachant ce qu'il peut faire et en nous donnant quelques conseils en plus sur un futur chantier. Merci encore »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Etienne M.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« Superbe travail. D'abord une analyse patiente d'une installation très ancienne et dégradée. Puis la proposition de solutions bien adaptées. Enfin une mise en œuvre impeccable pour un succès complet. Le tout avec le sourire et une belle maîtrise technique. Une pleine réussite ! »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Marion D.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« J'ai fait appel à Mathieu pour installer trois ventilateurs chez moi. Les sorties au plafond n'étaient pas adaptées et le trou avait été agrandi. Il a tout de suite trouvé une solution. Tout a été fait en 2h30, proprement et sans accroc. <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer">Voir plus</a> »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Nicolas D.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« Mathieu a électrifié mon volet roulant, super pro et dans la bonne humeur, je recommande merci beaucoup ! »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Ossama B.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« Suite à un problème de disjoncteur, Mathieu est intervenu de manière très professionnelle. Rapide et efficace, c'est très rassurant d'avoir des pros de confiance aujourd'hui. »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+                <article class="home-review">
+                    <div class="home-review__header">
+                        <cite class="home-review__author">Hélène M.</cite>
+                        <div class="home-review__stars" aria-hidden="true">★★★★★</div>
+                    </div>
+                    <blockquote class="home-review__text"><p>« Merci pour votre intervention rapide et efficace ! Mes fils avaient besoin de prises USB sur les murs de leur chambre et malgré une mauvaise surprise sur la nature des cloisons, le travail a été très rapidement réalisé avec soin ! Je recommande ! »</p></blockquote>
+                    <div class="home-review__source">Source — Google</div>
+                </article>
+            </div>
+
+            <div class="home-reviews-footer reveal">
+                <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="home-btn home-btn--outline-dark">Voir tous les avis sur Google <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 — CONTACT FINAL -->
+    <section id="contact" class="home-contact">
+        <div class="home-contact__inner">
+            <p class="home-contact__eyebrow">10 / Contact</p>
+            <h2 class="home-contact__title">On regarde votre <em>projet</em> ensemble ?</h2>
+            <p class="home-contact__sub">Une question, un devis, un dépannage. Décrivez-moi le besoin — je reviens vers vous sous 24 h.</p>
+            <div class="home-contact__cta-row">
+                <a href="{{ site.baseurl }}/contact/" class="home-btn home-btn--primary">Me contacter <span aria-hidden="true">→</span></a>
+                <a href="tel:{{ site.phone }}" class="home-hero__phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     06 49 92 78 41
                 </a>
             </div>
         </div>
-        <a href="#approche" class="hero-scroll-hint" aria-label="Défiler vers le bas">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
     </section>
 
-<!-- À propos Section -->
-    <section id="approche" class="about-full-section">
-        <div class="about-intro reveal">
-            <div class="about-intro-photo-wrap">
-                <img src="{{ site.baseurl }}/images/profil.jpeg" alt="Mathieu - L'artisan 2.0, en formation CAP Électricien" class="about-intro-photo" width="320" height="320">
-            </div>
-            <div class="about-intro-content">
-                <span class="about-intro-tag">À propos</span>
-                <h2 class="about-intro-title">Mathieu</h2>
-                <p class="about-intro-headline">Ingénieur reconverti en électricien — je mêle <strong>rigueur technique</strong> et <strong>travail soigné</strong> sur chaque chantier.</p>
-                <ul class="about-highlights">
-                    <li>
-                        <span class="about-highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </span>
-                        <span>15 ans en architecture logicielle</span>
-                    </li>
-                    <li>
-                        <span class="about-highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </span>
-                        <span>CAP Électricien en cours, déjà sur le terrain</span>
-                    </li>
-                    <li>
-                        <span class="about-highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
-                        </span>
-                        <span>Finitions soignées, matériaux adaptés, zéro gaspillage</span>
-                    </li>
-                </ul>
-                <div class="about-follow reveal">
-                    <span class="about-follow-label">Suivez l'aventure</span>
-                    <div class="about-follow-links">
-                        <a href="{{ site.linkedin }}" target="_blank" rel="noopener" class="about-follow-link linkedin" aria-label="LinkedIn">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            LinkedIn
-                        </a>
-                        <a href="{{ site.instagram }}" target="_blank" rel="noopener" class="about-follow-link instagram" aria-label="Instagram">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            Instagram
-                        </a>
-                        <a href="{{ site.facebook }}" target="_blank" rel="noopener" class="about-follow-link facebook" aria-label="Facebook">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            Facebook
-                        </a>
-                        <a href="{{ site.baseurl }}/blog/" class="about-follow-link blog" aria-label="Blog">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-                            Blog
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ma méthode -->
-        <div class="about-subsection reveal">
-            <h3 class="subsection-title">Ma méthode</h3>
-            <p class="about-subsection-intro">Un process simple et transparent, du premier contact à la réception du chantier.</p>
-            <div class="steps-row">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
-                            <path d="M30 30L40 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4>Diagnostic</h4>
-                    <p>Je me déplace, j'écoute votre besoin et j'analyse l'existant sur place</p>
-                </div>
-                <div class="step-connector">
-                    <svg viewBox="0 0 60 20" fill="none">
-                        <path d="M0 10H50" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
-                        <path d="M45 5L55 10L45 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <rect x="10" y="6" width="28" height="36" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 16H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M16 24H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M16 32H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4>Étude du projet</h4>
-                    <p>On échange sur les détails — matériaux, approche, planning</p>
-                </div>
-                <div class="step-connector">
-                    <svg viewBox="0 0 60 20" fill="none">
-                        <path d="M0 10H50" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
-                        <path d="M45 5L55 10L45 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <path d="M24 6L8 12V22C8 32 14 40 24 44C34 40 40 32 40 22V12L24 6Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M17 24L22 29L31 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4>Réalisation</h4>
-                    <p>Travaux soignés, chantier laissé propre, conformité vérifiée</p>
-                </div>
-            </div>
-        </div>
-
-    <!-- Mes engagements : Qualité et éco-conception -->
-    <div class="about-subsection about-pillars reveal">
-        <h3 class="subsection-title">Mes engagements</h3>
-        <div class="pillars-grid">
-            <div class="pillar-card">
-                <div class="pillar-card-header">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <path d="M24 4L8 10v12c0 10 8 18 16 22 8-4 16-12 16-22V10L24 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M18 24l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4>Qualité du travail</h4>
-                </div>
-                <ul class="pillar-list">
-                    <li>Câblage et repérage impeccables</li>
-                    <li>Matériaux fiables, adaptés à votre usage</li>
-                    <li>Chantier rendu en ordre, prêt à vivre</li>
-                </ul>
-            </div>
-            <div class="pillar-card">
-                <div class="pillar-card-header">
-                    <div class="pillar-icon">
-                        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                            <path d="M24 44 Q 6 24 24 4 Q 42 24 24 44 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
-                            <path d="M24 42 L 24 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4>Éco-conception</h4>
-                </div>
-                <ul class="pillar-list">
-                    <li>Dimensionnement juste, zéro surdimensionnement</li>
-                    <li>Réparer plutôt que remplacer quand c'est possible</li>
-                    <li>Domotique : uniquement ce qui sert vraiment</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-        <div class="about-subsection about-gallery reveal">
-            <h3 class="subsection-title">Sur le terrain</h3>
-            <p class="about-subsection-intro">
-                Quelques-uns de mes chantiers réalisés. Cliquez pour voir le détail sur la page <a href="{{ site.baseurl }}/realisations/" class="gallery-inline-link">mes réalisations</a>.
-            </p>
-            <div class="about-gallery-grid">
-                <a href="{{ site.baseurl }}/realisations/#maison-3-etages-paris" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/prestations/renovation/img1.jpeg" alt="Rénovation électrique maison 3 étages à Paris - tableau et circuits aux normes" loading="lazy" width="1134" height="2016">
-                    <div class="gallery-item-content">
-                        <span class="gallery-item-title">Rénnovation maison 3 étages – Paris</span>
-                        <span class="gallery-item-subtitle">Rénovation complète – mise aux normes NF C 15-100</span>
-                    </div>
-                </a>
-                <a href="{{ site.baseurl }}/realisations/#volet-roulant-paris" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/prestations/vr/img1.jpeg" alt="Volet roulant Paris : remplacement de l'axe, ajout moteur, circuit de motorisation et branchement" loading="lazy" width="500" height="889">
-                    <div class="gallery-item-content">
-                        <span class="gallery-item-title">Volet roulant – Paris</span>
-                        <span class="gallery-item-subtitle">Remplacement axe, installation moteur, circuit de motorisation</span>
-                    </div>
-                </a>
-                <a href="{{ site.baseurl }}/realisations/#ventilateurs-plafond-aubervilliers" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/prestations/ventilateur/ventilateur2.jpeg" alt="Installation ventilateurs de plafond CREATE à Aubervilliers - lumière et ventilation" loading="lazy">
-                    <div class="gallery-item-content">
-                        <span class="gallery-item-title">Ventilateurs plafond CREATE – Aubervilliers</span>
-                        <span class="gallery-item-subtitle">3 ventilateurs avec éclairage, confort été</span>
-                    </div>
-                </a>
-                <a href="{{ site.baseurl }}/realisations/#luminaires-exterieurs-bernay" class="about-gallery-item">
-                    <img src="{{ site.baseurl }}/images/blog/bernay/luminaire_terrain_gris.jpeg" alt="Luminaires extérieurs remis en service à Bernay sur installation des années 50" loading="lazy">
-                    <div class="gallery-item-content">
-                        <span class="gallery-item-title">Luminaires extérieurs – Bernay</span>
-                        <span class="gallery-item-subtitle">5 luminaires remis en service sur une installation des années 50</span>
-                    </div>
-                </a>
-            </div>
-            <p class="about-blog-cta">
-                J'écris aussi sur ma reconversion et mes chantiers — <a href="{{ site.baseurl }}/blog/">découvrez le blog</a>.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <!-- Illustration tournevis seul -->
-        <svg class="section-illustration left" width="120" height="280" viewBox="0 0 120 280" fill="none">
-            <rect x="45" y="20" width="30" height="80" rx="6" stroke="#1a1a1a" stroke-width="2"/>
-            <path d="M50 35H70" stroke="#1a1a1a" stroke-width="1.5"/>
-            <path d="M50 50H70" stroke="#1a1a1a" stroke-width="1.5"/>
-            <path d="M50 65H70" stroke="#1a1a1a" stroke-width="1.5"/>
-            <path d="M50 80H70" stroke="#1a1a1a" stroke-width="1.5"/>
-            <rect x="52" y="100" width="16" height="10" rx="2" stroke="#1a1a1a" stroke-width="2"/>
-            <rect x="56" y="110" width="8" height="130" stroke="#1a1a1a" stroke-width="2"/>
-            <path d="M54 240H66V250L60 260L54 250V240Z" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
-        </svg>
-        <!-- Illustration domotique -->
-        <svg class="section-illustration right" width="200" height="260" viewBox="0 0 200 260" fill="none">
-            <path d="M100 8C85 8 72 15 72 15" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <path d="M100 8C115 8 128 15 128 15" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <path d="M100 18C90 18 82 23 82 23" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <path d="M100 18C110 18 118 23 118 23" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" fill="none"/>
-            <circle cx="100" cy="30" r="4" fill="#1a1a1a"/>
-            <path d="M100 45L25 100H175L100 45Z" stroke="#1a1a1a" stroke-width="2" stroke-linejoin="round"/>
-            <rect x="35" y="100" width="130" height="115" stroke="#1a1a1a" stroke-width="2"/>
-            <rect x="50" y="115" width="35" height="35" stroke="#1a1a1a" stroke-width="2"/>
-            <path d="M67.5 115V150" stroke="#1a1a1a" stroke-width="1.5"/>
-            <path d="M50 132.5H85" stroke="#1a1a1a" stroke-width="1.5"/>
-            <rect x="115" y="115" width="35" height="35" stroke="#1a1a1a" stroke-width="2"/>
-            <path d="M132.5 115V150" stroke="#1a1a1a" stroke-width="1.5"/>
-            <path d="M115 132.5H150" stroke="#1a1a1a" stroke-width="1.5"/>
-            <rect x="75" y="165" width="50" height="50" rx="2" stroke="#1a1a1a" stroke-width="2"/>
-            <circle cx="115" cy="192" r="4" stroke="#1a1a1a" stroke-width="2"/>
-            <path d="M15 215H185" stroke="#1a1a1a" stroke-width="2"/>
-        </svg>
-        <div class="section-header reveal">
-            <span class="section-tag">Mes services</span>
-            <h2 class="section-title">Des prestations qui ont du sens</h2>
-            <p class="section-description section-description-lead">
-                Du tableau électrique à la domotique, en passant par la rénovation, le dépannage ou la borne de recharge : <strong>un interlocuteur unique, une approche claire</strong>. Installation complète (éclairage & luminaires, chauffage, VMC, courant faible — réseau, fibre), rénovation aux normes, dépannage réactif. Échange clair, chantier propre, <strong>conformité NF C 15-100</strong>.
-            </p>
-        </div>
-
-        <div class="services-grid reveal">
-            <a href="{{ site.baseurl }}/prestations/installation-electrique/" class="service-card" data-category="Installations" aria-label="En savoir plus sur Installation électrique complète">
-                <span class="service-card-num" aria-hidden="true">01</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><rect x="16" y="20" width="32" height="36" rx="2" stroke="currentColor" stroke-width="2"/><line x1="22" y1="28" x2="42" y2="28" stroke="currentColor" stroke-width="2"/><line x1="22" y1="36" x2="42" y2="36" stroke="currentColor" stroke-width="2"/><line x1="22" y1="44" x2="42" y2="44" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="28" r="2" fill="currentColor"/><circle cx="26" cy="36" r="2" fill="currentColor"/><circle cx="26" cy="44" r="2" fill="currentColor"/><path d="M32 8L28 20H36L32 8Z" stroke="currentColor" stroke-width="2"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Installation électrique complète</h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>De A à Z : tableau, circuits, prises, éclairage & luminaires, chauffage, VMC, visiophone, motorisation, volets roulants. Courant faible (réseau, fibre) sur demande. Conforme NF C 15-100.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a href="{{ site.baseurl }}/prestations/renovation-mise-aux-normes/" class="service-card" data-category="Rénovation & Dépannage" aria-label="En savoir plus sur Rénovation et mise aux normes">
-                <span class="service-card-num" aria-hidden="true">02</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="16" width="40" height="32" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20 32L28 40L44 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 52H44" stroke="currentColor" stroke-width="2"/><path d="M26 56H38" stroke="currentColor" stroke-width="2"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Rénovation & mise aux normes</h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>Ancien tableau, câblage vétuste ? Diagnostic, mise en conformité NF C 15-100 et refonte partielle ou complète. Un logement sûr et évolutif.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a href="{{ site.baseurl }}/prestations/depannage-electrique/" class="service-card" data-category="Rénovation & Dépannage" aria-label="En savoir plus sur Dépannage électrique">
-                <span class="service-card-num" aria-hidden="true">03</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><path d="M36 8L18 32H30L24 56L46 28H32L36 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Dépannage électrique <span class="service-badge urgency">Réactif</span></h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>Intervention rapide : diagnostic méthodique, recherche de panne, remplacement si besoin. Réponse sous 24h.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique/" class="service-card" data-category="Installations" aria-label="En savoir plus sur Bornes de recharge pour véhicules électriques">
-                <span class="service-card-num" aria-hidden="true">04</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><path d="M22 44H58V40C58 38 56 36 54 36H26C24 36 22 38 22 40V44Z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M28 36L32 28H48L54 36" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="28" cy="46" r="5" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="46" r="2" fill="currentColor"/><circle cx="52" cy="46" r="5" stroke="currentColor" stroke-width="2"/><circle cx="52" cy="46" r="2" fill="currentColor"/><path d="M22 38C18 38 14 34 12 28C10 22 10 16 10 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="14" r="4" stroke="currentColor" stroke-width="2"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Bornes de recharge VE <span class="service-badge coming-soon">À venir</span></h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>Bornes 7 à 22 kW : étude de puissance, raccordement dédié, pose et mise en service. Crédit d'impôt 300 €.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a href="{{ site.baseurl }}/prestations/domotique/" class="service-card" data-category="Conseil & Optimisation" aria-label="En savoir plus sur Domotique">
-                <span class="service-card-num" aria-hidden="true">05</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><path d="M32 8L6 30H14V54H50V30H58L32 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="32" cy="38" r="6" stroke="currentColor" stroke-width="2"/><path d="M32 32V28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M26.24 35L22.5 33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M37.76 35L41.5 33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M26.24 41L22.5 43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M37.76 41L41.5 43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Domotique</h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>Faites entrer votre maison dans l'ère du smart : pilotage chauffe-eau, chauffage, volets, éclairage depuis le smartphone, suivi conso. Shelly, Schneider, Legrand, Somfy, Ecojoko.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-            <a href="{{ site.baseurl }}/prestations/autonomie-autoconsommation/" class="service-card" data-category="Conseil & Optimisation" aria-label="En savoir plus sur Autonomie et auto-consommation">
-                <span class="service-card-num" aria-hidden="true">06</span>
-                <div class="service-card-header">
-                    <div class="service-card-head-row">
-                        <span class="service-icon" aria-hidden="true">
-                            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="2"/><path d="M32 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M32 48V56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 32H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M48 32H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 15L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M43 43L49 49" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 49L21 43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M43 21L49 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </span>
-                        <h3 class="service-card-title">Autonomie & auto-consommation</h3>
-                    </div>
-                </div>
-                <div class="service-content">
-                    <p>Stockez l'énergie du jour pour la soirée : batteries de stockage, raccordement panneaux, gestion jour/nuit pour maximiser l'autoconsommation.</p>
-                </div>
-                <span class="service-card-cta" aria-hidden="true"><span class="service-card-cta-text">En savoir plus</span><span class="service-card-arrow" aria-hidden="true">→</span></span>
-            </a>
-        </div>
-
-        <div class="brand-logos reveal">
-            <p class="brand-logos-label">Je travaille avec</p>
-            <div class="brand-logos-row">
-                <a href="https://www.se.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Schneider Electric">
-                    <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy" width="312" height="64">
-                </a>
-                <a href="https://www.legrand.fr/" target="_blank" rel="noopener" class="brand-logo" title="Legrand">
-                    <img src="{{ site.baseurl }}/images/marques/legrand.png" alt="Legrand" loading="lazy" width="200" height="58">
-                </a>
-                <a href="https://www.shelly.com/" target="_blank" rel="noopener" class="brand-logo" title="Shelly">
-                    <img src="{{ site.baseurl }}/images/marques/shelly.svg" alt="Shelly" loading="lazy" width="88" height="24">
-                </a>
-                <a href="https://www.somfy.fr/" target="_blank" rel="noopener" class="brand-logo" title="Somfy">
-                    <img src="{{ site.baseurl }}/images/marques/somfy.svg" alt="Somfy" loading="lazy" width="127" height="32">
-                </a>
-                <a href="https://www.ecojoko.com/" target="_blank" rel="noopener" class="brand-logo" title="Ecojoko">
-                    <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy" width="100" height="19">
-                </a>
-                <a href="https://www.hager.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Hager">
-                    <img src="{{ site.baseurl }}/images/marques/hager.png" alt="Hager" loading="lazy" width="256" height="86">
-                </a>
-                <a href="https://www.sauter.com/fr/" target="_blank" rel="noopener" class="brand-logo" title="Sauter">
-                    <img src="{{ site.baseurl }}/images/marques/sauter.svg" alt="Sauter" loading="lazy" width="200" height="63">
-                </a>
-                <a href="https://www.wallbox.com/fr_fr/" target="_blank" rel="noopener" class="brand-logo" title="Wallbox">
-                    <img src="{{ site.baseurl }}/images/marques/wallbox.jpg" alt="Wallbox" loading="lazy" width="300" height="75">
-                </a>
-            </div>
-        </div>
-
-        <p class="services-adapt reveal">
-            Un projet spécifique ? <a href="{{ site.baseurl }}/contact/">Parlons-en</a> — je m'adapte à votre demande.
-        </p>
-
-        <div class="services-cta reveal">
-            <a href="{{ site.baseurl }}/realisations/" class="btn-secondary">Voir mes réalisations →</a>
-            <a href="{{ site.baseurl }}/contact/" class="btn-primary">Me contacter</a>
-        </div>
-    </section>
-
-    <!-- Lumo Section - Lancement produit -->
-    <section id="lumo" class="lumo-section" aria-labelledby="lumo-title">
-        <div class="lumo-section-bg" aria-hidden="true"></div>
-        <div class="lumo-section-inner">
-            <p class="lumo-bridge-text reveal">Ingénieur de formation, artisan sur le terrain — je code aussi les outils que j'aurais aimé avoir.</p>
-            <div class="lumo-bridge-divider" aria-hidden="true"></div>
-
-            <a href="https://getlumo.fr" target="_blank" rel="noopener" class="lumo-section-logo-link reveal" aria-label="Découvrir Lumo">
-                <img src="{{ site.baseurl }}/images/logo.svg" alt="Lumo" class="lumo-section-logo" width="300" height="80" loading="lazy">
-            </a>
-
-            <h2 id="lumo-title" class="lumo-section-title reveal">Vous câblez,<br><span class="lumo-highlight">Lumo</span> fait le reste.</h2>
-            <p class="lumo-section-lead reveal">Gagnez du temps sur chaque chantier. Zéro doute sur la conformité NFC 15-100. Répartition, sélectivité, équilibrage, schéma unifilaire, étiquettes — tout est généré, prêt à poser.</p>
-
-            <a href="https://getlumo.fr" target="_blank" rel="noopener" class="lumo-section-cta-btn reveal">Découvrir Lumo →</a>
-            <span class="lumo-section-badge reveal">Bientôt disponible</span>
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews-section">
-        <div class="reviews-inner">
-            <div class="section-header reveal">
-                <span class="section-tag">Avis clients</span>
-                <h2 class="section-title">Ce qu'ils disent sur <span class="google-logo-colors" aria-hidden="true"><span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span> — {{ site.google_rating }} ★ ({{ site.google_review_count }} avis)</h2>
-                <p class="section-description">
-                    Professionnalisme, réactivité et travail soigné — ce que retiennent les clients après intervention.
-                </p>
-            </div>
-            <div class="reviews-grid reveal">
-                <article class="review-card">
-                    <div class="review-header">
-                        <cite class="review-author">Marion D.</cite>
-                        <div class="review-stars" aria-hidden="true"><span class="star">★★★★★</span></div>
-                    </div>
-                    <blockquote class="review-text"><p>J’ai fait appel à L’Artisan 2.0 pour installer trois ventilateurs chez moi. La principale difficulté concernait les sorties au plafond : elles n’étaient pas adaptées et le trou avait été agrandi lors d’une ancienne installation. Mathieu a tout de suite trouvé une solution. L’intervention a été particulièrement rapide : tout a été fait en 2h30, proprement et sans accroc.&nbsp;<a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="review-read-more">Voir plus</a></p></blockquote>
-                    <div class="review-meta"><span class="review-source review-source-google" aria-label="Google"><span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span></div>
-                </article>
-                <article class="review-card">
-                    <div class="review-header">
-                        <cite class="review-author">Nicolas D.</cite>
-                        <div class="review-stars" aria-hidden="true"><span class="star">★★★★★</span></div>
-                    </div>
-                    <blockquote class="review-text"><p>Mathieu a électrifié mon volet roulant, super pro et dans la bonne humeur, je recommande merci beaucoup!</p></blockquote>
-                    <div class="review-meta"><span class="review-source review-source-google" aria-label="Google"><span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span></div>
-                </article>
-                <article class="review-card">
-                    <div class="review-header">
-                        <cite class="review-author">Ossama B.</cite>
-                        <div class="review-stars" aria-hidden="true"><span class="star">★★★★★</span></div>
-                    </div>
-                    <blockquote class="review-text"><p>Suite à un problème de disjoncteur, Mathieu est intervenu de manière très professionnelle. Rapide et efficace, c’est très rassurant d’avoir des pros de confiance aujourd’hui.</p></blockquote>
-                    <div class="review-meta"><span class="review-source review-source-google" aria-label="Google"><span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span></div>
-                </article>
-                <article class="review-card">
-                    <div class="review-header">
-                        <cite class="review-author">Hélène M.</cite>
-                        <div class="review-stars" aria-hidden="true"><span class="star">★★★★★</span></div>
-                    </div>
-                    <blockquote class="review-text"><p>Merci pour votre intervention rapide et efficace! Mes fils avaient besoin de prises USB sur les murs de leur chambre et malgré une mauvaise surprise sur la nature des cloisons, le travail a été très rapidement réalisé avec soin!! Je recommande!</p></blockquote>
-                    <div class="review-meta"><span class="review-source review-source-google" aria-label="Google"><span class="g">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span></span></div>
-                </article>
-            </div>
-            <div class="reviews-cta reveal">
-                <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                    Voir tous les avis sur Google →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section - Renvoi vers page dédiée -->
-    <section id="contact" class="contact-teaser">
-        <div class="contact-teaser-content reveal">
-            <span class="section-tag">Contact</span>
-            <h2 class="section-title">Prêt à passer à l'action ?</h2>
-            <p class="contact-intro">
-                Une question, un projet ? Parlons-en — réponse sous 24h.
-            </p>
-            <a href="{{ site.baseurl }}/contact/" class="btn-primary btn-primary-large">Me contacter →</a>
-        </div>
-    </section>
+</div>

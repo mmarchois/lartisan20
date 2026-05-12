@@ -14,9 +14,7 @@ og_description: "Les coulisses de ma reconversion : formation CAP Électricien, 
     "name": "Blog - L'artisan 2.0",
     "description": "Les coulisses de ma reconversion : formation CAP Électricien, chantiers terrain, apprentissages et quotidien.",
     "url": "{{ site.url }}/blog/",
-    "publisher": {
-        "@id": "{{ site.url }}/#organization"
-    },
+    "publisher": { "@id": "{{ site.url }}/#organization" },
     "inLanguage": "fr-FR"
 }
 </script>
@@ -25,93 +23,90 @@ og_description: "Les coulisses de ma reconversion : formation CAP Électricien, 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Accueil",
-            "item": "{{ site.url }}/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "{{ site.url }}/blog/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" }
     ]
 }
 </script>
 
-<section class="blog-hero">
-    <div class="blog-header reveal">
-        <span class="section-tag">Blog</span>
-        <h1>Ma reconversion dans l'électricité</h1>
-        <p class="blog-intro">
-            Les coulisses de ma reconversion : formation CAP Électricien, chantiers terrain,
-            apprentissages et quotidien. D'ingénieur à artisan, suivez l'aventure au jour le jour.
-        </p>
-        <a href="{{ site.baseurl }}/feed.xml" class="rss-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.742-7.098-15.772-15.839-15.82zm0-8.18v4.819c11.104.062 20.088 9.044 20.149 20.138h4.851c-.067-13.768-11.186-24.889-25-24.957z"/>
-            </svg>
-            S'abonner au flux RSS
-        </a>
-    </div>
-</section>
+<div class="page">
 
-<section class="blog-listing">
-    <div class="blog-container">
-        <div class="blog-articles">
-            {% for post in site.posts %}
-            <article class="blog-article reveal">
-                <a href="{{ site.baseurl }}{{ post.url }}" class="blog-article-link">
-                    {% if post.image %}
-                    <div class="blog-article-image">
-                        <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-                    </div>
-                    {% endif %}
-                    <div class="blog-article-content">
-                        <div class="blog-article-header">
-                            <div class="blog-article-meta">
-                                {% if post.chantier %}
-                                    <span class="blog-article-category">Sur le terrain</span>
-                                {% elsif post.category %}
-                                    <span class="blog-article-category">{{ post.category }}</span>
-                                {% endif %}
-                                {% assign month_num = post.date | date: "%-m" %}
-                                {% case month_num %}
-                                    {% when '1' %}{% assign month_fr = 'janvier' %}
-                                    {% when '2' %}{% assign month_fr = 'février' %}
-                                    {% when '3' %}{% assign month_fr = 'mars' %}
-                                    {% when '4' %}{% assign month_fr = 'avril' %}
-                                    {% when '5' %}{% assign month_fr = 'mai' %}
-                                    {% when '6' %}{% assign month_fr = 'juin' %}
-                                    {% when '7' %}{% assign month_fr = 'juillet' %}
-                                    {% when '8' %}{% assign month_fr = 'août' %}
-                                    {% when '9' %}{% assign month_fr = 'septembre' %}
-                                    {% when '10' %}{% assign month_fr = 'octobre' %}
-                                    {% when '11' %}{% assign month_fr = 'novembre' %}
-                                    {% when '12' %}{% assign month_fr = 'décembre' %}
-                                {% endcase %}
-                                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="blog-article-date">{{ post.date | date: "%-d" }} {{ month_fr }} {{ post.date | date: "%Y" }}</time>
-                            </div>
-                            <h2 class="blog-article-title">{{ post.title }}</h2>
-                            {% if post.excerpt %}
-                            <p class="blog-article-excerpt">{{ post.excerpt }}</p>
-                            {% endif %}
-                        </div>
-                        <div class="blog-article-footer">
-                            <span class="blog-article-cta">
-                                Lire l'article
-                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <path d="M6.5 13.5L11.5 8.5L6.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="blog-article-accent"></div>
+    <!-- HERO charbon -->
+    <section class="page-hero page-hero--dark">
+        <div class="page-hero__inner">
+            <p class="page-hero__eyebrow">Blog — D'ingénieur à artisan</p>
+            <h1 class="page-hero__title">Ma reconversion dans l'<em>électricité</em>.</h1>
+            <hr class="page-hero__rule" aria-hidden="true">
+            <p class="page-hero__lead">
+                Les coulisses de ma reconversion : <strong>formation CAP Électricien</strong>, chantiers terrain, apprentissages au quotidien.
+            </p>
+            <div class="page-hero__cta-row">
+                <a href="{{ site.baseurl }}/feed.xml" class="page-btn page-btn--ghost">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.742-7.098-15.772-15.839-15.82zm0-8.18v4.819c11.104.062 20.088 9.044 20.149 20.138h4.851c-.067-13.768-11.186-24.889-25-24.957z"/></svg>
+                    S'abonner au flux RSS
                 </a>
-            </article>
-            {% endfor %}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Liste articles : cards avec image + tag + titre + excerpt + CTA -->
+    <section class="page-section page-section--light blog-listing-wrapper">
+        <div class="page-section__inner">
+            <div class="blog-articles">
+                {% for post in site.posts %}
+                <article class="blog-article reveal">
+                    <a href="{{ site.baseurl }}{{ post.url }}" class="blog-article-link">
+                        {% if post.image %}
+                        {% assign post_image_url = post.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
+                        <div class="blog-article-image">
+                            <img src="{{ site.baseurl }}{{ post_image_url }}" alt="{{ post.title }}" loading="lazy">
+                        </div>
+                        {% endif %}
+                        <div class="blog-article-content">
+                            <div class="blog-article-header">
+                                <div class="blog-article-meta">
+                                    {% if post.chantier %}
+                                        <span class="blog-article-category">Sur le terrain</span>
+                                    {% elsif post.category %}
+                                        <span class="blog-article-category">{{ post.category }}</span>
+                                    {% endif %}
+                                    {% assign month_num = post.date | date: "%-m" %}
+                                    {% case month_num %}
+                                        {% when '1' %}{% assign month_fr = 'janvier' %}
+                                        {% when '2' %}{% assign month_fr = 'février' %}
+                                        {% when '3' %}{% assign month_fr = 'mars' %}
+                                        {% when '4' %}{% assign month_fr = 'avril' %}
+                                        {% when '5' %}{% assign month_fr = 'mai' %}
+                                        {% when '6' %}{% assign month_fr = 'juin' %}
+                                        {% when '7' %}{% assign month_fr = 'juillet' %}
+                                        {% when '8' %}{% assign month_fr = 'août' %}
+                                        {% when '9' %}{% assign month_fr = 'septembre' %}
+                                        {% when '10' %}{% assign month_fr = 'octobre' %}
+                                        {% when '11' %}{% assign month_fr = 'novembre' %}
+                                        {% when '12' %}{% assign month_fr = 'décembre' %}
+                                    {% endcase %}
+                                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="blog-article-date">{{ post.date | date: "%-d" }} {{ month_fr }} {{ post.date | date: "%Y" }}</time>
+                                </div>
+                                <h2 class="blog-article-title">{{ post.title }}</h2>
+                                {% if post.excerpt %}
+                                <p class="blog-article-excerpt">{{ post.excerpt }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="blog-article-footer">
+                                <span class="blog-article-cta">
+                                    Lire l'article
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M6.5 13.5L11.5 8.5L6.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="blog-article-accent"></div>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+</div>

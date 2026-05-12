@@ -12,7 +12,7 @@ image: /images/blog/shelly.png
 
 Ça fait plusieurs mois que je me renseigne sur le sujet. Et honnêtement, au départ je pensais que la domotique c'était surtout pour allumer ses lumières avec la voix. Ça ne m'intéressait pas vraiment.
 
-Ce qui m'a fait changer d'avis, c'est en creusant la question sous un autre angle. Pas celui du confort ou du gadget, mais celui de la souveraineté, de l'écologie, et de la liberté technique. Et une fois que j'ai commencé à regarder par là, le choix s'est imposé assez rapidement.
+Ce qui m'a fait changer d'avis, c'est en creusant la question sous un autre angle. Pas celui du confort ou du gadget, mais celui de la souveraineté, de l'écologie et de la liberté technique. Et une fois que j'ai commencé à regarder par là, le choix s'est imposé assez rapidement.
 
 ## Pourquoi la domotique m'intéresse maintenant
 
@@ -69,7 +69,7 @@ C'est une liberté qu'aucune solution propriétaire ne vous offre.
 
 ### Zéro abonnement
 
-Il n'y a pas d'abonnement mensuel pour utiliser Shelly en local. Vous achetez le module, une vingtaine d'euros en moyenne, et c'est tout. Pas de frais cachés, pas de service qui peut vous être coupé.
+Il n'y a pas d'abonnement mensuel pour utiliser Shelly en local. Vous achetez le module, une vingtaine d'euros en moyenne et c'est tout. Pas de frais cachés, pas de service qui peut vous être coupé.
 
 ## Home Assistant : le cerveau qui centralise tout
 
@@ -79,7 +79,7 @@ Home Assistant est un logiciel open source de domotique qui tourne sur un petit 
 
 Et tout ça tourne **localement**, chez vous, sans passer par aucun cloud.
 
-L'intégration Shelly dans Home Assistant est officielle, locale, et se configure en quelques minutes. Les modules sont détectés automatiquement sur le réseau. Vous n'avez pas besoin de bidouiller.
+L'intégration Shelly dans Home Assistant est officielle, locale et se configure en quelques minutes. Les modules sont détectés automatiquement sur le réseau. Vous n'avez pas besoin de bidouiller.
 
 Concrètement, depuis une seule interface, vous pouvez :
 
@@ -91,9 +91,9 @@ Concrètement, depuis une seule interface, vous pouvez :
 
 Home Assistant est soutenu par une communauté de plusieurs centaines de milliers d'utilisateurs dans le monde. Le code est ouvert. Il ne dépend d'aucune entreprise privée. Si demain la société qui le développe disparaît (ce qui est très peu probable) le projet continuera à vivre.
 
-## La question écologique, et je vais être honnête
+## La question écologique et je vais être honnête
 
-C'est peut-être la dimension la plus importante pour moi, et celle sur laquelle je veux être le plus lucide.
+C'est peut-être la dimension la plus importante pour moi et celle sur laquelle je veux être le plus lucide.
 
 La domotique peut vite devenir du **tout-connecté inutile**. Des dizaines de modules qui consomment en permanence, des capteurs partout, des automatisations qui ne servent à rien en pratique. Ce n'est pas ce que je veux construire.
 
@@ -130,12 +130,12 @@ C'est ce que j'appellerai une domotique sobre. Et c'est celle que je veux pratiq
 
 Si vous voulez creuser le sujet, voici quelques ressources utiles :
 
-- [Documentation officielle Shelly](https://www.shelly.com), et notamment leur API locale
+- [Documentation officielle Shelly](https://www.shelly.com) et notamment leur API locale
 - [Home Assistant](https://www.home-assistant.io) : la doc est excellente, la communauté encore plus
 - [MQTT Explorer](https://mqtt-explorer.com) : pour visualiser ce qui transite sur votre réseau domotique
 
-Je documenterai tout le projet ici au fur et à mesure : les schémas, les configurations, les choix techniques, et les galères aussi. C'est ça l'idée de L'artisan 2.0 : partager le chantier en temps réel, pas seulement le résultat final.
+Je documenterai tout le projet ici au fur et à mesure : les schémas, les configurations, les choix techniques et les galères aussi. C'est ça l'idée de L'artisan 2.0 : partager le chantier en temps réel, pas seulement le résultat final.
 
 ---
 
-*Des questions sur Shelly, Home Assistant, ou la domotique en général ? Les commentaires sont là pour ça. Et si ce sujet vous parle, retrouvez la version condensée sur [LinkedIn](https://www.linkedin.com/company/l-artisan-2-0), et n'hésitez pas à partager si ça peut intéresser votre réseau.*
+*Des questions sur Shelly, Home Assistant, ou la domotique en général ? Les commentaires sont là pour ça. Et si ce sujet vous parle, retrouvez la version condensée sur [LinkedIn](https://www.linkedin.com/company/l-artisan-2-0) et n'hésitez pas à partager si ça peut intéresser votre réseau.*

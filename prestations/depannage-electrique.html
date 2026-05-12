@@ -10,230 +10,161 @@ service_type: Dépannage électrique
 hide_contact: true
 ---
 
-<section class="prestation-hero">
-    <div class="prestation-header reveal">
-        <a href="{{ site.baseurl }}/#services" class="back-link">← Retour aux services</a>
-        <span class="section-tag">Dépannage</span>
-        <h1>Dépannage Électrique</h1>
-        <p class="prestation-intro">
-            Panne, disjoncteur qui saute, prise en panne ? <strong>Dépannage réactif et efficace</strong> : diagnostic précis et intervention soignée — pas de bricolage, une vraie résolution du problème pour retrouver la sérénité.
-        </p>
-    </div>
-</section>
+<div class="page">
 
-<section class="prestation-content">
-    <div class="prestation-details reveal">
-        <div class="prestation-text">
-            <h2>Intervention rapide et diagnostic précis</h2>
-            <p>
-                Coupure de courant, disjoncteur qui saute, prise qui ne fonctionne plus...
-                Les pannes électriques peuvent être frustrantes et parfois dangereuses.
-                Mon approche méthodique me permet d'identifier rapidement l'origine du problème
-                et de le résoudre efficacement.
+    <!-- HERO -->
+    <section class="page-hero page-hero--dark">
+        <div class="page-hero__inner">
+            <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/#services" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Prestations</a> &nbsp; · &nbsp; 02 / Dépannage</p>
+
+            <h1 class="page-hero__title">Identifier la cause. Remettre en <em>service</em>.</h1>
+
+            <hr class="page-hero__rule" aria-hidden="true">
+
+            <p class="page-hero__lead">
+                Panne, disjoncteur qui saute, prise hors service ? <strong>Diagnostic méthodique</strong>, pas de bricolage — une vraie résolution.
             </p>
-            <p>
-                Fort de mon expérience en ingénierie, j'aborde chaque panne comme un problème à résoudre
-                de manière structurée : observation, hypothèses, tests, solution. Cette méthode permet
-                de gagner du temps et d'éviter les interventions à répétition.
+
+            <div class="page-hero__cta-row">
+                <a href="tel:{{ site.phone | remove: ' ' }}" class="page-btn page-btn--primary">Appeler {{ site.phone }} <span aria-hidden="true">→</span></a>
+                <a href="{{ site.baseurl }}/contact/" class="page-btn page-btn--ghost">Décrire la panne par mail <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 — Approche -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">02 / Approche</p>
+                <h2 class="page-section__title">Une panne, c'est un problème à résoudre.</h2>
+            </header>
+
+            <div class="reveal page-prose">
+                <p>Coupure de courant, disjoncteur qui saute, prise qui ne fonctionne plus… Les pannes électriques peuvent être frustrantes et parfois dangereuses. <strong>Approche méthodique : observation, hypothèses, tests, solution.</strong> Cette méthode permet de gagner du temps et d'éviter les interventions à répétition.</p>
+                <p>Je privilégie la <strong>réparation</strong> lorsque c'est possible, pour prolonger la vie de votre installation et limiter le gaspillage. Quand le remplacement est nécessaire, je vous l'explique avant — pas après.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 — Pannes courantes -->
+    <section class="page-section page-section--alt">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">03 / Pannes courantes</p>
+                <h2 class="page-section__title">Cinq symptômes, cinq causes typiques.</h2>
+            </header>
+
+            <ul class="page-list reveal">
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">A</span><h3 class="page-list__title">Disjoncteur qui saute</h3><p class="page-list__desc">Surcharge, appareil défectueux ou défaut d'isolement.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">B</span><h3 class="page-list__title">Prise ou circuit sans courant</h3><p class="page-list__desc">Connexion défaillante, fil coupé ou disjoncteur déclenché.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">C</span><h3 class="page-list__title">Éclairage qui clignote</h3><p class="page-list__desc">Mauvais contact, incompatibilité variateur ou problème de neutre.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">D</span><h3 class="page-list__title">Odeur de brûlé ou étincelles</h3><p class="page-list__desc">Échauffement anormal — coupez immédiatement le disjoncteur et appelez. Urgence.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">E</span><h3 class="page-list__title">Tableau qui grésille</h3><p class="page-list__desc">Connexions desserrées ou corrodées.</p><span></span></div></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 04 — Mes prestations -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">04 / Mes interventions</p>
+                <h2 class="page-section__title">Ce que je fais sur place.</h2>
+            </header>
+
+            <ul class="page-list reveal">
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">01</span><h3 class="page-list__title">Recherche de panne</h3><p class="page-list__desc">Diagnostic méthodique avec appareil de mesure pour identifier précisément l'origine du dysfonctionnement.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">02</span><h3 class="page-list__title">Remplacement de composants</h3><p class="page-list__desc">Disjoncteurs, interrupteurs différentiels, prises, interrupteurs défectueux.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">03</span><h3 class="page-list__title">Remise en service</h3><p class="page-list__desc">Réparation, tests complets et vérification du bon fonctionnement avant de partir.</p><span></span></div></li>
+                <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">04</span><h3 class="page-list__title">Conseils de prévention</h3><p class="page-list__desc">Recommandations pour éviter les pannes futures et améliorer votre installation.</p><span></span></div></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 05 — Processus -->
+    <section class="page-section page-section--alt">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">05 / Processus</p>
+                <h2 class="page-section__title">Quatre étapes. Pas plus.</h2>
+            </header>
+
+            <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--hr-border-on-light);">
+                <div style="padding:2rem 1.5rem 0 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">01</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Prise de contact</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">Vous me décrivez le problème par téléphone ou email. J'évalue l'urgence et propose un créneau.</p></div>
+                <div style="padding:2rem 1.5rem 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">02</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Diagnostic sur place</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">J'analyse la situation, effectue des mesures, identifie l'origine exacte du problème.</p></div>
+                <div style="padding:2rem 1.5rem 0;border-right:1px solid var(--hr-border-on-light);"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">03</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Explication &amp; réparation</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">Je vous explique le problème et la solution avant toute intervention.</p></div>
+                <div style="padding:2rem 0 0 1.5rem;"><div style="font-family:var(--hr-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-0.04em;margin-bottom:1rem;">04</div><h3 style="font-family:var(--hr-display);font-size:1.2rem;font-weight:600;margin:0 0 0.5rem;letter-spacing:-0.02em;">Tests &amp; conseils</h3><p style="color:var(--hr-text-on-light-muted);font-size:0.95rem;line-height:1.5;margin:0;">Vérification du bon fonctionnement et conseils pour éviter que ça ne se reproduise.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06 — Pourquoi -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">06 / Pourquoi me confier le dépannage</p>
+                <h2 class="page-section__title">Trois engagements.</h2>
+            </header>
+
+            <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Engagement 01</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Réactivité</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Intervention rapide selon vos disponibilités. Réponse sous 24 h, plus vite en urgence.</p>
+                </div>
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Engagement 02</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Diagnostic précis</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Approche méthodique d'ingénieur : on trouve la vraie cause, pas un symptôme.</p>
+                </div>
+                <div style="border:1px solid var(--hr-border-on-light);padding:2rem;background:var(--hr-bg-light);">
+                    <p style="font-family:var(--hr-mono);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 1rem;">Engagement 03</p>
+                    <h3 style="font-family:var(--hr-display);font-size:1.5rem;font-weight:600;margin:0 0 1rem;letter-spacing:-0.025em;line-height:1.1;">Transparence</h3>
+                    <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Échange clair avant intervention, pas de surprise sur la facture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog teaser -->
+    <section class="page-section page-section--alt" style="padding-top:2rem;padding-bottom:2rem;">
+        <div class="page-section__inner reveal" style="border-top:1px solid var(--hr-border-on-light);border-bottom:1px solid var(--hr-border-on-light);padding:2rem 0;">
+            <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;">
+                <span>Sur le blog</span>
+                <span style="color:var(--hr-accent);">—</span>
+                <a href="{{ site.baseurl }}/blog/2026/02/01/etincelle-8h30-court-circuit-renovation/" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-accent);font-family:var(--hr-display);font-size:1rem;font-weight:500;text-transform:none;letter-spacing:0;">8h30 du matin : l'étincelle qui change tout <span aria-hidden="true">→</span></a>
             </p>
-            <p>
-                Je privilégie la réparation lorsque c'est possible, pour prolonger la vie des équipements et limiter le gaspillage.
-            </p>
         </div>
-        <div class="prestation-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <path d="m21 15-5-5L5 21"/>
-            </svg>
-            <p><strong>Photos à venir</strong>Chantiers en cours de documentation</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="prestation-callout reveal">
-        <h3>Pannes les plus courantes</h3>
-        <ul>
-            <li><strong>Disjoncteur qui saute</strong><span>Surcharge, appareil défectueux ou défaut d'isolement.</span></li>
-            <li><strong>Prise ou circuit sans courant</strong><span>Connexion défaillante, fil coupé ou disjoncteur déclenché.</span></li>
-            <li><strong>Éclairage qui clignote</strong><span>Mauvais contact, incompatibilité variateur ou problème de neutre.</span></li>
-            <li><strong>Odeur de brûlé ou étincelles</strong><span>Échauffement anormal, intervention urgente nécessaire.</span></li>
-            <li><strong>Tableau qui grésille</strong><span>Connexions desserrées ou corrodées.</span></li>
-        </ul>
-    </div>
+    <!-- 07 — FAQ -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">07 / Questions fréquentes</p>
+                <h2 class="page-section__title">Avant de m'appeler.</h2>
+            </header>
 
-    <div class="prestation-services reveal">
-        <h3>Mes prestations incluent :</h3>
-        <ul class="prestation-list">
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Recherche de panne</strong>
-                <span>Diagnostic méthodique avec appareil de mesure pour identifier précisément l'origine du dysfonctionnement.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Remplacement de composants</strong>
-                <span>Disjoncteurs, interrupteurs différentiels, prises, interrupteurs défectueux.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Remise en service</strong>
-                <span>Réparation, tests complets et vérification du bon fonctionnement avant de partir.</span>
-            </li>
-            <li>
-                <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Conseils de prévention</strong>
-                <span>Recommandations pour éviter les pannes futures et améliorer votre installation.</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Process -->
-    <div class="prestation-process reveal">
-        <h3>Comment se déroule une intervention ?</h3>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h4>Prise de contact</h4>
-                    <p>Vous me décrivez le problème par téléphone ou email. J'évalue l'urgence et vous propose un créneau d'intervention.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h4>Diagnostic sur place</h4>
-                    <p>J'analyse la situation, effectue des mesures et identifie l'origine exacte du problème.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h4>Explication et réparation</h4>
-                    <p>Je vous explique le problème et vous propose une solution avant toute intervention.</p>
-                </div>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h4>Tests et conseils</h4>
-                    <p>Vérification du bon fonctionnement et conseils pour éviter que le problème ne se reproduise.</p>
-                </div>
+            <div class="reveal page-faq">
+                <details class="page-faq__item"><summary class="page-faq__q">Mon disjoncteur saute régulièrement, que faire ?</summary><div class="page-faq__a"><p>Un disjoncteur qui saute peut indiquer une <strong>surcharge du circuit</strong>, un <strong>appareil défectueux</strong>, ou un <strong>défaut d'isolement</strong> dans le câblage. Essayez de débrancher les appareils un par un. Si le problème persiste, une intervention est nécessaire pour localiser le défaut.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Je sens une odeur de brûlé près d'une prise, est-ce urgent ?</summary><div class="page-faq__a"><p><strong>Oui, c'est une urgence.</strong> Coupez immédiatement le disjoncteur du circuit (ou le général en cas de doute) et ne rebranchez rien. Une odeur de brûlé indique un échauffement anormal, souvent dû à un mauvais contact ou un câble sous-dimensionné.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Intervenez-vous en urgence ?</summary><div class="page-faq__a"><p>Je m'efforce de répondre rapidement aux situations urgentes (panne totale, risque de sécurité), selon ma disponibilité. <strong>En cas de danger immédiat</strong> (odeur de brûlé, étincelles, contact direct), <strong>coupez le disjoncteur général</strong> et appelez les pompiers (18). Pour les autres cas, appelez-moi au <strong>{{ site.phone }}</strong> pour évaluer la situation et convenir d'un créneau.</p></div></details>
+                <details class="page-faq__item"><summary class="page-faq__q">Plus de courant chez moi : panne réseau ou problème interne ?</summary><div class="page-faq__a"><p>Vérifiez d'abord si vos voisins sont aussi touchés — si oui, c'est une coupure réseau (Enedis 09 72 67 50 + département). Sinon, vérifiez votre disjoncteur général : s'il refuse de rester enclenché, c'est un défaut sur votre installation.</p></div></details>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Avantages -->
-    <div class="prestation-avantages reveal">
-        <h3>Pourquoi me faire confiance ?</h3>
-        <div class="avantages-grid">
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <circle cx="24" cy="24" r="18" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M24 14V24L30 28" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <h4>Réactivité</h4>
-                <p>Intervention rapide selon vos disponibilités.</p>
-            </div>
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <circle cx="24" cy="20" r="12" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M24 8V12" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M24 28V32" stroke="#ffffff" stroke-width="2"/>
-                        <circle cx="24" cy="20" r="3" fill="#ffffff"/>
-                        <path d="M24 33V42" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M18 42H30" stroke="#ffffff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h4>Diagnostic précis</h4>
-                <p>Approche méthodique pour trouver la vraie cause.</p>
-            </div>
-            <div class="avantage-item">
-                <div class="avantage-icon">
-                    <svg viewBox="0 0 48 48" fill="none">
-                        <rect x="8" y="8" width="32" height="32" rx="4" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M16 24H32" stroke="#ffffff" stroke-width="2"/>
-                        <path d="M24 16V32" stroke="#ffffff" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h4>Transparence</h4>
-                <p>Échange clair avant intervention, pas de surprise.</p>
-            </div>
-        </div>
-    </div>
+</div>
 
-    <div class="prestation-blog-teaser reveal">
-        <p><strong>Sur le blog :</strong> Un court-circuit sur un chantier de rénovation, un disjoncteur carbonisé, Enedis en sécurité — <a href="{{ site.baseurl }}/blog/2026/02/01/etincelle-8h30-court-circuit-renovation/">8h30 du matin : l'étincelle qui change tout</a>.</p>
-    </div>
-
-    <!-- FAQ -->
-    <div class="prestation-faq reveal">
-        <h3>Questions fréquentes</h3>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary class="faq-question">Mon disjoncteur saute régulièrement, que faire ?</summary>
-                <div class="faq-answer">
-                    <p>Un disjoncteur qui saute peut indiquer une <strong>surcharge du circuit</strong> (trop d'appareils branchés), un <strong>appareil défectueux</strong>, ou un <strong>défaut d'isolement</strong> dans le câblage. Essayez de débrancher les appareils un par un pour identifier le coupable. Si le problème persiste, une intervention est nécessaire pour localiser le défaut.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Je sens une odeur de brûlé près d'une prise, est-ce urgent ?</summary>
-                <div class="faq-answer">
-                    <p><strong>Oui, c'est une urgence.</strong> Coupez immédiatement le disjoncteur du circuit concerné (ou le disjoncteur général en cas de doute) et ne rebranchez rien. Une odeur de brûlé indique un échauffement anormal, souvent dû à un mauvais contact ou un câble sous-dimensionné. Contactez-moi rapidement.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Intervenez-vous en urgence ?</summary>
-                <div class="faq-answer">
-                    <p>Je m'efforce de répondre rapidement aux situations urgentes (panne totale, risque de sécurité). Appelez-moi directement au <strong>{{ site.phone }}</strong> pour évaluer l'urgence et convenir d'un créneau au plus vite.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary class="faq-question">Plus de courant chez moi : panne réseau ou problème interne ?</summary>
-                <div class="faq-answer">
-                    <p>Vérifiez d'abord si vos voisins sont aussi touchés — si oui, c'est une coupure réseau (contactez Enedis au 09 72 67 50 + votre département). Si le problème est chez vous uniquement, vérifiez votre disjoncteur général : s'il refuse de rester enclenché, il y a un défaut sur votre installation et une intervention est nécessaire.</p>
-                </div>
-            </details>
-        </div>
-    </div>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Mon disjoncteur saute régulièrement, que faire ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Cela peut indiquer une surcharge, un appareil défectueux ou un défaut d'isolement. Débranchez les appareils un par un. Si le problème persiste, contactez un électricien." }
-            },
-            {
-                "@type": "Question",
-                "name": "Je sens une odeur de brûlé près d'une prise, est-ce urgent ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Coupez immédiatement le disjoncteur et ne rebranchez rien. Contactez un électricien rapidement." }
-            },
-            {
-                "@type": "Question",
-                "name": "Plus de courant : panne réseau ou problème interne ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Si vos voisins sont aussi touchés, contactez Enedis. Si le problème est chez vous, vérifiez le disjoncteur général. S'il ne reste pas enclenché, contactez un électricien." }
-            }
-        ]
-    }
-    </script>
-
-    <div class="prestation-brands reveal">
-        <p class="prestation-brands-label">Les marques que j'installe</p>
-        <div class="prestation-brands-row">
-            <img src="{{ site.baseurl }}/images/marques/schneider.svg" alt="Schneider Electric" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/legrand.png" alt="Legrand" loading="lazy">
-            <img src="{{ site.baseurl }}/images/marques/hager.png" alt="Hager" loading="lazy">
-        </div>
-    </div>
-
-    <div class="prestation-cta reveal">
-        <h3>Une panne électrique ?</h3>
-        <p>Contactez-moi pour une intervention rapide sur Paris, Île-de-France et Lot.</p>
-        <div class="prestation-cta-buttons">
-            <a href="tel:{{ site.phone }}" class="btn-primary">Appeler directement</a>
-            <a href="{{ site.baseurl }}/contact/" class="btn-secondary">Me contacter</a>
-        </div>
-    </div>
-</section>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        { "@type": "Question", "name": "Mon disjoncteur saute régulièrement, que faire ?", "acceptedAnswer": { "@type": "Answer", "text": "Cela peut indiquer une surcharge, un appareil défectueux ou un défaut d'isolement. Débranchez les appareils un par un. Si le problème persiste, contactez un électricien." } },
+        { "@type": "Question", "name": "Je sens une odeur de brûlé près d'une prise, est-ce urgent ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Coupez immédiatement le disjoncteur et ne rebranchez rien. Contactez un électricien rapidement." } },
+        { "@type": "Question", "name": "Plus de courant : panne réseau ou problème interne ?", "acceptedAnswer": { "@type": "Answer", "text": "Si vos voisins sont aussi touchés, contactez Enedis. Si le problème est chez vous, vérifiez le disjoncteur général. S'il ne reste pas enclenché, contactez un électricien." } }
+    ]
+}
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Reconversion électricien : Pas encore diplômé, déjà sur le terrain"
-description: "Découvrez mon parcours de reconversion vers l'électricité : formation CAP en parallèle de mon job tech, rénovation de ma maison comme terrain d'apprentissage, et premiers coups de main aux proches."
+description: "Découvrez mon parcours de reconversion vers l'électricité : formation CAP en parallèle de mon job tech, rénovation de ma maison comme terrain d'apprentissage et premiers coups de main aux proches."
 keywords: "reconversion électricien, CAP électricien, formation électricien, reconversion professionnelle, électricien en formation, rénovation électrique"
 category: "Reconversion"
 date: 2026-01-19

@@ -52,7 +52,7 @@ C'est un test isolé, sans courant, sans interaction avec le reste de l'installa
 
 ### Mise en service = test fonctionnel
 
-Ensuite vient la mise sous tension. On alimente le tableau, on enclenche les disjoncteurs, et on vérifie en conditions réelles. La lumière s'allume. Le va-et-vient bascule correctement des deux côtés. Le volet monte ET descend. Le différentiel déclenche quand il doit.
+Ensuite vient la mise sous tension. On alimente le tableau, on enclenche les disjoncteurs et on vérifie en conditions réelles. La lumière s'allume. Le va-et-vient bascule correctement des deux côtés. Le volet monte ET descend. Le différentiel déclenche quand il doit.
 
 C'est le test end-to-end. On ne teste plus une brique isolée — on teste le système complet. Et comme en dev, c'est souvent là que tu découvres les vrais problèmes. Le circuit unitaire était bon, mais l'interaction entre circuits révèle un déséquilibre de phase ou un différentiel qui saute.
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 624" width="1640" height="624">
+  <defs>
+    <radialGradient id="glow" cx="80%" cy="0%" r="65%">
+      <stop offset="0%" stop-color="#E8B547" stop-opacity="0.10"/>
+      <stop offset="55%" stop-color="#E8B547" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="topLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8B547" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#E8B547" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#E8B547" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background charbon -->
+  <rect width="1640" height="624" fill="#0f0f10"/>
+  <rect width="1640" height="624" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1640" height="1" fill="url(#topLine)"/>
+
+  <!-- Eyebrow -->
+  <text x="140" y="180"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="20" letter-spacing="4" font-weight="500"
+        fill="#9a9a98">L&#x2019;ARTISAN 2.0 &#x2014; ÉLECTRICITÉ RÉSIDENTIELLE</text>
+  <text x="140" y="210"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="20" letter-spacing="4" font-weight="500"
+        fill="#9a9a98">ÎLE-DE-FRANCE · LOT (46)</text>
+
+  <!-- Title -->
+  <text x="140" y="320"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="92" font-weight="700" letter-spacing="-3"
+        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="#E8B547">artisan</tspan>,</text>
+  <text x="140" y="420"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="92" font-weight="700" letter-spacing="-3"
+        fill="#fafaf7">l&#x2019;exigence de l&#x2019;<tspan fill="#E8B547">ingénieur</tspan>.</text>
+
+  <!-- Gold rule -->
+  <rect x="140" y="460" width="100" height="2" fill="#E8B547"/>
+
+  <!-- Tagline -->
+  <text x="140" y="510"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="26" font-weight="500" letter-spacing="-0.3"
+        fill="#9a9a98">Installation · Rénovation · Dépannage · Domotique</text>
+  <text x="140" y="544"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="26" font-weight="500" letter-spacing="-0.3"
+        fill="#9a9a98">Un seul interlocuteur, du diagnostic à la mise en service.</text>
+
+  <!-- URL bottom-right -->
+  <text x="1500" y="582" text-anchor="end"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="18" letter-spacing="3" font-weight="500"
+        fill="#E8B547">WWW.LARTISAN20.FR</text>
+</svg>

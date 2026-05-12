@@ -39,7 +39,7 @@ Avant même de fixer la borne au mur, il y a tout ce qui ne se voit pas — mais
 Installer une borne, ce n’est pas simplement “tirer un câble”.
 C’est penser l’ensemble du système.
 
-![Installation de la borne – en cours de pose](/images/prestations/borne_ve/borne5.jpeg)
+![Installation de la borne – en cours de pose](/images/prestations/borne_ve/borne5.webp)
 *Installation en cours : préparation, fixation et raccordements.*
 
 Même chez moi, je travaille comme sur un chantier client :
@@ -55,7 +55,7 @@ Observer l’architecture interne.
 Analyser les borniers.
 Comprendre la logique de raccordement triphasé.
 
-![Wallbox Pulsar Plus ouverte – câblage interne](/images/prestations/borne_ve/borne1.jpeg)
+![Wallbox Pulsar Plus ouverte – câblage interne](/images/prestations/borne_ve/borne1.webp)
 *La borne ouverte avant fermeture : alimentation triphasée et connexions internes.*
 
 J’ai choisi une **Wallbox Pulsar Plus** en version triphasée pour plusieurs raisons :
@@ -120,7 +120,7 @@ Puis ce petit “clic”.
 
 La charge démarre.
 
-![Borne installée et véhicule en charge](/images/prestations/borne_ve/borne3.jpeg)
+![Borne installée et véhicule en charge](/images/prestations/borne_ve/borne3.webp)
 *Premier lancement de charge : un moment particulier.*
 
 À cet instant précis, ce n’est pas seulement une borne qui fonctionne.

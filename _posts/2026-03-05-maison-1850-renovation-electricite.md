@@ -11,13 +11,13 @@ excerpt: "Il y a quelques mois, nous avons acheté une vieille maison de 1850 da
 image: /images/blog/vignes/maison.jpeg
 ---
 
-# 🏡 Le début d'une rénovation qui va nous accompagner pendant des années
+## 🏡 Le début d'une rénovation qui va nous accompagner pendant des années
 
 Il y a maintenant plusieurs mois, nous avons acheté une vieille maison de 1850 dans le Lot.
 
 Une maison de vacances… mais surtout **le projet d'une vie**.
 
-Une bâtisse pleine de charme, avec ses murs épais, ses volets en bois, ses planchers qui grincent. Mais derrière ce charme, la réalité est là : absolument tout est à refaire. Électricité, plomberie, isolation, chauffage… La liste est longue, et on le savait en achetant. C'est même ce qui nous a attirés.
+Une bâtisse pleine de charme, avec ses murs épais, ses volets en bois, ses planchers qui grincent. Mais derrière ce charme, la réalité est là : absolument tout est à refaire. Électricité, plomberie, isolation, chauffage… La liste est longue et on le savait en achetant. C'est même ce qui nous a attirés.
 
 Une rénovation qui va probablement nous occuper pendant **plusieurs années** — et que j'ai décidé de documenter ici, étape par étape. Pas pour donner des leçons, mais pour garder une trace. Et parce que ce genre de projet mérite d'être raconté.
 
@@ -25,7 +25,7 @@ Une rénovation qui va probablement nous occuper pendant **plusieurs années** �
 
 Avant même de parler travaux, il fallait commencer par l'essentiel : **donner à la maison sa propre alimentation électrique**.
 
-Jusqu'à récemment, la situation était assez improbable. L'ancienne propriétaire possédait une grange de l'autre côté de la rue, et la maison était simplement alimentée par un câble tiré depuis cette grange — un câble qui traversait la rue, sans aucune installation digne de ce nom côté maison. Fonctionnel au sens très strict du terme. Mais clairement pas adapté à un chantier.
+Jusqu'à récemment, la situation était assez improbable. L'ancienne propriétaire possédait une grange de l'autre côté de la rue et la maison était simplement alimentée par un câble tiré depuis cette grange — un câble qui traversait la rue, sans aucune installation digne de ce nom côté maison. Fonctionnel au sens très strict du terme. Mais clairement pas adapté à un chantier.
 
 Pour la vente, un **compteur Linky triphasé** a donc été installé afin de rendre la maison indépendante. Bonne nouvelle. Mais il restait encore tout à raccorder entre ce compteur et la maison.
 
@@ -35,10 +35,10 @@ C'est là que le vrai travail commence.
 
 Première étape : **percer un passage dans les murs en pierre** pour faire entrer les nouvelles gaines électriques et d'eau.
 
-![Trou dans le mur pour passage des gaines](/images/blog/vignes/trou.jpeg)
+![Trou dans le mur pour passage des gaines](/images/blog/vignes/trou.webp)
 *Dans une maison de 1850, ça veut dire traverser plusieurs dizaines de centimètres de pierre.*
 
-Ce n'est pas un geste anodin. Dans une maison ancienne, les murs font parfois 60 à 80 cm d'épaisseur — de la vraie pierre, compacte, posée sans mortier moderne. Il faut anticiper le tracé, choisir le bon angle pour que la gaine ressorte au bon endroit de l'autre côté, et protéger l'entrée de câble contre les infiltrations d'eau.
+Ce n'est pas un geste anodin. Dans une maison ancienne, les murs font parfois 60 à 80 cm d'épaisseur — de la vraie pierre, compacte, posée sans mortier moderne. Il faut anticiper le tracé, choisir le bon angle pour que la gaine ressorte au bon endroit de l'autre côté et protéger l'entrée de câble contre les infiltrations d'eau.
 
 On prend son temps. On mesure. On repère à la craie avant de lancer la foreuse.
 
@@ -52,7 +52,7 @@ Une fois ce passage créé, j'ai pu tirer les gaines et relier le **disjoncteur 
 
 Pour alimenter la maison pendant le chantier, j'ai installé un **tableau électrique temporaire**.
 
-![Tableau électrique provisoire](/images/blog/vignes/tableau.jpeg)
+![Tableau électrique provisoire](/images/blog/vignes/tableau.webp)
 *Un tableau provisoire, mais dimensionné sérieusement — il va alimenter la maison pendant des mois.*
 
 On a tendance à vouloir aller vite sur cette étape. C'est "juste" provisoire, on le remplacera de toute façon. Mauvaise idée. Ce tableau va alimenter la maison pendant des mois, peut-être des années. Des outils de chantier, des éclairages, un chauffe-eau, une borne de recharge. Si quelque chose flanche ici, c'est tout le reste qui s'arrête.
@@ -61,7 +61,7 @@ Alors autant le faire bien.
 
 Pour l'alimentation depuis le Linky, j'ai choisi un **câble de 16 mm²**, adapté au triphasé. Un câble sous-dimensionné sur une installation aussi sollicitée, ça chauffe. Et sur un chantier, un câble qui chauffe, c'est une source de problèmes qu'on préfère éviter.
 
-![Raccordement du Linky](/images/blog/vignes/linky.jpeg)
+![Raccordement du Linky](/images/blog/vignes/linky.webp)
 *Le raccordement du compteur Linky au tableau provisoire : concentration et précision.*
 
 Le raccordement au Linky demande aussi de la minutie. Les connexions doivent être propres, bien serrées. Une mauvaise connexion peut créer une résistance parasite qui chauffe dans le temps, sans qu'on s'en rende compte. Ce genre de détail qu'on ne voit pas, mais qui fait la différence entre une installation fiable et une installation qui pose des problèmes six mois plus tard.
@@ -80,7 +80,7 @@ La norme NF C 15-100 impose une résistance **inférieure à 100 Ω**. Plus elle
 
 Résultat au télurohmmètre : **5 Ω**.
 
-J'avoue que quand ce chiffre est apparu sur l'écran, j'ai soufflé un coup de soulagement. Vingt fois sous la limite réglementaire. Ce n'est pas quelque chose qu'on voit ou qu'on montre facilement — mais une prise de terre à 5 Ω, c'est la garantie silencieuse que les protections feront leur travail si quelque chose tourne mal. Invisible, et pourtant fondamental.
+J'avoue que quand ce chiffre est apparu sur l'écran, j'ai soufflé un coup de soulagement. Vingt fois sous la limite réglementaire. Ce n'est pas quelque chose qu'on voit ou qu'on montre facilement — mais une prise de terre à 5 Ω, c'est la garantie silencieuse que les protections feront leur travail si quelque chose tourne mal. Invisible et pourtant fondamental.
 
 ## Équilibrer les phases
 
@@ -128,6 +128,6 @@ Dans les mois et années à venir, la maison va continuer à se transformer :
 - 🏠 **Domotique**
 - 🔧 Et sûrement quelques **surprises cachées dans les murs de 1850…**
 
-Chaque étape sera documentée ici — avec les photos, les choix techniques, et les inévitables imprévus que ce genre de maison réserve toujours.
+Chaque étape sera documentée ici — avec les photos, les choix techniques et les inévitables imprévus que ce genre de maison réserve toujours.
 
 Si vous aussi vous rénovez une maison ancienne, ou que vous vous lancez dans un projet similaire, je serais curieux de connaître votre expérience. Les belles surprises comme les galères — c'est souvent les secondes qu'on retient le mieux.

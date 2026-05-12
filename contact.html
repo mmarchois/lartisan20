@@ -8,79 +8,119 @@ redirect_from:
   - /contact.html
 ---
 
-<section class="contact-v2-hero" aria-labelledby="contact-hero-title">
-    <div class="contact-v2-hero-inner reveal">
-        <span class="section-tag">Contact</span>
-        <h1 id="contact-hero-title" class="contact-v2-hero-title">Parlons de votre projet</h1>
-        <p class="contact-v2-hero-lead">Réponse sous 24h. Paris, Île-de-France & Lot.</p>
-    </div>
-</section>
+<div class="page">
 
-<section class="contact-v2" aria-label="Coordonnées et informations de contact">
-    <header class="contact-v2-header">
-        <p class="contact-v2-intro">Décrivez votre besoin en quelques mots — installation, rénovation, dépannage, VMC, chauffage ou borne de recharge. Je vous réponds pour en discuter.</p>
-        <div class="contact-v2-actions">
-            <a href="mailto:{{ site.email }}" class="contact-v2-btn contact-v2-btn-email">
-                <span class="contact-v2-btn-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </span>
-                Écrire à {{ site.email }}
-            </a>
-            <a href="tel:{{ site.phone | remove: ' ' }}" class="contact-v2-btn contact-v2-btn-phone">
-                <span class="contact-v2-btn-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </span>
-                Appeler {{ site.phone }}
-            </a>
-        </div>
-        <p class="contact-v2-actions-hint">Dépannage urgent ? Appelez directement. <span class="contact-v2-horaires">Disponible du lundi au vendredi, 8h – 17h.</span></p>
-    </header>
+    <!-- HERO charbon -->
+    <section class="page-hero page-hero--dark" aria-labelledby="contact-hero-title">
+        <div class="page-hero__inner">
+            <p class="page-hero__eyebrow">Contact — Réponse sous 24 h</p>
 
-    <section class="contact-v2-reassurance" aria-label="Réassurance">
-        <p class="contact-v2-reassurance-title">Ce qui vous attend</p>
-        <div class="contact-v2-reassurance-grid">
-            <div class="contact-v2-reassurance-item">
-                <span class="contact-v2-reassurance-icon" aria-hidden="true">✓</span>
-                <span><strong>Premier échange gratuit</strong> — pour discuter de votre besoin</span>
-            </div>
-            <div class="contact-v2-reassurance-item">
-                <span class="contact-v2-reassurance-icon" aria-hidden="true">⚡</span>
-                <span><strong>Réponse sous 24h</strong> — on en discute ensemble</span>
-            </div>
-            <div class="contact-v2-reassurance-item">
-                <span class="contact-v2-reassurance-icon" aria-hidden="true">📋</span>
-                <span><strong>Conseil personnalisé</strong> — après échange ou visite</span>
-            </div>
-            <div class="contact-v2-reassurance-item">
-                <span class="contact-v2-reassurance-icon" aria-hidden="true">🛡️</span>
-                <span><strong>Informel et sans pression</strong> — vous décidez en toute liberté</span>
+            <h1 id="contact-hero-title" class="page-hero__title">On regarde votre <em>projet</em> ensemble ?</h1>
+
+            <hr class="page-hero__rule" aria-hidden="true">
+
+            <p class="page-hero__lead">
+                Décrivez-moi votre besoin en quelques mots — installation, rénovation, dépannage, VMC, chauffage ou borne de recharge. Je reviens vers vous sous 24 h.
+            </p>
+
+            <div class="page-hero__cta-row">
+                <a href="mailto:{{ site.email }}" class="page-btn page-btn--primary">
+                    Écrire à {{ site.email }}
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="tel:{{ site.phone | remove: ' ' }}" class="page-hero__phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    {{ site.phone }}
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="contact-v2-trust" aria-label="Confiance">
-        <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="contact-v2-google-rating">
-            <span class="contact-v2-google-stars" aria-hidden="true">★★★★★</span>
-            <span>{{ site.google_rating }} sur Google ({{ site.google_review_count }} avis)</span>
-        </a>
-        <a href="{{ site.baseurl }}/realisations/" class="contact-v2-realisations-link">Voir mes réalisations →</a>
+    <!-- Ce qui vous attend -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">01 / Ce qui vous attend</p>
+                <h2 class="page-section__title">On parle d'abord. On chiffre ensuite.</h2>
+                <p class="page-section__lead">Vous me décrivez le besoin, je vous réponds sous 24 h. On en discute — et vous décidez après.</p>
+            </header>
+
+            <ul class="page-list reveal">
+                <li class="page-list__item">
+                    <div class="page-list__link" style="cursor:default;">
+                        <span class="page-list__num">01</span>
+                        <h3 class="page-list__title">On échange, simplement</h3>
+                        <p class="page-list__desc">Mail, téléphone ou WhatsApp — vous me décrivez le besoin en quelques mots, quelques photos si vous voulez.</p>
+                        <span aria-hidden="true"></span>
+                    </div>
+                </li>
+                <li class="page-list__item">
+                    <div class="page-list__link" style="cursor:default;">
+                        <span class="page-list__num">02</span>
+                        <h3 class="page-list__title">Réponse sous 24 h</h3>
+                        <p class="page-list__desc">Je reviens vers vous rapidement, du lundi au vendredi. Visite sur place si le projet l'exige.</p>
+                        <span aria-hidden="true"></span>
+                    </div>
+                </li>
+                <li class="page-list__item">
+                    <div class="page-list__link" style="cursor:default;">
+                        <span class="page-list__num">03</span>
+                        <h3 class="page-list__title">Conseil personnalisé</h3>
+                        <p class="page-list__desc">Après échange ou visite, je vous propose une approche adaptée — pas un devis générique.</p>
+                        <span aria-hidden="true"></span>
+                    </div>
+                </li>
+                <li class="page-list__item">
+                    <div class="page-list__link" style="cursor:default;">
+                        <span class="page-list__num">04</span>
+                        <h3 class="page-list__title">Informel, sans pression</h3>
+                        <p class="page-list__desc">Vous gardez la main : vous décidez en toute liberté, sans relance commerciale.</p>
+                        <span aria-hidden="true"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
 
-    <div class="contact-v2-body">
-        <p class="contact-v2-zones-intro">J'interviens à Paris, en Île-de-France et dans le Lot (46). Basé à Saint-Ouen, je me déplace rapidement en région parisienne et régulièrement dans le Lot.</p>
-        <p class="contact-v2-zones">
-            <a href="{{ site.baseurl }}/electricien-ile-de-france/">Paris & Île-de-France</a>
-            <span aria-hidden="true"> · </span>
-            <a href="{{ site.baseurl }}/electricien-lot/">Lot (46)</a>
-        </p>
-        <p class="contact-v2-social-intro">Suivez les chantiers et actualités</p>
-        <div class="contact-v2-social" aria-label="Réseaux sociaux">
-            <a href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-            <a href="{{ site.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-            <a href="{{ site.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+    <!-- Zones d'intervention -->
+    <section class="page-section page-section--alt">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">02 / Zones d'intervention</p>
+                <h2 class="page-section__title">Île-de-France &amp; Lot (46).</h2>
+                <p class="page-section__lead">Basé à Saint-Ouen, je me déplace rapidement en région parisienne et régulièrement dans le Lot.</p>
+            </header>
+
+            <div class="reveal" style="display:flex;gap:1rem;flex-wrap:wrap;">
+                <a href="{{ site.baseurl }}/electricien-ile-de-france/" class="page-btn page-btn--outline-dark">Paris &amp; Île-de-France <span aria-hidden="true">→</span></a>
+                <a href="{{ site.baseurl }}/electricien-lot/" class="page-btn page-btn--outline-dark">Lot (46) <span aria-hidden="true">→</span></a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Réassurance Google + Réalisations -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">03 / Pour aller plus loin</p>
+                <h2 class="page-section__title">{{ site.google_rating }}★ sur Google. Et déjà des chantiers livrés.</h2>
+            </header>
+
+            <div class="reveal" style="display:flex;gap:1rem;flex-wrap:wrap;">
+                <a href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="page-btn page-btn--outline-dark">Lire les avis Google <span aria-hidden="true">→</span></a>
+                <a href="{{ site.baseurl }}/realisations/" class="page-btn page-btn--dark">Voir mes réalisations <span aria-hidden="true">→</span></a>
+            </div>
+
+            <p class="reveal" style="margin-top:3rem;font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);">
+                Suivre l'aventure —
+                <a href="{{ site.linkedin }}" target="_blank" rel="noopener" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-border-on-light);margin-left:1rem;">LinkedIn</a>
+                <a href="{{ site.instagram }}" target="_blank" rel="noopener" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-border-on-light);margin-left:1rem;">Instagram</a>
+                <a href="{{ site.facebook }}" target="_blank" rel="noopener" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-border-on-light);margin-left:1rem;">Facebook</a>
+            </p>
+        </div>
+    </section>
+
+</div>
 
 <script type="application/ld+json">
 {
@@ -88,9 +128,7 @@ redirect_from:
     "@type": "ContactPage",
     "name": "Contact L'artisan 2.0",
     "url": "{{ site.url }}/contact/",
-    "mainEntity": {
-        "@id": "{{ site.url }}/#organization"
-    }
+    "mainEntity": { "@id": "{{ site.url }}/#organization" }
 }
 </script>
 <script type="application/ld+json">
@@ -98,18 +136,8 @@ redirect_from:
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Accueil",
-            "item": "{{ site.url }}/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Contact",
-            "item": "{{ site.url }}/contact/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ site.url }}/contact/" }
     ]
 }
 </script>
