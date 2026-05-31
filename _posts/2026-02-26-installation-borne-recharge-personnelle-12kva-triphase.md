@@ -3,7 +3,7 @@ layout: blog
 title: "Installer ma propre borne de recharge à la maison : bien plus qu’un simple branchement"
 description: "Retour d’expérience détaillé sur l’installation de ma borne de recharge triphasée Wallbox Pulsar Plus, chez moi dans le Lot : protections, paramétrage en 12 kVA tri et premières sensations au lancement de charge."
 keywords: "borne de recharge maison, wallbox pulsar plus, installation triphasée, 12 kVA tri, disjoncteur tétrapolaire, différentiel 30mA, IRVE, recharge véhicule électrique, électricien"
-category: "Reconversion"
+category: "Électricité"
 chantier: "Maison personnelle (Lot)"
 date: 2026-02-26
 published: true

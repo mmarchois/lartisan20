@@ -3,7 +3,7 @@ layout: blog
 title: "De retour sur le chantier : quand les appareillages donnent vie aux murs"
 description: "Première semaine terrain depuis mon passage en 80/20. Au programme : pose d'appareillages, repérage en boîtes de dérivation et tests de continuité au multimètre. Le moment où un chantier bascule."
 keywords: "appareillages électriques, boîte de dérivation, test de continuité, multimètre, repérage circuits, pose prises interrupteurs, rénovation électrique, NF C 15-100"
-category: "Reconversion"
+category: "Électricité"
 chantier: "Rénovation maison 3 étages (Paris)"
 date: 2026-03-25
 published: true

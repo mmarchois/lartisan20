@@ -3,7 +3,7 @@ layout: blog
 title: "Une semaine en Normandie, seul sur le chantier"
 description: "Retour sur ma première semaine sur un nouveau chantier en Normandie, mené seul cette fois. Au programme : monter l'ossature Optima d'Isover sur tous les murs donnant vers l'extérieur d'une vieille maison normande en brique de 120 m². 3/4 du périmètre bouclé sur la semaine, avec des allers-retours quotidiens depuis Paris."
 keywords: "isolation maison normande, ossature Optima Isover, isolant Actis Hybris, isolation par l'intérieur brique, lisses fourrures BA13, isolant mince multicouche, reconversion électricien, chantier Normandie"
-category: "Rénovation"
+category: "Isolation"
 chantier: "Maison normande"
 date: 2026-05-25
 published: true

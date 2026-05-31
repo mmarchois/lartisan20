@@ -190,4 +190,37 @@
             if (e.key === 'ArrowRight') goToNext();
         });
     }
+
+    // Blog : filtre par thème (côté client, sans pagination)
+    (function () {
+        const listing = document.querySelector('.blog-articles');
+        if (!listing) return;
+
+        const articles = Array.from(listing.querySelectorAll('.blog-article'));
+        const chips = Array.from(document.querySelectorAll('.blog-filter__chip'));
+        const noResults = document.querySelector('.blog-no-results');
+
+        function applyFilter(theme) {
+            const visible = [];
+            articles.forEach(a => {
+                const show = theme === 'tous' || a.dataset.theme === theme;
+                a.style.display = show ? '' : 'none';
+                a.classList.remove('is-last-visible');
+                if (show) visible.push(a);
+            });
+            if (visible.length) visible[visible.length - 1].classList.add('is-last-visible');
+            if (noResults) noResults.hidden = visible.length !== 0;
+        }
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+                chip.classList.add('is-active');
+                chip.setAttribute('aria-pressed', 'true');
+                applyFilter(chip.dataset.theme);
+            });
+        });
+
+        applyFilter('tous');
+    })();
 </script>

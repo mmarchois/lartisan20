@@ -6523,6 +6523,64 @@ a.service-card:hover {
     opacity: 1;
 }
 
+/* Blog : filtre par thème */
+.blog-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin: 0 0 0.5rem;
+}
+
+.blog-filter__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.blog-filter__chip:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.blog-filter__chip.is-active {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: #fff;
+}
+
+.blog-filter__count {
+    font-size: 0.6875rem;
+    opacity: 0.6;
+}
+
+.blog-filter__chip.is-active .blog-filter__count {
+    opacity: 0.85;
+}
+
+.blog-no-results {
+    text-align: center;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Dernière carte visible (après filtrage/pagination) : pas de bordure */
+.blog-article.is-last-visible {
+    border-bottom: none;
+}
+
 /* Blog Post */
 .blog-post {
     background: var(--bg-white);

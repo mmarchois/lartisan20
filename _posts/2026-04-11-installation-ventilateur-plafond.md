@@ -3,7 +3,7 @@ layout: blog
 title: "Installer des ventilateurs de plafond : une vraie alternative à la clim"
 description: "Retour sur l'installation de 3 ventilateurs de plafond CREATE avec éclairage LED à Aubervilliers. Une solution simple, économique et efficace pour réduire la chaleur de 5 à 6°C et repousser les moustiques."
 keywords: "ventilateur plafond, CREATE, installation électrique, alternative climatisation, anti-moustique, économie énergie, Aubervilliers, électricien, artisan 2.0"
-category: "Réalisations"
+category: "Électricité"
 date: 2026-04-11
 published: true
 excerpt: "Une cliente à Aubervilliers voulait réduire la chaleur chez elle sans passer par la clim. Trois ventilateurs de plafond CREATE plus tard, la température ressentie a baissé de 5 à 6°C. Et bonus : les moustiques ne sont plus un problème."

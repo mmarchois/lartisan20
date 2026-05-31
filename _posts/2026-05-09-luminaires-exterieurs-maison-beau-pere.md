@@ -3,7 +3,7 @@ layout: blog
 title: "Cinq luminaires extérieurs remis en service sur une installation des années 50"
 description: "Retour d'un weekend chez mon beau-père, dans une maison avec une installation électrique extérieure des années 50 : remise en service de cinq luminaires extérieurs hors service depuis plus de vingt ans, en composant avec des câbles en coton, des boîtes de dérivation en porcelaine et une boîte de dérivation métal complètement rongée par la corrosion."
 keywords: "rénovation électrique extérieure maison, installation années 50, luminaires extérieurs, câble coton, boîte de dérivation porcelaine, boîte de dérivation métal corrosion, gel d'étanchéité, test de continuité, va-et-vient"
-category: "Rénovation"
+category: "Électricité"
 chantier: "Maison du beau-père"
 date: 2026-05-09
 published: true
