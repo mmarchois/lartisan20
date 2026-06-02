@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 80" width="210" height="80">
+  <g transform="translate(6,10) scale(0.75)">
+    <rect x="4" y="4" width="72" height="72" rx="22" fill="#e8b547"/>
+    <path transform="translate(11.2,11.2) scale(2.4)" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" fill="#0f0f10"/>
+  </g>
+  <text x="76" y="51" font-family="'Inter Tight','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="38" fill="#0f0f10" letter-spacing="-0.5">Lumo</text>
+</svg>

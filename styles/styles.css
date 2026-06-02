@@ -2855,6 +2855,7 @@ footer {
         width: 32px;
         height: 32px;
         flex-shrink: 0;
+        filter: invert(1) brightness(1.15);
     }
 
     .mobile-menu__logo-text {
@@ -7993,6 +7994,13 @@ a.service-card:hover {
     letter-spacing: -0.005em;
 }
 
+.home-lumo__logo {
+    display: block;
+    height: 44px;
+    width: auto;
+    margin: 0 0 1.5rem;
+}
+
 .home-lumo__num {
     font-family: var(--hr-mono);
     font-size: 0.74rem;
@@ -8756,7 +8764,7 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 .footer-redesign__logo img {
     height: 40px;
     width: auto;
-    filter: invert(1) brightness(1.1);
+    filter: invert(1) brightness(1.15);
 }
 .footer-redesign__logo-text {
     font-family: var(--hr-mono);
