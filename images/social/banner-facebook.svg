@@ -27,7 +27,7 @@
   <text x="140" y="210"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="20" letter-spacing="4" font-weight="500"
-        fill="#9a9a98">ÎLE-DE-FRANCE · LOT (46)</text>
+        fill="#9a9a98">ÎLE-DE-FRANCE</text>
 
   <!-- Title -->
   <text x="140" y="320"

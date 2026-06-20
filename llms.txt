@@ -1,12 +1,12 @@
 # L'artisan 2.0
 
-> Électricité générale à Paris, Île-de-France et Lot (46) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
+> Électricité générale à Paris et en Île-de-France (petite couronne : Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
 
 **Nom de la marque** : L'artisan 2.0 (aussi écrit : Artisan 2.0, L'Artisan 2.0, lartisan20)
 
 ## À propos
 
-L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité générale. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris, en Île-de-France et dans le Lot (46). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
+L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité générale. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris et en Île-de-France, principalement sur la petite couronne (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
 
 **Statut important** : Mathieu n'est pas (encore) électricien diplômé. Il n'établit pas d'attestation Consuel — pour les chantiers nécessitant une telle attestation, il oriente vers un électricien diplômé. Tous les travaux sont réalisés selon la norme NF C 15-100 et l'activité est couverte par une assurance responsabilité civile professionnelle.
 
@@ -45,22 +45,22 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 
 ## Zones d'intervention
 
-### Paris & Île-de-France (zone principale)
-- Paris (75) : Tous les arrondissements
-- Seine-Saint-Denis (93) : Saint-Ouen, Saint-Denis, Aubervilliers, Montreuil...
-- Hauts-de-Seine (92) : Boulogne-Billancourt, Nanterre, Colombes...
-- Val-de-Marne (94) : Créteil, Vitry-sur-Seine, Champigny...
-- Val-d'Oise (95) : Argenteuil, Cergy, Sarcelles...
-- Essonne (91) : Évry, Corbeil-Essonnes, Massy...
-- Yvelines (78) : Versailles, Saint-Germain-en-Laye...
-- Seine-et-Marne (77) : Meaux, Chelles, Melun...
+Basé à Saint-Ouen-sur-Seine (93400), zone d'intervention principale : Paris et la petite couronne (92, 93, 94).
 
-### Lot (46)
-- Cahors et environs
-- Figeac et environs
-- Gourdon et environs
-- Vallée du Lot
-- Causses du Quercy
+### Paris (75)
+- Tous les arrondissements, du 1er au 20e
+
+### Hauts-de-Seine (92)
+- Boulogne-Billancourt, Nanterre, Asnières-sur-Seine, Colombes, Courbevoie, Rueil-Malmaison, Levallois-Perret, Issy-les-Moulineaux, Neuilly-sur-Seine, Clichy, Suresnes
+
+### Seine-Saint-Denis (93)
+- Saint-Ouen-sur-Seine, Montreuil, Saint-Denis, Aubervilliers, Aulnay-sous-Bois, Drancy, Noisy-le-Grand, Pantin, Bobigny, Épinay-sur-Seine
+
+### Val-de-Marne (94)
+- Créteil, Vitry-sur-Seine, Champigny-sur-Marne, Saint-Maur-des-Fossés, Maisons-Alfort, Ivry-sur-Seine, Villejuif, Vincennes, Nogent-sur-Marne
+
+### Grande couronne (sur demande)
+- Val-d'Oise (95), Yvelines (78), Essonne (91), Seine-et-Marne (77)
 
 ## Contact
 
@@ -74,12 +74,16 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 - Réalisations : https://www.lartisan20.fr/realisations/
 - Contact : https://www.lartisan20.fr/contact/
 - Électricien Paris & Île-de-France : https://www.lartisan20.fr/electricien-ile-de-france/
-- Électricien Lot : https://www.lartisan20.fr/electricien-lot/
-- Électricien Cahors : https://www.lartisan20.fr/electricien-cahors/
-- Électricien Gourdon : https://www.lartisan20.fr/electricien-gourdon/
-- Électricien Figeac : https://www.lartisan20.fr/electricien-figeac/
 - Électricien Paris : https://www.lartisan20.fr/electricien-paris/
+- Électricien Hauts-de-Seine (92) : https://www.lartisan20.fr/electricien-hauts-de-seine/
+- Électricien Seine-Saint-Denis (93) : https://www.lartisan20.fr/electricien-seine-saint-denis/
+- Électricien Val-de-Marne (94) : https://www.lartisan20.fr/electricien-val-de-marne/
 - Électricien Saint-Ouen : https://www.lartisan20.fr/electricien-saint-ouen/
+
+Pages par ville (petite couronne) :
+- 92 : https://www.lartisan20.fr/electricien-boulogne-billancourt/ · /electricien-nanterre/ · /electricien-asnieres-sur-seine/ · /electricien-colombes/ · /electricien-courbevoie/ · /electricien-rueil-malmaison/ · /electricien-levallois-perret/ · /electricien-issy-les-moulineaux/ · /electricien-neuilly-sur-seine/ · /electricien-clichy/ · /electricien-suresnes/
+- 93 : https://www.lartisan20.fr/electricien-montreuil/ · /electricien-saint-denis/ · /electricien-aubervilliers/ · /electricien-aulnay-sous-bois/ · /electricien-drancy/ · /electricien-noisy-le-grand/ · /electricien-pantin/ · /electricien-bobigny/ · /electricien-epinay-sur-seine/
+- 94 : https://www.lartisan20.fr/electricien-creteil/ · /electricien-vitry-sur-seine/ · /electricien-champigny-sur-marne/ · /electricien-saint-maur-des-fosses/ · /electricien-maisons-alfort/ · /electricien-ivry-sur-seine/ · /electricien-villejuif/ · /electricien-vincennes/ · /electricien-nogent-sur-marne/
 
 Prestations :
 - Installation électrique : https://www.lartisan20.fr/prestations/installation-electrique/
@@ -100,4 +104,4 @@ Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
 
 ## Mots-clés
 
-électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, électricien Cahors, électricien Gourdon, électricien Figeac, électricien Souillac, électricien Gramat, électricien Rocamadour, électricien Pradines, électricien Mercuès, électricien Saint-Céré, électricien Bretenoux, électricien Martel, électricien Saint-Denis, électricien Aubervilliers, électricien Pantin, électricien Clichy, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien, domotique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire
+électricien Paris, électricien Île-de-France, électricien 92, électricien 93, électricien 94, électricien Hauts-de-Seine, électricien Seine-Saint-Denis, électricien Val-de-Marne, électricien Saint-Ouen, électricien Boulogne-Billancourt, électricien Nanterre, électricien Asnières-sur-Seine, électricien Colombes, électricien Courbevoie, électricien Rueil-Malmaison, électricien Levallois-Perret, électricien Issy-les-Moulineaux, électricien Neuilly-sur-Seine, électricien Clichy, électricien Suresnes, électricien Montreuil, électricien Saint-Denis, électricien Aubervilliers, électricien Aulnay-sous-Bois, électricien Drancy, électricien Noisy-le-Grand, électricien Pantin, électricien Bobigny, électricien Épinay-sur-Seine, électricien Créteil, électricien Vitry-sur-Seine, électricien Champigny-sur-Marne, électricien Saint-Maur-des-Fossés, électricien Maisons-Alfort, électricien Ivry-sur-Seine, électricien Villejuif, électricien Vincennes, électricien Nogent-sur-Marne, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire

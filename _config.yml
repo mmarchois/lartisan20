@@ -1,6 +1,6 @@
 # L'artisan 2.0 - Configuration Jekyll
 title: L'artisan 2.0
-description: "Électricien à Paris, Île-de-France et dans le Lot (46). Installation, rénovation, mise aux normes, dépannage, domotique. En formation CAP Électricien, déjà sur le terrain."
+description: "Électricien à Paris et en Île-de-France (75, 92, 93, 94). Installation, rénovation, mise aux normes, dépannage, domotique. Basé à Saint-Ouen (93). En formation CAP Électricien, déjà sur le terrain."
 url: "https://www.lartisan20.fr"
 baseurl: ""
 
@@ -20,7 +20,7 @@ google_review_count: 8
 google_reviews_url: "https://www.google.com/search?hl=fr-FR&sca_esv=a5908d9afcf34126&cs=1&sxsrf=ANbL-n43O4vMLBnFQqsa2dhXAdcQChV5Yg:1769716181853&q=L%27artisan+2.0&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcge5qDG8bODwVg-ZPx3SBWIJFRgKjV4_w526K-GaqG1IsaQefGKaqbucrMVfpcgdJNRaEM%3D&uds=ALYpb_kKdx-oX15sdjMUmdmJV1RhZXeeRjrhL19VVvUiqjrbvhNlSHeTI1nDwH_9elGDK1p_FPsIwxIju4n3REAyDsDoRMuZpDJV-J5xUdDB0TJnLFD5Imc&sa=X&ved=2ahUKEwiOpf3CwrGSAxUeTqQEHVEoJ40Q3PALegQIFxAE&biw=1680&bih=921&dpr=1.8&aic=0"
 
 # Zone d'intervention
-zone: Paris, Île-de-France & Lot (46)
+zone: Paris & Île-de-France (75, 92, 93, 94)
 
 # Build settings
 markdown: kramdown

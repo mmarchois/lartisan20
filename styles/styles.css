@@ -6017,7 +6017,7 @@ a.service-card:hover {
     font-family: var(--font-mono);
 }
 
-/* Zones Lot */
+/* Zones */
 /* CTA Zone */
 .zone-cta-section {
     text-align: center;
@@ -7574,67 +7574,6 @@ a.service-card:hover {
     .home-about { grid-template-columns: 1fr; }
     .home-about__media img { aspect-ratio: 3 / 4; max-height: 500px; }
     .home-about__list li { grid-template-columns: 1fr; gap: 0.3rem; padding: 1rem 0; }
-}
-
-/* ---------- MÉTHODE ---------- */
-.home-method {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--hr-border-on-light);
-}
-
-.home-method__step {
-    padding: 2.5rem 2rem 0 0;
-    border-right: 1px solid var(--hr-border-on-light);
-}
-.home-method__step:last-child { border-right: 0; padding-right: 0; }
-.home-method__step:not(:first-child) { padding-left: 2rem; }
-
-.home-method__num {
-    font-family: var(--hr-display);
-    font-weight: 700;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    color: var(--hr-text-on-light);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: baseline;
-    gap: 0.1em;
-}
-
-.home-method__num::before {
-    content: "0";
-    color: var(--hr-text-on-light-muted);
-    font-weight: 500;
-}
-
-.home-method__name {
-    font-family: var(--hr-display);
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0 0 0.6rem;
-    letter-spacing: -0.02em;
-}
-
-.home-method__text {
-    color: var(--hr-text-on-light-muted);
-    font-size: 0.98rem;
-    line-height: 1.55;
-    margin: 0;
-    max-width: 32ch;
-}
-
-@media (max-width: 800px) {
-    .home-method { grid-template-columns: 1fr; }
-    .home-method__step {
-        border-right: 0;
-        border-bottom: 1px solid var(--hr-border-on-light);
-        padding: 2rem 0;
-    }
-    .home-method__step:last-child { border-bottom: 0; }
-    .home-method__step:not(:first-child) { padding-left: 0; }
 }
 
 /* ---------- PRESTATIONS — liste éditoriale ---------- */
