@@ -42,7 +42,7 @@
   <text x="200" y="166"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="13" letter-spacing="3" font-weight="500"
-        fill="#9a9a98">ÉLECTRICITÉ RÉSIDENTIELLE</text>
+        fill="#9a9a98">ÉLECTRICITÉ GÉNÉRALE</text>
 
   <!-- Title -->
   <text x="80" y="320"

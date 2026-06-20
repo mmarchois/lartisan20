@@ -1,12 +1,12 @@
 # L'artisan 2.0
 
-> Électricité résidentielle à Paris, Île-de-France et Lot (46) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
+> Électricité générale à Paris, Île-de-France et Lot (46) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
 
 **Nom de la marque** : L'artisan 2.0 (aussi écrit : Artisan 2.0, L'Artisan 2.0, lartisan20)
 
 ## À propos
 
-L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité résidentielle. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris, en Île-de-France et dans le Lot (46). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
+L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité générale. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris, en Île-de-France et dans le Lot (46). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
 
 **Statut important** : Mathieu n'est pas (encore) électricien diplômé. Il n'établit pas d'attestation Consuel — pour les chantiers nécessitant une telle attestation, il oriente vers un électricien diplômé. Tous les travaux sont réalisés selon la norme NF C 15-100 et l'activité est couverte par une assurance responsabilité civile professionnelle.
 
@@ -16,7 +16,7 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 
 ### Prestations (pages dédiées)
 
-- **Installation électrique résidentielle** — Tableau, prises, éclairage intérieur et extérieur, visiophone, motorisation portail, volets roulants, chauffage, VMC. Conforme NF C 15-100. https://www.lartisan20.fr/prestations/installation-electrique/
+- **Installation électrique** — Tableau, prises, éclairage intérieur et extérieur, visiophone, motorisation portail, volets roulants, chauffage, VMC. Conforme NF C 15-100. https://www.lartisan20.fr/prestations/installation-electrique/
 - **Rénovation & mise aux normes** — Diagnostic, conformité NF C 15-100, remplacement tableau, mise à la terre, rénovation partielle ou complète. https://www.lartisan20.fr/prestations/renovation-mise-aux-normes/
 - **Dépannage électrique** — Recherche de pannes, remplacement composants, coupures, courts-circuits, intervention rapide. https://www.lartisan20.fr/prestations/depannage-electrique/
 - **Bornes de recharge véhicules électriques (IRVE)** — Étude, installation 7kW à 22kW, raccordement, mise en service. https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
@@ -26,7 +26,7 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 ### Détail par catégorie
 
 #### Installations
-- Installation électrique résidentielle : tableau, prises, interrupteurs, éclairage intérieur et extérieur, éclairage de jardin, visiophone, motorisation portail, volets roulants, circuits spécialisés (cuisine, salle de bain), chauffage électrique, VMC, prises réseau et multimédia
+- Installation électrique : tableau, prises, interrupteurs, éclairage intérieur et extérieur, éclairage de jardin, visiophone, motorisation portail, volets roulants, circuits spécialisés (cuisine, salle de bain), chauffage électrique, VMC, prises réseau et multimédia
 - Bornes de recharge VE (IRVE) : étude de puissance, installation 7kW à 22kW, raccordement au tableau, mise en service
 
 #### Rénovation & Dépannage
@@ -82,7 +82,7 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 - Électricien Saint-Ouen : https://www.lartisan20.fr/electricien-saint-ouen/
 
 Prestations :
-- Installation électrique résidentielle : https://www.lartisan20.fr/prestations/installation-electrique/
+- Installation électrique : https://www.lartisan20.fr/prestations/installation-electrique/
 - Rénovation & mise aux normes : https://www.lartisan20.fr/prestations/renovation-mise-aux-normes/
 - Dépannage électrique : https://www.lartisan20.fr/prestations/depannage-electrique/
 - Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
@@ -100,4 +100,4 @@ Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
 
 ## Mots-clés
 
-électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, électricien Cahors, électricien Gourdon, électricien Figeac, électricien Souillac, électricien Gramat, électricien Rocamadour, électricien Pradines, électricien Mercuès, électricien Saint-Céré, électricien Bretenoux, électricien Martel, électricien Saint-Denis, électricien Aubervilliers, électricien Pantin, électricien Clichy, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien résidentiel, domotique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire
+électricien Paris, électricien Île-de-France, électricien Lot, électricien 93, électricien Saint-Ouen, électricien Cahors, électricien Gourdon, électricien Figeac, électricien Souillac, électricien Gramat, électricien Rocamadour, électricien Pradines, électricien Mercuès, électricien Saint-Céré, électricien Bretenoux, électricien Martel, électricien Saint-Denis, électricien Aubervilliers, électricien Pantin, électricien Clichy, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, électricien, domotique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire
