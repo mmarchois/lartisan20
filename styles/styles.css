@@ -8685,13 +8685,27 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 
 .footer-redesign__top {
     display: grid;
-    grid-template-columns: 4fr 8fr;
+    grid-template-columns: 3fr 9fr;
     gap: clamp(2rem, 5vw, 5rem);
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--hr-border-on-dark);
 }
 
 .footer-redesign__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; text-align: left; }
+.footer-redesign__contact { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-redesign__contact a {
+    color: var(--hr-text-on-dark);
+    text-decoration: none;
+    font-family: var(--hr-display);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.footer-redesign__contact svg { color: var(--hr-accent); flex-shrink: 0; }
+.footer-redesign__contact a:hover { color: var(--hr-accent); }
 
 .footer-redesign__logo {
     display: inline-flex;
@@ -8751,9 +8765,10 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 
 .footer-redesign__columns {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
 }
+.footer-redesign__col--prestations { grid-column: span 3; }
 .footer-redesign__col-title {
     font-family: var(--hr-mono);
     font-size: 0.74rem;
@@ -8769,6 +8784,17 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+.footer-redesign__col ul.footer-redesign__col-list--two {
+    display: block;
+    columns: 3;
+    column-gap: 2rem;
+}
+.footer-redesign__col ul.footer-redesign__col-list--two li {
+    break-inside: avoid;
+}
+.footer-redesign__col ul.footer-redesign__col-list--two li:not(:last-child) {
+    margin-bottom: 0.6rem;
 }
 .footer-redesign__col li a {
     color: var(--hr-text-on-dark);
@@ -8813,9 +8839,12 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 @media (max-width: 900px) {
     .footer-redesign__top { grid-template-columns: 1fr; }
     .footer-redesign__columns { grid-template-columns: repeat(2, 1fr); }
+    .footer-redesign__col--prestations { grid-column: 1 / -1; }
+    .footer-redesign__col ul.footer-redesign__col-list--two { columns: 2; }
 }
 @media (max-width: 500px) {
     .footer-redesign__columns { grid-template-columns: 1fr; }
+    .footer-redesign__col ul.footer-redesign__col-list--two { columns: 1; }
 }
 
 /* ---------- Liste blog (page blog/index) ---------- */

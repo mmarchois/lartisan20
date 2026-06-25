@@ -55,31 +55,6 @@
         {{ content }}
 
         {% include statut-reconversion.html %}
-
-        <!-- Maillage interne : autres prestations -->
-        <section class="page-section page-section--alt page-section--auto-prestations">
-            <div class="page-section__inner">
-                <header class="page-section__head reveal">
-                    <p class="page-section__num">→ Autres prestations</p>
-                    <h2 class="page-section__title">Mes autres services.</h2>
-                </header>
-                <ul class="page-list reveal">
-                    {% assign prestations = site.pages | where: "layout", "prestation" | sort: "service_name" %}
-                    {% for p in prestations %}
-                    {% unless p.url == page.url %}
-                    <li class="page-list__item">
-                        <a href="{{ site.baseurl }}{{ p.url }}" class="page-list__link">
-                            <span class="page-list__num"></span>
-                            <h3 class="page-list__title">{{ p.service_name }}</h3>
-                            <p class="page-list__desc"></p>
-                            <span class="page-list__arrow" aria-hidden="true">→</span>
-                        </a>
-                    </li>
-                    {% endunless %}
-                    {% endfor %}
-                </ul>
-            </div>
-        </section>
     </main>
 
     {% include contact.html %}

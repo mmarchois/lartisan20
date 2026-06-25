@@ -1,5 +1,6 @@
 ---
 layout: blog
+last_modified_at: 2026-06-26
 title: "Du numérique responsable à l'électricité éco-responsable : je ne change pas de valeurs, je change d'outils"
 description: "Je fais du numérique responsable (sobriété, éco-conception, durabilité) et je me reconvertis dans l'électricité. Pourquoi l'électricité éco-responsable que je pratique aujourd'hui (vélo cargo, dimensionnement juste, alternatives à la clim) prolonge exactement ce métier."
 keywords: "électricien éco-responsable, numérique responsable, Fairness coopérative, sobriété énergétique, électricien vélo cargo, éco-conception, durabilité, dimensionnement juste, reconversion électricien, alternative climatisation, artisan 2.0"

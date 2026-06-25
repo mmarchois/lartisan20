@@ -23,6 +23,17 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 - **Domotique** — Pilotage chauffe-eau, chauffage, volets, éclairage, VMC avec modules Shelly, Schneider Wiser, Legrand, Somfy. Suivi de consommation Ecojoko. Automatismes intelligents. https://www.lartisan20.fr/prestations/domotique/
 - **Autonomie & auto-consommation** — Batteries de stockage, raccordement panneaux solaires, gestion jour/nuit, optimisation auto-consommation. https://www.lartisan20.fr/prestations/autonomie-autoconsommation/
 
+### Prestations ciblées (interventions à l'unité)
+
+- **Pose de ventilateur de plafond** — Installation de ventilateurs de plafond (CREATE, Xiaomi et autres marques), avec ou sans éclairage : adaptation de la platine au boîtier DCL, fixation sécurisée, raccordement et mise en service. Confort d'été, jusqu'à 5-6 °C de température ressentie en moins. https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
+- **Pose de luminaires & remplacement de prises** — Lustres, suspensions, appliques, spots, ainsi que remplacement et ajout de prises, interrupteurs, va-et-vient et variateurs. Petits travaux électriques soignés, terre vérifiée. https://www.lartisan20.fr/prestations/pose-luminaires-prises/
+- **Motorisation de volet roulant** — Motoriser un volet manuel existant ou poser un volet roulant électrique neuf : moteur tubulaire filaire ou radio, point de commande, raccordement au tableau. https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
+- **Installation visiophone & interphone** — Portier vidéo, plaque de rue avec caméra, moniteur intérieur, gâche électrique, ouverture de portail à distance. Pose neuve ou remplacement. https://www.lartisan20.fr/prestations/installation-visiophone-interphone/
+- **Motorisation de portail** — Portail battant ou coulissant : alimentation 230 V dédiée, pose des moteurs, cellules de sécurité, télécommandes, ouverture depuis le visiophone. https://www.lartisan20.fr/prestations/motorisation-portail/
+- **Pose de radiateur & sèche-serviette électrique** — Radiateurs à inertie ou rayonnants et sèche-serviettes : circuit dédié, fil pilote, dimensionnement de la puissance, respect des volumes en salle de bain. https://www.lartisan20.fr/prestations/pose-radiateur-electrique/
+- **Installation & raccordement VMC** — VMC simple flux (autoréglable ou hygroréglable) ou double flux : alimentation depuis le tableau, commande, raccordement du groupe et mise en service, remplacement d'un groupe bruyant. https://www.lartisan20.fr/prestations/installation-vmc/
+- **Éclairage extérieur & de jardin** — Spots et projecteurs, bornes lumineuses, balisage, détection de présence, cellule crépusculaire, circuits extérieurs conformes (câble U1000 R2V, différentiel 30 mA, matériel IP44 à IP65). https://www.lartisan20.fr/prestations/eclairage-exterieur-jardin/
+
 ### Détail par catégorie
 
 #### Installations
@@ -71,7 +82,7 @@ Basé à Saint-Ouen-sur-Seine (93400), zone d'intervention principale : Paris et
 ## Pages du site
 
 - Accueil : https://www.lartisan20.fr/
-- Réalisations : https://www.lartisan20.fr/realisations/
+- Réalisations : https://www.lartisan20.fr/realisations/ (chantiers récents : atelier de poterie dans l'Orne, luminaires extérieurs à Bernay, ventilateurs de plafond CREATE à Aubervilliers, ventilateur de plafond CREATE taille L posé en pleine canicule à Saint-Ouen-sur-Seine, motorisation de volet roulant à Paris, rénovation complète d'une maison de 3 étages à Paris)
 - Contact : https://www.lartisan20.fr/contact/
 - Électricien Paris & Île-de-France : https://www.lartisan20.fr/electricien-ile-de-france/
 - Électricien Paris : https://www.lartisan20.fr/electricien-paris/
@@ -92,6 +103,14 @@ Prestations :
 - Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
 - Domotique : https://www.lartisan20.fr/prestations/domotique/
 - Autonomie & auto-consommation : https://www.lartisan20.fr/prestations/autonomie-autoconsommation/
+- Pose de ventilateur de plafond : https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
+- Pose de luminaires & remplacement de prises : https://www.lartisan20.fr/prestations/pose-luminaires-prises/
+- Motorisation de volet roulant : https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
+- Installation visiophone & interphone : https://www.lartisan20.fr/prestations/installation-visiophone-interphone/
+- Motorisation de portail : https://www.lartisan20.fr/prestations/motorisation-portail/
+- Pose de radiateur & sèche-serviette électrique : https://www.lartisan20.fr/prestations/pose-radiateur-electrique/
+- Installation & raccordement VMC : https://www.lartisan20.fr/prestations/installation-vmc/
+- Éclairage extérieur & de jardin : https://www.lartisan20.fr/prestations/eclairage-exterieur-jardin/
 
 ## Articles de fond
 
@@ -104,4 +123,4 @@ Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
 
 ## Mots-clés
 
-électricien Paris, électricien Île-de-France, électricien 92, électricien 93, électricien 94, électricien Hauts-de-Seine, électricien Seine-Saint-Denis, électricien Val-de-Marne, électricien Saint-Ouen, électricien Boulogne-Billancourt, électricien Nanterre, électricien Asnières-sur-Seine, électricien Colombes, électricien Courbevoie, électricien Rueil-Malmaison, électricien Levallois-Perret, électricien Issy-les-Moulineaux, électricien Neuilly-sur-Seine, électricien Clichy, électricien Suresnes, électricien Montreuil, électricien Saint-Denis, électricien Aubervilliers, électricien Aulnay-sous-Bois, électricien Drancy, électricien Noisy-le-Grand, électricien Pantin, électricien Bobigny, électricien Épinay-sur-Seine, électricien Créteil, électricien Vitry-sur-Seine, électricien Champigny-sur-Marne, électricien Saint-Maur-des-Fossés, électricien Maisons-Alfort, électricien Ivry-sur-Seine, électricien Villejuif, électricien Vincennes, électricien Nogent-sur-Marne, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire
+électricien Paris, électricien Île-de-France, électricien 92, électricien 93, électricien 94, électricien Hauts-de-Seine, électricien Seine-Saint-Denis, électricien Val-de-Marne, électricien Saint-Ouen, électricien Boulogne-Billancourt, électricien Nanterre, électricien Asnières-sur-Seine, électricien Colombes, électricien Courbevoie, électricien Rueil-Malmaison, électricien Levallois-Perret, électricien Issy-les-Moulineaux, électricien Neuilly-sur-Seine, électricien Clichy, électricien Suresnes, électricien Montreuil, électricien Saint-Denis, électricien Aubervilliers, électricien Aulnay-sous-Bois, électricien Drancy, électricien Noisy-le-Grand, électricien Pantin, électricien Bobigny, électricien Épinay-sur-Seine, électricien Créteil, électricien Vitry-sur-Seine, électricien Champigny-sur-Marne, électricien Saint-Maur-des-Fossés, électricien Maisons-Alfort, électricien Ivry-sur-Seine, électricien Villejuif, électricien Vincennes, électricien Nogent-sur-Marne, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire, pose ventilateur de plafond, installation ventilateur de plafond, ventilateur plafond CREATE, ventilateur Xiaomi, brasseur d'air, pose de luminaire, installation lustre, pose applique, spots encastrés, remplacement de prise, ajout de prise, changer interrupteur, va-et-vient, variateur, motorisation volet roulant, moteur tubulaire, installation visiophone, remplacement interphone, motorisation portail battant, motorisation portail coulissant, pose radiateur électrique, radiateur à inertie, sèche-serviette, installation VMC, raccordement VMC, VMC simple flux, VMC double flux

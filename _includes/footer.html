@@ -23,17 +23,35 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795 0 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.742-7.098-15.772-15.839-15.82zm0-8.18v4.819c11.104.062 20.088 9.044 20.149 20.138h4.851c-.067-13.768-11.186-24.889-25-24.957z"/></svg>
                     </a>
                 </div>
+                <div class="footer-redesign__contact">
+                    <a href="tel:{{ site.phone | remove: ' ' }}">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>{{ site.phone }}</span>
+                    </a>
+                    <a href="mailto:{{ site.email }}">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>{{ site.email }}</span>
+                    </a>
+                </div>
             </div>
 
             <div class="footer-redesign__columns">
-                <div class="footer-redesign__col">
+                <div class="footer-redesign__col footer-redesign__col--prestations">
                     <p class="footer-redesign__col-title">Prestations</p>
-                    <ul>
+                    <ul class="footer-redesign__col-list--two">
                         <li><a href="{{ site.baseurl }}/prestations/installation-electrique/">Installation</a></li>
                         <li><a href="{{ site.baseurl }}/prestations/renovation-mise-aux-normes/">Rénovation &amp; normes</a></li>
                         <li><a href="{{ site.baseurl }}/prestations/depannage-electrique/">Dépannage</a></li>
                         <li><a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique/">Borne de recharge VE</a></li>
                         <li><a href="{{ site.baseurl }}/prestations/domotique/">Domotique</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/pose-ventilateur-plafond/">Ventilateur de plafond</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/pose-luminaires-prises/">Luminaires &amp; prises</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/motorisation-volet-roulant/">Volet roulant</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/installation-visiophone-interphone/">Visiophone</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/motorisation-portail/">Portail</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/pose-radiateur-electrique/">Radiateur électrique</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/installation-vmc/">VMC</a></li>
+                        <li><a href="{{ site.baseurl }}/prestations/eclairage-exterieur-jardin/">Éclairage extérieur</a></li>
                     </ul>
                 </div>
                 <div class="footer-redesign__col">
@@ -53,13 +71,6 @@
                         <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
                         <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
                         <li><a href="{{ site.baseurl }}/mentions-legales/">Mentions légales</a></li>
-                    </ul>
-                </div>
-                <div class="footer-redesign__col">
-                    <p class="footer-redesign__col-title">Coordonnées</p>
-                    <ul>
-                        <li><a href="tel:{{ site.phone | remove: ' ' }}">{{ site.phone }}</a></li>
-                        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 ---
 layout: blog
+last_modified_at: 2026-06-26
 title: "Dans la peau d'un maçon : la semaine la plus dure depuis le début de ma reconversion"
 description: "Retour sur ma semaine la plus difficile depuis le début de ma reconversion : la découverte du métier de maçon. Au programme, la création d'un ensemble terrasse et jardinière dans une cour, des fondations à creuser, une semelle en fer en fond de fouille, du béton et la pose des premières rangées de parpaings. Et deux jours en Normandie pour le câblage électrique et les plaques de BA13."
 keywords: "métier maçon, fondations semelle fond de fouille, béton parpaing, ferraillage ligature, terrasse jardinière, terrassement cour, big bag sable gravier, reconversion électricien, chantier BTP, câblage électrique BA13"
