@@ -32,7 +32,7 @@ redirect_from:
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">02 / Électricien de proximité</p>
-                <h2 class="page-section__title">Un secteur que je prends le temps de comprendre.</h2>
+                <h2 class="page-section__title">Des friches d'Ivry-Port aux étoiles de Renaudie.</h2>
             </header>
             <div class="reveal page-prose">
                 <p><strong>Ivry-sur-Seine</strong> est une commune contrastée, et c'est ce qui en fait l'intérêt sur le plan électrique. Le long des bords de Seine, les <strong>anciennes friches industrielles d'Ivry-Port</strong> ont laissé place à des lofts et à des programmes neufs ; au centre, l'architecture moderne des <strong>« étoiles » de Renaudie</strong> côtoie les immeubles anciens ; sur les hauteurs, les grands ensembles de <strong>Monmousseau et Gagarine</strong> ont leurs propres logiques d'installation.</p>
@@ -110,9 +110,10 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
+
+{% include communes-voisines.html %}
 
 <script type="application/ld+json">
 {
@@ -121,12 +122,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-ivry-sur-seine/#electrician",
     "name": "L'artisan 2.0 — Électricien Ivry-sur-Seine",
     "url": "{{ site.url }}/electricien-ivry-sur-seine/",
-    "description": "Électricien à Ivry-sur-Seine (94200) et dans le Val-de-Marne. Installation, rénovation, mise aux normes, dépannage. En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Ivry-sur-Seine (94200) et dans le Val-de-Marne. Installation, rénovation, mise aux normes, dépannage.",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Ivry-sur-Seine" }, { "@type": "City", "name": "Vitry-sur-Seine" }, { "@type": "City", "name": "Charenton-le-Pont" }, { "@type": "City", "name": "Alfortville" }, { "@type": "City", "name": "Le Kremlin-Bicêtre" }, { "@type": "AdministrativeArea", "name": "Val-de-Marne" }
@@ -134,14 +135,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

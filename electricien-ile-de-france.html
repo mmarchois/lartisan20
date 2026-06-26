@@ -34,7 +34,7 @@ redirect_from:
                 <h2 class="page-section__title">Tous types de logements. Toutes contraintes.</h2>
             </header>
             <div class="reveal page-prose">
-                <p>Basé à <strong>Saint-Ouen-sur-Seine (93)</strong>, aux portes de Paris, j'interviens dans toute la région. En formation CAP Électricien et déjà actif sur les chantiers, j'allie théorie et pratique au quotidien.</p>
+                <p>Basé à <strong>Saint-Ouen-sur-Seine (93)</strong>, aux portes de Paris, j'interviens dans toute la région. Déjà actif sur les chantiers, j'allie théorie et pratique au quotidien.</p>
                 <p><strong>Appartement haussmannien</strong> avec moulures et parquet, <strong>loft industriel</strong> à réhabiliter, <strong>pavillon de banlieue</strong> à rénover ou <strong>maison neuve</strong> à équiper : chaque projet a ses spécificités, je m'adapte.</p>
             </div>
         </div>
@@ -137,7 +137,6 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
 
@@ -148,12 +147,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-ile-de-france/#electrician",
     "name": "L'artisan 2.0 — Électricien Paris & Île-de-France",
     "url": "{{ site.url }}/electricien-ile-de-france/",
-    "description": "Électricien à Paris et en Île-de-France. Installation, rénovation, mise aux normes, dépannage. Basé à Saint-Ouen (93). En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Paris et en Île-de-France. Installation, rénovation, mise aux normes, dépannage. Basé à Saint-Ouen (93).",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Paris" }, { "@type": "State", "name": "Île-de-France" }, { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis (93)" }, { "@type": "AdministrativeArea", "name": "Hauts-de-Seine (92)" }, { "@type": "AdministrativeArea", "name": "Val-de-Marne (94)" }, { "@type": "AdministrativeArea", "name": "Val-d'Oise (95)" }, { "@type": "AdministrativeArea", "name": "Yvelines (78)" }, { "@type": "AdministrativeArea", "name": "Essonne (91)" }, { "@type": "AdministrativeArea", "name": "Seine-et-Marne (77)" }
@@ -161,14 +160,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

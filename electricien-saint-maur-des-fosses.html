@@ -32,7 +32,7 @@ redirect_from:
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">02 / Électricien de proximité</p>
-                <h2 class="page-section__title">Une commune que je prends le temps de comprendre.</h2>
+                <h2 class="page-section__title">Saint-Maur, dans la boucle de la Marne.</h2>
             </header>
             <div class="reveal page-prose">
                 <p><strong>Saint-Maur-des-Fossés</strong> est une commune résidentielle dessinée par la boucle de la Marne. On y trouve surtout des <strong>maisons individuelles</strong> : pavillons cossus de <strong>La Varenne-Saint-Hilaire</strong>, villas anciennes du <strong>Vieux-Saint-Maur</strong>, demeures bourgeoises près du <strong>Parc Saint-Maur</strong>, sans oublier les quartiers d'<strong>Adamville</strong>, de <strong>Champignol</strong> et du <strong>Pont de Créteil</strong>.</p>
@@ -110,9 +110,10 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
+
+{% include communes-voisines.html %}
 
 <script type="application/ld+json">
 {
@@ -121,12 +122,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-saint-maur-des-fosses/#electrician",
     "name": "L'artisan 2.0 — Électricien Saint-Maur-des-Fossés",
     "url": "{{ site.url }}/electricien-saint-maur-des-fosses/",
-    "description": "Électricien à Saint-Maur-des-Fossés et dans le Val-de-Marne (94). Installation, rénovation, mise aux normes, dépannage. En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Saint-Maur-des-Fossés et dans le Val-de-Marne (94). Installation, rénovation, mise aux normes, dépannage.",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Saint-Maur-des-Fossés" }, { "@type": "City", "name": "Créteil" }, { "@type": "City", "name": "Champigny-sur-Marne" }, { "@type": "City", "name": "Joinville-le-Pont" }, { "@type": "City", "name": "Bonneuil-sur-Marne" }, { "@type": "City", "name": "Maisons-Alfort" }
@@ -134,14 +135,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

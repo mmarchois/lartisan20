@@ -36,7 +36,7 @@ redirect_from:
             </header>
             <div class="reveal page-prose">
                 <p>Les <strong>Hauts-de-Seine</strong> sont un département de contrastes : les immeubles haussmanniens de <strong>Neuilly</strong> et <strong>Levallois</strong>, les pavillons de <strong>Rueil-Malmaison</strong> et <strong>Suresnes</strong>, les programmes neufs de <strong>Boulogne-Billancourt</strong> et du quartier d'affaires autour de <strong>La Défense</strong>. Chaque type de bâti a ses contraintes électriques propres.</p>
-                <p>Depuis ma base de <strong>Saint-Ouen-sur-Seine</strong>, aux portes nord du département, j'interviens rapidement sur tout le 92. En formation CAP Électricien et déjà actif sur les chantiers, j'allie méthode d'ingénieur et pratique du terrain.</p>
+                <p>Depuis ma base de <strong>Saint-Ouen-sur-Seine</strong>, aux portes nord du département, j'interviens rapidement sur tout le 92. Déjà actif sur les chantiers, j'allie méthode d'ingénieur et pratique du terrain.</p>
             </div>
         </div>
     </section>
@@ -110,7 +110,6 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
 
@@ -121,12 +120,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-hauts-de-seine/#electrician",
     "name": "L'artisan 2.0 — Électricien Hauts-de-Seine",
     "url": "{{ site.url }}/electricien-hauts-de-seine/",
-    "description": "Électricien dans les Hauts-de-Seine (92). Installation, rénovation, mise aux normes, dépannage. Basé à Saint-Ouen (93). En reconversion, CAP Électricien en formation.",
+    "description": "Électricien dans les Hauts-de-Seine (92). Installation, rénovation, mise aux normes, dépannage. Basé à Saint-Ouen (93).",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "AdministrativeArea", "name": "Hauts-de-Seine (92)" }, { "@type": "City", "name": "Boulogne-Billancourt" }, { "@type": "City", "name": "Nanterre" }, { "@type": "City", "name": "Asnières-sur-Seine" }, { "@type": "City", "name": "Colombes" }, { "@type": "City", "name": "Courbevoie" }, { "@type": "City", "name": "Rueil-Malmaison" }, { "@type": "City", "name": "Levallois-Perret" }, { "@type": "City", "name": "Issy-les-Moulineaux" }, { "@type": "City", "name": "Neuilly-sur-Seine" }, { "@type": "City", "name": "Clichy" }, { "@type": "City", "name": "Suresnes" }
@@ -134,14 +133,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

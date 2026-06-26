@@ -36,7 +36,7 @@ redirect_from:
             </header>
             <div class="reveal page-prose">
                 <p><strong>Maisons-Alfort (94700)</strong> est une ville dense, posée au confluent de la <strong>Seine</strong> et de la <strong>Marne</strong>. Le bâti y est varié : pavillons et maisons de ville du <strong>Centre-ville</strong> et de <strong>Charentonneau</strong>, immeubles anciens des années 1930, copropriétés et résidences plus récentes vers <strong>Alfort</strong>, la <strong>Liberté</strong> ou les <strong>Juilliottes</strong>. Chaque quartier a ses installations, des plus vétustes aux plus contemporaines.</p>
-                <p>Depuis ma base de <strong>Saint-Ouen-sur-Seine</strong>, je rejoins facilement Maisons-Alfort. En formation CAP Électricien et déjà actif sur les chantiers, j'avance avec méthode : diagnostic d'abord, dimensionnement juste, finitions soignées — aussi bien dans un pavillon de Charentonneau que dans un appartement du secteur Vert-de-Maisons.</p>
+                <p>Depuis ma base de <strong>Saint-Ouen-sur-Seine</strong>, je rejoins facilement Maisons-Alfort. Déjà actif sur les chantiers, j'avance avec méthode : diagnostic d'abord, dimensionnement juste, finitions soignées — aussi bien dans un pavillon de Charentonneau que dans un appartement du secteur Vert-de-Maisons.</p>
             </div>
         </div>
     </section>
@@ -110,9 +110,10 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
+
+{% include communes-voisines.html %}
 
 <script type="application/ld+json">
 {
@@ -121,12 +122,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-maisons-alfort/#electrician",
     "name": "L'artisan 2.0 — Électricien Maisons-Alfort",
     "url": "{{ site.url }}/electricien-maisons-alfort/",
-    "description": "Électricien à Maisons-Alfort (94700) et dans le Val-de-Marne (94). Installation, rénovation, mise aux normes, dépannage. En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Maisons-Alfort (94700) et dans le Val-de-Marne (94). Installation, rénovation, mise aux normes, dépannage.",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Maisons-Alfort" }, { "@type": "City", "name": "Créteil" }, { "@type": "City", "name": "Alfortville" }, { "@type": "City", "name": "Saint-Maur-des-Fossés" }, { "@type": "City", "name": "Joinville-le-Pont" }, { "@type": "City", "name": "Charenton-le-Pont" }
@@ -134,14 +135,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

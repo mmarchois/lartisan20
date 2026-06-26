@@ -23,7 +23,7 @@ Je ne l'étais pas vraiment. Mais j'y suis allé quand même.
 
 ## Ces semaines qui m'ont mis dans le bain
 
-Quand je regarde ce qu'il a fallu faire sur ce chantier, je me rends compte de l'ampleur du truc. [Le diagnostic de l'installation existante](/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/) et la décision de tout démonter. [Le court-circuit entre deux phases à 8h30 du matin](/blog/2026/02/01/etincelle-8h30-court-circuit-renovation/) et la gestion de la coupure Enedis. Le tirage de toutes les gaines, la cartographie du réseau, la reconstruction du tableau. Tous les [appareillages](/blog/2026/03/25/retour-chantier-appareillages/) : prises, interrupteurs, va-et-vient, fils pilotes, commandes de volets. Les boîtes de dérivation repérées une à une sans oublier les tests de continuité circuit par circuit.
+Quand je regarde ce qu'il a fallu faire sur ce chantier, je me rends compte de l'ampleur du truc. [Le diagnostic de l'installation existante](/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/) et la décision de tout démonter. [Le court-circuit entre deux phases à 8h30 du matin](/blog/2026/02/02/etincelle-8h30-court-circuit-renovation/) et la gestion de la coupure Enedis. Le tirage de toutes les gaines, la cartographie du réseau, la reconstruction du tableau. Tous les [appareillages](/blog/2026/03/25/retour-chantier-appareillages/) : prises, interrupteurs, va-et-vient, fils pilotes, commandes de volets. Les boîtes de dérivation repérées une à une sans oublier les tests de continuité circuit par circuit.
 
 Et pour finir, cette semaine, la VMC et l'interphonie à raccorder. La VMC, je l'ai posée dans les combles et j'en ai fait le raccordement électrique ; les gaines n'ont pas encore été livrées, donc le réseau aéraulique sera tiré plus tard. L'interphonie, avec un combiné au rez-de-chaussée et un autre au R+1 à brancher en parallèle, le tout câblé en catégorie 7 depuis la platine de rue. C'est en entendant la sonnerie résonner sur les deux combinés au test final que je me suis dit : voilà, c'est fini. Bouclé.
 
@@ -88,6 +88,6 @@ Ce chantier m'a fait grandir en tant qu'artisan. Et peut-être encore plus impor
 
 ---
 
-*Les autres étapes de ce chantier : [tout démolir pour repartir de zéro](/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/), [l'étincelle à 8h30](/blog/2026/02/01/etincelle-8h30-court-circuit-renovation/) et [les appareillages](/blog/2026/03/25/retour-chantier-appareillages/).*
+*Les autres étapes de ce chantier : [tout démolir pour repartir de zéro](/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/), [l'étincelle à 8h30](/blog/2026/02/02/etincelle-8h30-court-circuit-renovation/) et [les appareillages](/blog/2026/03/25/retour-chantier-appareillages/).*
 
 *Vous pouvez suivre la suite sur [LinkedIn]({{ site.linkedin }}) et [Instagram]({{ site.instagram }}). Un projet de rénovation ? [Contactez-moi](https://www.lartisan20.fr/contact/).*

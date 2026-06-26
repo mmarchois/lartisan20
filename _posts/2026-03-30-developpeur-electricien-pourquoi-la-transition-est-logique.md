@@ -68,7 +68,7 @@ Je débute dans ce métier. Je n'ai pas encore des années de chantier derrière
 
 En dev, on sait tous qu'un code bien nommé c'est un code maintenable. Des variables explicites, des fonctions qui disent ce qu'elles font. Quand tu reprends un projet six mois plus tard, la clarté du nommage fait toute la différence.
 
-En électricité, c'est le repérage. Les étiquettes au tableau, en boîtes de dérivation, sur les câbles. J'en parlais dans [mon dernier article](/blog/2026/03/25/appareillages-derivation-continuite/) : **repérer plus que nécessaire**, c'est ma règle.
+En électricité, c'est le repérage. Les étiquettes au tableau, en boîtes de dérivation, sur les câbles. J'en parlais dans [mon dernier article](/blog/2026/03/25/retour-chantier-appareillages/) : **repérer plus que nécessaire**, c'est ma règle.
 
 Un tableau bien repéré, c'est un `README` lisible. Une boîte de dérivation bien étiquetée, c'est du code commenté. Et un câble non identifié, c'est une variable nommée `x2_temp_final_v3` — bonne chance pour debugger ça dans cinq ans.
 
@@ -76,11 +76,11 @@ Un tableau bien repéré, c'est un `README` lisible. Une boîte de dérivation b
 
 Ce qui relie ces deux métiers, c'est la même exigence. Concevoir avant de construire. Tester avant de livrer. Documenter pour ceux qui passeront après.
 
-Est-ce que c'est facile pour autant ? Non. Il y a énormément à apprendre. Le geste technique ne s'improvise pas. La norme NF C 15-100 ne se devine pas. Et le terrain te rappelle régulièrement que tu es [encore en apprentissage](/blog/2026/01/19/reconversion-electricien-premiers-pas/).
+Est-ce que c'est facile pour autant ? Non. Il y a énormément à apprendre. Le geste technique ne s'improvise pas. La norme NF C 15-100 ne se devine pas. Et le terrain te rappelle régulièrement que tu es [encore en apprentissage](/blog/2026/01/19/reconversion-electricien-terrain-apprentissage/).
 
 Mais la manière de raisonner, d'aborder un problème, de structurer son travail… Tout ça, un développeur l'a déjà. Pas dans les mains — ça, ça vient avec le terrain. Mais dans la tête.
 
-Et franchement, après [l'épisode du court-circuit](/blog/2026/02/02/etincelle-court-circuit-lecon-chantier/) où j'ai dû remonter le problème exactement comme un debug en prod — garder la tête froide, isoler, réagir étape par étape — je me suis dit : finalement, c'est pas si loin.
+Et franchement, après [l'épisode du court-circuit](/blog/2026/02/02/etincelle-8h30-court-circuit-renovation/) où j'ai dû remonter le problème exactement comme un debug en prod — garder la tête froide, isoler, réagir étape par étape — je me suis dit : finalement, c'est pas si loin.
 
 ---
 

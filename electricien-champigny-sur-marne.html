@@ -110,9 +110,10 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
+
+{% include communes-voisines.html %}
 
 <script type="application/ld+json">
 {
@@ -121,12 +122,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-champigny-sur-marne/#electrician",
     "name": "L'artisan 2.0 — Électricien Champigny-sur-Marne",
     "url": "{{ site.url }}/electricien-champigny-sur-marne/",
-    "description": "Électricien à Champigny-sur-Marne (94500) et dans le Val-de-Marne. Installation, rénovation, mise aux normes, dépannage. En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Champigny-sur-Marne (94500) et dans le Val-de-Marne. Installation, rénovation, mise aux normes, dépannage.",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Champigny-sur-Marne" }, { "@type": "City", "name": "Saint-Maur-des-Fossés" }, { "@type": "City", "name": "Chennevières-sur-Marne" }, { "@type": "City", "name": "Joinville-le-Pont" }, { "@type": "City", "name": "Villiers-sur-Marne" }, { "@type": "City", "name": "Le Perreux-sur-Marne" }, { "@type": "City", "name": "Bry-sur-Marne" }
@@ -134,14 +135,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

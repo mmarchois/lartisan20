@@ -1,0 +1,48 @@
+# Avis Google — saisis à la main (pas de service tiers, 0 dépendance).
+# Pour ajouter un avis : copie un bloc ci-dessous et remplis les champs.
+# "date" = date réelle de l'avis au format AAAA-MM-JJ. Le « il y a X mois »
+# est calculé automatiquement au build (par rapport à la date de génération),
+# donc il se rafraîchit tout seul à chaque déploiement. Pas besoin d'y toucher.
+# Le nombre affiché ("Basé sur X avis") et la note viennent de _config.yml
+# (google_review_count / google_rating) pour rester cohérents avec tout le site.
+avis:
+  - auteur: "Marine B."
+    date: 2026-06-26
+    note: 5
+    texte: "Super expérience avec Mathieu qui a refait toute l'électricité de notre maison."
+  - auteur: "Claire D."
+    date: 2026-06-25
+    note: 5
+    texte: "Mathieu m'a sauvé en pleine canicule et a bravement vaincu la chaleur et les difficultés rencontrées. Je n'hésiterai pas à refaire appel à lui !"
+  - auteur: "Pauline F."
+    date: 2026-06-04
+    note: 5
+    texte: "Monsieur Marchois a été d'une grande aide pour les travaux d'électricité dans mon appartement. Le rendu est impeccable. De plus, il s'est montré à l'écoute et très réactif à mes messages ! Je ne peux que le recommander les yeux fermés. Encore merci pour votre professionnalisme !"
+  - auteur: "Gauthier R."
+    date: 2026-05-31
+    note: 5
+    texte: "Mathieu a fait un excellent travail sur une demande complexe (raccordement de four de poterie à 50 mètres du tableau général). Il est professionnel, exigeant, patient, et a fait un travail très propre et suivant la norme à la lettre. Je recommande à 100%."
+  - auteur: "Simon B."
+    date: 2026-05-20
+    note: 5
+    texte: "Nous devions installer une lumière/ventilateur au plafond et la plateforme de suspension ne correspondait pas. Il est intervenu très rapidement, en sachant ce qu'il peut faire et en nous donnant quelques conseils en plus sur un futur chantier. Merci encore."
+  - auteur: "Etienne M."
+    date: 2026-05-01
+    note: 5
+    texte: "Superbe travail. D'abord une analyse patiente d'une installation très ancienne et dégradée. Puis la proposition de solutions bien adaptées. Enfin une mise en œuvre impeccable pour un succès complet. Le tout avec le sourire et une belle maîtrise technique. Une pleine réussite !"
+  - auteur: "Marion D."
+    date: 2025-04-11
+    note: 5
+    texte: "J'ai fait appel à Mathieu pour installer trois ventilateurs chez moi. Les sorties au plafond n'étaient pas adaptées et le trou avait été agrandi. Il a tout de suite trouvé une solution. Tout a été fait en 2h30, proprement et sans accroc."
+  - auteur: "Nicolas D."
+    date: 2025-02-10
+    note: 5
+    texte: "Mathieu a électrifié mon volet roulant, super pro et dans la bonne humeur, je recommande merci beaucoup !"
+  - auteur: "Ossama B."
+    date: 2025-11-26
+    note: 5
+    texte: "Suite à un problème de disjoncteur, Mathieu est intervenu de manière très professionnelle. Rapide et efficace, c'est très rassurant d'avoir des pros de confiance aujourd'hui."
+  - auteur: "Hélène M."
+    date: 2025-10-26
+    note: 5
+    texte: "Merci pour votre intervention rapide et efficace ! Mes fils avaient besoin de prises USB sur les murs de leur chambre et malgré une mauvaise surprise sur la nature des cloisons, le travail a été très rapidement réalisé avec soin ! Je recommande !"

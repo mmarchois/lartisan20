@@ -20,17 +20,7 @@
             { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis (93)" },
             { "@type": "AdministrativeArea", "name": "Val-de-Marne (94)" }
         ],
-        "serviceType": "{{ page.service_type }}",
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "EUR",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "priceCurrency": "EUR"
-            },
-            "availability": "https://schema.org/InStock",
-            "url": "{{ site.url }}{{ page.url }}"
-        }
+        "serviceType": "{{ page.service_type }}"
     }
     </script>
     <script type="application/ld+json">
@@ -54,7 +44,23 @@
     <main id="main-content">
         {{ content }}
 
-        {% include statut-reconversion.html %}
+        <section class="page-section page-section--light">
+            <div class="page-section__inner">
+                <header class="page-section__head reveal">
+                    <p class="page-section__num">Zone d'intervention</p>
+                    <h2 class="page-section__title">{{ page.service_name }} à Paris &amp; en Île-de-France.</h2>
+                </header>
+                <div class="reveal page-prose">
+                    <p>J'interviens pour cette prestation à <strong>Paris</strong> et dans toute la petite couronne&nbsp;:
+                    <a href="{{ site.baseurl }}/electricien-paris/">Paris (75)</a>,
+                    <a href="{{ site.baseurl }}/electricien-hauts-de-seine/">Hauts-de-Seine (92)</a>,
+                    <a href="{{ site.baseurl }}/electricien-seine-saint-denis/">Seine-Saint-Denis (93)</a>
+                    et <a href="{{ site.baseurl }}/electricien-val-de-marne/">Val-de-Marne (94)</a>.
+                    Basé à Saint-Ouen (93), je me déplace dans les communes voisines pour étudier votre projet.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     {% include contact.html %}

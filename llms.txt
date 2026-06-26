@@ -1,3 +1,8 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
 # L'artisan 2.0
 
 > Électricité générale à Paris et en Île-de-France (petite couronne : Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
@@ -21,7 +26,6 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 - **Dépannage électrique** — Recherche de pannes, remplacement composants, coupures, courts-circuits, intervention rapide. https://www.lartisan20.fr/prestations/depannage-electrique/
 - **Bornes de recharge véhicules électriques (IRVE)** — Étude, installation 7kW à 22kW, raccordement, mise en service. https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
 - **Domotique** — Pilotage chauffe-eau, chauffage, volets, éclairage, VMC avec modules Shelly, Schneider Wiser, Legrand, Somfy. Suivi de consommation Ecojoko. Automatismes intelligents. https://www.lartisan20.fr/prestations/domotique/
-- **Autonomie & auto-consommation** — Batteries de stockage, raccordement panneaux solaires, gestion jour/nuit, optimisation auto-consommation. https://www.lartisan20.fr/prestations/autonomie-autoconsommation/
 
 ### Prestations ciblées (interventions à l'unité)
 
@@ -46,7 +50,6 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 
 #### Domotique & Optimisation
 - Domotique : pilotage chauffe-eau, chauffage, volets, éclairage, VMC. Marques : Shelly, Schneider Wiser, Legrand Netatmo, Somfy, Sonoff. Suivi de consommation Ecojoko. Compatible Home Assistant, Google Home, Alexa.
-- Autonomie & auto-consommation : batteries, panneaux solaires, gestion jour/nuit, auto-consommation
 
 ## Valeurs
 
@@ -102,7 +105,6 @@ Prestations :
 - Dépannage électrique : https://www.lartisan20.fr/prestations/depannage-electrique/
 - Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
 - Domotique : https://www.lartisan20.fr/prestations/domotique/
-- Autonomie & auto-consommation : https://www.lartisan20.fr/prestations/autonomie-autoconsommation/
 - Pose de ventilateur de plafond : https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
 - Pose de luminaires & remplacement de prises : https://www.lartisan20.fr/prestations/pose-luminaires-prises/
 - Motorisation de volet roulant : https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
@@ -115,11 +117,8 @@ Prestations :
 ## Articles de fond
 
 Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
-
-- Reconversion ingénieur → électricien : https://www.lartisan20.fr/blog/2026/01/19/reconversion-electricien-terrain-apprentissage/
-- Rénovation maison 1850 (Lot) : https://www.lartisan20.fr/blog/2026/03/04/maison-1850-renovation-electricite/
-- Borne de recharge 12 kVA triphasé : https://www.lartisan20.fr/blog/2026/02/26/installation-borne-recharge-personnelle-12kva-triphase/
-- Domotique Shelly, mes choix : https://www.lartisan20.fr/blog/2026/04/07/shelly-domotique-choix/
+{% for post in site.posts %}
+- {{ post.title }} : {{ site.url }}{{ post.url }}{% endfor %}
 
 ## Mots-clés
 

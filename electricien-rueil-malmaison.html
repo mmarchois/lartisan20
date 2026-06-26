@@ -32,7 +32,7 @@ redirect_from:
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">02 / Électricien de proximité</p>
-                <h2 class="page-section__title">Une commune résidentielle que je prends le temps de comprendre.</h2>
+                <h2 class="page-section__title">Rueil-Malmaison, du Mont-Valérien aux Bords de Seine.</h2>
             </header>
             <div class="reveal page-prose">
                 <p><strong>Rueil-Malmaison</strong> est l'une des plus grandes communes des <strong>Hauts-de-Seine</strong>, et son habitat est varié : les maisons cossues du <strong>Mont-Valérien</strong> et de <strong>Buzenval</strong>, les pavillons du <strong>Plateau</strong>, les copropriétés du <strong>Centre-ville</strong> et de la <strong>Plaine-Gare</strong>, sans oublier les programmes plus récents et les résidences des <strong>Bords de Seine</strong>.</p>
@@ -110,9 +110,10 @@ redirect_from:
         </div>
     </section>
 
-    {% include statut-reconversion.html variant='alt' %}
 
 </div>
+
+{% include communes-voisines.html %}
 
 <script type="application/ld+json">
 {
@@ -121,12 +122,12 @@ redirect_from:
     "@id": "{{ site.url }}/electricien-rueil-malmaison/#electrician",
     "name": "L'artisan 2.0 — Électricien Rueil-Malmaison",
     "url": "{{ site.url }}/electricien-rueil-malmaison/",
-    "description": "Électricien à Rueil-Malmaison (92500) et dans les Hauts-de-Seine. Installation, rénovation, mise aux normes, dépannage. En reconversion, CAP Électricien en formation.",
+    "description": "Électricien à Rueil-Malmaison (92500) et dans les Hauts-de-Seine. Installation, rénovation, mise aux normes, dépannage.",
     "telephone": "{{ site.phone_e164 }}",
     "email": "{{ site.email }}",
     "image": "{{ site.url }}/images/og-image.png",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-Sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "55 rue Eugène Berthoud", "addressLocality": "Saint-Ouen-sur-Seine", "postalCode": "93400", "addressRegion": "Île-de-France", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 48.9077, "longitude": 2.3345 },
     "areaServed": [
         { "@type": "City", "name": "Rueil-Malmaison" }, { "@type": "City", "name": "Nanterre" }, { "@type": "City", "name": "Suresnes" }, { "@type": "City", "name": "Garches" }, { "@type": "City", "name": "Chatou" }, { "@type": "City", "name": "Bougival" }
@@ -134,14 +135,6 @@ redirect_from:
     "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "{{ site.google_rating }}",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "{{ site.google_review_count }}",
-        "reviewCount": "{{ site.google_review_count }}"
-    },
     "sameAs": [
         "{{ site.linkedin }}",
         "{{ site.instagram }}",

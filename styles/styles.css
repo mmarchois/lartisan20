@@ -157,18 +157,18 @@ nav {
 }
 
 .logo-img {
-    height: 45px;
+    height: 50px;
     width: auto;
 }
 
 .logo-text {
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--hr-display); /* Inter Tight — même typo que les cartes / le covering */
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1;
     color: var(--text-primary);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -188,10 +188,13 @@ nav {
 }
 
 .logo-version {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--text-primary);
+    /* Même typo/taille/graisse que « L'ARTISAN » (héritées de .logo-text),
+       seule la couleur change : dégradé or identique aux cartes et au covering. */
+    color: var(--accent-primary); /* fallback navigateurs sans background-clip */
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -360,8 +363,8 @@ nav.scrolled {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 48px;
-    height: 48px;
+    width: 34px;
+    height: 34px;
     background: none;
     border: none;
     cursor: pointer;
@@ -2852,8 +2855,8 @@ footer {
     }
 
     .mobile-menu__logo-img {
-        width: 32px;
-        height: 32px;
+        width: 50px;
+        height: 50px;
         flex-shrink: 0;
         filter: invert(1) brightness(1.15);
     }
@@ -2865,15 +2868,25 @@ footer {
     }
 
     .mobile-menu__logo-name {
-        font-family: var(--hr-display);
-        font-weight: 600;
+        font-family: var(--hr-display); /* Inter Tight — même typo que les cartes / le covering */
+        font-weight: 700;
         font-size: 0.95rem;
-        letter-spacing: -0.01em;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         color: var(--hr-text-on-dark);
     }
 
+    .mobile-menu__logo-version {
+        /* même typo/taille que le wordmark, dégradé or des cartes */
+        color: var(--accent-primary); /* fallback */
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .mobile-menu__logo-subtitle {
-        font-family: var(--hr-mono);
+        font-family: var(--hr-display); /* Inter Tight — même typo que les cartes / le covering */
         font-size: 0.62rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -3119,14 +3132,6 @@ footer {
     .logo-subtitle {
         font-size: 0.58rem;
         letter-spacing: 0.15em;
-    }
-
-    .logo-version {
-        font-size: 0.9rem;
-    }
-
-    .logo-img {
-        height: 34px;
     }
 
     .btn-contact {
@@ -4798,10 +4803,6 @@ a.service-card:hover {
     }
 
     .logo-text {
-        font-size: 0.8rem;
-    }
-
-    .logo-version {
         font-size: 0.8rem;
     }
 
@@ -7248,6 +7249,10 @@ a.service-card:hover {
 
 .home-hero__title .em {
     color: #F2C46E;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     position: relative;
     white-space: nowrap;
 }
@@ -7962,6 +7967,10 @@ a.service-card:hover {
 .home-lumo__title em {
     font-style: normal;
     color: #F2C46E;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .home-lumo__lead {
@@ -7997,78 +8006,188 @@ a.service-card:hover {
 }
 
 /* ---------- AVIS GOOGLE ---------- */
-.home-reviews-grid {
+/* ---------- WIDGET AVIS GOOGLE (maison) ---------- */
+.gr-widget {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
 }
 
-.home-review {
+/* Panneau récap (gauche) */
+.gr-summary {
+    text-align: center;
     border: 1px solid var(--hr-border-on-light);
-    padding: 2rem;
     background: white;
+    padding: 2rem 1.5rem;
+    position: sticky;
+    top: 100px;
+}
+
+.gr-summary__label {
+    font-family: var(--hr-display);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+    color: var(--hr-text-on-light);
+}
+
+.gr-summary__stars {
+    color: #fbbc04;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.gr-summary__count {
+    font-size: 0.95rem;
+    color: var(--hr-text-on-light-muted);
+    margin: 0.75rem 0 1.25rem;
+}
+.gr-summary__count strong { color: var(--hr-text-on-light); font-weight: 600; }
+
+.gr-summary__google {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+/* Carrousel (droite) */
+.gr-carousel { position: relative; min-width: 0; }
+
+.gr-track {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.gr-track::-webkit-scrollbar { display: none; }
+
+.gr-card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    border: 1px solid var(--hr-border-on-light);
+    background: white;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 3px rgba(15, 15, 16, 0.04);
 }
 
-.home-review__header {
+.gr-card__head {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-.home-review__author {
-    font-style: normal;
-    font-family: var(--hr-mono);
-    font-size: 0.74rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--hr-text-on-light-muted);
-}
-
-.home-review__stars {
-    color: var(--hr-accent);
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-}
-
-.home-review__text {
+.gr-avatar {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
     font-family: var(--hr-display);
-    font-weight: 500;
-    font-size: 1.05rem;
-    line-height: 1.45;
-    margin: 0 0 1.5rem;
-    color: var(--hr-text-on-light);
-    letter-spacing: -0.005em;
-    flex: 1;
-}
-
-.home-review__text p { margin: 0; }
-.home-review__text a {
-    color: var(--hr-text-on-light-muted);
-    text-decoration: underline;
-    font-weight: 400;
-}
-
-.home-review__source {
-    font-family: var(--hr-mono);
-    font-size: 0.7rem;
+    font-weight: 600;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--hr-text-on-light-muted);
-    margin-top: auto;
-    padding-top: 0.5rem;
-    border-top: 1px solid var(--hr-border-on-light);
 }
+
+.gr-card__meta { flex: 1; min-width: 0; }
+
+.gr-card__author {
+    font-family: var(--hr-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--hr-text-on-light);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gr-card__date {
+    font-size: 0.82rem;
+    color: var(--hr-text-on-light-muted);
+    margin: 0.1rem 0 0;
+}
+
+.gr-card__g { flex: 0 0 auto; }
+
+.gr-card__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.gr-stars { color: #fbbc04; font-size: 1rem; letter-spacing: 0.04em; }
+.gr-star--empty { color: #dadce0; }
+.gr-verified { flex: 0 0 auto; }
+
+.gr-card__text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--hr-text-on-light);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.gr-card__more {
+    font-size: 0.88rem;
+    color: var(--hr-text-on-light-muted);
+    text-decoration: none;
+    margin-top: 0.6rem;
+    align-self: flex-start;
+}
+.gr-card__more:hover { color: var(--hr-text-on-light); text-decoration: underline; }
+
+/* Flèches navigation */
+.gr-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--hr-border-on-light);
+    background: white;
+    color: var(--hr-text-on-light);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 8px rgba(15, 15, 16, 0.1);
+    transition: background 0.2s, color 0.2s;
+}
+.gr-nav:hover { background: var(--hr-text-on-light); color: white; }
+.gr-nav--prev { left: -14px; }
+.gr-nav--next { right: -14px; }
+.gr-nav[disabled] { opacity: 0.35; cursor: default; }
+.gr-nav[disabled]:hover { background: white; color: var(--hr-text-on-light); }
 
 .home-reviews-footer {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     text-align: center;
 }
 
 @media (max-width: 800px) {
-    .home-reviews-grid { grid-template-columns: 1fr; }
+    .gr-widget { grid-template-columns: 1fr; }
+    .gr-summary { position: static; }
+    .gr-nav--prev { left: 4px; }
+    .gr-nav--next { right: 4px; }
 }
 
 /* ---------- CONTACT FINAL ----------
@@ -8110,6 +8229,10 @@ a.service-card:hover {
 .home-contact__title em {
     font-style: normal;
     color: #F2C46E;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .home-contact__sub {
@@ -8143,55 +8266,63 @@ body:has(.home) nav:not(.scrolled) {
     border-bottom-color: transparent;
 }
 
-body:has(.home) nav:not(.scrolled) .logo-name,
-body:has(.home) nav:not(.scrolled) .logo-version {
+/* Au scroll, le header reste charbon (au lieu de repasser en blanc).
+   Pas de backdrop-filter : il est désactivé sur mobile plus haut car il casse
+   le position:fixed du menu mobile (enfant du nav). Le fond opaque le rend inutile. */
+body:has(.home) nav.scrolled {
+    background: #0f0f10;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+    border-bottom-color: rgba(250, 250, 247, 0.12);
+}
+
+body:has(.home) nav .logo-name {
     color: #fafaf7;
 }
 
-body:has(.home) nav:not(.scrolled) .logo-subtitle {
+body:has(.home) nav .logo-subtitle {
     color: #9a9a98;
 }
 
-body:has(.home) nav:not(.scrolled) .logo-img {
+body:has(.home) nav .logo-img {
     filter: invert(1) brightness(1.1);
 }
 
-body:has(.home) nav:not(.scrolled) .nav-links a {
+body:has(.home) nav .nav-links a {
     color: #fafaf7;
 }
 
-body:has(.home) nav:not(.scrolled) .nav-links a:hover {
+body:has(.home) nav .nav-links a:hover {
     color: #D49F04;
 }
 
-body:has(.home) nav:not(.scrolled) .nav-dropdown-menu a {
+body:has(.home) nav .nav-dropdown-menu a {
     color: #1a1a1a;
 }
 
-body:has(.home) nav:not(.scrolled) .nav-social {
+body:has(.home) nav .nav-social {
     color: #fafaf7;
 }
 
-body:has(.home) nav:not(.scrolled) .nav-social:hover {
+body:has(.home) nav .nav-social:hover {
     color: #D49F04;
 }
 
-body:has(.home) nav:not(.scrolled) .menu-toggle span {
+body:has(.home) nav .menu-toggle span {
     background: #fafaf7;
 }
 
-body:has(.home) nav:not(.scrolled) .nav-lumo {
+body:has(.home) nav .nav-lumo {
     color: #fafaf7;
     border-color: rgba(250, 250, 247, 0.25);
 }
 
-body:has(.home) nav:not(.scrolled) .nav-lumo:hover {
+body:has(.home) nav .nav-lumo:hover {
     color: #D49F04;
     border-color: #D49F04;
 }
 
 /* Sur le hero charbon, le badge or reste lisible — pas besoin d'inverser. */
-body:has(.home) nav:not(.scrolled) .nav-badge-new {
+body:has(.home) nav .nav-badge-new {
     background: #D49F04;
     color: #0f0f10;
 }
@@ -8268,33 +8399,40 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) {
     backdrop-filter: none;
     border-bottom-color: transparent;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .logo-name,
-body:has(.page .page-hero--dark) nav:not(.scrolled) .logo-version,
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-links a,
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-social,
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-lumo {
+
+/* Au scroll, le header reste charbon (au lieu de repasser en blanc).
+   Pas de backdrop-filter : voir note ci-dessus (casse le menu mobile fixed). */
+body:has(.page .page-hero--dark) nav.scrolled {
+    background: #0f0f10;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+    border-bottom-color: rgba(250, 250, 247, 0.12);
+}
+body:has(.page .page-hero--dark) nav .logo-name,
+body:has(.page .page-hero--dark) nav .nav-links a,
+body:has(.page .page-hero--dark) nav .nav-social,
+body:has(.page .page-hero--dark) nav .nav-lumo {
     color: #fafaf7;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .logo-subtitle {
+body:has(.page .page-hero--dark) nav .logo-subtitle {
     color: #9a9a98;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .logo-img {
+body:has(.page .page-hero--dark) nav .logo-img {
     filter: invert(1) brightness(1.1);
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-links a:hover,
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-social:hover {
+body:has(.page .page-hero--dark) nav .nav-links a:hover,
+body:has(.page .page-hero--dark) nav .nav-social:hover {
     color: #D49F04;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-dropdown-menu a {
+body:has(.page .page-hero--dark) nav .nav-dropdown-menu a {
     color: #1a1a1a;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .menu-toggle span {
+body:has(.page .page-hero--dark) nav .menu-toggle span {
     background: #fafaf7;
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-lumo {
+body:has(.page .page-hero--dark) nav .nav-lumo {
     border-color: rgba(250, 250, 247, 0.25);
 }
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
+body:has(.page .page-hero--dark) nav .nav-badge-new {
     background: #fafaf7;
     color: #0f0f10;
 }
@@ -8356,6 +8494,10 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 .page-hero__title em {
     font-style: normal;
     color: #F2C46E;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .page-hero__rule {
@@ -8661,7 +8803,7 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
     margin: 0 0 2rem;
     max-width: 16ch;
 }
-.page-cta__title em { font-style: normal; color: #F2C46E; }
+.page-cta__title em { font-style: normal; color: #F2C46E; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .page-cta__sub {
     font-family: var(--hr-display);
     font-weight: 500;
@@ -8720,17 +8862,25 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
     filter: invert(1) brightness(1.15);
 }
 .footer-redesign__logo-text {
-    font-family: var(--hr-mono);
+    font-family: var(--hr-display); /* Inter Tight — même typo que les cartes / le covering */
     font-weight: 700;
     line-height: 1;
     color: var(--hr-text-on-dark);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     display: flex;
     flex-direction: column;
     gap: 0.15rem;
 }
 .footer-redesign__logo-name { font-size: 1.2rem; }
+.footer-redesign__logo-version {
+    /* Même typo/taille que « L'ARTISAN », seule la couleur change : dégradé or des cartes. */
+    color: var(--accent-primary); /* fallback */
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .footer-redesign__logo-subtitle {
     font-size: 0.55rem;
     font-weight: 500;
@@ -9145,8 +9295,8 @@ body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-badge-new {
 }
 
 /* Overlay sombre : home hero + pages avec hero charbon */
-body:has(.home) nav:not(.scrolled) .nav-links a[aria-current="page"],
-body:has(.page .page-hero--dark) nav:not(.scrolled) .nav-links a[aria-current="page"] {
+body:has(.home) nav .nav-links a[aria-current="page"],
+body:has(.page .page-hero--dark) nav .nav-links a[aria-current="page"] {
     color: #D49F04;
 }
 

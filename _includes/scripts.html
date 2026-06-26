@@ -116,6 +116,33 @@
         }
     });
 
+    // Carrousel avis Google (défilement horizontal + flèches)
+    document.querySelectorAll('.gr-carousel').forEach(carousel => {
+        const track = carousel.querySelector('.gr-track');
+        const prevBtn = carousel.querySelector('.gr-nav--prev');
+        const nextBtn = carousel.querySelector('.gr-nav--next');
+        if (!track) return;
+
+        function step() {
+            const card = track.querySelector('.gr-card');
+            if (!card) return track.clientWidth;
+            const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+            return card.offsetWidth + gap;
+        }
+
+        function updateButtons() {
+            const max = track.scrollWidth - track.clientWidth - 1;
+            if (prevBtn) prevBtn.disabled = track.scrollLeft <= 0;
+            if (nextBtn) nextBtn.disabled = track.scrollLeft >= max;
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+        if (nextBtn) nextBtn.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+        track.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+    });
+
     // Retour en haut
     const backToTop = document.getElementById('back-to-top');
     if (backToTop) {

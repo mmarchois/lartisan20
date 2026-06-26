@@ -1,0 +1,36 @@
+# Communes avec page dédiée, regroupées par département.
+# Source unique pour le maillage interne (include communes-voisines.html).
+# slug = nom du fichier sans .html (= début d'URL après /).
+
+- { slug: electricien-boulogne-billancourt, nom: "Boulogne-Billancourt", dept: "92" }
+- { slug: electricien-nanterre,             nom: "Nanterre",             dept: "92" }
+- { slug: electricien-asnieres-sur-seine,   nom: "Asnières-sur-Seine",   dept: "92" }
+- { slug: electricien-colombes,             nom: "Colombes",             dept: "92" }
+- { slug: electricien-courbevoie,           nom: "Courbevoie",           dept: "92" }
+- { slug: electricien-rueil-malmaison,      nom: "Rueil-Malmaison",      dept: "92" }
+- { slug: electricien-levallois-perret,     nom: "Levallois-Perret",     dept: "92" }
+- { slug: electricien-issy-les-moulineaux,  nom: "Issy-les-Moulineaux",  dept: "92" }
+- { slug: electricien-neuilly-sur-seine,    nom: "Neuilly-sur-Seine",    dept: "92" }
+- { slug: electricien-clichy,               nom: "Clichy",               dept: "92" }
+- { slug: electricien-suresnes,             nom: "Suresnes",             dept: "92" }
+
+- { slug: electricien-saint-ouen,           nom: "Saint-Ouen",           dept: "93" }
+- { slug: electricien-montreuil,            nom: "Montreuil",            dept: "93" }
+- { slug: electricien-saint-denis,          nom: "Saint-Denis",          dept: "93" }
+- { slug: electricien-aubervilliers,        nom: "Aubervilliers",        dept: "93" }
+- { slug: electricien-aulnay-sous-bois,     nom: "Aulnay-sous-Bois",     dept: "93" }
+- { slug: electricien-drancy,               nom: "Drancy",               dept: "93" }
+- { slug: electricien-noisy-le-grand,       nom: "Noisy-le-Grand",       dept: "93" }
+- { slug: electricien-pantin,               nom: "Pantin",               dept: "93" }
+- { slug: electricien-bobigny,              nom: "Bobigny",              dept: "93" }
+- { slug: electricien-epinay-sur-seine,     nom: "Épinay-sur-Seine",     dept: "93" }
+
+- { slug: electricien-creteil,              nom: "Créteil",              dept: "94" }
+- { slug: electricien-vitry-sur-seine,      nom: "Vitry-sur-Seine",      dept: "94" }
+- { slug: electricien-champigny-sur-marne,  nom: "Champigny-sur-Marne",  dept: "94" }
+- { slug: electricien-saint-maur-des-fosses, nom: "Saint-Maur-des-Fossés", dept: "94" }
+- { slug: electricien-maisons-alfort,       nom: "Maisons-Alfort",       dept: "94" }
+- { slug: electricien-ivry-sur-seine,       nom: "Ivry-sur-Seine",       dept: "94" }
+- { slug: electricien-villejuif,            nom: "Villejuif",            dept: "94" }
+- { slug: electricien-vincennes,            nom: "Vincennes",            dept: "94" }
+- { slug: electricien-nogent-sur-marne,     nom: "Nogent-sur-Marne",     dept: "94" }

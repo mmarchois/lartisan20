@@ -1,0 +1,28 @@
+{% comment %}
+  Maillage interne : liste les autres communes du même département ayant une page dédiée.
+  Piloté par _data/villes.yml. Ne rend rien si la page courante n'est pas une commune listée.
+{% endcomment %}
+{% assign current = page.url | replace: '/', '' %}
+{% assign self = site.data.villes | where: 'slug', current | first %}
+{% if self %}
+{% assign voisines = site.data.villes | where: 'dept', self.dept %}
+{% case self.dept %}
+  {% when '92' %}{% assign dept_nom = 'Hauts-de-Seine (92)' %}{% assign dept_slug = 'electricien-hauts-de-seine' %}
+  {% when '93' %}{% assign dept_nom = 'Seine-Saint-Denis (93)' %}{% assign dept_slug = 'electricien-seine-saint-denis' %}
+  {% when '94' %}{% assign dept_nom = 'Val-de-Marne (94)' %}{% assign dept_slug = 'electricien-val-de-marne' %}
+{% endcase %}
+<section class="page-section page-section--light">
+    <div class="page-section__inner">
+        <header class="page-section__head reveal">
+            <p class="page-section__num">Communes voisines</p>
+            <h2 class="page-section__title">Électricien ailleurs dans le {{ dept_nom }}.</h2>
+        </header>
+        <div class="reveal" style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem;">
+            {% for v in voisines %}{% unless v.slug == current %}<a href="{{ site.baseurl }}/{{ v.slug }}/" style="display:inline-block;border:1px solid var(--hr-border-on-light);padding:0.5rem 0.9rem;color:var(--hr-text-on-light);text-decoration:none;font-size:0.9rem;line-height:1;">{{ v.nom }}</a>{% endunless %}{% endfor %}
+        </div>
+        <p class="reveal" style="margin:0;font-family:var(--hr-mono);font-size:0.8rem;letter-spacing:0.04em;">
+            <a href="{{ site.baseurl }}/{{ dept_slug }}/" style="color:inherit;">Voir toute la zone {{ dept_nom }} →</a>
+        </p>
+    </div>
+</section>
+{% endif %}
