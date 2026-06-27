@@ -12,43 +12,73 @@
       <stop offset="80%" stop-color="#E8B547" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8B547"/>
+      <stop offset="1" stop-color="#F2C46E"/>
+    </linearGradient>
   </defs>
 
   <!-- Background charbon -->
   <rect width="1584" height="396" fill="#0f0f10"/>
-  <!-- Subtle glow top-right -->
   <rect width="1584" height="396" fill="url(#glow)"/>
-  <!-- Top hairline -->
   <rect x="0" y="0" width="1584" height="1" fill="url(#topLine)"/>
 
-  <!-- Eyebrow (mono) -->
-  <text x="120" y="118"
+  <!-- CÂBLE signature (style hero, raccourci) -->
+  <g transform="translate(1402 50)" fill="none">
+    <circle cx="86" cy="10" r="3.5" fill="#E8B547"/>
+    <path d="M86 10 H104 A18 18 0 0 1 122 28 V150 A14 14 0 0 1 108 164 C70 164 20 174 26 218 C30 250 80 256 90 224 C98 198 70 186 60 212 C55 230 74 240 68 266"
+          stroke="#E8B547" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(68 266) rotate(75)" fill="url(#goldGrad)">
+      <rect x="0" y="-11" width="20" height="22" rx="6"/>
+      <rect x="20" y="-7" width="11" height="4.6" rx="2.3"/>
+      <rect x="20" y="2.4" width="11" height="4.6" rx="2.3"/>
+      <circle cx="9" cy="0" r="2.2" fill="#0f0f10"/>
+    </g>
+  </g>
+
+  <!-- Lockup : picto (blanc) + wordmark + eyebrow -->
+  <g transform="translate(96, 38) scale(0.088)" fill="#fafaf7">
+    <path d="M522.3,848.2c-13.5,0-27-3.5-39.1-10.4l-199.3-115.1c-24.1-13.9-39.1-39.8-39.1-67.6v-230.1c0-27.8,15-53.7,39.1-67.6l199.3-115.1c24.1-13.9,54-13.9,78.1,0l199.3,115.1c24.1,13.9,39.1,39.8,39.1,67.6v230.1c0,27.8-15,53.7-39.1,67.6l-199.3,115.1c-12,7-25.5,10.4-39.1,10.4ZM522.3,247.9c-10.7,0-21.4,2.8-31,8.3l-199.3,115.1c-19.1,11-31,31.6-31,53.7v230.1c0,22.1,11.9,42.6,31,53.7l199.3,115.1c19.1,11,42.9,11,62,0l199.3-115.1c19.1-11,31-31.6,31-53.7v-230.1c0-22.1-11.9-42.6-31-53.7l-199.3-115.1c-9.6-5.5-20.3-8.3-31-8.3Z"/>
+    <path d="M522.3,570c-4.5,0-8.1-3.6-8.1-8.1v-191.9c0-4.5,3.6-8.1,8.1-8.1s8.1,3.6,8.1,8.1v191.9c0,4.5-3.6,8.1-8.1,8.1Z"/>
+    <path d="M641.1,618.1h-229.1c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h229.1c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
+    <path d="M607.4,681.9h-161.5c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h161.5c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
+    <path d="M676.4,547.1h-308.2c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h308.2c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
+  </g>
+  <text x="206" y="86"
+        font-family="Inter Tight, -apple-system, system-ui, sans-serif"
+        font-size="36" font-weight="700" letter-spacing="-1.2"
+        fill="#fafaf7">L&#x2019;ARTISAN <tspan fill="url(#goldGrad)">2.0</tspan></text>
+  <text x="208" y="112"
         font-family="JetBrains Mono, ui-monospace, monospace"
-        font-size="16" letter-spacing="3" font-weight="500"
-        fill="#9a9a98">L&#x2019;ARTISAN 2.0 &#x2014; ÉLECTRICITÉ GÉNÉRALE &#x2014; ÎLE-DE-FRANCE</text>
+        font-size="14" letter-spacing="3.5" font-weight="500"
+        fill="#9a9a98">ÉLECTRICITÉ GÉNÉRALE</text>
 
   <!-- Title -->
   <text x="120" y="200"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
-        font-size="68" font-weight="700" letter-spacing="-2"
-        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="#E8B547">artisan</tspan>,</text>
-  <text x="120" y="270"
+        font-size="64" font-weight="700" letter-spacing="-2"
+        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="url(#goldGrad)">artisan</tspan>,</text>
+  <text x="120" y="268"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
-        font-size="68" font-weight="700" letter-spacing="-2"
-        fill="#fafaf7">l&#x2019;exigence de l&#x2019;<tspan fill="#E8B547">ingénieur</tspan>.</text>
+        font-size="64" font-weight="700" letter-spacing="-2"
+        fill="#fafaf7">l&#x2019;exigence de l&#x2019;<tspan fill="url(#goldGrad)">ingénieur</tspan>.</text>
 
   <!-- Gold rule -->
-  <rect x="120" y="298" width="88" height="2" fill="#E8B547"/>
+  <rect x="120" y="296" width="88" height="2.5" fill="url(#goldGrad)"/>
 
   <!-- Tagline -->
-  <text x="120" y="330"
+  <text x="120" y="332"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
         font-size="20" font-weight="500" letter-spacing="-0.3"
-        fill="#9a9a98">Installation · Rénovation · Dépannage · Domotique &#x2014; un seul interlocuteur, du diagnostic à la mise en service.</text>
+        fill="#9a9a98">Installation · Rénovation · Dépannage · Domotique</text>
 
-  <!-- URL bottom-right (mono, muted) -->
-  <text x="1464" y="354" text-anchor="end"
+  <!-- Footer : zone + URL -->
+  <text x="120" y="366"
+        font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="14" letter-spacing="3" font-weight="500"
+        fill="#9a9a98">PARIS &amp; ÎLE-DE-FRANCE</text>
+  <text x="1464" y="366" text-anchor="end"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="14" letter-spacing="2" font-weight="500"
-        fill="#E8B547">WWW.LARTISAN20.FR</text>
+        fill="url(#goldGrad)">WWW.LARTISAN20.FR</text>
 </svg>

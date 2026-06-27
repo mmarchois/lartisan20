@@ -17,6 +17,11 @@
       <stop offset="50%" stop-color="#E8B547" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#E8B547" stop-opacity="0"/>
     </linearGradient>
+    <!-- Dégradé or brand (aligné carte / covering / t-shirt) -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8B547"/>
+      <stop offset="1" stop-color="#F2C46E"/>
+    </linearGradient>
   </defs>
 
   <!-- Background charbon -->
@@ -25,8 +30,21 @@
   <rect x="0" y="0" width="1200" height="1" fill="url(#topLine)"/>
   <rect x="0" y="629" width="1200" height="1" fill="url(#botLine)"/>
 
-  <!-- Picto logo (top-left) -->
-  <g transform="translate(80, 70) scale(0.10)" fill="#E8B547">
+  <!-- CÂBLE signature (style hero) : terminal → coude arrondi → descente → boucle → prise -->
+  <g transform="translate(1006 98)" fill="none">
+    <circle cx="86" cy="10" r="3.5" fill="#E8B547"/>
+    <path d="M86 10 H104 A18 18 0 0 1 122 28 V286 A14 14 0 0 1 108 300 C70 300 20 310 26 354 C30 386 80 392 90 360 C98 334 70 322 60 348 C55 366 74 376 68 402"
+          stroke="#E8B547" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(68 402) rotate(75)" fill="url(#goldGrad)">
+      <rect x="0" y="-12" width="22" height="24" rx="6.5"/>
+      <rect x="22" y="-7.5" width="12" height="5" rx="2.5"/>
+      <rect x="22" y="2.5" width="12" height="5" rx="2.5"/>
+      <circle cx="10" cy="0" r="2.4" fill="#0f0f10"/>
+    </g>
+  </g>
+
+  <!-- Picto logo (top-left) — blanc -->
+  <g transform="translate(80, 70) scale(0.10)" fill="#fafaf7">
     <path d="M522.3,848.2c-13.5,0-27-3.5-39.1-10.4l-199.3-115.1c-24.1-13.9-39.1-39.8-39.1-67.6v-230.1c0-27.8,15-53.7,39.1-67.6l199.3-115.1c24.1-13.9,54-13.9,78.1,0l199.3,115.1c24.1,13.9,39.1,39.8,39.1,67.6v230.1c0,27.8-15,53.7-39.1,67.6l-199.3,115.1c-12,7-25.5,10.4-39.1,10.4ZM522.3,247.9c-10.7,0-21.4,2.8-31,8.3l-199.3,115.1c-19.1,11-31,31.6-31,53.7v230.1c0,22.1,11.9,42.6,31,53.7l199.3,115.1c19.1,11,42.9,11,62,0l199.3-115.1c19.1-11,31-31.6,31-53.7v-230.1c0-22.1-11.9-42.6-31-53.7l-199.3-115.1c-9.6-5.5-20.3-8.3-31-8.3Z"/>
     <path d="M522.3,570c-4.5,0-8.1-3.6-8.1-8.1v-191.9c0-4.5,3.6-8.1,8.1-8.1s8.1,3.6,8.1,8.1v191.9c0,4.5-3.6,8.1-8.1,8.1Z"/>
     <path d="M641.1,618.1h-229.1c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h229.1c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
@@ -38,7 +56,7 @@
   <text x="200" y="135"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
         font-size="38" font-weight="700" letter-spacing="-1"
-        fill="#fafaf7">L&#x2019;artisan 2.0</text>
+        fill="#fafaf7">L&#x2019;ARTISAN <tspan fill="url(#goldGrad)">2.0</tspan></text>
   <text x="200" y="166"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="13" letter-spacing="3" font-weight="500"
@@ -48,14 +66,14 @@
   <text x="80" y="320"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
         font-size="62" font-weight="700" letter-spacing="-2"
-        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="#E8B547">artisan</tspan>,</text>
+        fill="#fafaf7">Le savoir-faire de l&#x2019;<tspan fill="url(#goldGrad)">artisan</tspan>,</text>
   <text x="80" y="390"
         font-family="Inter Tight, -apple-system, system-ui, sans-serif"
         font-size="62" font-weight="700" letter-spacing="-2"
-        fill="#fafaf7">l&#x2019;exigence de l&#x2019;<tspan fill="#E8B547">ingénieur</tspan>.</text>
+        fill="#fafaf7">l&#x2019;exigence de l&#x2019;<tspan fill="url(#goldGrad)">ingénieur</tspan>.</text>
 
   <!-- Gold rule -->
-  <rect x="80" y="420" width="88" height="2" fill="#E8B547"/>
+  <rect x="80" y="420" width="88" height="3" fill="url(#goldGrad)"/>
 
   <!-- Tagline -->
   <text x="80" y="465"
@@ -67,9 +85,9 @@
   <text x="80" y="570"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="14" letter-spacing="3" font-weight="500"
-        fill="#9a9a98">ÎLE-DE-FRANCE</text>
+        fill="#9a9a98">PARIS &amp; ÎLE-DE-FRANCE</text>
   <text x="1120" y="570" text-anchor="end"
         font-family="JetBrains Mono, ui-monospace, monospace"
         font-size="14" letter-spacing="3" font-weight="500"
-        fill="#E8B547">WWW.LARTISAN20.FR</text>
+        fill="url(#goldGrad)">WWW.LARTISAN20.FR</text>
 </svg>
