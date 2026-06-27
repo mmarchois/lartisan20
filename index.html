@@ -117,8 +117,37 @@ hide_contact: true
 
     <!-- 01 — HERO -->
     <section class="home-hero" aria-labelledby="hero-title">
+
+        <!-- Câble (desktop) : descend de haut, coude arrondi, boucle + prise -->
+        <svg class="home-hero__cable home-hero__cable--lg" viewBox="0 0 150 440" fill="none" aria-hidden="true" focusable="false">
+            <!-- terminal en haut, un peu à gauche -->
+            <circle cx="86" cy="10" r="3.5" fill="#E8B547"/>
+            <!-- coude arrondi en haut, descente, coude arrondi, boucle -->
+            <path d="M86 10 H104 A18 18 0 0 1 122 28 V286 A14 14 0 0 1 108 300 C70 300 20 310 26 354 C30 386 80 392 90 360 C98 334 70 322 60 348 C55 366 74 376 68 402"
+                  stroke="#E8B547" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- embout (prise) -->
+            <g transform="translate(68 402) rotate(75)" fill="#E8B547">
+                <rect x="0" y="-12" width="22" height="24" rx="6.5"/>
+                <rect x="22" y="-7.5" width="12" height="5" rx="2.5"/>
+                <rect x="22" y="2.5" width="12" height="5" rx="2.5"/>
+                <circle cx="10" cy="0" r="2.4" fill="#0f0f10"/>
+            </g>
+        </svg>
+        <!-- Câble (mobile) : démarre juste au-dessus du titre, descend à droite, boucle + prise -->
+        <svg class="home-hero__cable home-hero__cable--sm" viewBox="0 0 90 670" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="48" cy="9" r="4" fill="#E8B547"/>
+            <path d="M48 9 H64 A12 12 0 0 1 76 21 V542 A10 10 0 0 1 66 552 C44 552 16 561 21 594 C24 620 58 625 66 598 C72 578 50 568 43 590 C39 606 55 614 50 632"
+                  stroke="#E8B547" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <g transform="translate(50 632) rotate(75)" fill="#E8B547">
+                <rect x="0" y="-11" width="20" height="22" rx="6"/>
+                <rect x="20" y="-7" width="11" height="4.6" rx="2.3"/>
+                <rect x="20" y="2.4" width="11" height="4.6" rx="2.3"/>
+                <circle cx="9" cy="0" r="2.2" fill="#0f0f10"/>
+            </g>
+        </svg>
+
         <div class="home-hero__inner">
-            <p class="home-hero__eyebrow"><span class="home-hero__eyebrow-prefix">L'artisan 2.0 — </span>Électricité Générale <span class="home-hero__eyebrow-sep"> - </span>Paris &amp; petite couronne</p>
+            <p class="home-hero__eyebrow"><span class="home-hero__eyebrow-prefix">L'artisan 2.0 — </span>Entreprise d'Électricité Générale <span class="home-hero__eyebrow-sep"> - </span>Paris &amp; petite couronne</p>
 
             <h1 id="hero-title" class="home-hero__title">
                 Le savoir-faire de l'<span class="em">artisan</span>,<br>
@@ -128,7 +157,7 @@ hide_contact: true
             <hr class="home-hero__rule" aria-hidden="true">
 
             <p class="home-hero__tagline">
-                Installation, rénovation, dépannage, domotique. <strong>Un seul interlocuteur</strong>, du diagnostic à la mise en service.
+                <strong>Spécialiste des travaux d'électricité.</strong> Installation, rénovation, dépannage, domotique. Un seul interlocuteur, du diagnostic à la mise en service.
             </p>
 
             <div class="home-hero__cta-row">
@@ -143,11 +172,11 @@ hide_contact: true
             </div>
 
             <div class="home-hero__trust" aria-label="Éléments de confiance">
-                <span class="home-hero__trust-item"><span class="star">★</span> {{ site.google_rating }} Google · {{ site.google_review_count }} avis</span>
+                <a class="home-hero__trust-item home-hero__trust-link" href="#reviews"><span class="home-hero__rating">{{ site.google_rating }}<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span> Google · {{ site.google_review_count }} avis</a>
+                <span class="home-hero__trust-sep" aria-hidden="true">/</span>
+                <span class="home-hero__trust-item">Devis gratuit</span>
                 <span class="home-hero__trust-sep" aria-hidden="true">/</span>
                 <span class="home-hero__trust-item">Réponse sous 24 h</span>
-                <span class="home-hero__trust-sep" aria-hidden="true">/</span>
-                <span class="home-hero__trust-item">Conformité NF C 15-100</span>
             </div>
         </div>
     </section>
@@ -166,7 +195,11 @@ hide_contact: true
                 </div>
                 <div class="home-about__content">
                     <p class="home-about__lede">
-                        Je viens du logiciel et j'apporte la même méthodologie au chantier : <strong>tout penser en amont, rien laisser au hasard, vérifier avant de partir</strong>. C'est ce que mon ancien métier m'a appris — et c'est ce qui me sert le plus aujourd'hui. C'est l'idée derrière <strong>Artisan 2.0</strong> : la rigueur de l'ingénieur au service de l'artisanat.
+                        Je viens du logiciel et j'apporte la même méthodologie à l'électricité : <strong>tout penser en amont, rien laisser au hasard, vérifier avant de partir</strong>. Confier votre installation électrique à un ingénieur, ça ne se voit pas tous les jours : pour vous, c'est l'assurance d'un travail réfléchi et sûr, où tout est anticipé plutôt que rattrapé après coup.
+                    </p>
+
+                    <p class="home-about__body">
+                        Il y a une autre chose qui me définit autant : <strong>l'éco-responsabilité</strong>. Je choisis des équipements durables plutôt que jetables, je trie et valorise les déchets de chantier, et j'aide chaque client à réduire sa consommation au quotidien. Bien faire mon métier et le faire de façon responsable, pour moi, c'est indissociable.
                     </p>
 
                     <ul class="home-about__list">
