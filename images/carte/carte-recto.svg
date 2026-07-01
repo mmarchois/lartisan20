@@ -25,7 +25,7 @@
   <rect class="ink" x="0" y="0" width="910" height="610"/>
 
   <!-- Liseré-câble doré (même design que la caisse) : il fait le tour, rentre et se balade jusqu'à l'embout -->
-  <path d="M846 219 V530 A16 16 0 0 1 830 546 H80 A16 16 0 0 1 64 530 V80 A16 16 0 0 1 80 64 H830 A16 16 0 0 1 846 80 V150
+  <path d="M846 219 V530 A16 16 0 0 1 830 546 H80 A16 16 0 0 1 64 530 V80 A16 16 0 0 1 80 64 H830 A16 16 0 0 1 846 80 V138 A12 12 0 0 1 834 150
            C810 150 773 157 777 188 C780 210 815 214 822 192 C828 174 808 165 801 184 C796 198 810 205 805 223"
         fill="none" stroke="#E8B547" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="846" cy="219" r="3.5" fill="#E8B547"/>

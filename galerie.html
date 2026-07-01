@@ -1,0 +1,88 @@
+---
+layout: default
+title: Galerie photos | L'artisan 2.0 - Électricité générale Paris & Île-de-France
+description: Galerie photos de mes chantiers d'électricité générale à Paris et en Île-de-France. Tableaux électriques, éclairage, appareillage, équipements et coulisses de l'activité.
+keywords: galerie photos électricien, photos tableau électrique, photos chantier électricité, éclairage extérieur, appareillage électrique Paris
+redirect_from:
+  - /galerie.html
+---
+
+<div class="page">
+
+    <!-- HERO -->
+    <section class="page-hero page-hero--dark">
+        <div class="page-hero__inner">
+            <p class="page-hero__eyebrow">Galerie — Photos de chantier</p>
+            <h1 class="page-hero__title">Le travail, <em>en images</em>.</h1>
+            <hr class="page-hero__rule" aria-hidden="true">
+            <p class="page-hero__lead">
+                La page réalisations raconte les chantiers, ici place aux images. Tableaux, éclairages, appareillage, équipements et quelques coulisses de l'activité. <strong>Cliquez sur une photo pour l'agrandir.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- GRILLE -->
+    <section class="page-section page-section--light">
+        <div class="page-section__inner">
+
+            <div class="galerie-grid">
+                {% for p in site.data.galerie.photos %}
+                <div class="galerie-item reveal">
+                    <button type="button" class="galerie-item__zoom" aria-label="Agrandir : {{ p.alt }}">
+                        <img src="{{ site.baseurl }}{{ p.src }}" alt="{{ p.alt }}" loading="lazy">
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Suite : réalisations racontées + blog -->
+    <section class="page-section page-section--light" style="padding-top:3rem;">
+        <div class="page-section__inner reveal" style="text-align:center;">
+            <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 2rem;">Les chantiers derrière ces photos —</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="{{ site.baseurl }}/realisations/" class="page-btn page-btn--dark">Voir les réalisations <span aria-hidden="true">→</span></a>
+                <a href="{{ site.baseurl }}/blog/" class="page-btn page-btn--outline-dark">Lire le blog <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <p class="lightbox-caption"></p>
+    </div>
+    <button type="button" class="lightbox-close" aria-label="Fermer la photo">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Photo précédente">&#8249;</button>
+    <button type="button" class="lightbox-next" aria-label="Photo suivante">&#8250;</button>
+</div>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Galerie photos - L'artisan 2.0",
+    "description": "Photos de chantiers d'électricité générale : tableaux électriques, éclairage, appareillage, équipements et coulisses.",
+    "url": "{{ site.url }}/galerie/",
+    "image": [
+        {% for p in site.data.galerie.photos %}{ "@type": "ImageObject", "contentUrl": "{{ site.url }}{{ p.src }}", "caption": {{ p.alt | jsonify }} }{% unless forloop.last %},
+        {% endunless %}{% endfor %}
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Galerie", "item": "{{ site.url }}/galerie/" }
+    ]
+}
+</script>

@@ -156,14 +156,10 @@
         });
     }
 
-    // Lightbox : clic sur une photo des cartes réalisations
+    // Lightbox : photos de la galerie (et cartes réalisations le cas échéant)
     const lightboxEl = document.getElementById('lightbox');
     if (lightboxEl) {
-        const imgNodes = document.querySelectorAll('.realisation-slider .carousel-slide img');
-        const images = Array.from(imgNodes).map(img => ({
-            src: img.currentSrc || img.src,
-            title: img.alt || ''
-        }));
+        const triggers = Array.from(document.querySelectorAll('.galerie-item__zoom, .realisation-slider .carousel-slide img'));
         const imgEl = lightboxEl.querySelector('.lightbox-img');
         const captionEl = lightboxEl.querySelector('.lightbox-caption');
         const prevBtn = lightboxEl.querySelector('.lightbox-prev');
@@ -171,16 +167,33 @@
         const backdrop = lightboxEl.querySelector('.lightbox-backdrop');
         const closeBtn = lightboxEl.querySelector('.lightbox-close');
 
+        let images = [];
         let currentIndex = 0;
 
-        function openLightbox(index) {
+        function triggerImg(trigger) {
+            return trigger.tagName === 'IMG' ? trigger : trigger.querySelector('img');
+        }
+
+        function showImage(index) {
             currentIndex = index;
             imgEl.src = images[index].src;
             imgEl.alt = images[index].title;
             captionEl.textContent = images[index].title;
-            lightboxEl.removeAttribute('hidden');
             prevBtn.style.visibility = images.length > 1 ? 'visible' : 'hidden';
             nextBtn.style.visibility = images.length > 1 ? 'visible' : 'hidden';
+        }
+
+        function openLightbox(trigger) {
+            // La liste est recalculée à l'ouverture : seules les photos visibles
+            // (non masquées par le filtre de la galerie) entrent dans le diaporama.
+            const visible = triggers.filter(t => t.offsetParent !== null);
+            images = visible.map(t => {
+                const img = triggerImg(t);
+                return { src: img.currentSrc || img.src, title: img.alt || '' };
+            });
+            if (images.length === 0) return;
+            showImage(Math.max(0, visible.indexOf(trigger)));
+            lightboxEl.removeAttribute('hidden');
             document.body.style.overflow = 'hidden';
         }
 
@@ -190,18 +203,20 @@
         }
 
         function goToPrev() {
-            openLightbox((currentIndex - 1 + images.length) % images.length);
+            if (images.length === 0) return;
+            showImage((currentIndex - 1 + images.length) % images.length);
         }
 
         function goToNext() {
-            openLightbox((currentIndex + 1) % images.length);
+            if (images.length === 0) return;
+            showImage((currentIndex + 1) % images.length);
         }
 
-        imgNodes.forEach((img, index) => {
-            img.classList.add('lightbox-trigger');
-            img.addEventListener('click', (e) => {
+        triggers.forEach(trigger => {
+            trigger.classList.add('lightbox-trigger');
+            trigger.addEventListener('click', (e) => {
                 e.preventDefault();
-                openLightbox(index);
+                openLightbox(trigger);
             });
         });
 

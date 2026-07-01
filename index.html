@@ -79,9 +79,18 @@ hide_contact: true
         "itemListElement": [
             { "@type": "OfferCatalog", "name": "Installation électrique", "url": "{{ site.url }}/prestations/installation-electrique/" },
             { "@type": "OfferCatalog", "name": "Rénovation électrique et mise aux normes", "url": "{{ site.url }}/prestations/renovation-mise-aux-normes/" },
+            { "@type": "OfferCatalog", "name": "Remplacement de tableau électrique", "url": "{{ site.url }}/prestations/remplacement-tableau-electrique/" },
             { "@type": "OfferCatalog", "name": "Dépannage électrique", "url": "{{ site.url }}/prestations/depannage-electrique/" },
-            { "@type": "OfferCatalog", "name": "Borne de recharge véhicule électrique", "url": "{{ site.url }}/prestations/borne-recharge-vehicule-electrique/" },
-            { "@type": "OfferCatalog", "name": "Domotique", "url": "{{ site.url }}/prestations/domotique/" }
+            { "@type": "OfferCatalog", "name": "Domotique", "url": "{{ site.url }}/prestations/domotique/" },
+            { "@type": "OfferCatalog", "name": "Pose de luminaires et prises", "url": "{{ site.url }}/prestations/pose-luminaires-prises/" },
+            { "@type": "OfferCatalog", "name": "Éclairage extérieur et jardin", "url": "{{ site.url }}/prestations/eclairage-exterieur-jardin/" },
+            { "@type": "OfferCatalog", "name": "Installation VMC", "url": "{{ site.url }}/prestations/installation-vmc/" },
+            { "@type": "OfferCatalog", "name": "Pose de radiateur électrique", "url": "{{ site.url }}/prestations/pose-radiateur-electrique/" },
+            { "@type": "OfferCatalog", "name": "Pose de ventilateur de plafond", "url": "{{ site.url }}/prestations/pose-ventilateur-plafond/" },
+            { "@type": "OfferCatalog", "name": "Motorisation de volet roulant", "url": "{{ site.url }}/prestations/motorisation-volet-roulant/" },
+            { "@type": "OfferCatalog", "name": "Motorisation de portail", "url": "{{ site.url }}/prestations/motorisation-portail/" },
+            { "@type": "OfferCatalog", "name": "Installation de visiophone et interphone", "url": "{{ site.url }}/prestations/installation-visiophone-interphone/" },
+            { "@type": "OfferCatalog", "name": "Borne de recharge véhicule électrique", "url": "{{ site.url }}/prestations/borne-recharge-vehicule-electrique/" }
         ]
     },
     "sameAs": [
@@ -157,7 +166,7 @@ hide_contact: true
             <hr class="home-hero__rule" aria-hidden="true">
 
             <p class="home-hero__tagline">
-                <strong>Votre électricien à Paris et Île-de-France.</strong> Installation, rénovation, dépannage, domotique, du diagnostic à la mise en service.
+                <strong>Votre électricien à Paris et Île-de-France.</strong><br/>Installation, rénovation, dépannage, domotique, du diagnostic à la mise en service.
             </p>
 
             <div class="home-hero__cta-row">
@@ -186,7 +195,7 @@ hide_contact: true
         <div class="home-section__inner">
             <header class="home-section__head reveal">
                 <p class="home-section__num">02 / À propos</p>
-                <h2 class="home-section__title">Mathieu, ingénieur passé au terrain.</h2>
+                <h2 class="home-section__title">Passion d'électricien, méthode d'ingénieur.</h2>
             </header>
 
             <div class="home-about reveal">
@@ -204,7 +213,7 @@ hide_contact: true
                 </div>
                 <div class="home-about__content">
                     <p class="home-about__lede">
-                        Je viens du logiciel et j'apporte la même méthodologie à l'électricité : <strong>tout penser en amont, rien laisser au hasard, vérifier avant de partir</strong>. Confier votre installation électrique à un ingénieur, ça ne se voit pas tous les jours : pour vous, c'est l'assurance d'un travail réfléchi et sûr, où tout est anticipé plutôt que rattrapé après coup.
+                        Moi, c'est Mathieu. L'électricité, j'y suis venu par passion : comprendre une installation de bout en bout, la concevoir, la câbler proprement, la voir fonctionner du premier coup. Mon passé d'ingénieur fait le reste : <strong>tout penser en amont, ne rien laisser au hasard, vérifier avant de partir</strong>. Pour vous, c'est un travail réfléchi et sûr, où tout est anticipé plutôt que rattrapé après coup.
                     </p>
 
                     <p class="home-about__body">
@@ -235,8 +244,8 @@ hide_contact: true
         <div class="home-section__inner">
             <header class="home-section__head reveal">
                 <p class="home-section__num">03 / Prestations</p>
-                <h2 class="home-section__title">Cinq prestations. Un seul interlocuteur.</h2>
-                <p class="home-section__lead">Du diagnostic à la mise en service, sur tout le périmètre résidentiel. Conformité <strong>NF C 15-100</strong> systématique.</p>
+                <h2 class="home-section__title">Toute l'électricité du logement. Un seul interlocuteur.</h2>
+                <p class="home-section__lead">Du remplacement d'une prise à l'installation complète, du diagnostic à la mise en service. Conformité <strong>NF C 15-100</strong> sur chaque intervention.</p>
             </header>
 
             <ul class="home-services reveal">
@@ -272,15 +281,23 @@ hide_contact: true
                         <span class="home-services__arrow" aria-hidden="true">→</span>
                     </a>
                 </li>
-                <li class="home-services__item">
-                    <a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique/" class="home-services__link">
-                        <span class="home-services__num">05</span>
-                        <h3 class="home-services__title">Borne de recharge VE <span class="home-services__badge">À venir</span></h3>
-                        <p class="home-services__desc">Recharger chez soi, sans surprise sur la facture ni sur le tableau. Étude de puissance incluse. Crédit d'impôt 300 €.</p>
-                        <span class="home-services__arrow" aria-hidden="true">→</span>
-                    </a>
-                </li>
             </ul>
+
+            <div class="home-services__more reveal">
+                <p class="home-services__more-label">Et aussi —</p>
+                <ul class="home-services__more-list">
+                    <li><a href="{{ site.baseurl }}/prestations/remplacement-tableau-electrique/">Remplacement de tableau</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/pose-luminaires-prises/">Luminaires &amp; prises</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/eclairage-exterieur-jardin/">Éclairage extérieur &amp; jardin</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/installation-vmc/">VMC</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/pose-radiateur-electrique/">Radiateurs électriques</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/pose-ventilateur-plafond/">Ventilateurs de plafond</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/motorisation-volet-roulant/">Volets roulants</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/motorisation-portail/">Motorisation de portail</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/installation-visiophone-interphone/">Visiophone &amp; interphone</a></li>
+                    <li><a href="{{ site.baseurl }}/prestations/borne-recharge-vehicule-electrique/">Borne de recharge VE <span class="home-services__badge">À venir</span></a></li>
+                </ul>
+            </div>
 
             <div class="home-services__footer reveal">
                 <p class="home-services__footer-text">Un projet spécifique ? <a href="{{ site.baseurl }}/contact/">Parlons-en</a>. Je m'adapte à votre demande.</p>
@@ -362,7 +379,7 @@ hide_contact: true
                 <div class="home-pillar">
                     <p class="home-pillar__num">Vélo cargo</p>
                     <h3 class="home-pillar__title">Zéro émission, et à l'heure</h3>
-                    <p style="margin:0;color:var(--hr-text-on-light);line-height:1.55;font-size:0.98rem;">Je rejoins mes chantiers à vélo cargo, pas en fourgon. Pas d'utilitaire diesel devant chez vous, et en ville je passe là où les autres restent coincés.</p>
+                    <p style="margin:0;color:var(--hr-text-on-light);line-height:1.55;font-size:0.98rem;">Je rejoins mes chantiers à vélo cargo, pas en fourgon. Pas d'utilitaire diesel devant chez vous, et en ville je passe là où les autres restent coincés. Pour les gros chantiers, le matériel lourd est livré directement chez vous : le volume n'est jamais une limite.</p>
                 </div>
             </div>
         </div>
@@ -378,6 +395,13 @@ hide_contact: true
             </header>
 
             <div class="home-gallery reveal">
+                <a href="{{ site.baseurl }}/realisations/#eclairage-connecte-aix-les-bains" class="home-gallery__item">
+                    <div class="home-gallery__media">
+                        <img src="{{ site.baseurl }}/images/prestations/eclairage_aix/luminaire_allume.webp" alt="Allée éclairée à la tombée du jour par les luminaires connectés installés à Aix-les-Bains" loading="lazy">
+                    </div>
+                    <div class="home-gallery__caption">Aix-les-Bains · Éclairage connecté</div>
+                    <h3 class="home-gallery__title">Éclairage d'allée pilotable au smartphone</h3>
+                </a>
                 <a href="{{ site.baseurl }}/realisations/#ventilateur-create-saint-ouen" class="home-gallery__item">
                     <div class="home-gallery__media">
                         <img src="{{ site.baseurl }}/images/prestations/ventilateur2/ventilateur.jpeg" alt="Ventilateur de plafond CREATE taille L installé à Saint-Ouen-sur-Seine en pleine canicule" loading="lazy">
@@ -423,7 +447,7 @@ hide_contact: true
             </div>
 
             <p class="home-gallery__footer reveal">
-                J'écris aussi sur ma reconversion et mes chantiers : <a href="{{ site.baseurl }}/blog/">découvrez le blog</a>.
+                Toutes les photos de mes chantiers sont réunies dans <a href="{{ site.baseurl }}/galerie/">la galerie</a>. J'écris aussi sur ma reconversion et mes chantiers : <a href="{{ site.baseurl }}/blog/">découvrez le blog</a>.
             </p>
         </div>
     </section>
@@ -450,6 +474,9 @@ hide_contact: true
                 </a>
                 <a href="https://www.nodon.fr/" target="_blank" rel="noopener" title="Nodon">
                     <img src="{{ site.baseurl }}/images/marques/nodon.svg" alt="Nodon" loading="lazy" width="68" height="28">
+                </a>
+                <a href="https://www.yokis.fr/" target="_blank" rel="noopener" title="Yokis (pilotage radio sans fil de l'éclairage)">
+                    <img src="{{ site.baseurl }}/images/marques/yokis.png" alt="Yokis" loading="lazy" width="48" height="28">
                 </a>
                 <a href="https://www.ecojoko.com/" target="_blank" rel="noopener" title="Ecojoko">
                     <img src="{{ site.baseurl }}/images/marques/ecojoko.svg" alt="Ecojoko" loading="lazy" width="90" height="17">

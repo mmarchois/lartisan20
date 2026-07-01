@@ -4,10 +4,11 @@
   Silhouette = caisse Urban Arrow : hexagone symétrique (dessus large, 2 coins bas chanfreinés).
   Typo alignée sur images/tshirt : Inter Tight + JetBrains Mono. OR #E8B547 + BLANC #fafaf7 / NOIR #0f0f10.
   Wordmark + ÉLECTRICITÉ GÉNÉRALE CENTRÉS. Picto flottant ferré à gauche, équilibré par le QR bas-droite.
-  Câble doré FIN qui fait le tour. Ligne réseaux en bas. Artboard indicatif 1200 x 760 — À MESURER.
+  Câble doré FIN qui fait le tour. Ligne réseaux en bas. Artboard 1200 x 680 = ratio du flanc réel
+  de la caisse flightcase Cargo XL (~132 x 75 cm) — À MESURER avant impression.
   Vectoriser les textes avant impression.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
   <defs>
     <style>
       .gold    { fill: url(#goldGrad); }
@@ -18,7 +19,7 @@
     </style>
     <!-- Silhouette de la caisse : hexagone symétrique, 2 coins bas chanfreinés -->
     <clipPath id="caisse">
-      <path d="M20 0 H1180 A20 20 0 0 1 1200 20 V380 L1028 760 H172 L0 380 V20 A20 20 0 0 1 20 0 Z"/>
+      <path d="M20 0 H1180 A20 20 0 0 1 1200 20 V340 L1028 680 H172 L0 340 V20 A20 20 0 0 1 20 0 Z"/>
     </clipPath>
     <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#E8B547"/>
@@ -28,11 +29,11 @@
 
   <!-- Fond noir découpé à la forme de la caisse -->
   <g clip-path="url(#caisse)">
-    <rect class="ink" x="0" y="0" width="1200" height="760"/>
+    <rect class="ink" x="0" y="0" width="1200" height="680"/>
   </g>
 
   <!-- CÂBLE doré FIN qui fait le tour de la caisse ; sur le flanc droit il rentre et se balade jusqu'à l'embout -->
-  <path d="M1184 312 V384 L1022 744 H178 L16 384 V28 A12 12 0 0 1 28 16 H1172 A12 12 0 0 1 1184 28 V214
+  <path d="M1184 312 V344 L1022 664 H178 L16 344 V28 A12 12 0 0 1 28 16 H1172 A12 12 0 0 1 1184 28 V200 A14 14 0 0 1 1170 214
            C1132 214 1080 224 1086 268 C1090 300 1140 306 1150 274 C1158 248 1130 236 1120 262
            C1112 282 1132 292 1126 318"
         fill="none" stroke="#E8B547" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,8 +47,8 @@
     <circle cx="11" cy="0" r="2.6" class="ink"/>
   </g>
 
-  <!-- CONTENU (échelle réduite pour de meilleures proportions / marges autour) -->
-  <g transform="translate(600 380) scale(0.85) translate(-600 -380)">
+  <!-- CONTENU (échelle réduite : le lettrage ne doit pas remplir le flanc, cf. proportions covering Cyclowatt) -->
+  <g transform="translate(600 340) scale(0.72) translate(-600 -380)">
 
   <!-- PICTO (terre) ferré à gauche : hauteur = les 2 lignes (wordmark + sous-titre), centré verticalement -->
   <g transform="translate(10 39) scale(0.237)" class="white" stroke="#fafaf7" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
@@ -67,10 +68,10 @@
   <rect class="gold" x="520" y="281" width="160" height="3"/>
 
   <!-- PRESTATIONS -->
-  <text x="600" y="345" text-anchor="middle" class="display gold" font-size="26" letter-spacing="2.8">INSTALLATION · RÉNOVATION · DÉPANNAGE · MISE AUX NORMES</text>
+  <text x="600" y="337" text-anchor="middle" class="display gold" font-size="30" letter-spacing="2.8">INSTALLATION · RÉNOVATION · DÉPANNAGE · MISE AUX NORMES</text>
 
   <!-- CONTACT (centré, à gauche du QR) -->
-  <text x="500" y="470" text-anchor="middle" class="display gold" font-size="82" letter-spacing="1">06 49 92 78 41</text>
+  <text x="500" y="470" text-anchor="middle" class="display gold" font-size="52" letter-spacing="1">06 49 92 78 41</text>
   <text x="500" y="525" text-anchor="middle" class="mono white" font-size="32" letter-spacing="3">contact@lartisan20.fr</text>
 
   <!-- RÉSEAUX SOCIAUX -->

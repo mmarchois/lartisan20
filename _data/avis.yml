@@ -6,6 +6,14 @@
 # Le nombre affiché ("Basé sur X avis") et la note viennent de _config.yml
 # (google_review_count / google_rating) pour rester cohérents avec tout le site.
 avis:
+  - auteur: "Kinoshita B."
+    date: 2026-07-07
+    note: 5
+    texte: "Très bonne expérience, Mathieu a été très efficace et a monté sans difficulté mon ventilateur de plafond Create en taille L (151cm). Merci encore !"
+  - auteur: "Gwendal Audrain"
+    date: 2026-07-02
+    note: 5
+    texte: "Super intervention de Mathieu et l'artisan 2.0, que j'ai découvert grâce à son site web, pour la pose de 3 ventilateurs de plafond. Tout s'est fait facilement, avec beaucoup d'adaptabilité et de professionnalisme de sa part, que ce soit avant, pendant ou après l'intervention. Autant dans les conseils que dans l'opérationnel. Je suis ravi d'avoir trouvé un professionnel de confiance si besoin de nouveaux travaux au sein de notre appartement. Je recommande ++. Encore merci !"
   - auteur: "Marine B."
     date: 2026-06-26
     note: 5

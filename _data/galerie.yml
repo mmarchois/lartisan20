@@ -1,0 +1,42 @@
+photos:
+  # --- Tableaux électriques ---
+  - src: /images/blog/nouveau_tableau.webp
+    alt: "Tableau électrique neuf, circuits repérés et étiquetés"
+  - src: /images/poterie/tableau.webp
+    alt: "Tableau dédié de l'atelier de poterie : circuits four, prises et éclairage"
+  - src: /images/prestations/eclairage_aix/tableau.webp
+    alt: "Tableau Legrand avec le disjoncteur dédié ajouté pour l'éclairage d'allée"
+
+  # --- Éclairage ---
+  - src: /images/blog/luminaire_aix.webp
+    alt: "Suspension à cinq pendants installée dans un séjour à double hauteur à Aix-les-Bains"
+  - src: /images/prestations/eclairage_aix/luminaire_allume.webp
+    alt: "Allée éclairée à la tombée du jour par les luminaires installés à Aix-les-Bains"
+  - src: /images/prestations/eclairage_aix/interrupteur_exterieur.webp
+    alt: "Interrupteur d'éclairage extérieur posé sur le pilier près du portail"
+  - src: /images/blog/bernay/luminaire_terrain_gris.webp
+    alt: "Luminaire extérieur sur pilier remis en service, sur une installation des années 50"
+  - src: /images/blog/bernay/luminaire_entree.webp
+    alt: "Luminaire d'entrée extérieur remis en service"
+
+  # --- Équipements & confort ---
+  - src: /images/prestations/ventilateur2/ventilateur.jpeg
+    alt: "Ventilateur de plafond CREATE taille L installé à Saint-Ouen-sur-Seine"
+  - src: /images/prestations/ventilateur/ventilateur2.webp
+    alt: "Ventilateur de plafond CREATE avec éclairage intégré installé à Aubervilliers"
+  - src: /images/prestations/radiateur/radiateur.webp
+    alt: "Radiateur électrique à inertie posé sur circuit dédié"
+  - src: /images/blog/radiateur_pierre.webp
+    alt: "Deux radiateurs en pierre naturelle posés sous les fenêtres pendant la rénovation"
+  - src: /images/prestations/radiateur/seche_serviette.webp
+    alt: "Sèche-serviette installé en salle de bain selon les volumes NF C 15-100"
+  - src: /images/blog/vignes/installation_vmc.webp
+    alt: "Installation d'un caisson VMC dans les combles"
+  - src: /images/prestations/borne_ve/borne2.webp
+    alt: "Borne de recharge Wallbox Pulsar Plus installée sur poteau bois"
+
+  # --- Appareillage & finitions ---
+  - src: /images/poterie/prise.webp
+    alt: "Prise posée en saillie dans l'atelier de poterie"
+  - src: /images/poterie/interrupteur.webp
+    alt: "Interrupteur posé dans l'atelier de poterie"

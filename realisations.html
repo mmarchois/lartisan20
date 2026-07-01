@@ -16,12 +16,41 @@ redirect_from:
             <h1 class="page-hero__title">Quelques chantiers <em>récents</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
-                Diagnostic, échange, réalisation. Chaque projet traité avec la même rigueur. <strong>Voici six exemples</strong>, de l'Orne à Paris en passant par Saint-Ouen, Aubervilliers et Bernay.
+                Diagnostic, échange, réalisation. Chaque projet traité avec la même rigueur. <strong>Voici sept exemples</strong>, d'Aix-les-Bains à Paris en passant par l'Orne, Saint-Ouen, Aubervilliers et Bernay.
             </p>
         </div>
     </section>
 
-    <!-- CHANTIER 01 — Ventilateur CREATE Saint-Ouen (le plus récent) -->
+    <!-- CHANTIER 00 — Éclairage connecté Aix-les-Bains (le plus récent) -->
+    <section id="eclairage-connecte-aix-les-bains" class="page-section page-section--light realisation-chantier">
+        <div class="page-section__inner">
+            <header class="page-section__head reveal">
+                <p class="page-section__num">Aix-les-Bains · Éclairage connecté</p>
+                <h2 class="page-section__title">Une allée éclairée, pilotable au smartphone.</h2>
+            </header>
+
+            <div class="realisation-layout reveal realisation-layout--photo-right">
+                <div class="page-prose">
+                    <p>Installation d'un <strong>éclairage d'allée</strong> chez mes parents, à Aix-les-Bains : <strong>4 luminaires</strong> le long du chemin, sur un <strong>circuit dédié protégé par un disjoncteur 10 A</strong>. Commande par <strong>va-et-vient</strong>, un interrupteur au portail et un second à l'entrée de la maison.</p>
+                    <p>En plus des deux interrupteurs, pose d'un <strong>module connecté Shelly 1 Mini Gen4</strong> pour piloter l'allée depuis le smartphone : allumage à distance en rentrant en voiture, <strong>simulation de présence</strong> pendant les absences. Deux boîtes de dérivation extérieures <strong>étanchéifiées au gel</strong>, une boîte intérieure près du tableau et de la box wifi. Le récit détaillé est sur le <a href="{{ site.baseurl }}/blog/2026/07/01/eclairage-exterieur-connecte-aix-les-bains-shelly/">blog</a>.</p>
+                    <ul class="realisation-meta">
+                        <li><span class="realisation-meta__label">Lieu</span><span>Aix-les-Bains</span></li>
+                        <li><span class="realisation-meta__label">Type</span><span>Maison</span></li>
+                        <li><span class="realisation-meta__label">Spécificité</span><span>Pilotage connecté Shelly</span></li>
+                    </ul>
+                </div>
+                <div class="realisation-photos">
+                    <img src="{{ site.baseurl }}/images/prestations/eclairage_aix/luminaire_allume.webp" alt="Allée éclairée à la tombée du jour par les luminaires installés à Aix-les-Bains" loading="lazy" class="realisation-photos__main">
+                    <div class="realisation-photos__thumbs">
+                        <img src="{{ site.baseurl }}/images/prestations/eclairage_aix/boite_deriv2_shelly.webp" alt="Module connecté Shelly 1 Mini Gen4 câblé dans la boîte de dérivation intérieure" loading="lazy">
+                        <img src="{{ site.baseurl }}/images/prestations/eclairage_aix/boite_deriv1_gel.webp" alt="Boîte de dérivation extérieure étanchéifiée au gel pour le circuit d'éclairage" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHANTIER 01 — Ventilateur CREATE Saint-Ouen -->
     <section id="ventilateur-create-saint-ouen" class="page-section page-section--alt realisation-chantier">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
@@ -198,7 +227,10 @@ redirect_from:
     <section class="page-section page-section--light" style="padding-top:3rem;">
         <div class="page-section__inner reveal" style="text-align:center;">
             <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0 0 2rem;">D'autres histoires de chantier —</p>
-            <a href="{{ site.baseurl }}/blog/" class="page-btn page-btn--dark">Lire le blog <span aria-hidden="true">→</span></a>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="{{ site.baseurl }}/galerie/" class="page-btn page-btn--dark">Voir la galerie photos <span aria-hidden="true">→</span></a>
+                <a href="{{ site.baseurl }}/blog/" class="page-btn page-btn--outline-dark">Lire le blog <span aria-hidden="true">→</span></a>
+            </div>
         </div>
     </section>
 
@@ -214,12 +246,13 @@ redirect_from:
     "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "item": { "@type": "CreativeWork", "name": "Ventilateur de plafond CREATE – Saint-Ouen-sur-Seine", "description": "Pose d'un ventilateur de plafond CREATE taille L en remplacement d'un luminaire, en pleine canicule : adaptation de la platine au boîtier DCL, raccordement de l'éclairage intégré et mise en service.", "url": "{{ site.url }}/realisations/#ventilateur-create-saint-ouen", "image": "{{ site.url }}/images/prestations/ventilateur2/ventilateur.jpeg" } },
-            { "@type": "ListItem", "position": 2, "item": { "@type": "CreativeWork", "name": "Électrification d'un atelier de poterie – Orne", "description": "Installation électrique complète d'un atelier de poterie avec four : tranchée et câble 10 mm², tableau dédié Schneider Resi 9, circuit spécialisé four 32 A, conforme NF C 15-100.", "url": "{{ site.url }}/realisations/#atelier-poterie-orne", "image": "{{ site.url }}/images/poterie/atelier_final.jpeg" } },
-            { "@type": "ListItem", "position": 3, "item": { "@type": "CreativeWork", "name": "Luminaires extérieurs – Bernay", "description": "Pose de luminaires extérieurs avec création de circuits dédiés et étanchéité IP65.", "url": "{{ site.url }}/realisations/#luminaires-exterieurs-bernay" } },
-            { "@type": "ListItem", "position": 4, "item": { "@type": "CreativeWork", "name": "Ventilateurs de plafond CREATE – Aubervilliers", "description": "Installation et câblage de ventilateurs de plafond CREATE en remplacement de luminaires existants.", "url": "{{ site.url }}/realisations/#ventilateurs-plafond-aubervilliers" } },
-            { "@type": "ListItem", "position": 5, "item": { "@type": "CreativeWork", "name": "Motorisation volet roulant – Paris 18ᵉ", "description": "Transformation d'un volet roulant manuel en volet électrique : remplacement de l'axe, moteur tubulaire, circuit dédié depuis le tableau.", "url": "{{ site.url }}/realisations/#volet-roulant-paris", "image": "{{ site.url }}/images/prestations/vr/img1.jpeg" } },
-            { "@type": "ListItem", "position": 6, "item": { "@type": "CreativeWork", "name": "Rénovation maison 3 étages – Paris 18ᵉ", "description": "Rénovation électrique intégrale sur trois niveaux : nouveau tableau aux normes, refonte complète des circuits, mise en conformité NF C 15-100.", "url": "{{ site.url }}/realisations/#maison-3-etages-paris", "image": "{{ site.url }}/images/prestations/renovation/img1.jpeg" } }
+            { "@type": "ListItem", "position": 1, "item": { "@type": "CreativeWork", "name": "Éclairage extérieur connecté – Aix-les-Bains", "description": "Installation d'un éclairage d'allée de 4 luminaires sur circuit dédié 10 A, commandé par va-et-vient (portail et entrée) et piloté au smartphone via un module Shelly 1 Mini Gen4, avec simulation de présence et boîte de dérivation extérieure étanchéifiée au gel.", "url": "{{ site.url }}/realisations/#eclairage-connecte-aix-les-bains", "image": "{{ site.url }}/images/prestations/eclairage_aix/luminaire_allume.jpeg" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "CreativeWork", "name": "Ventilateur de plafond CREATE – Saint-Ouen-sur-Seine", "description": "Pose d'un ventilateur de plafond CREATE taille L en remplacement d'un luminaire, en pleine canicule : adaptation de la platine au boîtier DCL, raccordement de l'éclairage intégré et mise en service.", "url": "{{ site.url }}/realisations/#ventilateur-create-saint-ouen", "image": "{{ site.url }}/images/prestations/ventilateur2/ventilateur.jpeg" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "CreativeWork", "name": "Électrification d'un atelier de poterie – Orne", "description": "Installation électrique complète d'un atelier de poterie avec four : tranchée et câble 10 mm², tableau dédié Schneider Resi 9, circuit spécialisé four 32 A, conforme NF C 15-100.", "url": "{{ site.url }}/realisations/#atelier-poterie-orne", "image": "{{ site.url }}/images/poterie/atelier_final.jpeg" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "CreativeWork", "name": "Luminaires extérieurs – Bernay", "description": "Pose de luminaires extérieurs avec création de circuits dédiés et étanchéité IP65.", "url": "{{ site.url }}/realisations/#luminaires-exterieurs-bernay" } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "CreativeWork", "name": "Ventilateurs de plafond CREATE – Aubervilliers", "description": "Installation et câblage de ventilateurs de plafond CREATE en remplacement de luminaires existants.", "url": "{{ site.url }}/realisations/#ventilateurs-plafond-aubervilliers" } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "CreativeWork", "name": "Motorisation volet roulant – Paris 18ᵉ", "description": "Transformation d'un volet roulant manuel en volet électrique : remplacement de l'axe, moteur tubulaire, circuit dédié depuis le tableau.", "url": "{{ site.url }}/realisations/#volet-roulant-paris", "image": "{{ site.url }}/images/prestations/vr/img1.jpeg" } },
+            { "@type": "ListItem", "position": 7, "item": { "@type": "CreativeWork", "name": "Rénovation maison 3 étages – Paris 18ᵉ", "description": "Rénovation électrique intégrale sur trois niveaux : nouveau tableau aux normes, refonte complète des circuits, mise en conformité NF C 15-100.", "url": "{{ site.url }}/realisations/#maison-3-etages-paris", "image": "{{ site.url }}/images/prestations/renovation/img1.jpeg" } }
         ]
     }
 }

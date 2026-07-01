@@ -29,6 +29,7 @@ Page dédiée : https://www.lartisan20.fr/a-propos/
 
 ### Prestations ciblées (interventions à l'unité)
 
+- **Remplacement de tableau électrique** — Dépose de l'ancien tableau (fusibles, tableau vétuste), pose d'un tableau neuf conforme NF C 15-100 : différentiels 30 mA, disjoncteurs calibrés, tri et repérage des circuits, étiquetage, schéma remis, rééquilibrage des phases en triphasé. Mise en sécurité possible sans refaire toute l'installation. https://www.lartisan20.fr/prestations/remplacement-tableau-electrique/
 - **Pose de ventilateur de plafond** — Installation de ventilateurs de plafond (CREATE, Xiaomi et autres marques), avec ou sans éclairage : adaptation de la platine au boîtier DCL, fixation sécurisée, raccordement et mise en service. Confort d'été, jusqu'à 5-6 °C de température ressentie en moins. https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
 - **Pose de luminaires & remplacement de prises** — Lustres, suspensions, appliques, spots, ainsi que remplacement et ajout de prises, interrupteurs, va-et-vient et variateurs. Petits travaux électriques soignés, terre vérifiée. https://www.lartisan20.fr/prestations/pose-luminaires-prises/
 - **Motorisation de volet roulant** — Motoriser un volet manuel existant ou poser un volet roulant électrique neuf : moteur tubulaire filaire ou radio, point de commande, raccordement au tableau. https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
@@ -86,6 +87,7 @@ Basé à Saint-Ouen-sur-Seine (93400), zone d'intervention principale : Paris et
 
 - Accueil : https://www.lartisan20.fr/
 - Réalisations : https://www.lartisan20.fr/realisations/ (chantiers récents : atelier de poterie dans l'Orne, luminaires extérieurs à Bernay, ventilateurs de plafond CREATE à Aubervilliers, ventilateur de plafond CREATE taille L posé en pleine canicule à Saint-Ouen-sur-Seine, motorisation de volet roulant à Paris, rénovation complète d'une maison de 3 étages à Paris)
+- Galerie photos : https://www.lartisan20.fr/galerie/ (photos de chantiers par catégorie : tableaux électriques, éclairage, équipements et confort, appareillage et finitions, coulisses de l'activité)
 - Contact : https://www.lartisan20.fr/contact/
 - Électricien Paris & Île-de-France : https://www.lartisan20.fr/electricien-ile-de-france/
 - Électricien Paris : https://www.lartisan20.fr/electricien-paris/
@@ -102,6 +104,7 @@ Pages par ville (petite couronne) :
 Prestations :
 - Installation électrique : https://www.lartisan20.fr/prestations/installation-electrique/
 - Rénovation & mise aux normes : https://www.lartisan20.fr/prestations/renovation-mise-aux-normes/
+- Remplacement de tableau électrique : https://www.lartisan20.fr/prestations/remplacement-tableau-electrique/
 - Dépannage électrique : https://www.lartisan20.fr/prestations/depannage-electrique/
 - Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
 - Domotique : https://www.lartisan20.fr/prestations/domotique/
