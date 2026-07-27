@@ -12,7 +12,6 @@ image: /images/blog/vignes/ete_26/comble_vide.webp
 ---
 
 Cet été marque le premier anniversaire de notre maison du Lot. En un an, il s'en est passé des choses. Ça faisait d'ailleurs un moment que je n'avais pas donné de nouvelles du chantier. Depuis [le dernier point d'étape](/blog/2026/04/29/deux-semaines-au-lot-combles-plomberie-vmc/), où je racontais les quinze jours de câblage, de plomberie et de VMC dans les combles, le chantier a bien avancé. Les combles sont aujourd'hui isolés et plaqués. Ce qui n'était qu'un plateau de pierre et de charpente est devenu un espace fermé, propre, prêt à être découpé en pièces. Voici ce que ces dernières semaines ont donné.
-
 ## Les combles isolés et plaqués : place au cloisonnement
 
 Le gros changement depuis le dernier article, c'est que les rampants et le plafond des combles sont désormais isolés et recouverts de plaques. L'étage a changé de nature. On passe d'une charpente à nu, avec les réseaux qui couraient à l'air libre, à un volume habitable qu'il faut maintenant organiser.

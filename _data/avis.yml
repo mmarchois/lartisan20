@@ -6,6 +6,14 @@
 # Le nombre affiché ("Basé sur X avis") et la note viennent de _config.yml
 # (google_review_count / google_rating) pour rester cohérents avec tout le site.
 avis:
+  - auteur: "Sarah Jehle"
+    date: 2026-07-28
+    note: 5
+    texte: "Mathieu a été très professionnel ! Je n'avais pas d'électricien attitré et je suis très contente d'en avoir enfin un qui n'en veut pas à votre argent, honnête et de très bons conseils. Je le recommande vivement !"
+  - auteur: "Sylvain P."
+    date: 2026-07-27
+    note: 5
+    texte: "Excellente intervention pour monter un ventilateur de plafond, avec un plafond pourtant capricieux et plein de surprises ! Merci encore je recommande !"
   - auteur: "Kinoshita B."
     date: 2026-07-07
     note: 5
