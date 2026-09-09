@@ -1,5 +1,15 @@
-{% comment %} Widget avis Google maison — données dans _data/avis.yml, zéro service tiers {% endcomment %}
+{% comment %}
+Widget avis Google maison — données dans _data/avis.yml, zéro service tiers.
+Le carrousel n'affiche qu'une sélection : les avis marqués `selection: true`
+dans _data/avis.yml. Si aucun n'est marqué, on prend les premiers du fichier
+(include.limit, 6 par défaut). Tous les autres restent dans le fichier et sont
+comptés dans « Basé sur X avis » / la carte « Voir plus d'avis ».
+{% endcomment %}
 {% assign palette = "#7E57C2,#26A69A,#42A5F5,#EC407A,#FF7043,#5C6BC0,#66BB6A,#FFA726,#26C6DA" | split: "," %}
+{% assign gr_limit = include.limit | default: 6 %}
+{% assign gr_list = site.data.avis.avis | where: "selection", true %}
+{% if gr_list.size == 0 %}{% assign gr_list = site.data.avis.avis | slice: 0, gr_limit %}{% endif %}
+{% assign gr_rest = site.google_review_count | minus: gr_list.size %}
 <div class="gr-widget reveal">
     <aside class="gr-summary">
         <p class="gr-summary__label">Excellent</p>
@@ -18,7 +28,7 @@
     <div class="gr-carousel">
         <button type="button" class="gr-nav gr-nav--prev" aria-label="Avis précédents">&#8249;</button>
         <ul class="gr-track">
-            {% for a in site.data.avis.avis %}
+            {% for a in gr_list %}
             {% assign idx = forloop.index0 | modulo: palette.size %}
             {% assign color = palette[idx] %}
             {% assign note = a.note | default: 5 %}
@@ -65,6 +75,15 @@
                 <a class="gr-card__more" href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer">Lire la suite</a>
             </li>
             {% endfor %}
+            {% if gr_rest > 0 %}
+            <li class="gr-card gr-more">
+                <a class="gr-more__link" href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer">
+                    <span class="gr-more__num">+{{ gr_rest }}</span>
+                    <span class="gr-more__label">{% if gr_rest == 1 %}autre avis{% else %}autres avis{% endif %} sur Google</span>
+                    <span class="gr-more__cta">Voir plus d'avis <span aria-hidden="true">→</span></span>
+                </a>
+            </li>
+            {% endif %}
         </ul>
         <button type="button" class="gr-nav gr-nav--next" aria-label="Avis suivants">&#8250;</button>
     </div>

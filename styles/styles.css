@@ -8274,6 +8274,51 @@ a.service-card:hover {
 }
 .gr-card__more:hover { color: var(--hr-text-on-light); text-decoration: underline; }
 
+/* Carte de fin du carrousel : « +N autres avis / Voir plus d'avis » */
+.gr-more {
+    padding: 0;
+    background: transparent;
+    border-style: dashed;
+    box-shadow: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+.gr-more:hover { background: white; border-color: var(--hr-text-on-light); }
+
+.gr-more__link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.gr-more__num {
+    font-family: var(--hr-display);
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--hr-text-on-light);
+}
+
+.gr-more__label {
+    font-size: 0.95rem;
+    color: var(--hr-text-on-light-muted);
+    margin: 0.4rem 0 1.1rem;
+}
+
+.gr-more__cta {
+    font-family: var(--hr-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--hr-text-on-light);
+}
+.gr-more:hover .gr-more__cta { text-decoration: underline; }
+
 /* Flèches navigation */
 .gr-nav {
     position: absolute;
