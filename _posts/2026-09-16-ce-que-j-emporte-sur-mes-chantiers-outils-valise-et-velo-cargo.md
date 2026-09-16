@@ -1,12 +1,12 @@
 ---
 layout: blog
 title: "Ce que j'emporte sur mes chantiers : mes outils, ma valise et mon vélo cargo"
-description: "Tour d'horizon du matériel que j'emporte sur mes chantiers d'électricité : VAT et multimètres, tournevis Wiha, pinces Knipex, électroportatif DeWalt, dérouleurs de fils et de gaines Runpotec, escabeau télescopique. Le tout rangé dans une valise Velocity Pro Gear Rogue 600 et transporté dans Paris en vélo cargo Urban Arrow."
-keywords: "outillage électricien, matériel électricien professionnel, VAT vérificateur d'absence de tension, multimètre, tournevis Wiha, pinces Knipex, DeWalt, dérouleur Runpotec, escabeau télescopique, valise à outils Velocity Pro Gear Rogue 600, vélo cargo Urban Arrow, électricien vélo cargo Paris"
+description: "Tour d'horizon du matériel que j'emporte sur mes chantiers d'électricité : VAT et multimètres, tournevis Wiha, pinces Knipex, électroportatif DeWalt, dérouleurs de fils et de gaines Runpotec, escabeau télescopique. Le tout rangé dans une valise Velocity Pro Gear Rogue 600 et transporté dans Paris en vélo cargo Bullitt."
+keywords: "outillage électricien, matériel électricien professionnel, VAT vérificateur d'absence de tension, multimètre, tournevis Wiha, pinces Knipex, DeWalt, dérouleur Runpotec, escabeau télescopique, valise à outils Velocity Pro Gear Rogue 600, vélo cargo Bullitt, électricien vélo cargo Paris"
 category: "Reconversion"
-date: 2026-07-12
+date: 2026-09-16
 published: false
-excerpt: "Pas de retour de chantier cette fois : je vous ouvre ma valise. VAT, multimètres, Wiha, Knipex, DeWalt, dérouleurs Runpotec, escabeau télescopique... et le vélo cargo Urban Arrow qui transporte tout ça dans Paris. Parce que s'équiper en matériel de pro, quand on est en reconversion, c'est aussi une façon de montrer qu'on prend ce métier au sérieux."
+excerpt: "Pas de retour de chantier cette fois : je vous ouvre ma valise. VAT, multimètres, Wiha, Knipex, DeWalt, dérouleurs Runpotec, escabeau télescopique... et le vélo cargo Bullitt qui transporte tout ça dans Paris. Parce que s'équiper en matériel de pro, quand on est en reconversion, c'est aussi une façon de montrer qu'on prend ce métier au sérieux."
 image: /images/blog/outillage/velo_cargo_charge.webp
 ---
 
@@ -62,14 +62,14 @@ Une valise ordonnée qui s'ouvre chez un client, c'est aussi un message qui se p
 
 ## Traverser Paris avec tout ça : le vélo cargo
 
-Reste la vraie question logistique : comment déplacer tout ce matériel dans Paris ? Ma réponse tient en deux mots : **vélo cargo**. Le mien est un **Urban Arrow**, un biporteur électrique avec sa grande caisse à l'avant. La valise, l'électroportatif, l'escabeau replié, les consommables du jour : tout part dans la caisse et tout arrive en même temps que moi.
+Reste la vraie question logistique : comment déplacer tout ce matériel dans Paris ? Ma réponse tient en deux mots : **vélo cargo**. Le mien est un **Bullitt**, un biporteur électrique avec sa caisse à l'avant. La valise, l'électroportatif, l'escabeau replié, les consommables du jour : tout part dans la caisse et tout arrive en même temps que moi.
 
 J'ai déjà raconté [ce que ce choix doit à mes convictions]({{ site.baseurl }}/blog/2026/06/22/du-numerique-responsable-a-l-electricite-eco-responsable/), je n'y reviens donc pas en détail. Il faut pourtant être honnête : même sans la dimension écologique, le vélo cargo resterait un choix très rationnel pour un artisan parisien. Pas de place de stationnement à chercher pendant une demi-heure, pas de bouchons qui transforment un trajet de vingt minutes en une heure. Je passe là où les fourgons restent coincés, je me gare au plus près de la porte et je repars aussi facilement le soir. Aux heures de pointe, c'est moi qui arrive à l'heure annoncée.
 
 Pour les chantiers loin de Paris, en Normandie ou dans l'Orne par exemple, la voiture reprend évidemment le relais : je ne vais pas prétendre rejoindre Bernay en biporteur. Mais sur mon terrain principal, Paris et la petite couronne, le vélo couvre tout.
 
-![Vélo cargo Urban Arrow chargé avec la valise et le matériel](/images/blog/outillage/velo_cargo_charge.webp)
-*L'Urban Arrow chargé pour une journée de chantier : la valise, l'électroportatif, l'escabeau replié et les consommables du jour. Tout tient dans la caisse.*
+![Vélo cargo Bullitt chargé avec la valise et le matériel](/images/blog/outillage/velo_cargo_charge.webp)
+*Le Bullitt chargé pour une journée de chantier : la valise, l'électroportatif, l'escabeau replié et les consommables du jour. Tout tient dans la caisse.*
 
 ## Du matériel de pro, pas une collection
 
