@@ -11,6 +11,16 @@
 # restent ici, comptés dans « +N autres avis sur Google »). Sans aucun
 # `selection: true`, il affiche les 6 premiers du fichier.
 avis:
+  - auteur: "Anne Monfort"
+    selection: true
+    date: 2026-09-17
+    note: 5
+    texte: "J’ai fait appel à Mathieu pour poser un ventilateur de plafond. J’ai apprécié sa réactivité, la précision des informations communiquées, une prise de rendez-vous facile et un travail soigné. Je ferai dorénavant appel à lui pour tous mes travaux d’électricité."
+  - auteur: "Mathilde Delvert"
+    selection: true
+    date: 2026-09-13
+    note: 5
+    texte: "J’ai fait appel à l’Artisan 2.0 pour installer un ventilateur de plafond dans mon appartement, alors qu’il n’y avait pas de sortie électrique. Mathieu s’est d’abord déplacé pour repérer les lieux, bien comprendre ma demande et voir avec moi la meilleure solution pour l’installation. Une date a ensuite été fixée quelques jours plus tard. L’intervention nécessitait notamment un passage de câbles dans les combles (isolés avec de la laine de roche en prime !) et tout a été réalisé avec beaucoup de maîtrise et de soin, le tout dans le calme et la bonne humeur. Le travail est vraiment propre et les délais ont été respectés. Je suis ravie du résultat et je recommande vivement l’Artisan 2.0 pour son sérieux, son professionnalisme et la qualité de son travail ! Merci encore 😊"
   - auteur: "Sarah Jehle"
     selection: true
     date: 2026-07-28
