@@ -11,6 +11,11 @@
 # restent ici, comptés dans « +N autres avis sur Google »). Sans aucun
 # `selection: true`, il affiche les 6 premiers du fichier.
 avis:
+  - auteur: "Colette Vernet"
+    selection: true
+    date: 2026-09-21
+    note: 5
+    texte: "Très contente de la pose de mon ventilateur plafond par Mathieu, d’autant que l’installation n’était pas du tout évidente chez moi et c’est impeccable !! Merci pour votre patience, ponctualité, amabilité et gentillesse. Je recommande vivement"
   - auteur: "Anne Monfort"
     selection: true
     date: 2026-09-17
