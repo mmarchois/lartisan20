@@ -7,12 +7,18 @@ comptés dans « Basé sur X avis » / la carte « Voir plus d'avis ».
 {% endcomment %}
 {% assign palette = "#7E57C2,#26A69A,#42A5F5,#EC407A,#FF7043,#5C6BC0,#66BB6A,#FFA726,#26C6DA" | split: "," %}
 {% assign gr_limit = include.limit | default: 6 %}
-{% assign gr_list = site.data.avis.avis | where: "selection", true %}
-{% if gr_list.size == 0 %}{% assign gr_list = site.data.avis.avis | slice: 0, gr_limit %}{% endif %}
+{% comment %} Tri explicite du plus récent au plus ancien, quel que soit l'ordre du fichier {% endcomment %}
+{% assign gr_all = site.data.avis.avis | sort: "date" | reverse %}
+{% assign gr_list = gr_all | where: "selection", true %}
+{% if gr_list.size == 0 %}{% assign gr_list = gr_all | slice: 0, gr_limit %}{% endif %}
 {% assign gr_rest = site.google_review_count | minus: gr_list.size %}
+{% comment %} Note formatée « 5,0 » pour le panneau récap {% endcomment %}
+{% assign gr_score = site.google_rating | append: "" | replace: ".", "," %}
+{% unless gr_score contains "," %}{% assign gr_score = gr_score | append: ",0" %}{% endunless %}
 <div class="gr-widget reveal">
     <aside class="gr-summary">
         <p class="gr-summary__label">Excellent</p>
+        <p class="gr-summary__score"><span class="gr-summary__score-value">{{ gr_score }}</span><span class="gr-summary__score-max">/5</span></p>
         <div class="gr-summary__stars" aria-hidden="true">★★★★★</div>
         <p class="gr-summary__count">Basé sur <strong>{{ site.google_review_count }} avis</strong></p>
         <a class="gr-summary__google" href="{{ site.google_reviews_url }}" target="_blank" rel="noopener noreferrer" aria-label="Voir tous les avis sur Google">

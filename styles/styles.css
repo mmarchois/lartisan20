@@ -7318,7 +7318,7 @@ a.service-card:hover {
     gap: 1.5rem 2rem;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .home-btn {
@@ -7412,18 +7412,71 @@ a.service-card:hover {
     gap: 0.45rem;
 }
 
-.home-hero__rating {
+/* Badge note Google : sous les CTA, cliquable → section #reviews */
+.home-hero__google {
     display: inline-flex;
     align-items: center;
-    gap: 0.1em;
-    line-height: 1;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.8rem 1.25rem 0.8rem 1rem;
+    margin-bottom: 3.5rem;
+    border: 1px solid var(--hr-border-on-dark);
+    border-radius: 999px;
+    background: rgba(250, 250, 247, 0.04);
+    color: var(--hr-text-on-dark);
+    text-decoration: none;
+    transition: border-color 0.22s ease, background-color 0.22s ease;
+}
+.home-hero__google:hover {
+    border-color: var(--hr-accent);
+    background: rgba(232, 181, 71, 0.08);
 }
 
-.home-hero__trust-item .star {
-    width: 1.05em;
-    height: 1.05em;
+.home-hero__google-logo {
+    width: 22px;
+    height: 22px;
+    flex: none;
+}
+
+.home-hero__google-score {
+    font-family: var(--hr-display);
+    font-weight: 700;
+    font-size: 1.35rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.home-hero__google-stars {
+    display: inline-flex;
+    gap: 0.12em;
+    line-height: 1;
+}
+.home-hero__google-stars svg {
+    width: 1.05rem;
+    height: 1.05rem;
     fill: var(--hr-accent);
     flex: none;
+}
+.home-hero__google-stars svg.is-empty {
+    fill: var(--hr-border-on-dark);
+}
+
+.home-hero__google-count {
+    font-family: var(--hr-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--hr-text-on-dark-muted);
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--hr-border-on-dark);
+}
+
+.home-hero__google-arrow {
+    color: var(--hr-text-on-dark-muted);
+    transition: color 0.22s ease, transform 0.22s ease;
+}
+.home-hero__google:hover .home-hero__google-arrow {
+    color: var(--hr-accent);
+    transform: translateX(3px);
 }
 
 /* Item avis cliquable → descend vers la section #reviews */
@@ -7447,8 +7500,18 @@ a.service-card:hover {
         min-height: auto;
         padding: 7rem 1.5rem 3rem;
     }
-    .home-hero__cta-row { gap: 1rem; margin-bottom: 2rem; }
+    .home-hero__cta-row { gap: 1rem; margin-bottom: 1.25rem; }
     .home-btn { padding: 0.95rem 1.5rem; font-size: 0.9rem; }
+
+    .home-hero__google {
+        gap: 0.6rem;
+        padding: 0.7rem 1rem 0.7rem 0.85rem;
+        margin-bottom: 2rem;
+    }
+    .home-hero__google-score { font-size: 1.2rem; }
+    .home-hero__google-stars svg { width: 0.95rem; height: 0.95rem; }
+    .home-hero__google-count { padding-left: 0.6rem; }
+    .home-hero__google-arrow { display: none; }
 
     .home-hero__eyebrow {
         font-size: 0.7rem;
@@ -7470,7 +7533,7 @@ a.service-card:hover {
     .home-hero__trust-item {
         padding: 0;
     }
-    .home-hero__trust-item:not(:first-of-type)::before {
+    .home-hero__trust-item::before {
         content: "✓";
         color: var(--hr-accent);
         font-weight: 700;
@@ -8147,12 +8210,30 @@ a.service-card:hover {
 }
 
 .gr-summary__label {
+    font-family: var(--hr-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin: 0 0 0.75rem;
+    color: var(--hr-text-on-light-muted);
+}
+
+/* Note chiffrée en grand : l'élément principal du panneau */
+.gr-summary__score {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: 1.6rem;
-    letter-spacing: -0.01em;
-    margin: 0 0 0.5rem;
+    font-size: 3.6rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 0 0 0.4rem;
     color: var(--hr-text-on-light);
+}
+.gr-summary__score-max {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-left: 0.15em;
+    color: var(--hr-text-on-light-muted);
 }
 
 .gr-summary__stars {
