@@ -7234,18 +7234,52 @@ a.service-card:hover {
     width: clamp(120px, 13vw, 188px);
 }
 
-/* Mobile : version compacte, discrète, dans le coin bas-droite */
-.home-hero__cable--sm { display: none; }
+/* Mobile : câble en trois morceaux (voir index.html), masqué hors téléphone */
+.home-hero__cable-sm { display: none; }
 
-/* Téléphones uniquement : câble compact. Tablettes + desktop gardent le câble ferré à droite. */
+/* Téléphones uniquement. Tablettes + desktop gardent le câble ferré à droite. */
 @media (max-width: 600px) {
     .home-hero__cable--lg { display: none; }
-    .home-hero__cable--sm {
+    .home-hero__cable-sm {
+        --cw: clamp(56px, 16vw, 66px);   /* largeur du câble (viewBox large de 90) */
+        --cr: clamp(6px, 3vw, 16px);     /* marge droite */
+        --ct: clamp(132px, 18vh, 162px); /* haut : coude juste sous le bandeau */
+        --cb: 293px;                     /* bas : prise à hauteur du téléphone (CTA empilés) */
         display: block;
-        right: clamp(6px, 3vw, 16px);
-        top: clamp(132px, 18vh, 162px);
-        width: clamp(66px, 18vw, 82px);
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
         opacity: 0.6;
+    }
+    .home-hero__cable-sm > * {
+        position: absolute;
+        right: var(--cr);
+    }
+    .home-hero__cable-sm-top {
+        top: var(--ct);
+        width: var(--cw);
+        height: calc(var(--cw) * 44 / 90);
+        overflow: visible;
+    }
+    .home-hero__cable-sm-bottom {
+        bottom: var(--cb);
+        width: var(--cw);
+        height: calc(var(--cw) * 150 / 90);
+        overflow: visible;
+    }
+    /* Trait vertical : centré sur x = 76/90 du câble, épaisseur 3.8/90, chevauche les SVG de 2px */
+    .home-hero__cable-sm-line {
+        top: calc(var(--ct) + var(--cw) * 44 / 90 - 2px);
+        bottom: calc(var(--cb) + var(--cw) * 150 / 90 - 2px);
+        right: calc(var(--cr) + var(--cw) * 12.1 / 90);
+        width: calc(var(--cw) * 3.8 / 90);
+        background: #E8B547;
+    }
+    /* CTA empilés : la boucle du câble tombe à droite du téléphone, jamais dessus */
+    .home-hero__cta-row {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -7539,6 +7573,16 @@ a.service-card:hover {
         font-weight: 700;
     }
     .home-hero__trust-sep { display: none; }
+}
+
+/* Petits écrans : le badge tient sur une ligne */
+@media (max-width: 380px) {
+    .home-hero__google {
+        gap: 0.5rem;
+        padding: 0.65rem 0.85rem 0.65rem 0.75rem;
+    }
+    .home-hero__google-stars svg { width: 0.85rem; height: 0.85rem; }
+    .home-hero__google-count { padding-left: 0.5rem; font-size: 0.72rem; }
 }
 
 /* ---------- SECTIONS génériques ---------- */

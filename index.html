@@ -140,18 +140,26 @@ hide_contact: true
                 <circle cx="10" cy="0" r="2.4" fill="#0f0f10"/>
             </g>
         </svg>
-        <!-- Câble (mobile) : démarre juste au-dessus du titre, descend à droite, boucle + prise -->
-        <svg class="home-hero__cable home-hero__cable--sm" viewBox="0 0 90 670" fill="none" aria-hidden="true" focusable="false">
-            <circle cx="48" cy="9" r="4" fill="#E8B547"/>
-            <path d="M48 9 H64 A12 12 0 0 1 76 21 V542 A10 10 0 0 1 66 552 C44 552 16 561 21 594 C24 620 58 625 66 598 C72 578 50 568 43 590 C39 606 55 614 50 632"
-                  stroke="#E8B547" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <g transform="translate(50 632) rotate(75)" fill="#E8B547">
-                <rect x="0" y="-11" width="20" height="22" rx="6"/>
-                <rect x="20" y="-7" width="11" height="4.6" rx="2.3"/>
-                <rect x="20" y="2.4" width="11" height="4.6" rx="2.3"/>
-                <circle cx="9" cy="0" r="2.2" fill="#0f0f10"/>
-            </g>
-        </svg>
+        <!-- Câble (mobile) en trois morceaux : le coude haut est calé sous le bandeau, la boucle + prise
+             sont calées par le bas (à droite du téléphone, dans la zone libre du bloc CTA empilé) et le
+             trait vertical s'étire entre les deux, quelle que soit la hauteur du texte. -->
+        <div class="home-hero__cable-sm" aria-hidden="true">
+            <svg class="home-hero__cable-sm-top" viewBox="0 0 90 44" fill="none" focusable="false">
+                <circle cx="48" cy="9" r="4" fill="#E8B547"/>
+                <path d="M48 9 H64 A12 12 0 0 1 76 21 V44" stroke="#E8B547" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="home-hero__cable-sm-line"></span>
+            <svg class="home-hero__cable-sm-bottom" viewBox="0 0 90 150" fill="none" focusable="false">
+                <path d="M76 0 V22 A10 10 0 0 1 66 32 C44 32 16 41 21 74 C24 100 58 105 66 78 C72 58 50 48 43 70 C39 86 55 94 50 112"
+                      stroke="#E8B547" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <g transform="translate(50 112) rotate(75)" fill="#E8B547">
+                    <rect x="0" y="-11" width="20" height="22" rx="6"/>
+                    <rect x="20" y="-7" width="11" height="4.6" rx="2.3"/>
+                    <rect x="20" y="2.4" width="11" height="4.6" rx="2.3"/>
+                    <circle cx="9" cy="0" r="2.2" fill="#0f0f10"/>
+                </g>
+            </svg>
+        </div>
 
         <div class="home-hero__inner">
             <p class="home-hero__eyebrow"><span class="home-hero__eyebrow-prefix">L'artisan 2.0 · </span>Entreprise d'Électricité Générale <span class="home-hero__eyebrow-sep"> - </span>Paris &amp; petite couronne</p>

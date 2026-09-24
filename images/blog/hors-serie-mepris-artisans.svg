@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2c2c2c"/>
+      <stop offset="1" stop-color="#3a3a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- fine grid, very discreet -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="157" x2="1200" y2="157"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="473" x2="1200" y2="473"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+  <!-- eyebrow -->
+  <text x="228" y="150" font-family="'JetBrains Mono', Menlo, monospace" font-size="22" letter-spacing="4" fill="#E8B547" font-weight="500">L'ARTISAN 2.0 · HORS SÉRIE</text>
+  <line x1="228" y1="176" x2="324" y2="176" stroke="#E8B547" stroke-width="3"/>
+  <!-- quote -->
+  <text x="228" y="296" font-family="'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="-1.5">« Mille euros pour</text>
+  <text x="228" y="384" font-family="'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="78" font-weight="700" fill="#ffffff" letter-spacing="-1.5">faire couler de l'eau. »</text>
+  <!-- subtitle -->
+  <text x="228" y="470" font-family="'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="500" fill="#c9c9c9">Une semaine chez une cliente qui regarde les artisans de haut</text>
+  <!-- footer -->
+  <text x="228" y="540" font-family="'JetBrains Mono', Menlo, monospace" font-size="18" letter-spacing="2" fill="#8f8f8f">lartisan20.fr · blog</text>
+</svg>
