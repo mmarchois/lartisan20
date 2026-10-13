@@ -1,6 +1,11 @@
 {
+  "id": "/",
   "name": "L'artisan 2.0",
   "short_name": "L'artisan 2.0",
+  "description": "Électricien à Paris et en petite couronne (92, 93, 94). Installation, rénovation, mise aux normes, dépannage, domotique.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/images/favicon/web-app-manifest-192x192.png",

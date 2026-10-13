@@ -86,3 +86,28 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # IndexNow : signale les URL du sitemap à Bing, Yandex, Naver, Seznam et Yep
+      # (Bing alimente ChatGPT Search et Copilot). La clé est publique par conception :
+      # elle est servie à la racine du site dans <clé>.txt.
+      - name: Notify IndexNow
+        if: success()
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: d6385d3add68005906c5dd7d8c3a6ad1
+          SITE_HOST: www.lartisan20.fr
+        run: |
+          curl -fsSL "https://${{ env.SITE_HOST }}/sitemap.xml" \
+            | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' > urls.txt
+          echo "URLs à soumettre : $(wc -l < urls.txt)"
+          jq -n \
+            --arg host "$SITE_HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://${SITE_HOST}/${INDEXNOW_KEY}.txt" \
+            --rawfile urls urls.txt \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: ($urls | split("\n") | map(select(length > 0)))}' \
+            > indexnow.json
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data @indexnow.json

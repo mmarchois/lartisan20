@@ -1,0 +1,13 @@
+{%- comment -%}
+Éléments du tableau "areaServed" (JSON-LD), sans crochets : Paris, les trois
+départements de la petite couronne, puis chaque commune de _data/villes.yml.
+Usage : "areaServed": [ {% include schema-areaserved.html %} ]
+{%- endcomment -%}
+{ "@type": "City", "name": "Paris", "sameAs": "https://fr.wikipedia.org/wiki/Paris" },
+{ "@type": "AdministrativeArea", "name": "Hauts-de-Seine", "sameAs": "https://fr.wikipedia.org/wiki/Hauts-de-Seine" },
+{ "@type": "AdministrativeArea", "name": "Seine-Saint-Denis", "sameAs": "https://fr.wikipedia.org/wiki/Seine-Saint-Denis" },
+{ "@type": "AdministrativeArea", "name": "Val-de-Marne", "sameAs": "https://fr.wikipedia.org/wiki/Val-de-Marne" }
+{%- for v in site.data.villes -%}
+,
+{ "@type": "City", "name": {{ v.nom | jsonify }}, "containedInPlace": { "@type": "AdministrativeArea", "name": {% if v.dept == "92" %}"Hauts-de-Seine"{% elsif v.dept == "93" %}"Seine-Saint-Denis"{% else %}"Val-de-Marne"{% endif %} } }
+{%- endfor %}

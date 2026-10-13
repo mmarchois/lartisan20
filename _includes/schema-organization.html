@@ -1,0 +1,155 @@
+{%- comment -%}
+Entité principale du site (Electrician = LocalBusiness) + WebSite, injectées sur
+toutes les pages via head.html. Les autres blocs JSON-LD (Service, BlogPosting,
+pages ville) référencent "{{ site.url }}/#organization" et "{{ site.url }}/#founder" :
+les déclarer ici garantit que la référence se résout sur chaque page.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "@id": "{{ site.url }}/#organization",
+    "name": "L'artisan 2.0",
+    "alternateName": ["Artisan 2.0", "L'Artisan 2.0", "Artisan 2 point 0", "lartisan20"],
+    "legalName": "L'artisan 2.0",
+    "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "SIRET",
+        "value": "10587686600010"
+    },
+    "foundingDate": "2026-06-26",
+    "description": "Électricien à Paris et en petite couronne (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94), basé à Saint-Ouen-sur-Seine. Installation électrique, rénovation, mise aux normes NF C 15-100, remplacement de tableau, dépannage, domotique, VMC, chauffage. Électricien éco-responsable : déplacements à vélo cargo, zéro émission.",
+    "slogan": "Le savoir-faire de l'artisan, l'exigence de l'ingénieur.",
+    "url": "{{ site.url }}/",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/images/logo_artisan_2-0.png"
+    },
+    "image": [
+        "{{ site.url }}/images/og-image.png",
+        "{{ site.url }}/images/profil.jpeg"
+    ],
+    "email": "{{ site.email }}",
+    "telephone": "{{ site.phone_e164 }}",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "{{ site.phone_e164 }}",
+        "email": "{{ site.email }}",
+        "availableLanguage": "fr",
+        "areaServed": "FR"
+    },
+    "founder": {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#founder",
+        "name": "Mathieu Marchois",
+        "givenName": "Mathieu",
+        "familyName": "Marchois",
+        "url": "{{ site.url }}/a-propos/",
+        "image": "{{ site.url }}/images/profil.jpeg",
+        "knowsAbout": [
+            "Installation électrique NF C 15-100",
+            "Rénovation électrique",
+            "Mise aux normes électriques",
+            "Tableau électrique",
+            "Domotique Shelly",
+            "VMC",
+            "Architecture logicielle",
+            "Numérique responsable"
+        ],
+        "worksFor": { "@id": "{{ site.url }}/#organization" },
+        "sameAs": [
+            "{{ site.linkedin }}",
+            "{{ site.instagram }}"
+        ]
+    },
+    "employee": { "@id": "{{ site.url }}/#founder" },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "55 rue Eugène Berthoud",
+        "addressLocality": "Saint-Ouen-sur-Seine",
+        "postalCode": "93400",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.9077,
+        "longitude": 2.3345
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+        }
+    ],
+    "areaServed": [
+        {% include schema-areaserved.html %}
+    ],
+    "knowsAbout": [
+        "Installation électrique",
+        "Rénovation électrique",
+        "Mise aux normes NF C 15-100",
+        "Remplacement de tableau électrique",
+        "Dépannage électrique",
+        "Domotique",
+        "Éclairage intérieur et extérieur",
+        "VMC",
+        "Chauffage électrique",
+        "Motorisation de volet roulant et de portail",
+        "Visiophone et interphone",
+        "Sobriété énergétique"
+    ],
+    "knowsLanguage": "fr",
+    "currenciesAccepted": "EUR",
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations d'électricité générale",
+        "itemListElement": [
+            {%- for p in site.data.prestations %}
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "@id": "{{ site.url }}/prestations/{{ p.slug }}/#service",
+                    "name": {{ p.nom | jsonify }},
+                    "description": {{ p.description | jsonify }},
+                    "url": "{{ site.url }}/prestations/{{ p.slug }}/",
+                    "provider": { "@id": "{{ site.url }}/#organization" }
+                }
+            }{% unless forloop.last %},{% endunless %}
+            {%- endfor %}
+        ]
+    },
+    "sameAs": [
+        "{{ site.linkedin }}",
+        "{{ site.instagram }}",
+        "{{ site.facebook }}"
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ site.google_rating }}",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "{{ site.google_review_count }}",
+        "reviewCount": "{{ site.google_review_count }}"
+    },
+    "priceRange": "$$"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website",
+    "name": "L'artisan 2.0",
+    "alternateName": ["Artisan 2.0", "L'Artisan 2.0", "lartisan20"],
+    "url": "{{ site.url }}/",
+    "description": {{ site.description | jsonify }},
+    "publisher": { "@id": "{{ site.url }}/#organization" },
+    "about": { "@id": "{{ site.url }}/#organization" },
+    "inLanguage": "fr-FR"
+}
+</script>

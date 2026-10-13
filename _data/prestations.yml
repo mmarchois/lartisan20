@@ -1,0 +1,43 @@
+# Prestations publiées, source unique pour le JSON-LD (OfferCatalog), llms.txt et llms-full.txt.
+# slug = dossier prestations/ + nom de fichier sans .html.
+# La borne IRVE n'est pas listée : page dépubliée en attendant la qualification.
+
+- slug: installation-electrique
+  nom: "Installation électrique"
+  description: "Installation électrique complète ou partielle : tableau, circuits, prises, interrupteurs, éclairage intérieur et extérieur, circuits spécialisés cuisine et salle de bain, chauffage, VMC, prises réseau. Conforme NF C 15-100."
+- slug: renovation-mise-aux-normes
+  nom: "Rénovation électrique et mise aux normes"
+  description: "Diagnostic de l'installation existante, mise en conformité NF C 15-100, remplacement du tableau, mise à la terre, rénovation partielle ou complète, sans tout casser quand ce n'est pas nécessaire."
+- slug: remplacement-tableau-electrique
+  nom: "Remplacement de tableau électrique"
+  description: "Dépose de l'ancien tableau (fusibles, tableau vétuste), pose d'un tableau neuf conforme NF C 15-100 : différentiels 30 mA, disjoncteurs calibrés, circuits repérés et étiquetés, schéma remis, rééquilibrage des phases en triphasé."
+- slug: depannage-electrique
+  nom: "Dépannage électrique"
+  description: "Recherche de panne méthodique (coupure, court-circuit, disjoncteur qui saute, prise ou circuit mort), remplacement des composants défaillants, prix annoncé avant intervention. Réponse sous 24 h."
+- slug: domotique
+  nom: "Domotique"
+  description: "Pilotage du chauffe-eau, du chauffage, des volets, de l'éclairage et de la VMC avec des modules Shelly, Schneider Wiser, Legrand ou Somfy. Suivi de consommation Ecojoko. Compatible Home Assistant, Google Home et Alexa. Le strict utile, sans gadget."
+- slug: pose-luminaires-prises
+  nom: "Pose de luminaires et remplacement de prises"
+  description: "Lustres, suspensions, appliques, spots, et remplacement ou ajout de prises, interrupteurs, va-et-vient et variateurs. Appareillage Schneider Odace par défaut, terre vérifiée."
+- slug: eclairage-exterieur-jardin
+  nom: "Éclairage extérieur et de jardin"
+  description: "Spots, projecteurs, bornes lumineuses, balisage d'allée, détecteur de présence, cellule crépusculaire. Circuits extérieurs conformes : câble U1000 R2V, différentiel 30 mA, matériel IP44 à IP65."
+- slug: installation-vmc
+  nom: "Installation et raccordement VMC"
+  description: "VMC simple flux autoréglable ou hygroréglable, ou double flux : alimentation depuis le tableau, commande, raccordement du groupe, mise en service, remplacement d'un groupe bruyant."
+- slug: pose-radiateur-electrique
+  nom: "Pose de radiateur et sèche-serviette électrique"
+  description: "Radiateurs à inertie ou rayonnants et sèche-serviettes : circuit dédié, fil pilote, dimensionnement de la puissance, respect des volumes de sécurité en salle de bain."
+- slug: pose-ventilateur-plafond
+  nom: "Pose de ventilateur de plafond"
+  description: "Ventilateurs de plafond CREATE, Xiaomi et autres marques, avec ou sans éclairage : adaptation de la platine au boîtier DCL, fixation sécurisée, raccordement et mise en service."
+- slug: motorisation-volet-roulant
+  nom: "Motorisation de volet roulant"
+  description: "Motorisation d'un volet manuel existant ou pose d'un volet roulant électrique neuf : moteur tubulaire filaire ou radio, point de commande, raccordement au tableau."
+- slug: motorisation-portail
+  nom: "Motorisation de portail"
+  description: "Portail battant ou coulissant : alimentation 230 V dédiée, pose des moteurs, cellules de sécurité, télécommandes, ouverture depuis le visiophone."
+- slug: installation-visiophone-interphone
+  nom: "Installation de visiophone et interphone"
+  description: "Portier vidéo, plaque de rue avec caméra, moniteur intérieur, gâche électrique, ouverture de portail à distance. Pose neuve ou remplacement d'un interphone existant."

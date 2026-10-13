@@ -7,20 +7,29 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "@id": "{{ site.url }}{{ page.url }}#service",
-        "name": "{{ page.service_name }}",
-        "description": "{{ page.description }}",
+        "name": {{ page.service_name | jsonify }},
+        "serviceType": {{ page.service_type | jsonify }},
+        "category": "Électricité générale",
+        "description": {{ page.description | jsonify }},
         "url": "{{ site.url }}{{ page.url }}",
+        "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}",
+        "inLanguage": "fr-FR",
         "provider": {
-            "@id": "{{ site.url }}/#organization"
+            "@type": "Electrician",
+            "@id": "{{ site.url }}/#organization",
+            "name": "L'artisan 2.0",
+            "url": "{{ site.url }}/",
+            "telephone": "{{ site.phone_e164 }}"
         },
         "areaServed": [
-            { "@type": "City", "name": "Paris" },
-            { "@type": "State", "name": "Île-de-France" },
-            { "@type": "AdministrativeArea", "name": "Hauts-de-Seine (92)" },
-            { "@type": "AdministrativeArea", "name": "Seine-Saint-Denis (93)" },
-            { "@type": "AdministrativeArea", "name": "Val-de-Marne (94)" }
+            {% include schema-areaserved.html %}
         ],
-        "serviceType": "{{ page.service_type }}"
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "{{ site.url }}/contact/",
+            "servicePhone": { "@type": "ContactPoint", "telephone": "{{ site.phone_e164 }}", "contactType": "customer service" },
+            "availableLanguage": "fr"
+        }
     }
     </script>
     <script type="application/ld+json">

@@ -6,18 +6,32 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "{{ page.title }}",
-        "description": "{{ page.description }}",
-        "author": { "@id": "{{ site.url }}/#founder" },
-        "publisher": { "@id": "{{ site.url }}/#organization" },
-        "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
-        "dateModified": "{{ page.last_modified_at | default: page.date | date: '%Y-%m-%d' }}",
+        "@id": "{{ site.url }}{{ page.url }}#article",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page.description | default: page.excerpt | strip_html | strip | jsonify }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "author": {
+            "@type": "Person",
+            "@id": "{{ site.url }}/#founder",
+            "name": "Mathieu Marchois",
+            "url": "{{ site.url }}/a-propos/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "@id": "{{ site.url }}/#organization",
+            "name": "L'artisan 2.0",
+            "logo": { "@type": "ImageObject", "url": "{{ site.url }}/images/logo_artisan_2-0.png" }
+        },
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ site.url }}{{ page.url }}" },
+        "isPartOf": { "@type": "Blog", "@id": "{{ site.url }}/blog/#blog", "name": "Blog L'artisan 2.0" },
         "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}",
         "inLanguage": "fr-FR",
+        "isAccessibleForFree": true,
         "wordCount": {{ content | strip_html | number_of_words }}{% if page.keywords %},
-        "keywords": "{{ page.keywords }}"{% endif %}{% if page.category %},
-        "articleSection": "{{ page.category }}"{% endif %}
+        "keywords": {{ page.keywords | jsonify }}{% endif %}{% if page.category %},
+        "articleSection": {{ page.category | jsonify }}{% endif %}
     }
     </script>
     <script type="application/ld+json">
@@ -61,7 +75,7 @@
             <!-- HERO charbon -->
             <section class="page-hero page-hero--dark">
                 <div class="page-hero__inner">
-                    <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/blog/" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Blog</a>{% if page.chantier %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>Sur le terrain — {{ page.chantier }}</span>{% elsif page.category %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>{{ page.category }}</span>{% endif %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time></p>
+                    <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/blog/" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Blog</a>{% if page.chantier %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>Sur le terrain — {{ page.chantier }}</span>{% elsif page.category %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>{{ page.category }}</span>{% endif %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time><span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><a href="{{ site.baseurl }}/a-propos/" rel="author" style="color:inherit;text-decoration:none;">Par Mathieu Marchois</a></p>
 
                     <h1 class="page-hero__title">{{ page.title }}</h1>
 

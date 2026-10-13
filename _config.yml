@@ -24,6 +24,7 @@ zone: Paris & petite couronne (75, 92, 93, 94)
 
 # Build settings
 markdown: kramdown
+timezone: Europe/Paris
 future: true
 permalink: pretty
 
@@ -58,7 +59,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-      last_modified_at: 2026-05-15
   - scope:
       path: "_posts"
     values:
@@ -67,6 +67,10 @@ defaults:
   # Sitemap : exclure les fichiers non-HTML du sitemap auto-généré
   - scope:
       path: "llms.txt"
+    values:
+      sitemap: false
+  - scope:
+      path: "llms-full.txt"
     values:
       sitemap: false
   - scope:

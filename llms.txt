@@ -5,124 +5,94 @@ sitemap: false
 ---
 # L'artisan 2.0
 
-> Électricité générale à Paris et en petite couronne (petite couronne : Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94) - Installation, rénovation, mise aux normes, domotique, borne de recharge VE
+> Électricien à Paris et en petite couronne (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94), basé à Saint-Ouen-sur-Seine. Installation électrique, rénovation, mise aux normes NF C 15-100, remplacement de tableau, dépannage, domotique, VMC, chauffage. Fondé par Mathieu Marchois, ingénieur informatique passé à l'électricité. Déplacements à vélo cargo, zéro émission.
 
-**Nom de la marque** : L'artisan 2.0 (aussi écrit : Artisan 2.0, L'Artisan 2.0, lartisan20)
+Ce fichier suit la convention llms.txt (https://llmstxt.org). Version intégrale avec le texte complet des articles : {{ site.url }}/llms-full.txt. Dernière génération : {{ site.time | date: "%Y-%m-%d" }}.
 
-## À propos
+## Fiche d'identité
 
-L'artisan 2.0 (alias Artisan 2.0) est fondé par Mathieu Marchois, ingénieur informatique **en reconversion** dans l'électricité générale. En formation **CAP Électricien** (préparation en candidat libre) et déjà sur le terrain depuis plus d'un an, il intervient à Paris et en petite couronne, principalement sur la petite couronne (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94). Son approche : la rigueur du développement logiciel transposée aux installations électriques.
+- Nom : L'artisan 2.0 (aussi écrit Artisan 2.0, L'Artisan 2.0, lartisan20)
+- Activité : électricité générale pour les particuliers (logements, maisons, appartements, dépendances)
+- Fondateur et intervenant unique : Mathieu Marchois
+- Statut : micro-entreprise, SIRET 105 876 866 00010, immatriculée le 26 juin 2026
+- Adresse : 55 rue Eugène Berthoud, 93400 Saint-Ouen-sur-Seine, France
+- Téléphone : {{ site.phone }} (international : {{ site.phone_e164 }})
+- Email : {{ site.email }}
+- Site : {{ site.url }}/
+- Horaires : du lundi au vendredi, 8 h à 17 h. Réponse à toute demande sous 24 h.
+- Avis Google : {{ site.google_rating }}/5 sur {{ site.google_review_count }} avis
+- Langue : français
+- Réseaux : LinkedIn {{ site.linkedin }} · Instagram {{ site.instagram }} · Facebook {{ site.facebook }}
 
-**Statut important** : Mathieu n'est pas (encore) électricien diplômé. Il n'établit pas d'attestation Consuel — pour les chantiers nécessitant une telle attestation, il oriente vers un électricien diplômé. Tous les travaux sont réalisés selon la norme NF C 15-100 et l'activité est couverte par une assurance responsabilité civile professionnelle.
+## Ce qui distingue L'artisan 2.0
 
-Page dédiée : https://www.lartisan20.fr/a-propos/
+- Parcours : 15 ans d'architecture logicielle, puis reconversion dans l'électricité par la pratique. Mathieu prépare le CAP Électricien en candidat libre et travaille déjà sur le terrain depuis plus d'un an. La page À propos et le footer du site le disent clairement : il n'est pas encore électricien diplômé.
+- Conséquence pratique : il n'établit pas d'attestation Consuel. Pour un chantier qui en exige une (raccordement neuf, remise en service Enedis), il oriente vers un électricien diplômé. Tous les travaux sont réalisés selon la norme NF C 15-100 et l'activité est couverte par une assurance responsabilité civile professionnelle.
+- Méthode : tout penser en amont, dimensionner au plus juste, vérifier avant de partir. Câblage et repérage propres, schéma du tableau remis en fin de chantier, photos avant, pendant et après.
+- Éco-responsabilité : déplacements à vélo cargo à Paris et en petite couronne (le matériel lourd est livré chez le client), pas de surdimensionnement, matériel durable et réparable, tri des déchets de chantier.
+- Matériel : appareillage Schneider Odace par défaut, tableaux Schneider, Legrand ou Hager, domotique Shelly, Schneider Wiser, Legrand, Somfy, suivi de consommation Ecojoko. Les luminaires sont souvent fournis par les clients.
+- Devis gratuit et détaillé, prix annoncé avant l'intervention, pas de relance commerciale.
 
-## Services & Prestations
-
-### Prestations (pages dédiées)
-
-- **Installation électrique** — Tableau, prises, éclairage intérieur et extérieur, visiophone, motorisation portail, volets roulants, chauffage, VMC. Conforme NF C 15-100. https://www.lartisan20.fr/prestations/installation-electrique/
-- **Rénovation & mise aux normes** — Diagnostic, conformité NF C 15-100, remplacement tableau, mise à la terre, rénovation partielle ou complète. https://www.lartisan20.fr/prestations/renovation-mise-aux-normes/
-- **Dépannage électrique** — Recherche de pannes, remplacement composants, coupures, courts-circuits, intervention rapide. https://www.lartisan20.fr/prestations/depannage-electrique/
-- **Bornes de recharge véhicules électriques (IRVE)** — Étude, installation 7kW à 22kW, raccordement, mise en service. https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
-- **Domotique** — Pilotage chauffe-eau, chauffage, volets, éclairage, VMC avec modules Shelly, Schneider Wiser, Legrand, Somfy. Suivi de consommation Ecojoko. Automatismes intelligents. https://www.lartisan20.fr/prestations/domotique/
-
-### Prestations ciblées (interventions à l'unité)
-
-- **Remplacement de tableau électrique** — Dépose de l'ancien tableau (fusibles, tableau vétuste), pose d'un tableau neuf conforme NF C 15-100 : différentiels 30 mA, disjoncteurs calibrés, tri et repérage des circuits, étiquetage, schéma remis, rééquilibrage des phases en triphasé. Mise en sécurité possible sans refaire toute l'installation. https://www.lartisan20.fr/prestations/remplacement-tableau-electrique/
-- **Pose de ventilateur de plafond** — Installation de ventilateurs de plafond (CREATE, Xiaomi et autres marques), avec ou sans éclairage : adaptation de la platine au boîtier DCL, fixation sécurisée, raccordement et mise en service. Confort d'été, jusqu'à 5-6 °C de température ressentie en moins. https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
-- **Pose de luminaires & remplacement de prises** — Lustres, suspensions, appliques, spots, ainsi que remplacement et ajout de prises, interrupteurs, va-et-vient et variateurs. Petits travaux électriques soignés, terre vérifiée. https://www.lartisan20.fr/prestations/pose-luminaires-prises/
-- **Motorisation de volet roulant** — Motoriser un volet manuel existant ou poser un volet roulant électrique neuf : moteur tubulaire filaire ou radio, point de commande, raccordement au tableau. https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
-- **Installation visiophone & interphone** — Portier vidéo, plaque de rue avec caméra, moniteur intérieur, gâche électrique, ouverture de portail à distance. Pose neuve ou remplacement. https://www.lartisan20.fr/prestations/installation-visiophone-interphone/
-- **Motorisation de portail** — Portail battant ou coulissant : alimentation 230 V dédiée, pose des moteurs, cellules de sécurité, télécommandes, ouverture depuis le visiophone. https://www.lartisan20.fr/prestations/motorisation-portail/
-- **Pose de radiateur & sèche-serviette électrique** — Radiateurs à inertie ou rayonnants et sèche-serviettes : circuit dédié, fil pilote, dimensionnement de la puissance, respect des volumes en salle de bain. https://www.lartisan20.fr/prestations/pose-radiateur-electrique/
-- **Installation & raccordement VMC** — VMC simple flux (autoréglable ou hygroréglable) ou double flux : alimentation depuis le tableau, commande, raccordement du groupe et mise en service, remplacement d'un groupe bruyant. https://www.lartisan20.fr/prestations/installation-vmc/
-- **Éclairage extérieur & de jardin** — Spots et projecteurs, bornes lumineuses, balisage, détection de présence, cellule crépusculaire, circuits extérieurs conformes (câble U1000 R2V, différentiel 30 mA, matériel IP44 à IP65). https://www.lartisan20.fr/prestations/eclairage-exterieur-jardin/
-
-### Détail par catégorie
-
-#### Installations
-- Installation électrique : tableau, prises, interrupteurs, éclairage intérieur et extérieur, éclairage de jardin, visiophone, motorisation portail, volets roulants, circuits spécialisés (cuisine, salle de bain), chauffage électrique, VMC, prises réseau et multimédia
-- Bornes de recharge VE (IRVE) : étude de puissance, installation 7kW à 22kW, raccordement au tableau, mise en service
-
-#### Rénovation & Dépannage
-- Rénovation & mise aux normes : diagnostic, conformité NF C 15-100, remplacement tableau, chauffage, mise à la terre, rénovation partielle ou complète
-- Dépannage électrique : recherche de pannes, remplacement composants, coupures, courts-circuits, intervention rapide
-
-#### Domotique & Optimisation
-- Domotique : pilotage chauffe-eau, chauffage, volets, éclairage, VMC. Marques : Shelly, Schneider Wiser, Legrand Netatmo, Somfy, Sonoff. Suivi de consommation Ecojoko. Compatible Home Assistant, Google Home, Alexa.
-
-## Valeurs
-
-- **Efficience énergétique** : Des installations qui consomment juste ce qu'il faut, ni plus ni moins
-- **Qualité durable** : Des solutions pensées pour résister au temps et évoluer avec les besoins
-- **Innovation responsable** : La technologie au service du confort et du budget, sans gaspillage
+## Prestations
+{% for p in site.data.prestations %}
+- [{{ p.nom }}]({{ site.url }}/prestations/{{ p.slug }}/): {{ p.description }}{% endfor %}
+- Borne de recharge pour véhicule électrique (IRVE) : sur demande uniquement, pas de page dédiée pour le moment, en attendant la qualification IRVE.
 
 ## Zones d'intervention
 
-Basé à Saint-Ouen-sur-Seine (93400), zone d'intervention principale : Paris et la petite couronne (92, 93, 94).
+Base : Saint-Ouen-sur-Seine (93400). Zone principale : Paris et la petite couronne. Grande couronne (77, 78, 91, 95) uniquement sur demande.
 
-### Paris (75)
-- Tous les arrondissements, du 1er au 20e
+- [Électricien Paris et Île-de-France]({{ site.url }}/electricien-ile-de-france/): page régionale, tous les départements franciliens.
+- [Électricien Paris (75)]({{ site.url }}/electricien-paris/): tous les arrondissements, du 1er au 20e. Appartements haussmanniens, studios, lofts, copropriétés.
+- [Électricien Hauts-de-Seine (92)]({{ site.url }}/electricien-hauts-de-seine/): page départementale.
+- [Électricien Seine-Saint-Denis (93)]({{ site.url }}/electricien-seine-saint-denis/): page départementale.
+- [Électricien Val-de-Marne (94)]({{ site.url }}/electricien-val-de-marne/): page départementale.
+{% assign villes92 = site.data.villes | where: "dept", "92" %}{% assign villes93 = site.data.villes | where: "dept", "93" %}{% assign villes94 = site.data.villes | where: "dept", "94" %}
+Pages par commune, Hauts-de-Seine (92) :
+{% for v in villes92 %}
+- [Électricien {{ v.nom }}]({{ site.url }}/{{ v.slug }}/){% endfor %}
 
-### Hauts-de-Seine (92)
-- Boulogne-Billancourt, Nanterre, Asnières-sur-Seine, Colombes, Courbevoie, Rueil-Malmaison, Levallois-Perret, Issy-les-Moulineaux, Neuilly-sur-Seine, Clichy, Suresnes
+Pages par commune, Seine-Saint-Denis (93) :
+{% for v in villes93 %}
+- [Électricien {{ v.nom }}]({{ site.url }}/{{ v.slug }}/){% if v.slug == "electricien-saint-ouen" %}: commune de la base, intervention la plus rapide{% endif %}{% endfor %}
 
-### Seine-Saint-Denis (93)
-- Saint-Ouen-sur-Seine, Montreuil, Saint-Denis, Aubervilliers, Aulnay-sous-Bois, Drancy, Noisy-le-Grand, Pantin, Bobigny, Épinay-sur-Seine
+Pages par commune, Val-de-Marne (94) :
+{% for v in villes94 %}
+- [Électricien {{ v.nom }}]({{ site.url }}/{{ v.slug }}/){% endfor %}
 
-### Val-de-Marne (94)
-- Créteil, Vitry-sur-Seine, Champigny-sur-Marne, Saint-Maur-des-Fossés, Maisons-Alfort, Ivry-sur-Seine, Villejuif, Vincennes, Nogent-sur-Marne
+## Questions fréquentes
 
-### Grande couronne (sur demande)
-- Val-d'Oise (95), Yvelines (78), Essonne (91), Seine-et-Marne (77)
+- Dans quelles villes intervenez-vous ? Paris (tous arrondissements) et toute la petite couronne : Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94). Base à Saint-Ouen-sur-Seine.
+- Sous quel délai ? Réponse sous 24 h du lundi au vendredi. Dépannage dans la journée quand le planning le permet. Chantier plus important : échange, visite si nécessaire, puis devis détaillé.
+- Le devis est-il gratuit ? Oui, sans engagement. Description du besoin par mail, téléphone ou WhatsApp, avec photos si possible.
+- Comment transporter le matériel à vélo cargo ? L'outillage voyage dans la caisse. Le matériel lourd (tableau, câbles, gaines, radiateurs) est livré directement chez le client par le fournisseur.
+- Les travaux sont-ils aux normes ? Oui, NF C 15-100 : différentiels 30 mA, disjoncteurs calibrés, terre vérifiée, circuits repérés et étiquetés, schéma remis.
+- Faites-vous les attestations Consuel ? Non, pas encore : orientation vers un électricien diplômé pour les chantiers qui l'exigent.
+- Combien de temps pour remplacer un tableau électrique ? Une journée pour un logement standard. Coupure limitée à la journée, circuits essentiels remis sous tension en priorité.
+- Quelle domotique ? Shelly en priorité (modules relais, mesure, compatibles Home Assistant, Google Home, Alexa), ou Schneider Wiser, Legrand, Somfy selon l'existant. Uniquement ce qui sert vraiment : chauffe-eau, chauffage, volets, éclairage, VMC.
 
-## Contact
+## Pages principales
 
-- Email : contact@lartisan20.fr
-- Site web : https://www.lartisan20.fr
-- Horaires : Lundi au Vendredi, 8h-17h
+- [Accueil]({{ site.url }}/): présentation, prestations, engagements, avis Google, FAQ.
+- [À propos]({{ site.url }}/a-propos/): parcours de Mathieu Marchois, formation, engagement éco-responsable.
+- [Réalisations]({{ site.url }}/realisations/): chantiers récents racontés avec photos (éclairage connecté Shelly à Aix-les-Bains, ventilateur de plafond CREATE à Saint-Ouen-sur-Seine, atelier de poterie avec four dans l'Orne, luminaires extérieurs sur installation 1950 à Bernay, ventilateurs de plafond à Aubervilliers, motorisation de volet roulant à Paris, rénovation complète d'une maison de 3 étages à Paris).
+- [Galerie photos]({{ site.url }}/galerie/): photos de chantiers par catégorie (tableaux, éclairage, équipements, appareillage, coulisses).
+- [Contact]({{ site.url }}/contact/): mail, téléphone, WhatsApp, zones d'intervention.
+- [Blog]({{ site.url }}/blog/): journal de la reconversion et retours de chantier, flux RSS {{ site.url }}/feed.xml.
 
-## Pages du site
+## Articles du blog
 
-- Accueil : https://www.lartisan20.fr/
-- Réalisations : https://www.lartisan20.fr/realisations/ (chantiers récents : atelier de poterie dans l'Orne, luminaires extérieurs à Bernay, ventilateurs de plafond CREATE à Aubervilliers, ventilateur de plafond CREATE taille L posé en pleine canicule à Saint-Ouen-sur-Seine, motorisation de volet roulant à Paris, rénovation complète d'une maison de 3 étages à Paris)
-- Galerie photos : https://www.lartisan20.fr/galerie/ (photos de chantiers par catégorie : tableaux électriques, éclairage, équipements et confort, appareillage et finitions, coulisses de l'activité)
-- Contact : https://www.lartisan20.fr/contact/
-- Électricien Paris & Île-de-France : https://www.lartisan20.fr/electricien-ile-de-france/
-- Électricien Paris : https://www.lartisan20.fr/electricien-paris/
-- Électricien Hauts-de-Seine (92) : https://www.lartisan20.fr/electricien-hauts-de-seine/
-- Électricien Seine-Saint-Denis (93) : https://www.lartisan20.fr/electricien-seine-saint-denis/
-- Électricien Val-de-Marne (94) : https://www.lartisan20.fr/electricien-val-de-marne/
-- Électricien Saint-Ouen : https://www.lartisan20.fr/electricien-saint-ouen/
-
-Pages par ville (petite couronne) :
-- 92 : https://www.lartisan20.fr/electricien-boulogne-billancourt/ · /electricien-nanterre/ · /electricien-asnieres-sur-seine/ · /electricien-colombes/ · /electricien-courbevoie/ · /electricien-rueil-malmaison/ · /electricien-levallois-perret/ · /electricien-issy-les-moulineaux/ · /electricien-neuilly-sur-seine/ · /electricien-clichy/ · /electricien-suresnes/
-- 93 : https://www.lartisan20.fr/electricien-montreuil/ · /electricien-saint-denis/ · /electricien-aubervilliers/ · /electricien-aulnay-sous-bois/ · /electricien-drancy/ · /electricien-noisy-le-grand/ · /electricien-pantin/ · /electricien-bobigny/ · /electricien-epinay-sur-seine/
-- 94 : https://www.lartisan20.fr/electricien-creteil/ · /electricien-vitry-sur-seine/ · /electricien-champigny-sur-marne/ · /electricien-saint-maur-des-fosses/ · /electricien-maisons-alfort/ · /electricien-ivry-sur-seine/ · /electricien-villejuif/ · /electricien-vincennes/ · /electricien-nogent-sur-marne/
-
-Prestations :
-- Installation électrique : https://www.lartisan20.fr/prestations/installation-electrique/
-- Rénovation & mise aux normes : https://www.lartisan20.fr/prestations/renovation-mise-aux-normes/
-- Remplacement de tableau électrique : https://www.lartisan20.fr/prestations/remplacement-tableau-electrique/
-- Dépannage électrique : https://www.lartisan20.fr/prestations/depannage-electrique/
-- Borne de recharge VE : https://www.lartisan20.fr/prestations/borne-recharge-vehicule-electrique/
-- Domotique : https://www.lartisan20.fr/prestations/domotique/
-- Pose de ventilateur de plafond : https://www.lartisan20.fr/prestations/pose-ventilateur-plafond/
-- Pose de luminaires & remplacement de prises : https://www.lartisan20.fr/prestations/pose-luminaires-prises/
-- Motorisation de volet roulant : https://www.lartisan20.fr/prestations/motorisation-volet-roulant/
-- Installation visiophone & interphone : https://www.lartisan20.fr/prestations/installation-visiophone-interphone/
-- Motorisation de portail : https://www.lartisan20.fr/prestations/motorisation-portail/
-- Pose de radiateur & sèche-serviette électrique : https://www.lartisan20.fr/prestations/pose-radiateur-electrique/
-- Installation & raccordement VMC : https://www.lartisan20.fr/prestations/installation-vmc/
-- Éclairage extérieur & de jardin : https://www.lartisan20.fr/prestations/eclairage-exterieur-jardin/
-
-## Articles de fond
-
-Retours d'expérience terrain. Index : https://www.lartisan20.fr/blog/
+Retours d'expérience terrain écrits à la première personne par Mathieu Marchois, du plus récent au plus ancien.
 {% for post in site.posts %}
-- {{ post.title }} : {{ site.url }}{{ post.url }}{% endfor %}
+- [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.date | date: "%Y-%m-%d" }}{% if post.category %}, {{ post.category }}{% endif %}. {{ post.description | default: post.excerpt | strip_html | strip | truncate: 220 }}{% endfor %}
+
+## Optional
+
+- [Contenu intégral pour les LLM]({{ site.url }}/llms-full.txt): le texte complet de tous les articles du blog et des fiches prestations, en un seul fichier.
+- [Sitemap XML]({{ site.url }}/sitemap.xml): liste de toutes les pages indexables.
+- [Flux RSS]({{ site.url }}/feed.xml): derniers articles du blog.
+- [Mentions légales]({{ site.url }}/mentions-legales/): éditeur, SIRET, hébergeur.
 
 ## Mots-clés
 
-électricien Paris, électricien Île-de-France, électricien 92, électricien 93, électricien 94, électricien Hauts-de-Seine, électricien Seine-Saint-Denis, électricien Val-de-Marne, électricien Saint-Ouen, électricien Boulogne-Billancourt, électricien Nanterre, électricien Asnières-sur-Seine, électricien Colombes, électricien Courbevoie, électricien Rueil-Malmaison, électricien Levallois-Perret, électricien Issy-les-Moulineaux, électricien Neuilly-sur-Seine, électricien Clichy, électricien Suresnes, électricien Montreuil, électricien Saint-Denis, électricien Aubervilliers, électricien Aulnay-sous-Bois, électricien Drancy, électricien Noisy-le-Grand, électricien Pantin, électricien Bobigny, électricien Épinay-sur-Seine, électricien Créteil, électricien Vitry-sur-Seine, électricien Champigny-sur-Marne, électricien Saint-Maur-des-Fossés, électricien Maisons-Alfort, électricien Ivry-sur-Seine, électricien Villejuif, électricien Vincennes, électricien Nogent-sur-Marne, installation électrique, rénovation électrique, mise aux normes NF C 15-100, borne de recharge, IRVE, tableau électrique, domotique, shelly, schneider wiser, legrand, somfy, ecojoko, suivi consommation, auto-consommation, dépannage électrique, éclairage jardin, éclairage extérieur, visiophone, motorisation portail, autonomie solaire, pose ventilateur de plafond, installation ventilateur de plafond, ventilateur plafond CREATE, ventilateur Xiaomi, brasseur d'air, pose de luminaire, installation lustre, pose applique, spots encastrés, remplacement de prise, ajout de prise, changer interrupteur, va-et-vient, variateur, motorisation volet roulant, moteur tubulaire, installation visiophone, remplacement interphone, motorisation portail battant, motorisation portail coulissant, pose radiateur électrique, radiateur à inertie, sèche-serviette, installation VMC, raccordement VMC, VMC simple flux, VMC double flux
+électricien Paris, électricien petite couronne, électricien 92, électricien 93, électricien 94, électricien Hauts-de-Seine, électricien Seine-Saint-Denis, électricien Val-de-Marne, électricien Saint-Ouen, électricien vélo cargo, électricien éco-responsable, installation électrique, rénovation électrique, mise aux normes NF C 15-100, remplacement tableau électrique, mise en sécurité électrique, dépannage électrique, domotique Shelly, Schneider Wiser, Ecojoko, pose de luminaire, remplacement de prise, Schneider Odace, éclairage extérieur, éclairage de jardin, installation VMC, pose radiateur électrique, sèche-serviette, ventilateur de plafond CREATE, motorisation volet roulant, motorisation portail, visiophone, interphone, reconversion électricien, ingénieur devenu électricien

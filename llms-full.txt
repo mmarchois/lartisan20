@@ -1,0 +1,71 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# L'artisan 2.0 : contenu intégral pour les assistants IA
+
+> Électricien à Paris et en petite couronne (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-de-Marne 94), basé à Saint-Ouen-sur-Seine. Installation électrique, rénovation, mise aux normes NF C 15-100, remplacement de tableau, dépannage, domotique, VMC, chauffage. Fondé par Mathieu Marchois, ingénieur informatique passé à l'électricité. Déplacements à vélo cargo.
+
+Ce fichier complète {{ site.url }}/llms.txt (résumé et liens) avec le texte intégral des fiches prestations et de tous les articles du blog. Dernière génération : {{ site.time | date: "%Y-%m-%d" }}. Tout le contenu est rédigé par Mathieu Marchois, en français.
+
+## Fiche d'identité
+
+- Nom : L'artisan 2.0 (aussi écrit Artisan 2.0, L'Artisan 2.0, lartisan20)
+- Fondateur et intervenant unique : Mathieu Marchois, 15 ans d'architecture logicielle, en reconversion dans l'électricité générale (CAP Électricien préparé en candidat libre, plus d'un an de chantiers)
+- Statut : micro-entreprise, SIRET 105 876 866 00010, immatriculée le 26 juin 2026. Pas encore électricien diplômé : pas d'attestation Consuel, orientation vers un électricien diplômé pour les chantiers qui l'exigent. Travaux selon la norme NF C 15-100, assurance responsabilité civile professionnelle.
+- Adresse : 55 rue Eugène Berthoud, 93400 Saint-Ouen-sur-Seine
+- Téléphone : {{ site.phone }} · Email : {{ site.email }} · Site : {{ site.url }}/
+- Horaires : lundi au vendredi, 8 h à 17 h. Réponse sous 24 h. Devis gratuit et détaillé, prix annoncé avant intervention.
+- Avis Google : {{ site.google_rating }}/5 sur {{ site.google_review_count }} avis
+- Zone : Paris (tous arrondissements) et petite couronne (92, 93, 94). Grande couronne sur demande.
+- Engagements : câblage et repérage propres, matériaux fiables, conformité NF C 15-100, suivi avec photos avant, pendant et après, joignable sur WhatsApp, chantier nettoyé chaque jour, livraison clé en main.
+- Éco-responsabilité : vélo cargo (matériel lourd livré chez le client), dimensionnement juste, matériel durable et réparable, tri des déchets.
+- Matériel : appareillage Schneider Odace par défaut, tableaux Schneider, Legrand ou Hager, domotique Shelly, Schneider Wiser, Legrand, Somfy, suivi de consommation Ecojoko, bornes Wallbox. Les luminaires sont souvent fournis par les clients.
+
+## Prestations
+{% for p in site.data.prestations %}
+### {{ p.nom }}
+
+URL : {{ site.url }}/prestations/{{ p.slug }}/
+
+{{ p.description }} Intervention à Paris et dans toute la petite couronne (92, 93, 94), depuis Saint-Ouen-sur-Seine.
+{% endfor %}
+### Borne de recharge pour véhicule électrique (IRVE)
+
+Sur demande uniquement, pas de page dédiée pour le moment, en attendant la qualification IRVE.
+
+## Communes avec une page dédiée
+{% assign villes92 = site.data.villes | where: "dept", "92" %}{% assign villes93 = site.data.villes | where: "dept", "93" %}{% assign villes94 = site.data.villes | where: "dept", "94" %}
+- Paris (75), tous arrondissements : {{ site.url }}/electricien-paris/
+- Hauts-de-Seine (92) : {{ site.url }}/electricien-hauts-de-seine/ puis {% for v in villes92 %}{{ v.nom }} ({{ site.url }}/{{ v.slug }}/){% unless forloop.last %}, {% endunless %}{% endfor %}
+- Seine-Saint-Denis (93) : {{ site.url }}/electricien-seine-saint-denis/ puis {% for v in villes93 %}{{ v.nom }} ({{ site.url }}/{{ v.slug }}/){% unless forloop.last %}, {% endunless %}{% endfor %}
+- Val-de-Marne (94) : {{ site.url }}/electricien-val-de-marne/ puis {% for v in villes94 %}{{ v.nom }} ({{ site.url }}/{{ v.slug }}/){% unless forloop.last %}, {% endunless %}{% endfor %}
+- Île-de-France (page régionale) : {{ site.url }}/electricien-ile-de-france/
+
+## Réalisations racontées ({{ site.url }}/realisations/)
+
+- Aix-les-Bains, éclairage d'allée connecté : 4 luminaires sur circuit dédié 10 A, va-et-vient portail et entrée, module Shelly 1 Mini Gen4 pour pilotage au smartphone et simulation de présence, boîtes de dérivation extérieures étanchéifiées au gel.
+- Saint-Ouen-sur-Seine, ventilateur de plafond CREATE taille L posé en pleine canicule : dépose du luminaire, adaptation de la platine au boîtier DCL, raccordement de l'éclairage intégré, appairage de la télécommande.
+- Orne, atelier de poterie avec four : tranchée et câble 10 mm² sous gaine TPC, nouveau départ au tableau de la maison (différentiel 63 A, disjoncteur 32 A), tableau dédié Schneider Resi 9 (four 32 A, prises 16 A, éclairage 10 A), R02V sous tubes IRL, conforme NF C 15-100.
+- Bernay, cinq luminaires extérieurs remis en service sur une installation des années 1950.
+- Aubervilliers, trois ventilateurs de plafond CREATE avec éclairage.
+- Paris, motorisation de volet roulant : remplacement de l'axe, moteur, circuit dédié et branchement.
+- Paris, rénovation électrique complète d'une maison de 3 étages : tableau et circuits aux normes NF C 15-100.
+
+## Articles du blog, texte intégral
+
+Index : {{ site.url }}/blog/ · Flux RSS : {{ site.url }}/feed.xml · Auteur de tous les articles : Mathieu Marchois.
+{% for post in site.posts %}
+---
+
+### {{ post.title }}
+
+- URL : {{ site.url }}{{ post.url }}
+- Date de publication : {{ post.date | date: "%Y-%m-%d" }}{% if post.last_modified_at %} (mis à jour le {{ post.last_modified_at | date: "%Y-%m-%d" }}){% endif %}
+{% if post.category %}- Thème : {{ post.category }}
+{% endif %}{% if post.chantier %}- Chantier : {{ post.chantier }}
+{% endif %}- Résumé : {{ post.description | default: post.excerpt | strip_html | strip }}
+
+{{ post.content | strip_html | replace: '&nbsp;', ' ' | replace: '&amp;', '&' | replace: '&quot;', '"' | replace: '&#39;', "'" | replace: '&lt;', '<' | replace: '&gt;', '>' | strip }}
+{% endfor %}

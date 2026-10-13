@@ -1,38 +1,38 @@
-# Robots.txt for L'artisan 2.0
+# robots.txt - L'artisan 2.0
 # https://www.lartisan20.fr
+#
+# Tout le site est ouvert à l'indexation, moteurs classiques comme assistants IA.
+# Résumé structuré pour les LLM : https://www.lartisan20.fr/llms.txt
+# Contenu intégral pour les LLM : https://www.lartisan20.fr/llms-full.txt
 
+# Moteurs classiques et tout autre robot
 User-agent: *
 Allow: /
+Disallow: /redirects.json
 
-# AI Crawlers (ChatGPT, Perplexity, Claude, Bing Copilot etc.)
+# Assistants et moteurs IA (OpenAI, Anthropic, Perplexity, Google, Apple, Meta, Microsoft, Amazon, Mistral, DuckDuckGo, Cohere, You.com, Common Crawl)
 User-agent: GPTBot
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: ClaudeBot
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
 User-agent: Google-Extended
-Allow: /
-
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
 User-agent: Bingbot
-Allow: /
-
 User-agent: Amazonbot
+User-agent: MistralAI-User
+User-agent: DuckAssistBot
+User-agent: cohere-ai
+User-agent: YouBot
+User-agent: CCBot
 Allow: /
-
-# Exclusions
 Disallow: /redirects.json
 
 # Sitemap
