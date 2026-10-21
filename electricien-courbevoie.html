@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Courbevoie (92400)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Courbevoie</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Courbevoie alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Courbevoie (92400) fait partie de ma zone d'intervention régulière dans les Hauts-de-Seine. Contactez-moi pour convenir d'un rendez-vous." } },
         { "@type": "Question", "name": "Travaillez-vous dans les immeubles anciens de Bécon-les-Bruyères ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est un cas fréquent à Courbevoie. Dans le bâti ancien et bourgeois, je commence par un diagnostic, puis je traite ce qui doit l'être : mise à la terre, remplacement de câblages vétustes, mise aux normes du tableau." } },
         { "@type": "Question", "name": "Couvrez-vous les communes voisines comme Puteaux ou Nanterre ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Au-delà de Courbevoie, j'interviens à La Garenne-Colombes, Puteaux, Nanterre, Asnières-sur-Seine, Neuilly-sur-Seine et dans le reste des Hauts-de-Seine (92)." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Courbevoie", "item": "{{ site.url }}/electricien-courbevoie/" }
     ]
 }
 </script>

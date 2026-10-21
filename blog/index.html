@@ -5,6 +5,7 @@ description: "Les coulisses de ma reconversion : chantiers terrain, apprentissag
 keywords: "reconversion électricien, parcours reconversion, chantier électrique, blog reconversion, apprenti électricien"
 og_title: "Blog - Ma reconversion dans l'électricité | L'artisan 2.0"
 og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentissages au quotidien."
+crumb: "Blog"
 ---
 
 <script type="application/ld+json">
@@ -18,22 +19,13 @@ og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentis
     "inLanguage": "fr-FR"
 }
 </script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" }
-    ]
-}
-</script>
 
 <div class="page">
 
     <!-- HERO charbon -->
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
+            {% include breadcrumb.html %}
             <p class="page-hero__eyebrow">Blog — D'ingénieur à artisan</p>
             <h1 class="page-hero__title">Ma reconversion dans l'<em>électricité</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
@@ -53,7 +45,10 @@ og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentis
     <section class="page-section page-section--light blog-listing-wrapper">
         <div class="page-section__inner">
 
-            {% assign theme_order = "Électricité,Rénovation,Isolation,Domotique,Reconversion" | split: "," %}
+            {% assign theme_order = "Électricité,Rénovation,Isolation,Domotique,BTP,Reconversion,Hors série" | split: "," %}
+            {% comment %} Toute catégorie absente de la liste ci-dessus est ajoutée automatiquement en fin de rangée. {% endcomment %}
+            {% assign all_categories = site.posts | map: "category" | compact | uniq %}
+            {% for c in all_categories %}{% unless theme_order contains c %}{% assign theme_order = theme_order | push: c %}{% endunless %}{% endfor %}
             <div class="blog-filter reveal" role="group" aria-label="Filtrer les articles par thème">
                 <button type="button" class="blog-filter__chip is-active" data-theme="tous" aria-pressed="true">Tous <span class="blog-filter__count">{{ site.posts | size }}</span></button>
                 {% for t in theme_order %}
@@ -78,7 +73,7 @@ og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentis
                             <div class="blog-article-header">
                                 <div class="blog-article-meta">
                                     {% if post.category %}
-                                        <span class="blog-article-category">{{ post.category }}</span>
+                                        <span class="blog-article-category">{% include icons/tag.html %}{{ post.category }}</span>
                                     {% endif %}
                                     {% assign month_num = post.date | date: "%-m" %}
                                     {% case month_num %}
@@ -95,7 +90,10 @@ og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentis
                                         {% when '11' %}{% assign month_fr = 'novembre' %}
                                         {% when '12' %}{% assign month_fr = 'décembre' %}
                                     {% endcase %}
-                                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="blog-article-date">{{ post.date | date: "%-d" }} {{ month_fr }} {{ post.date | date: "%Y" }}</time>
+                                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="blog-article-date">{% include icons/calendar.html %}{{ post.date | date: "%-d" }} {{ month_fr }} {{ post.date | date: "%Y" }}</time>
+                                    {% assign rt_words = post.content | strip_html | number_of_words %}
+                                    {% assign rt_min = rt_words | plus: 199 | divided_by: 200 %}
+                                    <span class="blog-article-readtime">{% include icons/clock.html %}{{ rt_min }} min de lecture</span>
                                 </div>
                                 <h2 class="blog-article-title">{{ post.title }}</h2>
                                 {% if post.excerpt %}

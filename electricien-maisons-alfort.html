@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Maisons-Alfort (94700)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Maisons-Alfort</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tous les quartiers de Maisons-Alfort ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'interviens dans tout Maisons-Alfort (94700) : Centre-ville / Mairie, Charentonneau, Alfort / École Vétérinaire, Liberté, Vert-de-Maisons et Les Juilliottes." } },
         { "@type": "Question", "name": "Travaillez-vous sur les immeubles anciens des années 1930 ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est fréquent à Maisons-Alfort. Je commence par un diagnostic des câblages, je vérifie la mise à la terre et je propose une remise aux normes NF C 15-100, ciblée selon l'état de l'installation." } },
         { "@type": "Question", "name": "Couvrez-vous les communes autour de Maisons-Alfort ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans tout le Val-de-Marne (94) : Créteil, Alfortville, Saint-Maur-des-Fossés, Joinville-le-Pont, ainsi que Charenton-le-Pont en limite directe." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Maisons-Alfort", "item": "{{ site.url }}/electricien-maisons-alfort/" }
     ]
 }
 </script>

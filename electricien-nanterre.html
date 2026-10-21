@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Nanterre (92000)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Nanterre</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Nanterre alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nanterre fait partie de ma zone d'intervention dans l'ouest des Hauts-de-Seine : Centre, Préfecture, Petit-Nanterre, Université, Plateau-Mont-Valérien et La Défense." } },
         { "@type": "Question", "name": "Travaillez-vous dans les tours et grands ensembles de Nanterre ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je commence par un diagnostic du tableau et des circuits, puis je propose la remise en sécurité ou la mise aux normes adaptée, dans le respect des règles de la copropriété." } },
         { "@type": "Question", "name": "Pouvez-vous intervenir près de La Défense et des communes voisines ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je couvre la partie ouest de La Défense ainsi que Rueil-Malmaison, Courbevoie, Suresnes et Colombes. Réponse sous 24 h, urgences selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Nanterre", "item": "{{ site.url }}/electricien-nanterre/" }
     ]
 }
 </script>

@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Drancy (93700)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Drancy</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Drancy alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis installé à Saint-Ouen-sur-Seine et je me déplace régulièrement à Drancy (93700) et dans les communes voisines du 93." } },
         { "@type": "Question", "name": "Je rénove un pavillon ancien à Drancy, par où commencer ?", "acceptedAnswer": { "@type": "Answer", "text": "Beaucoup de pavillons drancéens des années 1920-1950 ont une installation à reprendre. Je commence par un diagnostic de l'existant, puis je propose une rénovation ciblée." } },
         { "@type": "Question", "name": "Couvrez-vous les communes autour de Drancy ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi à Bobigny, Le Bourget, Le Blanc-Mesnil, Bondy, Aulnay-sous-Bois et Pavillons-sous-Bois, ainsi que dans le reste de la Seine-Saint-Denis." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Drancy", "item": "{{ site.url }}/electricien-drancy/" }
     ]
 }
 </script>

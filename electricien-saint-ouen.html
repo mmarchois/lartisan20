@@ -14,7 +14,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Saint-Ouen (93)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Saint-Ouen</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -149,17 +149,6 @@ redirect_from:
         { "@type": "Question", "name": "Comment trouver un électricien à Saint-Ouen-sur-Seine ?", "acceptedAnswer": { "@type": "Answer", "text": "L'artisan 2.0 est basé au 55 rue Eugène Berthoud à Saint-Ouen (93400). Je suis votre électricien de proximité." } },
         { "@type": "Question", "name": "Intervenez-vous dans toute la Seine-Saint-Denis ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans tout le 93 : Saint-Denis, Aubervilliers, Pantin, Montreuil, Bobigny, Noisy-le-Sec, Romainville et toutes les communes du département." } },
         { "@type": "Question", "name": "Quel est votre délai d'intervention à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Étant basé à Saint-Ouen, je peux intervenir très rapidement. Réponse sous 24h." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Saint-Ouen-sur-Seine", "item": "{{ site.url }}/electricien-saint-ouen/" }
     ]
 }
 </script>

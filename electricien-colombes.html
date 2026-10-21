@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Colombes (92700)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Colombes</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Colombes alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis installé à Saint-Ouen-sur-Seine et Colombes fait partie de ma zone d'intervention régulière dans les Hauts-de-Seine." } },
         { "@type": "Question", "name": "Travaillez-vous dans tous les quartiers de Colombes ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans toute la ville : Centre, Petit-Colombes, Les Grèves, Europe, Fossés-Jean, Gabriel-Péri et le Plateau." } },
         { "@type": "Question", "name": "Mon pavillon de Colombes est ancien, pouvez-vous le mettre aux normes ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je commence par un diagnostic de l'installation existante, puis je propose une remise en sécurité ciblée selon la NF C 15-100 : tableau, mise à la terre, circuits dédiés." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Colombes", "item": "{{ site.url }}/electricien-colombes/" }
     ]
 }
 </script>

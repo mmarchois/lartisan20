@@ -1,0 +1,67 @@
+{%- comment -%}
+Fil d'Ariane : navigation visible + JSON-LD BreadcrumbList, générés depuis une seule source.
+Résolution : page.breadcrumb (liste de {name, url}) > layout blog > layout prestation
+> pages zones (site.data.villes + site.data.departements) > page.crumb (sinon page.title).
+Mobile (≤ 640 px) : seul le parent reste visible, sous la forme « ← Parent » (CSS .breadcrumb).
+{%- endcomment -%}
+{%- assign bc_names = "Accueil" | split: "|" -%}
+{%- assign bc_urls = "/" | split: "|" -%}
+{%- assign bc_slug = page.url | split: "/" | last -%}
+{%- if page.breadcrumb -%}
+    {%- for c in page.breadcrumb -%}
+        {%- assign bc_names = bc_names | push: c.name -%}
+        {%- assign bc_urls = bc_urls | push: c.url -%}
+    {%- endfor -%}
+{%- elsif page.layout == "blog" -%}
+    {%- assign bc_names = bc_names | push: "Blog" | push: page.title -%}
+    {%- assign bc_urls = bc_urls | push: "/blog/" | push: page.url -%}
+{%- elsif page.layout == "prestation" -%}
+    {%- assign bc_label = page.crumb | default: page.service_name -%}
+    {%- assign bc_names = bc_names | push: "Prestations" | push: bc_label -%}
+    {%- assign bc_urls = bc_urls | push: "/#services" | push: page.url -%}
+{%- elsif bc_slug == "electricien-ile-de-france" -%}
+    {%- assign bc_names = bc_names | push: "Île-de-France" -%}
+    {%- assign bc_urls = bc_urls | push: page.url -%}
+{%- else -%}
+    {%- assign bc_ville = site.data.villes | where: "slug", bc_slug | first -%}
+    {%- assign bc_dept = site.data.departements | where: "slug", bc_slug | first -%}
+    {%- if bc_ville -%}
+        {%- assign bc_vdept = site.data.departements | where: "code", bc_ville.dept | first -%}
+        {%- capture bc_durl -%}/{{ bc_vdept.slug }}/{%- endcapture -%}
+        {%- assign bc_names = bc_names | push: "Île-de-France" | push: bc_vdept.nom | push: bc_ville.nom -%}
+        {%- assign bc_urls = bc_urls | push: "/electricien-ile-de-france/" | push: bc_durl | push: page.url -%}
+    {%- elsif bc_dept -%}
+        {%- assign bc_names = bc_names | push: "Île-de-France" | push: bc_dept.nom -%}
+        {%- assign bc_urls = bc_urls | push: "/electricien-ile-de-france/" | push: page.url -%}
+    {%- else -%}
+        {%- assign bc_label = page.crumb | default: page.title -%}
+        {%- assign bc_names = bc_names | push: bc_label -%}
+        {%- assign bc_urls = bc_urls | push: page.url -%}
+    {%- endif -%}
+{%- endif -%}
+{%- assign bc_last = bc_names.size | minus: 1 -%}
+{%- assign bc_parent = bc_last | minus: 1 -%}
+<div class="breadcrumb" role="navigation" aria-label="Fil d'Ariane">
+    <ol class="breadcrumb__list">
+    {%- for bc_name in bc_names -%}
+        {%- assign bc_i = forloop.index0 -%}
+        {%- if bc_i == bc_last %}
+        <li class="breadcrumb__item breadcrumb__item--current"><span aria-current="page">{{ bc_name | escape }}</span></li>
+        {%- else %}
+        <li class="breadcrumb__item{% if bc_i == bc_parent %} breadcrumb__item--parent{% endif %}"><a href="{{ site.baseurl }}{{ bc_urls[bc_i] }}">{{ bc_name | escape }}</a><span class="breadcrumb__sep" aria-hidden="true">›</span></li>
+        {%- endif -%}
+    {%- endfor %}
+    </ol>
+</div>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    {%- for bc_name in bc_names -%}
+        {%- assign bc_i = forloop.index0 %}
+        { "@type": "ListItem", "position": {{ forloop.index }}, "name": {{ bc_name | jsonify }}, "item": "{{ site.url }}{{ bc_urls[bc_i] }}" }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+    ]
+}
+</script>

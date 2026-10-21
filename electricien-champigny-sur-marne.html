@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Champigny-sur-Marne (94500)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Champigny-sur-Marne</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Champigny-sur-Marne alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Mon siège est à Saint-Ouen (93), mais Champigny-sur-Marne (94500) fait partie de ma zone d'intervention dans le Val-de-Marne." } },
         { "@type": "Question", "name": "Travaillez-vous dans tous les quartiers de Champigny ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi bien dans les pavillons du Plant et de Cœuilly que dans les copropriétés du Centre-ville, du Plateau ou les grands ensembles du Bois-l'Abbé et des Mordacs." } },
         { "@type": "Question", "name": "Couvrez-vous les communes voisines de Champigny ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : Saint-Maur-des-Fossés, Chennevières-sur-Marne, Joinville-le-Pont, Villiers-sur-Marne, Le Perreux-sur-Marne et Bry-sur-Marne." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Champigny-sur-Marne", "item": "{{ site.url }}/electricien-champigny-sur-marne/" }
     ]
 }
 </script>

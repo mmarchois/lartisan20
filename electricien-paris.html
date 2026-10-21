@@ -15,7 +15,7 @@ redirect_from:
     <!-- HERO -->
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Paris (75)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Paris</em>. Tous arrondissements.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -162,17 +162,6 @@ redirect_from:
         { "@type": "Question", "name": "Quels travaux d'électricité réalisez-vous à Paris ?", "acceptedAnswer": { "@type": "Answer", "text": "Installation complète, rénovation et mise aux normes NF C 15-100, dépannage, VMC, chauffage, domotique." } },
         { "@type": "Question", "name": "Combien coûte un électricien à Paris ?", "acceptedAnswer": { "@type": "Answer", "text": "Chaque projet est unique. Contactez-moi pour discuter de vos travaux et de votre budget, sans engagement." } },
         { "@type": "Question", "name": "Intervenez-vous en urgence à Paris ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'assure les dépannages électriques à Paris : coupures, courts-circuits, recherche de pannes." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Paris", "item": "{{ site.url }}/electricien-paris/" }
     ]
 }
 </script>

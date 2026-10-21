@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Suresnes (92150)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Suresnes</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Suresnes alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Suresnes fait partie de ma zone d'intervention dans l'ouest des Hauts-de-Seine : centre-ville, Cité-Jardins, Mont-Valérien, Liberté, Écluse-Belvédère et les Bords de Seine." } },
         { "@type": "Question", "name": "Travaillez-vous dans les logements de la Cité-Jardins ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je commence par un diagnostic du tableau et des circuits, puis je propose la remise en sécurité ou la mise aux normes adaptée, dans le respect du bâti et des règles de la copropriété." } },
         { "@type": "Question", "name": "Pouvez-vous intervenir dans les communes voisines de Suresnes ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je couvre Puteaux, Nanterre, Rueil-Malmaison, ainsi que Saint-Cloud et l'ouest parisien (16e) par le pont de Suresnes. Réponse sous 24 h, urgences selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Suresnes", "item": "{{ site.url }}/electricien-suresnes/" }
     ]
 }
 </script>

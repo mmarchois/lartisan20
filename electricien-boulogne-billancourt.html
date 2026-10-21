@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Boulogne-Billancourt (92100)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Boulogne-Billancourt</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous aussi bien dans le neuf du Trapèze que dans les immeubles anciens ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les programmes neufs du Trapèze et de l'Île Seguin demandent surtout des finitions et ajouts ; les immeubles des années 30 du centre-ville appellent des reprises de tableau et des mises aux normes. Je m'adapte au bâti." } },
         { "@type": "Question", "name": "Travaillez-vous dans les autres communes des Hauts-de-Seine ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens autour de Boulogne dans l'ouest du 92 : Issy-les-Moulineaux, Sèvres, Meudon et Vanves." } },
         { "@type": "Question", "name": "Vous êtes basé à Saint-Ouen : quel délai pour Boulogne-Billancourt ?", "acceptedAnswer": { "@type": "Answer", "text": "Boulogne est à l'opposé de ma base, je l'organise sur rendez-vous. Réponse sous 24 h et créneau calé ensemble selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Boulogne-Billancourt", "item": "{{ site.url }}/electricien-boulogne-billancourt/" }
     ]
 }
 </script>

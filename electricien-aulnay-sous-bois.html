@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Aulnay-sous-Bois (93600)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Aulnay-sous-Bois</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tous les quartiers d'Aulnay-sous-Bois ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans tout Aulnay-sous-Bois (93600) : Vieux-Pays, Centre-gare, Nonneville au sud, Rose-des-Vents, Mitry, Gros-Saule et Chanteloup au nord." } },
         { "@type": "Question", "name": "Travaillez-vous aussi dans les communes voisines d'Aulnay ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Depuis Saint-Ouen, je couvre le nord-est de la Seine-Saint-Denis : Le Blanc-Mesnil, Sevran, Drancy et Le Bourget, ainsi que Villepinte (93) et Gonesse (95)." } },
         { "@type": "Question", "name": "Pouvez-vous rénover l'électricité d'un pavillon ancien à Aulnay ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est l'un des cas les plus fréquents à Aulnay, notamment dans les pavillons du Vieux-Pays et de Nonneville. Je commence toujours par un diagnostic avant de proposer une remise aux normes ciblée." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Aulnay-sous-Bois", "item": "{{ site.url }}/electricien-aulnay-sous-bois/" }
     ]
 }
 </script>

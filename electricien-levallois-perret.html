@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Levallois-Perret (92300)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Levallois-Perret</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Levallois-Perret alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Levallois-Perret est à quelques minutes de Saint-Ouen, où je suis installé. J'y interviens régulièrement, dans tous les quartiers : Centre, Front-de-Seine, Eiffel, Collange, Anatole-France et Wilson." } },
         { "@type": "Question", "name": "Travaillez-vous en copropriété et en immeuble ancien ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est l'essentiel du bâti à Levallois-Perret : immeubles haussmanniens, immeubles du début du XXe siècle et copropriétés. Je respecte les règles de l'immeuble, les horaires et les parties communes, et je remets aux normes les installations anciennes." } },
         { "@type": "Question", "name": "Dans quelles autres communes des Hauts-de-Seine intervenez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Autour de Levallois-Perret, j'interviens notamment à Clichy, Neuilly-sur-Seine, Courbevoie et Asnières-sur-Seine, ainsi que dans le reste des Hauts-de-Seine (92)." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Levallois-Perret", "item": "{{ site.url }}/electricien-levallois-perret/" }
     ]
 }
 </script>

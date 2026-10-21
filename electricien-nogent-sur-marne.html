@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Nogent-sur-Marne (94130)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Nogent-sur-Marne</em>. Au bord de la Marne.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Nogent-sur-Marne alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis installé à Saint-Ouen-sur-Seine, mais je me déplace régulièrement à Nogent-sur-Marne (94130) et dans tout le Val-de-Marne." } },
         { "@type": "Question", "name": "Travaillez-vous sur les maisons anciennes du bord de Marne ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les maisons bourgeoises et villas de Nogent ont souvent des installations à reprendre. Je commence toujours par un diagnostic, puis je propose une remise aux normes ciblée." } },
         { "@type": "Question", "name": "Couvrez-vous les communes voisines de Nogent ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : Le Perreux-sur-Marne, Fontenay-sous-Bois, Vincennes, Joinville-le-Pont et Bry-sur-Marne." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Nogent-sur-Marne", "item": "{{ site.url }}/electricien-nogent-sur-marne/" }
     ]
 }
 </script>

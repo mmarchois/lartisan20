@@ -2,6 +2,7 @@
 <html lang="fr-FR">
 <head>
     {% include head.html %}
+    {% assign rt_words = content | strip_html | number_of_words %}{% assign rt_min = rt_words | plus: 199 | divided_by: 200 %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -29,20 +30,10 @@
         "image": "{{ site.url }}{{ page.image | default: '/images/og-image.png' }}",
         "inLanguage": "fr-FR",
         "isAccessibleForFree": true,
+        "timeRequired": "PT{{ rt_min }}M",
         "wordCount": {{ content | strip_html | number_of_words }}{% if page.keywords %},
         "keywords": {{ page.keywords | jsonify }}{% endif %}{% if page.category %},
         "articleSection": {{ page.category | jsonify }}{% endif %}
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "{{ site.url }}{{ page.url }}" }
-        ]
     }
     </script>
 </head>
@@ -75,7 +66,13 @@
             <!-- HERO charbon -->
             <section class="page-hero page-hero--dark">
                 <div class="page-hero__inner">
-                    <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/blog/" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Blog</a>{% if page.chantier %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>Sur le terrain — {{ page.chantier }}</span>{% elsif page.category %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><span>{{ page.category }}</span>{% endif %}<span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time><span class="page-hero__eyebrow__sep" aria-hidden="true">·</span><a href="{{ site.baseurl }}/a-propos/" rel="author" style="color:inherit;text-decoration:none;">Par Mathieu Marchois</a></p>
+                    {% include breadcrumb.html %}
+                    <ul class="post-meta" aria-label="Informations sur l'article">
+                        {% if page.category %}<li class="post-meta__item post-meta__item--tag">{% include icons/tag.html %}<span>{{ page.category }}</span></li>{% endif %}
+                        {% if page.chantier %}<li class="post-meta__item post-meta__item--tag">{% include icons/hammer.html %}<span>{{ page.chantier }}</span></li>{% endif %}
+                        <li class="post-meta__item">{% include icons/calendar.html %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ month_fr }} {{ page.date | date: "%Y" }}</time></li>
+                        <li class="post-meta__item">{% include icons/clock.html %}<span>{{ rt_min }} min de lecture</span></li>
+                    </ul>
 
                     <h1 class="page-hero__title">{{ page.title }}</h1>
 
@@ -112,7 +109,7 @@
                     {% capture chantier_links %}
                     {% for p in site.posts %}
                     {% if p.chantier == page.chantier and p.url != page.url %}
-                    <li class="page-list__item"><a href="{{ site.baseurl }}{{ p.url }}" class="page-list__link"><span class="page-list__num">→</span><h3 class="page-list__title">{{ p.title }}</h3><p class="page-list__desc"></p><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                    <li class="page-list__item"><a href="{{ site.baseurl }}{{ p.url }}" class="page-list__link"><span class="page-list__num">Même chantier</span><h3 class="page-list__title">{{ p.title }}</h3><p class="page-list__desc"></p><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
                     {% endif %}
                     {% endfor %}
                     {% endcapture %}

@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Asnières-sur-Seine (92600)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Asnières-sur-Seine</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Asnières-sur-Seine alors que vous êtes à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis basé à Saint-Ouen (93), juste de l'autre côté de la Seine. Asnières-sur-Seine et ses quartiers (Centre, Les Grésillons, Bords de Seine, Hauts-d'Asnières) font partie de mon secteur immédiat." } },
         { "@type": "Question", "name": "Quels travaux réalisez-vous dans les immeubles anciens du centre d'Asnières ?", "acceptedAnswer": { "@type": "Answer", "text": "Sur le bâti ancien, j'interviens sur le remplacement des câblages vétustes, la mise à la terre, la rénovation du tableau et la remise aux normes NF C 15-100, en préservant au maximum l'existant." } },
         { "@type": "Question", "name": "Couvrez-vous aussi les communes voisines des Hauts-de-Seine ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens autour d'Asnières dans le nord du 92 : Clichy, Colombes, Gennevilliers, Courbevoie et Bois-Colombes. Réponse sous 24h et intervention rapide selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Asnières-sur-Seine", "item": "{{ site.url }}/electricien-asnieres-sur-seine/" }
     ]
 }
 </script>

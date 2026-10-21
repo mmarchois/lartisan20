@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Pantin (93500)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Pantin</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tous les quartiers de Pantin ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'interviens dans tout Pantin (93500) : Quatre-Chemins, Église / Centre, Petit-Pantin, Hauts-de-Pantin, Les Courtillières et le secteur du Canal / Grands-Moulins." } },
         { "@type": "Question", "name": "Pouvez-vous équiper un loft ou un bureau aménagé dans un ancien bâtiment industriel ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le long du canal de l'Ourcq, beaucoup de lofts et de bureaux occupent d'anciens locaux industriels. Ces espaces demandent un tableau bien dimensionné et des circuits adaptés ; je commence toujours par un diagnostic." } },
         { "@type": "Question", "name": "Quel est votre délai d'intervention à Pantin ?", "acceptedAnswer": { "@type": "Answer", "text": "Depuis ma base de Saint-Ouen, Pantin est tout proche. Réponse sous 24 h et intervention dans la journée pour les urgences, selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Pantin", "item": "{{ site.url }}/electricien-pantin/" }
     ]
 }
 </script>

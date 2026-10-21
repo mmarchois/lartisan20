@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Noisy-le-Grand (93160)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Noisy-le-Grand</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Noisy-le-Grand alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis installé à Saint-Ouen (93) mais je me déplace dans tout le département, y compris à Noisy-le-Grand (93160) et dans le secteur de Marne-la-Vallée." } },
         { "@type": "Question", "name": "Travaillez-vous dans les tours du Mont d'Est et les copropriétés ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'interviens aussi bien dans les grands ensembles du Mont d'Est et les copropriétés que dans les pavillons des Richardets ou du Champy, dans le respect du règlement et des parties communes." } },
         { "@type": "Question", "name": "Desservez-vous les communes autour de Noisy-le-Grand ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans les communes voisines : Gournay-sur-Marne, Neuilly-sur-Marne, Neuilly-Plaisance, ainsi qu'à Bry-sur-Marne et Villiers-sur-Marne (94) et Champs-sur-Marne (77)." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Noisy-le-Grand", "item": "{{ site.url }}/electricien-noisy-le-grand/" }
     ]
 }
 </script>

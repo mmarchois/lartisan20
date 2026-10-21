@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Seine-Saint-Denis (93)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien en <em>Seine-Saint-Denis</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -147,17 +147,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tout le département de la Seine-Saint-Denis ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le 93 est mon département de base. J'interviens à Saint-Ouen, Montreuil, Saint-Denis, Aubervilliers, Aulnay-sous-Bois, Drancy, Noisy-le-Grand, Pantin, Bobigny, Épinay-sur-Seine et toutes les communes voisines." } },
         { "@type": "Question", "name": "Quel est votre délai d'intervention dans le 93 ?", "acceptedAnswer": { "@type": "Answer", "text": "Étant installé à Saint-Ouen, au cœur du département, je suis très rapidement sur place. Réponse sous 24 h, intervention dans la journée pour les urgences selon disponibilité." } },
         { "@type": "Question", "name": "Quels travaux d'électricité réalisez-vous en Seine-Saint-Denis ?", "acceptedAnswer": { "@type": "Answer", "text": "Installation complète, rénovation et mise aux normes NF C 15-100, dépannage, VMC, chauffage, domotique." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" }
     ]
 }
 </script>

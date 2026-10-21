@@ -1,0 +1,6 @@
+# Pages départementales, hubs des pages villes (clé `dept` de villes.yml = `code`).
+# Utilisé par _includes/breadcrumb.html pour le fil d'Ariane Accueil > Île-de-France > Département > Ville.
+- { code: "75", slug: electricien-paris,             nom: "Paris" }
+- { code: "92", slug: electricien-hauts-de-seine,    nom: "Hauts-de-Seine" }
+- { code: "93", slug: electricien-seine-saint-denis, nom: "Seine-Saint-Denis" }
+- { code: "94", slug: electricien-val-de-marne,      nom: "Val-de-Marne" }

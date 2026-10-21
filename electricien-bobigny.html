@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Bobigny (93000)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Bobigny</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tous les quartiers de Bobigny ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'interviens dans tout Bobigny (93000) : centre-ville et Préfecture, Karl-Marx, L'Étoile, Pont-de-Bondy, Grémillon, La Folie et Les Vignes." } },
         { "@type": "Question", "name": "Travaillez-vous sur les grands ensembles et les copropriétés ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, aussi bien dans les grands ensembles (Abreuvoir, Karl-Marx) que dans les copropriétés du centre-ville. Je respecte le règlement, les horaires et la protection des parties communes." } },
         { "@type": "Question", "name": "Couvrez-vous les communes voisines de Bobigny ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Au-delà de Bobigny, j'interviens à Drancy, Pantin, Noisy-le-Sec, La Courneuve, Bondy et dans tout le reste de la Seine-Saint-Denis (93)." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Bobigny", "item": "{{ site.url }}/electricien-bobigny/" }
     ]
 }
 </script>

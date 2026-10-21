@@ -6,12 +6,14 @@ keywords: L'artisan 2.0, Artisan 2.0, Mathieu artisan 2.0, Mathieu Marchois, fon
 geo_region: FR-IDF
 geo_placename: Saint-Ouen-sur-Seine
 hide_contact: true
+crumb: "À propos"
 ---
 
 <div class="page">
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
+            {% include breadcrumb.html %}
             <p class="page-hero__eyebrow">À propos · L'artisan 2.0 (alias Artisan 2.0)</p>
             <h1 class="page-hero__title">Moi, c'est <em>Mathieu</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
@@ -177,15 +179,5 @@ hide_contact: true
             "{{ site.facebook }}"
         ]
     }
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "À propos", "item": "{{ site.url }}/a-propos/" }
-    ]
 }
 </script>

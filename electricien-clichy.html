@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Clichy (92110)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Clichy</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Clichy-la-Garenne (92110) ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis basé à Saint-Ouen, commune directement voisine de Clichy de l'autre côté de la Seine, ce qui me permet d'intervenir facilement dans tous les quartiers : Centre / Mairie, Berges de Seine, Victor-Hugo, Beaujon." } },
         { "@type": "Question", "name": "Travaillez-vous dans les autres communes des Hauts-de-Seine ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi dans les communes voisines du 92 comme Levallois-Perret et Asnières-sur-Seine." } },
         { "@type": "Question", "name": "Pouvez-vous rénover un loft aménagé dans une ancienne friche ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les anciens locaux industriels reconvertis en lofts ou bureaux présentent souvent de grands volumes et des besoins en puissance particuliers. Je commence toujours par un diagnostic avant de proposer une remise aux normes ou une extension adaptée." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Clichy", "item": "{{ site.url }}/electricien-clichy/" }
     ]
 }
 </script>

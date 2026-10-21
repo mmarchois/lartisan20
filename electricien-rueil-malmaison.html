@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Rueil-Malmaison (92500)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Rueil-Malmaison</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Rueil-Malmaison alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Rueil-Malmaison (92500) fait partie de ma zone d'intervention dans les Hauts-de-Seine. Contactez-moi pour convenir d'un rendez-vous." } },
         { "@type": "Question", "name": "Travaillez-vous aussi bien en maison individuelle qu'en copropriété à Rueil ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'interviens sur les maisons et pavillons du Mont-Valérien, de Buzenval ou du Plateau comme dans les copropriétés du Centre-ville et les résidences des Bords de Seine." } },
         { "@type": "Question", "name": "Couvrez-vous les communes autour de Rueil-Malmaison ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans les communes voisines du 92 : Nanterre, Suresnes et Garches." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Rueil-Malmaison", "item": "{{ site.url }}/electricien-rueil-malmaison/" }
     ]
 }
 </script>

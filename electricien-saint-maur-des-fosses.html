@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Saint-Maur-des-Fossés (94100)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Saint-Maur-des-Fossés</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Saint-Maur-des-Fossés alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Mon siège est à Saint-Ouen-sur-Seine (93), et le Val-de-Marne fait partie de ma zone d'intervention. Je me déplace à Saint-Maur et dans ses quartiers : La Varenne, Adamville, Champignol." } },
         { "@type": "Question", "name": "Travaillez-vous sur les maisons anciennes du Vieux-Saint-Maur ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est un cas fréquent à Saint-Maur. Sur les villas et maisons anciennes, je commence par un diagnostic : état du tableau, mise à la terre, câblages. La remise aux normes se fait ensuite par étapes." } },
         { "@type": "Question", "name": "Couvrez-vous les communes voisines de Saint-Maur ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi à Créteil, Champigny-sur-Marne, Joinville-le-Pont, Bonneuil-sur-Marne, Maisons-Alfort et dans tout le Val-de-Marne (94)." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Saint-Maur-des-Fossés", "item": "{{ site.url }}/electricien-saint-maur-des-fosses/" }
     ]
 }
 </script>

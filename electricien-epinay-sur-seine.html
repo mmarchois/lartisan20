@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Épinay-sur-Seine (93800)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Épinay-sur-Seine</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Épinay-sur-Seine alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'artisan 2.0 est installé à Saint-Ouen-sur-Seine (93400) et Épinay-sur-Seine fait partie de ma zone d'intervention dans le nord du 93." } },
         { "@type": "Question", "name": "Travaillez-vous dans les grands ensembles d'Orgemont et de La Source ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans tous les quartiers d'Épinay : Centre-ville, Orgemont, La Source / Les Presles, Les Béatus, Le Cygne d'Enghien et les bords de Seine, en appartement comme en pavillon." } },
         { "@type": "Question", "name": "Quel est votre délai d'intervention à Épinay-sur-Seine ?", "acceptedAnswer": { "@type": "Answer", "text": "Depuis Saint-Ouen, Épinay est tout proche : je peux intervenir rapidement. Réponse sous 24h, intervention dans la journée pour les urgences selon disponibilité." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Épinay-sur-Seine", "item": "{{ site.url }}/electricien-epinay-sur-seine/" }
     ]
 }
 </script>

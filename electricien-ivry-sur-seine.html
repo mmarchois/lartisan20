@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Ivry-sur-Seine (94200)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Ivry-sur-Seine</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Ivry-sur-Seine alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis basé à Saint-Ouen-sur-Seine mais j'interviens régulièrement à Ivry-sur-Seine (94200) et dans le Val-de-Marne." } },
         { "@type": "Question", "name": "Travaillez-vous dans les lofts d'Ivry-Port et les anciens locaux industriels ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les friches reconverties d'Ivry-Port demandent une installation adaptée à de grands volumes : sections de câbles, tableau dimensionné, circuits pensés pour l'usage réel. Je commence toujours par un diagnostic de l'existant." } },
         { "@type": "Question", "name": "Couvrez-vous le reste du Val-de-Marne autour d'Ivry ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans les communes voisines : Vitry-sur-Seine, Charenton-le-Pont, Alfortville, Le Kremlin-Bicêtre et plus largement le Val-de-Marne (94), ainsi que le 13e arrondissement de Paris." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Ivry-sur-Seine", "item": "{{ site.url }}/electricien-ivry-sur-seine/" }
     ]
 }
 </script>

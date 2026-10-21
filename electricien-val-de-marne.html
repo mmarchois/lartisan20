@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Val-de-Marne (94)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien dans le <em>Val-de-Marne</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -146,17 +146,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous dans tout le département du Val-de-Marne ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens dans tout le 94 : Créteil, Vitry-sur-Seine, Champigny-sur-Marne, Saint-Maur-des-Fossés, Maisons-Alfort, Ivry-sur-Seine, Villejuif, Vincennes, Nogent-sur-Marne et les communes voisines." } },
         { "@type": "Question", "name": "Quel est votre délai d'intervention dans le 94 ?", "acceptedAnswer": { "@type": "Answer", "text": "Basé à Saint-Ouen, je rejoins le département rapidement. Réponse sous 24 h, intervention dans la journée pour les urgences selon disponibilité." } },
         { "@type": "Question", "name": "Quels travaux d'électricité réalisez-vous dans le Val-de-Marne ?", "acceptedAnswer": { "@type": "Answer", "text": "Installation complète, rénovation et mise aux normes NF C 15-100, dépannage, VMC, chauffage, domotique." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" }
     ]
 }
 </script>

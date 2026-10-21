@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Neuilly-sur-Seine (92200)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Neuilly-sur-Seine</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Neuilly-sur-Seine depuis Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis basé à Saint-Ouen et j'interviens régulièrement à Neuilly-sur-Seine (92200), des Sablons à Saint-James." } },
         { "@type": "Question", "name": "Travaillez-vous dans les immeubles anciens et hôtels particuliers ?", "acceptedAnswer": { "@type": "Answer", "text": "Tout à fait. Le bâti de Neuilly demande du soin : appartements bourgeois, moulures, parquets, hôtels particuliers. Je privilégie une intégration discrète des équipements et des finitions nettes." } },
         { "@type": "Question", "name": "Desservez-vous les communes autour de Neuilly ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi à Levallois-Perret, Courbevoie et Puteaux, ainsi qu'à Paris 16e et 17e, limitrophes de Neuilly." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Hauts-de-Seine", "item": "{{ site.url }}/electricien-hauts-de-seine/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Neuilly-sur-Seine", "item": "{{ site.url }}/electricien-neuilly-sur-seine/" }
     ]
 }
 </script>

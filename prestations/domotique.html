@@ -13,6 +13,8 @@ redirect_from:
   - /prestations/maison-connectee.html
   - /maison-connectee.html
   - /prestations/domotique.html
+crumb: "Domotique"
+last_modified_at: 2026-10-21
 ---
 
 <div class="page">
@@ -20,7 +22,7 @@ redirect_from:
     <!-- HERO -->
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/#services" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Prestations</a> &nbsp; · &nbsp; 04 / Domotique</p>
+            {% include breadcrumb.html %}
 
             <h1 class="page-hero__title">La domotique <em>utile</em>. Sans gadget.</h1>
 
@@ -97,22 +99,19 @@ redirect_from:
                 <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">G</span><h3 class="page-list__title">Delta Dore</h3><p class="page-list__desc">Fabricant français. Pilotage du chauffage, gestion d'énergie et sécurité, centralisés via la box Tydom.</p><span></span></div></li>
                 <li class="page-list__item"><div class="page-list__link" style="cursor:default;"><span class="page-list__num">H</span><h3 class="page-list__title">Ecojoko</h3><p class="page-list__desc">Suivi de consommation en temps réel par appareil. Afficheur salon + application smartphone, en euros.</p><span></span></div></li>
             </ul>
-        </div>
-    </section>
-
-    <!-- Blog teaser -->
-    <section class="page-section page-section--alt" style="padding-top:2rem;padding-bottom:2rem;">
-        <div class="page-section__inner reveal" style="border-top:1px solid var(--hr-border-on-light);border-bottom:1px solid var(--hr-border-on-light);padding:2rem 0;">
-            <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;">
-                <span>Sur le blog</span>
-                <span style="color:var(--hr-accent);">—</span>
-                <a href="{{ site.baseurl }}/blog/2026/04/07/shelly-domotique-choix/" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-accent);font-family:var(--hr-display);font-size:1rem;font-weight:500;text-transform:none;letter-spacing:0;">Pourquoi j'ai choisi Shelly comme solution domotique <span aria-hidden="true">→</span></a>
-            </p>
+            <div class="page-related reveal">
+                <p class="page-related__label">Pour voir concrètement</p>
+                <h3 class="page-related__title">Ce que ça donne sur un vrai chantier.</h3>
+                <ul class="page-list page-list--related">
+                    <li class="page-list__item"><a href="{{ site.baseurl }}/realisations/#eclairage-connecte-aix-les-bains" class="page-list__link"><span class="page-list__num">Réalisation</span><h4 class="page-list__title">Une allée éclairée, pilotable au smartphone avec un module Shelly</h4><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                    <li class="page-list__item"><a href="{{ site.baseurl }}/blog/2026/04/07/shelly-domotique-choix/" class="page-list__link"><span class="page-list__num">Sur le blog</span><h4 class="page-list__title">Pourquoi j'ai choisi Shelly comme solution domotique</h4><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- 05 — Processus -->
-    <section class="page-section page-section--light">
+    <section class="page-section page-section--alt">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">05 / Processus</p>
@@ -129,7 +128,7 @@ redirect_from:
     </section>
 
     <!-- 06 — Bénéfices -->
-    <section class="page-section page-section--alt">
+    <section class="page-section page-section--light">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">06 / Bénéfices</p>
@@ -157,7 +156,7 @@ redirect_from:
     </section>
 
     <!-- 07 — FAQ -->
-    <section class="page-section page-section--light">
+    <section class="page-section page-section--alt">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">07 / Questions fréquentes</p>

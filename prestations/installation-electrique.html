@@ -8,6 +8,8 @@ og_description: Installation électrique complète pour votre habitation. Tablea
 service_name: Installation Électrique
 service_type: Installation électrique
 hide_contact: true
+crumb: "Installation"
+last_modified_at: 2026-10-21
 ---
 
 <div class="page">
@@ -15,7 +17,7 @@ hide_contact: true
     <!-- HERO charbon -->
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow"><a href="{{ site.baseurl }}/#services" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;">← Prestations</a> &nbsp; · &nbsp; 01 / Installation</p>
+            {% include breadcrumb.html %}
 
             <h1 class="page-hero__title">Une installation pensée comme un <em>système</em>.</h1>
 
@@ -172,22 +174,20 @@ hide_contact: true
                     <p style="color:var(--hr-text-on-light-muted);margin:0;line-height:1.5;">Réserves au tableau et gaines prévues pour les ajouts futurs : domotique, borne VE, extensions.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Blog teaser -->
-    <section class="page-section page-section--light" style="padding-top:2rem;padding-bottom:2rem;">
-        <div class="page-section__inner reveal" style="border-top:1px solid var(--hr-border-on-light);border-bottom:1px solid var(--hr-border-on-light);padding:2rem 0;">
-            <p style="font-family:var(--hr-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--hr-text-on-light-muted);margin:0;display:flex;flex-wrap:wrap;gap:0.5rem 1rem;align-items:center;">
-                <span>Sur le blog</span>
-                <span style="color:var(--hr-accent);">—</span>
-                <a href="{{ site.baseurl }}/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/" style="color:var(--hr-text-on-light);text-decoration:none;border-bottom:1px solid var(--hr-accent);font-family:var(--hr-display);font-size:1rem;font-weight:500;text-transform:none;letter-spacing:0;">Parfois, la meilleure façon d'avancer, c'est de tout démolir <span aria-hidden="true">→</span></a>
-            </p>
+            <div class="page-related reveal">
+                <p class="page-related__label">Pour voir concrètement</p>
+                <h3 class="page-related__title">Ce que ça donne sur un vrai chantier.</h3>
+                <ul class="page-list page-list--related">
+                    <li class="page-list__item"><a href="{{ site.baseurl }}/realisations/#maison-du-lot-deuxieme-etage" class="page-list__link"><span class="page-list__num">Réalisation</span><h4 class="page-list__title">L'électricité d'un étage entier, de la gaine au dernier interrupteur</h4><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                    <li class="page-list__item"><a href="{{ site.baseurl }}/realisations/#maison-3-etages-paris" class="page-list__link"><span class="page-list__num">Réalisation</span><h4 class="page-list__title">Rénovation complète d'une maison de trois étages à Paris</h4><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                    <li class="page-list__item"><a href="{{ site.baseurl }}/blog/2026/01/24/renovation-complete-tout-demolir-repartir-zero/" class="page-list__link"><span class="page-list__num">Sur le blog</span><h4 class="page-list__title">Parfois, la meilleure façon d'avancer, c'est de tout démolir</h4><span class="page-list__arrow" aria-hidden="true">→</span></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- 06 — FAQ -->
-    <section class="page-section page-section--alt">
+    <section class="page-section page-section--light">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">06 / Questions fréquentes</p>
@@ -224,7 +224,7 @@ hide_contact: true
     </section>
 
     <!-- 07 — Marques -->
-    <section class="page-section page-section--light">
+    <section class="page-section page-section--alt">
         <div class="page-section__inner">
             <header class="page-section__head reveal">
                 <p class="page-section__num">07 / Marques</p>

@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Aubervilliers (93300)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Aubervilliers</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Aubervilliers alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Ma base est à Saint-Ouen-sur-Seine, à quelques minutes d'Aubervilliers (93300). J'interviens sur toute la ville, du Centre-Mairie au Fort d'Aubervilliers." } },
         { "@type": "Question", "name": "Travaillez-vous dans les anciens ateliers reconvertis du Canal ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les anciens entrepôts du secteur Canal-Pont-Tournant reconvertis en lofts ou en bureaux demandent souvent des installations adaptées : tableau dédié, circuits repensés, mise aux normes NF C 15-100." } },
         { "@type": "Question", "name": "Desservez-vous les communes voisines d'Aubervilliers ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : Saint-Denis, Pantin, La Courneuve et Saint-Ouen-sur-Seine, ainsi que le 19e arrondissement de Paris, limitrophe." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Seine-Saint-Denis", "item": "{{ site.url }}/electricien-seine-saint-denis/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Aubervilliers", "item": "{{ site.url }}/electricien-aubervilliers/" }
     ]
 }
 </script>

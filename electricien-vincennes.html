@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Vincennes (94300)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Vincennes</em>. Le travail soigné, sans surprise.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Vincennes alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. L'artisan 2.0 est basé à Saint-Ouen-sur-Seine et se déplace à Vincennes (94300) et dans le Val-de-Marne pour tous travaux d'électricité." } },
         { "@type": "Question", "name": "Mon appartement haussmannien a une installation ancienne, que faire ?", "acceptedAnswer": { "@type": "Answer", "text": "C'est très courant à Vincennes. Je commence par un diagnostic de l'existant (tableau, mise à la terre, câblages), puis je propose une rénovation ciblée ou une mise aux normes NF C 15-100 selon l'état de l'installation." } },
         { "@type": "Question", "name": "Travaillez-vous dans les copropriétés de Vincennes ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens régulièrement en copropriété : respect des règles de l'immeuble, des horaires et protection des parties communes. J'interviens aussi à Saint-Mandé, Fontenay-sous-Bois et Nogent-sur-Marne." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Vincennes", "item": "{{ site.url }}/electricien-vincennes/" }
     ]
 }
 </script>

@@ -15,7 +15,7 @@ redirect_from:
 
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
-            <p class="page-hero__eyebrow">Zone d'intervention · Villejuif (94800)</p>
+            {% include breadcrumb.html %}
             <h1 class="page-hero__title">Électricien à <em>Villejuif</em>. Et dans le 94.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
@@ -150,18 +150,6 @@ redirect_from:
         { "@type": "Question", "name": "Intervenez-vous à Villejuif alors que vous êtes basé à Saint-Ouen ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Je suis installé à Saint-Ouen (93) et je me déplace régulièrement dans le Val-de-Marne, dont Villejuif." } },
         { "@type": "Question", "name": "Travaillez-vous sur les logements anciens comme sur les programmes neufs du Grand Paris ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Que ce soit un pavillon du Centre-ville à remettre aux normes ou un appartement récent près des nouvelles gares, j'adapte mon intervention au bâti et à l'installation existante." } },
         { "@type": "Question", "name": "Couvrez-vous les communes autour de Villejuif ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'interviens aussi à L'Haÿ-les-Roses, Vitry-sur-Seine, Le Kremlin-Bicêtre, Cachan, Arcueil, Chevilly-Larue et plus largement dans le Val-de-Marne." } }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Électricien Paris & Île-de-France", "item": "{{ site.url }}/electricien-ile-de-france/" },
-        { "@type": "ListItem", "position": 3, "name": "Électricien Val-de-Marne", "item": "{{ site.url }}/electricien-val-de-marne/" },
-        { "@type": "ListItem", "position": 4, "name": "Électricien Villejuif", "item": "{{ site.url }}/electricien-villejuif/" }
     ]
 }
 </script>

@@ -6,6 +6,7 @@ keywords: contact électricien, électricien Paris, électricien Île-de-France,
 hide_contact: true
 redirect_from:
   - /contact.html
+crumb: "Contact"
 ---
 
 <div class="page">
@@ -13,6 +14,7 @@ redirect_from:
     <!-- HERO charbon -->
     <section class="page-hero page-hero--dark" aria-labelledby="contact-hero-title">
         <div class="page-hero__inner">
+            {% include breadcrumb.html %}
             <p class="page-hero__eyebrow">Contact — Réponse sous 24 h</p>
 
             <h1 id="contact-hero-title" class="page-hero__title">On regarde votre <em>projet</em> ensemble ?</h1>
@@ -132,15 +134,5 @@ redirect_from:
     "name": "Contact L'artisan 2.0",
     "url": "{{ site.url }}/contact/",
     "mainEntity": { "@id": "{{ site.url }}/#organization" }
-}
-</script>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ site.url }}/contact/" }
-    ]
 }
 </script>
