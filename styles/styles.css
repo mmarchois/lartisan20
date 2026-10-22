@@ -2529,21 +2529,19 @@ section {
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* Nav Lumo badge — pill solide en or (#D49F04). */
-.nav-badge-new {
+/* Nav Lumo : pictogramme de la marque (carré or + éclair) devant le nom.
+   Le lien reste inline comme ses voisins pour partager la même ligne de base ;
+   l'icône est calée sur le texte par vertical-align. */
+.nav-lumo {
+    white-space: nowrap;
+}
+
+.nav-lumo-icon {
     display: inline-block;
-    background: #D49F04;
-    color: #0f0f10;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 0.58rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    padding: 0.3em 0.6em;
-    border-radius: 999px;
-    vertical-align: middle;
-    margin-left: 0.4em;
-    line-height: 1;
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.22em;
+    margin-right: 0.4em;
 }
 
 @media (max-width: 768px) {
@@ -3027,7 +3025,6 @@ footer {
     .mobile-menu__lumo {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 0.75rem;
         padding: 0.85rem 1.1rem;
         border-radius: 12px;
@@ -3046,18 +3043,10 @@ footer {
         border-color: var(--hr-accent);
     }
 
-    .mobile-menu__badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.25rem 0.6rem;
-        border-radius: 999px;
-        background: var(--hr-accent);
-        color: var(--hr-bg-dark);
-        font-family: var(--hr-mono);
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+    .mobile-menu__lumo-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
     }
 
     .mobile-menu__footer {
@@ -8923,12 +8912,6 @@ body:has(.home) nav .nav-lumo:hover {
     border-color: #D49F04;
 }
 
-/* Sur le hero charbon, le badge or reste lisible — pas besoin d'inverser. */
-body:has(.home) nav .nav-badge-new {
-    background: #D49F04;
-    color: #0f0f10;
-}
-
 /* ---------- Footer : ajustement pour transition douce depuis le contact dark ---------- */
 body:has(.home) .footer {
     border-top: 1px solid var(--hr-border-on-dark);
@@ -9033,10 +9016,6 @@ body:has(.page .page-hero--dark) nav .menu-toggle span {
 }
 body:has(.page .page-hero--dark) nav .nav-lumo {
     border-color: rgba(250, 250, 247, 0.25);
-}
-body:has(.page .page-hero--dark) nav .nav-badge-new {
-    background: #fafaf7;
-    color: #0f0f10;
 }
 
 /* ---------- HERO partagé ---------- */

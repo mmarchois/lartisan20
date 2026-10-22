@@ -25,7 +25,7 @@
         <li><a href="{{ site.baseurl }}/a-propos/"{% if page.url contains '/a-propos' %} aria-current="page"{% endif %}>À propos</a></li>
         <li><a href="{{ site.baseurl }}/contact/"{% if page.url contains '/contact' %} aria-current="page"{% endif %}>Contact</a></li>
         <li><a href="{{ site.baseurl }}/blog/"{% if page.url contains '/blog' %} aria-current="page"{% endif %}>Blog</a></li>
-        <li><a href="https://getlumo.fr" target="_blank" rel="noopener" class="nav-lumo">Lumo <span class="nav-badge-new">Nouveau</span></a></li>
+        <li><a href="https://getlumo.fr" target="_blank" rel="noopener" class="nav-lumo">{% include lumo-icon.html %}Lumo</a></li>
 
     </ul>
     <div class="nav-socials" aria-label="Réseaux sociaux">
@@ -95,8 +95,8 @@
             </div>
 
             <a href="https://getlumo.fr" target="_blank" rel="noopener" class="mobile-menu__lumo">
+                {% include lumo-icon.html class="mobile-menu__lumo-icon" %}
                 <span>Découvrir Lumo</span>
-                <span class="mobile-menu__badge">Nouveau</span>
             </a>
         </div>
 

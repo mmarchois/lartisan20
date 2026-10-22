@@ -5,7 +5,7 @@ description: "Retour d'expérience d'un candidat encore en formation sur la pré
 keywords: "CAP électricien candidat libre, CAP électricien à distance, formation CAP électricien en ligne, L'atelier des Chefs CAP électricien, avis formation CAP électricien, CAP électricien CPF, financer son CAP électricien, reconversion électricien, se reconvertir électricien, devenir électricien adulte, formation électricien reconversion, préparer le CAP électricien en travaillant, expérience terrain électricien"
 category: "Reconversion"
 date: 2026-10-27
-published: false
+published: true
 image: /images/blog/atelier_des_chefs.jpeg
 excerpt: "Je prépare mon CAP Électricien en candidat libre, avec une formation entièrement en ligne financée par mon CPF. Pour ceux qui envisagent le même chemin, voici ce que j'en retire à ce stade : ce que veut dire candidat libre, ce que coûte vraiment la formation, la rigueur qu'exige le 100 % à distance quand on travaille à côté, la façon dont le cursus mêle théorie et exercices sur maquette, puis ce qui lui manque, le terrain."
 ---
