@@ -1,19 +1,19 @@
 ---
 layout: blog
 title: "Lumo, mon outil pour concevoir un tableau électrique"
-description: "Retour d'expérience sur Lumo, l'outil en ligne que je développe depuis huit mois pour concevoir des tableaux électriques conformes à la NF C 15-100, destiné aux particuliers qui rénovent eux-mêmes comme aux électriciens : une idée née en regardant des électriciens concevoir leurs tableaux sur un bout de carton, un outil testé sur la rénovation de ma maison et qui m'a servi à réviser la norme pour mon CAP, son fonctionnement (circuits, répartition sous interrupteurs différentiels, équilibrage des phases, diagnostic d'un tableau existant à partir d'une photo, schéma unifilaire, étiquettes), son installation sur mobile comme une application (PWA), ce qu'il apporte à un particulier qui se lance dans sa rénovation et les près de 400 utilisateurs qui s'en servent aujourd'hui."
-keywords: "Lumo, logiciel tableau électrique, conception tableau électrique, tableau électrique NFC 15-100, logiciel NFC 15-100, répartition tableau électrique, équilibrage des phases triphasé, schéma unifilaire en ligne, étiquettes tableau électrique, faire son tableau électrique soi-même, rénovation électrique particulier, diagnostic tableau électrique existant, tableau divisionnaire, outil électricien, application électricien, application mobile tableau électrique, PWA hors ligne chantier, réviser la NFC 15-100, CAP électricien, reconversion développeur électricien"
+description: "Retour d'expérience sur Lumo, l'outil en ligne que je développe depuis huit mois pour concevoir des tableaux électriques conformes à la NF C 15-100, destiné aux particuliers qui rénovent eux-mêmes comme aux électriciens : une idée née en regardant des électriciens concevoir leurs tableaux sur un bout de carton, un outil testé sur la rénovation de ma maison et qui m'a servi à réviser la norme pour mon CAP, son fonctionnement (circuits, répartition sous interrupteurs différentiels, équilibrage des phases, diagnostic d'un tableau existant à partir d'une photo, schéma unifilaire, étiquettes), son installation sur mobile comme une application (PWA), ses trois offres payées une seule fois par chantier, ce qu'il apporte à un particulier qui se lance dans sa rénovation et les près de 400 utilisateurs qui s'en servent aujourd'hui."
+keywords: "Lumo, logiciel tableau électrique, conception tableau électrique, tableau électrique NFC 15-100, logiciel NFC 15-100, répartition tableau électrique, équilibrage des phases triphasé, schéma unifilaire en ligne, étiquettes tableau électrique, faire son tableau électrique soi-même, rénovation électrique particulier, diagnostic tableau électrique existant, tableau divisionnaire, outil électricien, application électricien, application mobile tableau électrique, PWA hors ligne chantier, prix Lumo, tarifs Lumo, réviser la NFC 15-100, CAP électricien, reconversion développeur électricien"
 category: "Électricité"
 date: 2026-11-03
-published: false
+published: true
 image: /images/blog/lumo/dashboard.webp
 excerpt: "Depuis huit mois, je développe Lumo, un outil en ligne qui conçoit des tableaux électriques conformes à la NF C 15-100, pour les particuliers qui rénovent eux-mêmes comme pour les électriciens. L'idée est née devant des vidéos d'électriciens qui dessinaient leurs tableaux sur un bout de carton. Testé sur la rénovation de ma maison, l'outil m'a aussi servi à réviser la norme pour mon CAP. Il compte aujourd'hui près de 400 utilisateurs. Voici d'où il vient, ce qu'il m'a appris et ce qu'il peut vous apporter."
 ---
 
 Ça fait maintenant huit mois que je développe [Lumo](https://getlumo.fr), un outil en ligne pour concevoir des tableaux électriques conformes à la NF C 15-100, accessible sur [getlumo.fr](https://getlumo.fr). Je n'en avais encore jamais parlé ici, alors que c'est sans doute le projet qui résume le mieux ma reconversion : le développement, mon métier d'origine, y rejoint l'électricité, celui que j'apprends. L'idée est née devant des vidéos d'électriciens qui dessinaient leurs tableaux au crayon. Aujourd'hui, près de 400 personnes l'utilisent. Voici d'où il vient, ce qu'il m'a appris et ce qu'il peut vous apporter, que vous rénoviez vous-même votre maison ou que vous soyez électricien.
 
-![L'éditeur de tableau de Lumo : deux rangées de modules Schneider (sectionneur général, interrupteur différentiel 63 A 30 mA, disjoncteurs C20 et C16, contacteur jour-nuit), avec à droite un avertissement NF C 15-100 sur un détecteur d'arc, l'équilibrage des trois phases et un tableau divisionnaire « Atelier »](/images/blog/lumo/tableau.webp)
-*L'éditeur de tableau d'un chantier en triphasé. Les modules sont dessinés comme les vrais, ici en Schneider. À droite, la conformité NF C 15-100, l'équilibrage des phases et le tableau divisionnaire de l'atelier.*
+![L'éditeur de tableau de Lumo : deux rangées de 13 modules Schneider, avec un interrupteur différentiel 40 A type AC suivi des disjoncteurs de l'éclairage, des prises du séjour, des volets roulants et de la VMC, puis un interrupteur différentiel 63 A type A suivi de disjoncteurs C32 et C20](/images/blog/lumo/tableau.webp)
+*L'éditeur de tableau. Les modules sont dessinés comme les vrais, ici en Schneider, avec sous chacun son repère et le circuit qu'il protège. Chaque rangée indique combien de modules restent libres.*
 
 ## Au départ, un bout de carton à côté du tableau vide
 
@@ -48,13 +48,13 @@ Le développement apporte la rigueur : une architecture pensée pour durer, des 
 
 Concrètement, [Lumo](https://getlumo.fr) fonctionne en quelques étapes. On commence par décrire le logement : maison ou appartement, du T1 au T7, alimentation monophasée ou triphasée, puissance de l'abonnement. On ajoute ensuite les équipements pièce par pièce, des éclairages et des prises jusqu'à la borne de recharge, la pompe à chaleur ou la piscine. Lumo en déduit la liste des circuits, calibres et sections compris.
 
-![Liste détaillée des circuits du tableau principal dans Lumo : radiateurs, chauffe-eau, prises par groupe de pièces, frigo, sèche-serviettes, volets roulants, éclairages, arrosage, avec pour chacun le calibre du disjoncteur, la section de câble, le nombre de points et la phase](/images/blog/lumo/circuits.webp)
-*La liste des circuits déduite des équipements : pour chacun, le calibre du disjoncteur, la section de câble, le nombre de points et la phase.*
+![Saisie des pièces dans Lumo : le séjour avec ses points lumineux, ses prises 16 A et ses volets roulants, puis la cuisine avec ses prises de plan de travail, un four de 3 500 W, des plaques de cuisson de 7 200 W, un lave-vaisselle et un réfrigérateur](/images/blog/lumo/pieces.webp)
+*La saisie des pièces : pour chacune, on indique les équipements, leur nombre ou leur puissance. Lumo rappelle au passage la règle de la norme qui s'applique.*
 
 Vient ensuite la répartition : les circuits sont placés sous les interrupteurs différentiels, les phases équilibrées en triphasé, le tout rangé dans un coffret Legrand, Schneider ou Hager de 13, 18 ou 24 modules par rangée. Rien n'est figé pour autant. On déplace un module par glisser-déposer, on change la taille du coffret, on ajoute un tableau divisionnaire pour un étage ou un garage. Si de nouveaux équipements arrivent en cours de route, on complète le chantier et la répartition s'ajuste sans repartir de zéro. À chaque changement, la conformité est recontrôlée. Lumo signale aussi ce que la norme conseille sans l'imposer, comme un détecteur d'arc sur certains circuits.
 
-![Page Conformité du chantier dans Lumo : un avertissement non bloquant sur un détecteur d'arc recommandé, puis la checklist Consuel avec ses points bloquants (schéma unifilaire imprimé, attestation de conformité, étiquetage des circuits, réserve de 20 % dans le tableau)](/images/blog/lumo/conformites.webp)
-*La page Conformité du chantier. En haut, une recommandation de la norme, signalée comme non bloquante. En dessous, la checklist Consuel à cocher au fil des travaux.*
+![Checklist Consuel dans Lumo : les documents à préparer (schéma unifilaire imprimé, attestation de conformité, plan de l'installation) puis les points de contrôle du tableau (étiquetage des circuits, réserve de 20 %, nombre d'interrupteurs différentiels, au moins un type A), les points bloquants étant signalés en rouge](/images/blog/lumo/consuel.webp)
+*La checklist Consuel du chantier. Chaque point contrôlé lors de la visite y figure, les bloquants sont signalés. On les coche au fil des travaux.*
 
 Une fois le tableau validé, Lumo génère les documents du chantier : le schéma unifilaire, les étiquettes à coller sur le tableau, le plan d'implantation, le diagnostic de conformité et un dossier technique complet. S'y ajoutent la liste des fournitures, avec un prix indicatif que l'on peut comparer entre les trois marques, ainsi qu'une checklist pour préparer le passage du Consuel.
 
@@ -69,7 +69,7 @@ Lumo s'adresse d'abord aux particuliers qui rénovent eux-mêmes, qu'ils partent
 - **Acheter le bon matériel du premier coup.** La liste des fournitures vous dit exactement quoi commander, avec un prix indicatif. Elle permet en plus de comparer Legrand, Schneider et Hager avant de passer commande.
 - **Finir avec un tableau propre.** Grâce aux étiquettes et au schéma unifilaire, votre tableau reste lisible, pour vous comme pour l'électricien qui interviendra après vous. La checklist Consuel vous aide ensuite à préparer le contrôle.
 
-![Liste des fournitures dans Lumo avec le total comparé entre Legrand (878 €), Schneider Electric (1 218 €) et Hager (991 €) : coffret, interrupteurs différentiels et disjoncteurs avec leurs références, quantités et prix](/images/blog/lumo/fournitures.webp)
+![Liste des fournitures dans Lumo avec le total comparé entre Legrand (373 €), Schneider Electric (488 €) et Hager (505 €) : coffret, interrupteurs différentiels et disjoncteurs avec leurs références, quantités et prix](/images/blog/lumo/fournitures.webp)
 *La liste des fournitures, avec le total comparé entre Legrand, Schneider et Hager. Les prix sont indicatifs, mais on sait exactement quoi commander.*
 
 Je préfère être honnête sur ce que Lumo ne fait pas. Il vous aide à concevoir un tableau conforme, il ne le pose pas à votre place. La qualité des raccordements, le serrage des bornes et le passage des câbles restent entre vos mains. La lecture de la photo par l'intelligence artificielle mérite toujours une vérification, parce qu'un calibre mal visible peut la tromper. Enfin, quand le Consuel est requis, c'est l'installation réelle qu'il contrôle, pas le plan. Au moindre doute pendant les travaux, faire passer un électricien reste une bonne idée.
@@ -95,6 +95,16 @@ Lumo est ce qu'on appelle une PWA, mais vous n'avez pas besoin de le savoir pour
 - **Sur Android**, ouvrez [getlumo.fr](https://getlumo.fr) dans Chrome, touchez le menu à trois points en haut à droite, puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».
 
 L'icône de Lumo apparaît alors parmi vos applications, prête pour le prochain chantier.
+
+## Ce que ça coûte
+
+La configuration reste gratuite, sans limite : vous créez votre chantier, décrivez le logement, ajoutez vos équipements, ajustez les circuits et choisissez le coffret sans rien payer. Le paiement n'intervient qu'au moment de débloquer le tableau généré et ses documents. Il n'y a pas d'abonnement : vous payez une seule fois, par chantier, selon ce dont vous avez besoin.
+
+- **Essentiel, 4,99 € par chantier.** Le tableau électrique généré et conforme à la NF C 15-100, le détail de chaque circuit (calibres, sections, interrupteurs différentiels), l'éditeur complet avec contrôle de la norme à chaque modification, les tableaux divisionnaires et le partage du tableau par lien.
+- **Chantier, 9,99 € par chantier.** Tout ce que contient Essentiel, plus les documents à remettre : le schéma unifilaire prêt pour le Consuel, la liste de fournitures chiffrée par marque, la checklist Consuel, les étiquettes de tableau, le plan d'implantation, le rapport de diagnostic et le dossier technique complet en PDF.
+- **Pro, 19,99 € par chantier.** Tout ce que contient Chantier, plus les outils de l'électricien : la collaboration avec les membres de votre équipe, les documents au nom de votre entreprise et les étiquettes au format ruban pour étiqueteuse Brother P-touch.
+
+Pour un particulier qui refait son installation, l'offre Chantier contient tout ce qu'il faut pour poser le tableau et passer le Consuel. L'offre Pro s'adresse aux électriciens qui travaillent en équipe et remettent des documents à leur nom. Si vous commencez petit, vous pourrez passer à l'offre supérieure plus tard en ne payant que la différence. Le détail est sur [getlumo.fr/tarifs](https://getlumo.fr/tarifs).
 
 ## Près de 400 utilisateurs, ce n'est que le début
 
