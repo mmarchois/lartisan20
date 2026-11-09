@@ -7640,9 +7640,9 @@ a.service-card:hover {
 .home-section__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.2rem, 5vw, 4rem);
-    line-height: 1;
-    letter-spacing: -0.035em;
+    font-size: clamp(1.85rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
     margin: 0;
     border-top: 1px solid var(--hr-border-on-light);
     padding-top: 1rem;
@@ -8493,9 +8493,9 @@ a.service-card:hover {
 .home-lumo__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
     margin: 0 0 1.5rem;
     color: var(--hr-text-on-dark);
 }
@@ -8819,9 +8819,9 @@ a.service-card:hover {
 .home-contact__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.5rem, 8vw, 7rem);
-    line-height: 0.95;
-    letter-spacing: -0.045em;
+    font-size: clamp(2.1rem, 6.2vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
     margin: 0 0 2.5rem;
     max-width: 14ch;
     color: var(--hr-text-on-dark);
@@ -9520,9 +9520,9 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
 .page-section__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-size: clamp(1.55rem, 3.2vw, 2.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
     margin: 0;
     border-top: 1px solid var(--hr-border-on-light);
     padding-top: 1rem;
@@ -9788,7 +9788,7 @@ a.page-list__link:focus-visible .page-list__arrow { transform: translateX(5px); 
 .page-cta__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-size: clamp(1.9rem, 4.8vw, 4rem);
     line-height: 0.97;
     letter-spacing: -0.04em;
     margin: 0 0 2rem;

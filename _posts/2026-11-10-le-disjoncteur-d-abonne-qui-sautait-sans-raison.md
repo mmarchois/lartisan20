@@ -78,7 +78,7 @@ Depuis cette manœuvre, le disjoncteur d'abonné n'a plus sauté. Avec une panne
 
 ## La valise du désespoir : le chauffe-eau au mégohmmètre
 
-Pour être sûr que le problème ne venait pas de là, j'ai sorti ce que j'aime appeler la « valise du désespoir ». Quand on la sort, on sait qu'on va passer un mauvais moment 😅. Elle contient les outils réservés aux pannes qui sortent de l'ordinaire, dont le mégohmmètre.
+Pour être sûr que le problème ne venait pas de là, j'ai sorti ce que j'aime appeler la « valise du désespoir ». Quand on la sort, on sait qu'on va passer un mauvais moment. 😅 Elle contient les outils réservés aux pannes qui sortent de l'ordinaire, dont le mégohmmètre.
 
 C'est avec lui que j'ai procédé à un test d'isolement. Cet appareil applique une tension élevée entre deux points et mesure la résistance qu'il rencontre. Plus elle est grande, mieux c'est isolé.
 
