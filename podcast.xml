@@ -3,7 +3,7 @@ layout: null
 sitemap: false
 permalink: /podcast.xml
 ---
-<?xml version="1.0" encoding="UTF-8"?>
+{% assign audio_base = site.audio_base_url %}{% if audio_base == '' or audio_base == nil %}{% assign audio_base = site.url | append: '/audio' %}{% endif %}<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
     <title>Podcast de l'artisan 2.0</title>
@@ -33,12 +33,12 @@ permalink: /podcast.xml
     <item>
         <title>{{ post.title | strip_html | xml_escape }}</title>
         <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="false">{{ site.url }}{{ episode.src }}</guid>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <description>{{ post.excerpt | strip_html | strip | xml_escape }} Article complet : {{ site.url }}{{ post.url }}</description>
-        <enclosure url="{{ site.url }}{{ episode.src }}" length="{{ episode.bytes }}" type="audio/mpeg"/>
+        <enclosure url="{{ audio_base }}{{ episode.src }}" length="{{ episode.bytes }}" type="audio/mpeg"/>
         <itunes:duration>{{ episode.duration }}</itunes:duration>
-{% if episode.image %}        <itunes:image href="{{ site.url }}{{ episode.image }}"/>
+{% if episode.image %}        <itunes:image href="{{ audio_base }}{{ episode.image }}"/>
 {% endif %}        <itunes:explicit>false</itunes:explicit>
         <itunes:episodeType>full</itunes:episodeType>
     </item>

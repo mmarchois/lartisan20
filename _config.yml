@@ -13,6 +13,13 @@ linkedin: https://www.linkedin.com/company/l-artisan-2-0
 instagram: https://www.instagram.com/lartisan2.0
 facebook: https://www.facebook.com/lartisan20
 
+# Podcast (version audio des articles). Laisser vide tant que la plateforme n'a pas publié l'émission.
+podcast_spotify: "https://open.spotify.com/show/0Vx8YtAC9dNFQezglA6Yer"
+podcast_apple: ""
+# Adresse publique du bucket Cloudflare R2 qui héberge les MP3 et images d'épisode
+# (domaine r2.dev ou domaine personnalisé, sans barre oblique finale). Les fichiers sont sous blog/.
+audio_base_url: "https://pub-ad249e031b2e4fa8a7b4f44d2b72ba98.r2.dev"
+
 # Avis Google : note et nombre d'avis (affichés dans le hero et section avis)
 google_rating: "5"
 google_review_count: 18
@@ -50,6 +57,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - scripts
+  - audio
   - vendor
   - .sass-cache
   - .jekyll-cache

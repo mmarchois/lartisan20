@@ -3,12 +3,13 @@ Lecteur audio d'un article (piloté par /js/audio-player.js).
 Paramètres : audio (entrée de _data/audio.json), title, artwork (URL absolue de l'image),
 compact (true pour la pastille de la liste du blog). Sans JavaScript, le lecteur natif reste affiché.
 {% endcomment %}
+{% assign audio_base = site.audio_base_url %}{% if audio_base == '' or audio_base == nil %}{% assign audio_base = site.url | append: '/audio' %}{% endif %}
 {% assign ap_min = include.audio.duration | divided_by: 60 %}
 {% assign ap_sec = include.audio.duration | modulo: 60 | prepend: '0' | slice: -2, 2 %}
 {% assign ap_round = include.audio.duration | plus: 30 | divided_by: 60 %}
 {% if include.compact %}
-<div class="audio-player audio-player--compact" data-audio-player data-duration="{{ include.audio.duration }}" data-title="{{ include.title | escape }}" data-artwork="{% if include.audio.image %}{{ site.url }}{{ include.audio.image }}{% else %}{{ include.artwork }}{% endif %}">
-    <audio preload="none" controls src="{{ site.baseurl }}{{ include.audio.src }}" aria-label="Version audio de l'article : {{ include.title | escape }}"></audio>
+<div class="audio-player audio-player--compact" data-audio-player data-duration="{{ include.audio.duration }}" data-title="{{ include.title | escape }}" data-artwork="{% if include.audio.image %}{{ audio_base }}{{ include.audio.image }}{% else %}{{ include.artwork }}{% endif %}">
+    <audio preload="none" controls src="{{ audio_base }}{{ include.audio.src }}" aria-label="Version audio de l'article : {{ include.title | escape }}"></audio>
     <button type="button" class="audio-player__pill" data-toggle aria-label="Écouter l'article">
         {% include icons/play.html %}{% include icons/pause.html %}
         <span class="audio-player__pill-label"><span class="audio-player__pill-verb">Écouter · </span>{{ ap_round }} min</span>
@@ -16,8 +17,8 @@ compact (true pour la pastille de la liste du blog). Sans JavaScript, le lecteur
     </button>
 </div>
 {% else %}
-<div class="audio-player" data-audio-player data-duration="{{ include.audio.duration }}" data-title="{{ include.title | escape }}" data-artwork="{% if include.audio.image %}{{ site.url }}{{ include.audio.image }}{% else %}{{ include.artwork }}{% endif %}">
-    <audio preload="metadata" controls src="{{ site.baseurl }}{{ include.audio.src }}" aria-label="Version audio de l'article : {{ include.title | escape }}"></audio>
+<div class="audio-player" data-audio-player data-duration="{{ include.audio.duration }}" data-title="{{ include.title | escape }}" data-artwork="{% if include.audio.image %}{{ audio_base }}{{ include.audio.image }}{% else %}{{ include.artwork }}{% endif %}">
+    <audio preload="metadata" controls src="{{ audio_base }}{{ include.audio.src }}" aria-label="Version audio de l'article : {{ include.title | escape }}"></audio>
     <div class="audio-player__ui">
         <button type="button" class="audio-player__toggle" data-toggle aria-label="Écouter l'article">{% include icons/play.html %}{% include icons/pause.html %}</button>
         <div class="audio-player__head">
@@ -26,7 +27,7 @@ compact (true pour la pastille de la liste du blog). Sans JavaScript, le lecteur
         </div>
         <input type="range" class="audio-player__seek" data-seek min="0" max="{{ include.audio.duration }}" step="1" value="0" aria-label="Position de lecture">
         <div class="audio-player__foot">
-            <span class="audio-player__note"><span class="audio-player__note-long">Lecture par une voix de synthèse</span><span class="audio-player__note-short">Voix de synthèse</span><span class="audio-player__note-sep"> · </span><a href="{{ site.baseurl }}/podcast.xml">Flux podcast</a></span>
+            <span class="audio-player__note"><span class="audio-player__note-long">Lecture par une voix de synthèse</span><span class="audio-player__note-short">Voix de synthèse</span><span class="audio-player__note-sep"> · </span><span class="audio-player__links">{% if site.podcast_spotify != "" %}<a href="{{ site.podcast_spotify }}" target="_blank" rel="noopener noreferrer">Spotify</a> · {% endif %}{% if site.podcast_apple != "" %}<a href="{{ site.podcast_apple }}" target="_blank" rel="noopener noreferrer">Apple Podcasts</a> · {% endif %}<a href="{{ site.baseurl }}/podcast.xml">Flux RSS</a></span></span>
             <button type="button" class="audio-player__speed" data-speed aria-label="Changer la vitesse de lecture">1×</button>
         </div>
     </div>

@@ -23,3 +23,7 @@ vendor/
 
 # Logs
 *.log
+
+# Audio : fichiers générés localement puis envoyés sur Cloudflare R2, et cache de synthèse
+audio/
+.audio-cache/

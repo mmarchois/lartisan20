@@ -4,7 +4,7 @@
     {% include head.html %}
     {% assign rt_words = content | strip_html | number_of_words %}{% assign rt_min = rt_words | plus: 199 | divided_by: 200 %}
     {% comment %} Version audio : générée par scripts/generate-audio.mjs, décrite dans _data/audio.json {% endcomment %}
-    {% assign audio = site.data.audio[page.slug] %}{% if audio %}{% assign audio_min = audio.duration | divided_by: 60 %}{% assign audio_sec = audio.duration | modulo: 60 %}{% endif %}
+    {% assign audio = site.data.audio[page.slug] %}{% assign audio_base = site.audio_base_url %}{% if audio_base == '' or audio_base == nil %}{% assign audio_base = site.url | append: '/audio' %}{% endif %}{% if audio %}{% assign audio_min = audio.duration | divided_by: 60 %}{% assign audio_sec = audio.duration | modulo: 60 %}{% endif %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -40,7 +40,7 @@
             "@type": "AudioObject",
             "name": {{ page.title | jsonify }},
             "description": "Version audio de l'article, lue par une voix de synthèse.",
-            "contentUrl": "{{ site.url }}{{ audio.src }}",
+            "contentUrl": "{{ audio_base }}{{ audio.src }}",
             "encodingFormat": "audio/mpeg",
             "duration": "PT{{ audio_min }}M{{ audio_sec }}S",
             "inLanguage": "fr-FR"

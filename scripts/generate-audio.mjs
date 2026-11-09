@@ -7,6 +7,7 @@
 //   node scripts/generate-audio.mjs --only lumo  limite aux articles dont le nom contient « lumo »
 //   node scripts/generate-audio.mjs --force      régénère même si l'article n'a pas changé
 //   node scripts/generate-audio.mjs --images     crée seulement les images d'épisode manquantes (sans Azure)
+//   node scripts/generate-audio.mjs --upload     envoie sur R2 tous les fichiers locaux déjà générés
 //   node scripts/generate-audio.mjs --voices     liste les voix françaises disponibles
 //   node scripts/generate-audio.mjs --sample     génère un court extrait par voix pour comparer
 //
@@ -14,14 +15,21 @@
 //   AZURE_SPEECH_KEY     clé de la ressource Speech (obligatoire pour générer)
 //   AZURE_SPEECH_REGION  région de la ressource (défaut : francecentral)
 //   AZURE_SPEECH_VOICE   voix (défaut : VOICE ci-dessous)
+//   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET (défaut : lartisan20)
+//                        jeton d'API R2 (lecture/écriture d'objets) pour envoyer les fichiers ;
+//                        sans ces variables, les fichiers restent dans audio/blog/ à envoyer à la main.
 //
-// Les MP3 sont écrits dans audio/blog/ et décrits dans _data/audio.json, que le
-// gabarit _layouts/blog.html lit pour afficher le lecteur. Les deux se commitent.
+// Les MP3 et images d'épisode sont écrits dans audio/blog/ (dossier local, hors git et hors
+// site) puis envoyés dans le bucket Cloudflare R2 sous blog/. _data/audio.json les décrit
+// (chemins relatifs au bucket) ; les gabarits les préfixent avec site.audio_base_url.
+// Chaque fichier = intro + corps de l'article + outro. L'intro et l'outro sont
+// synthétisées une seule fois ; les corps sont gardés dans .audio-cache/ (ignoré par
+// git) pour pouvoir réassembler les fichiers sans rien resynthétiser.
 // Pour le flux podcast, la photo de chaque article est aussi recadrée en carré
 // (audio/blog/<slug>.jpg) avec l'outil sips de macOS.
 
 import { execFileSync } from 'node:child_process';
-import { createHash } from 'node:crypto';
+import { createHash, createHmac } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
@@ -46,6 +54,20 @@ const DELAY_MS = Number(process.env.AZURE_SPEECH_DELAY_MS || 3500);
 const PREP_VERSION = 1;
 // Côté des images d'épisode carrées (Apple demande entre 1400 et 3000 px).
 const IMAGE_SIZE = 1400;
+const CACHE_DIR = join(ROOT, '.audio-cache');
+// Hébergement des fichiers : bucket Cloudflare R2, parlé via son API compatible S3.
+const R2 = {
+  accountId: process.env.R2_ACCOUNT_ID,
+  bucket: process.env.R2_BUCKET || 'lartisan20',
+  accessKeyId: process.env.R2_ACCESS_KEY_ID,
+  secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
+  prefix: 'blog',
+};
+const r2Configured = () => Boolean(R2.accountId && R2.accessKeyId && R2.secretAccessKey);
+
+// Intro et outro lues par la même voix en tête et en queue de chaque épisode.
+const INTRO = "Bienvenue dans le podcast de L'artisan 2.0. Vous écoutez la version audio d'un article du blog de Mathieu Marchois, lue par une voix de synthèse.";
+const OUTRO = `Cet article est terminé. Vous le retrouverez en texte et en photos sur lartisan20 point \uE000FR\uE001, avec tous les autres épisodes du podcast. Merci de votre écoute et à bientôt.`;
 
 const SAMPLE_VOICES = [
   'fr-FR-RemyMultilingualNeural',
@@ -196,6 +218,7 @@ function blockToSsml(block) {
   const text = escapeXml(block.text)
     .replaceAll(SPELL_OPEN, '<say-as interpret-as="characters">')
     .replaceAll(SPELL_CLOSE, '</say-as>');
+  if (block.type === 'outro') return `<break time="900ms"/><p>${text}</p>`;
   const pause = block.type === 'text' ? '' : '<break time="600ms"/>';
   return `<p>${text}</p>${pause}`;
 }
@@ -347,6 +370,72 @@ function requireKey() {
 }
 
 // ---------------------------------------------------------------------------
+// Cloudflare R2 : envoi et suppression d'objets (signature AWS v4, sans dépendance)
+// ---------------------------------------------------------------------------
+
+const sha256 = (data) => createHash('sha256').update(data).digest('hex');
+const hmac = (key, data) => createHmac('sha256', key).update(data).digest();
+
+async function r2Request(method, key, body = Buffer.alloc(0), contentType) {
+  const host = `${R2.accountId}.r2.cloudflarestorage.com`;
+  const path = `/${R2.bucket}/${key.split('/').map(encodeURIComponent).join('/')}`;
+  const now = new Date();
+  const amzDate = now.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+  const date = amzDate.slice(0, 8);
+  const payloadHash = sha256(body);
+  const headers = {
+    host,
+    'x-amz-content-sha256': payloadHash,
+    'x-amz-date': amzDate,
+  };
+  if (contentType) {
+    headers['content-type'] = contentType;
+    headers['cache-control'] = 'public, max-age=3600';
+  }
+  const signedHeaders = Object.keys(headers).sort();
+  const canonical = [
+    method,
+    path,
+    '',
+    ...signedHeaders.map((name) => `${name}:${headers[name]}`),
+    '',
+    signedHeaders.join(';'),
+    payloadHash,
+  ].join('\n');
+  const scope = `${date}/auto/s3/aws4_request`;
+  const toSign = ['AWS4-HMAC-SHA256', amzDate, scope, sha256(canonical)].join('\n');
+  const signingKey = hmac(hmac(hmac(hmac(`AWS4${R2.secretAccessKey}`, date), 'auto'), 's3'), 'aws4_request');
+  const signature = createHmac('sha256', signingKey).update(toSign).digest('hex');
+  const { host: _host, ...sendHeaders } = headers;
+  const response = await fetch(`https://${host}${path}`, {
+    method,
+    headers: {
+      ...sendHeaders,
+      Authorization: `AWS4-HMAC-SHA256 Credential=${R2.accessKeyId}/${scope}, SignedHeaders=${signedHeaders.join(';')}, Signature=${signature}`,
+    },
+    body: method === 'PUT' ? body : undefined,
+  });
+  if (!response.ok && !(method === 'DELETE' && response.status === 404)) {
+    throw new Error(`R2 a répondu ${response.status} pour ${method} ${key} : ${(await response.text()).slice(0, 200)}`);
+  }
+}
+
+const CONTENT_TYPES = { mp3: 'audio/mpeg', jpg: 'image/jpeg' };
+
+// Envoie un fichier local dans le bucket, sous blog/<nom>. Sans configuration R2, ne fait rien.
+async function uploadToR2(localPath) {
+  if (!r2Configured()) return false;
+  const name = localPath.split('/').pop();
+  await r2Request('PUT', `${R2.prefix}/${name}`, readFileSync(localPath), CONTENT_TYPES[name.split('.').pop()]);
+  return true;
+}
+
+async function deleteFromR2(name) {
+  if (!r2Configured()) return;
+  await r2Request('DELETE', `${R2.prefix}/${name}`);
+}
+
+// ---------------------------------------------------------------------------
 // Images d'épisode : la photo de l'article recadrée en carré, pour Spotify et Apple
 // ---------------------------------------------------------------------------
 
@@ -379,14 +468,14 @@ function makeEpisodeImage(post) {
   // Recadrage centré au carré, puis mise à l'échelle.
   execFileSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '85', '-c', side, side, source, '--out', dest], { stdio: 'ignore' });
   execFileSync('sips', ['-z', String(IMAGE_SIZE), String(IMAGE_SIZE), dest], { stdio: 'ignore' });
-  return `/audio/blog/${post.slug}.jpg`;
+  return `/${R2.prefix}/${post.slug}.jpg`;
 }
 
 const hasEpisodeImage = (post, manifest) =>
-  Boolean(manifest[post.slug]?.image) && existsSync(join(ROOT, manifest[post.slug].image.slice(1)));
+  Boolean(manifest[post.slug]?.image) && existsSync(join(AUDIO_DIR, `${post.slug}.jpg`));
 
 // Crée l'image carrée de chaque article qui a un audio mais pas encore d'image.
-function makeMissingImages(posts, manifest, force) {
+async function makeMissingImages(posts, manifest, force) {
   const missing = posts.filter((post) => manifest[post.slug] && (force || !hasEpisodeImage(post, manifest)));
   if (!missing.length) return;
   if (!sipsAvailable()) {
@@ -401,7 +490,8 @@ function makeMissingImages(posts, manifest, force) {
     }
     manifest[post.slug].image = image;
     writeManifest(manifest);
-    console.log(`  ${post.slug}  image d'épisode créée`);
+    const sent = await uploadToR2(join(AUDIO_DIR, `${post.slug}.jpg`));
+    console.log(`  ${post.slug}  image d'épisode créée${sent ? ' et envoyée sur R2' : ''}`);
   }
 }
 
@@ -421,11 +511,13 @@ function loadPosts(only) {
       const slug = file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
       const chunks = toChunks(post.blocks);
       const spoken = post.blocks.map((block) => block.text).join('\n');
-      const hash = createHash('sha256')
+      // bodyHash : le corps lu (texte, voix, format). hash : le fichier complet, intro et outro comprises.
+      const bodyHash = createHash('sha256')
         .update(JSON.stringify([PREP_VERSION, VOICE, FORMAT, post.blocks]))
         .digest('hex')
         .slice(0, 16);
-      return { file, slug, chunks, hash, chars: spoken.length, ...post };
+      const hash = createHash('sha256').update(`${bodyHash}:${WRAP_HASH}`).digest('hex').slice(0, 16);
+      return { file, slug, chunks, bodyHash, hash, chars: spoken.length, ...post };
     })
     .filter(Boolean);
 }
@@ -440,16 +532,50 @@ function writeManifest(manifest) {
 const isCurrent = (post, manifest) =>
   manifest[post.slug]?.hash === post.hash && existsSync(join(AUDIO_DIR, `${post.slug}.mp3`));
 
+// Empreinte de l'habillage (intro + outro) : la changer réassemble les fichiers sans resynthétiser les corps.
+const WRAP_HASH = createHash('sha256').update(JSON.stringify([VOICE, FORMAT, INTRO, OUTRO])).digest('hex').slice(0, 16);
+const wrapPath = (kind) => join(CACHE_DIR, `${kind}-${WRAP_HASH}.mp3`);
+const bodyPath = (post) => join(CACHE_DIR, `${post.slug}-${post.bodyHash}.mp3`);
+
+// Corps de l'article déjà synthétisé, s'il existe. Les fichiers produits avant l'intro/outro
+// (manifeste où hash == bodyHash) sont des corps nus : on les récupère tels quels.
+function cachedBody(post, manifest) {
+  if (existsSync(bodyPath(post))) return readFileSync(bodyPath(post));
+  const current = join(AUDIO_DIR, `${post.slug}.mp3`);
+  if (manifest[post.slug]?.hash === post.bodyHash && existsSync(current)) {
+    const body = readFileSync(current);
+    mkdirSync(CACHE_DIR, { recursive: true });
+    writeFileSync(bodyPath(post), body);
+    return body;
+  }
+  return null;
+}
+
+async function wrapper(kind) {
+  if (existsSync(wrapPath(kind))) return readFileSync(wrapPath(kind));
+  const block = kind === 'intro'
+    ? { type: 'heading', text: normalize(INTRO) }
+    : { type: 'outro', text: normalize(OUTRO) };
+  const { frames } = await synthesize(chunkToSsml([block], VOICE));
+  const audio = Buffer.concat(frames);
+  mkdirSync(CACHE_DIR, { recursive: true });
+  writeFileSync(wrapPath(kind), audio);
+  return audio;
+}
+
 const readable = (text) => text.replaceAll(SPELL_OPEN, '[').replaceAll(SPELL_CLOSE, ']');
 
 async function generate({ only, force, dryRun }) {
   const posts = loadPosts(only);
   const manifest = readManifest();
   const todo = posts.filter((post) => force || !isCurrent(post, manifest));
-  const chars = todo.reduce((sum, post) => sum + post.chars, 0);
+  const toSynthesize = todo.filter((post) => force || !cachedBody(post, manifest));
+  const chars = toSynthesize.reduce((sum, post) => sum + post.chars, 0);
+  const wrapMissing = !existsSync(wrapPath('intro')) || !existsSync(wrapPath('outro'));
 
-  console.log(`${posts.length} article(s) publié(s), ${todo.length} à générer (${chars.toLocaleString('fr-FR')} caractères, voix ${VOICE}).`);
-  for (const post of todo) console.log(`  ${post.slug}  ${post.chars} caractères, ${post.chunks.length} requête(s)`);
+  console.log(`${posts.length} article(s) publié(s), ${toSynthesize.length} à synthétiser (${chars.toLocaleString('fr-FR')} caractères, voix ${VOICE}), ${todo.length - toSynthesize.length} à réassembler avec l'intro et l'outro.`);
+  if (todo.length && wrapMissing) console.log(`  intro et outro à synthétiser (${(INTRO.length + OUTRO.length)} caractères)`);
+  for (const post of toSynthesize) console.log(`  ${post.slug}  ${post.chars} caractères, ${post.chunks.length} requête(s)`);
 
   // Audio d'articles supprimés ou dépubliés
   const slugs = new Set(loadPosts().map((post) => post.slug));
@@ -460,29 +586,38 @@ async function generate({ only, force, dryRun }) {
   if (missingImages) console.log(`${missingImages} image(s) d'épisode à créer.`);
 
   if (dryRun || (!todo.length && !orphans.length && !missingImages)) return;
-  if (todo.length) requireKey();
+  if (toSynthesize.length || (todo.length && wrapMissing)) requireKey();
   mkdirSync(AUDIO_DIR, { recursive: true });
 
   for (const slug of orphans) {
     rmSync(join(AUDIO_DIR, `${slug}.mp3`), { force: true });
     rmSync(join(AUDIO_DIR, `${slug}.jpg`), { force: true });
+    await deleteFromR2(`${slug}.mp3`);
+    await deleteFromR2(`${slug}.jpg`);
     delete manifest[slug];
     writeManifest(manifest);
+  }
+  if (!r2Configured() && (todo.length || missingImages)) {
+    console.log("Variables R2 absentes : les fichiers resteront dans audio/blog/, à envoyer dans le bucket à la main.");
   }
 
   for (const [index, post] of todo.entries()) {
     console.log(`[${index + 1}/${todo.length}] ${post.slug}`);
-    const frames = [];
-    let seconds = 0;
-    for (const chunk of post.chunks) {
-      const part = await synthesize(chunkToSsml(chunk, VOICE));
-      frames.push(...part.frames);
-      seconds += part.seconds;
+    let body = force ? null : cachedBody(post, manifest);
+    if (!body) {
+      const frames = [];
+      for (const chunk of post.chunks) frames.push(...(await synthesize(chunkToSsml(chunk, VOICE))).frames);
+      body = Buffer.concat(frames);
+      mkdirSync(CACHE_DIR, { recursive: true });
+      writeFileSync(bodyPath(post), body);
     }
-    const mp3 = Buffer.concat(frames);
+    const mp3 = Buffer.concat([await wrapper('intro'), body, await wrapper('outro')]);
+    const { seconds } = extractFrames(mp3);
     writeFileSync(join(AUDIO_DIR, `${post.slug}.mp3`), mp3);
+    const sent = await uploadToR2(join(AUDIO_DIR, `${post.slug}.mp3`));
     manifest[post.slug] = {
-      src: `/audio/blog/${post.slug}.mp3`,
+      ...manifest[post.slug],
+      src: `/${R2.prefix}/${post.slug}.mp3`,
       duration: Math.round(seconds),
       bytes: mp3.length,
       voice: VOICE,
@@ -490,17 +625,38 @@ async function generate({ only, force, dryRun }) {
     };
     // Écrit après chaque article : une interruption ne fait rien perdre.
     writeManifest(manifest);
-    console.log(`    ${Math.floor(seconds / 60)} min ${Math.round(seconds % 60)} s, ${(mp3.length / 1e6).toFixed(1)} Mo`);
+    console.log(`    ${Math.floor(seconds / 60)} min ${Math.round(seconds % 60)} s, ${(mp3.length / 1e6).toFixed(1)} Mo${sent ? ', envoyé sur R2' : ''}`);
   }
 
-  makeMissingImages(posts, manifest, false);
+  await makeMissingImages(posts, manifest, false);
 }
 
-function images({ only, force }) {
+// Envoie dans R2 tous les fichiers locaux des articles du manifeste (migration ou reprise).
+async function uploadAll({ only }) {
+  if (!r2Configured()) {
+    console.error('Variables R2 absentes : R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (et R2_BUCKET si différent de lartisan20).');
+    process.exit(1);
+  }
+  const manifest = readManifest();
+  const posts = loadPosts(only).filter((post) => manifest[post.slug]);
+  let count = 0;
+  for (const post of posts) {
+    for (const ext of ['mp3', 'jpg']) {
+      const path = join(AUDIO_DIR, `${post.slug}.${ext}`);
+      if (!existsSync(path)) continue;
+      await uploadToR2(path);
+      count += 1;
+      console.log(`  ${R2.prefix}/${post.slug}.${ext}`);
+    }
+  }
+  console.log(`${count} fichier(s) envoyé(s) dans le bucket ${R2.bucket}.`);
+}
+
+async function images({ only, force }) {
   const posts = loadPosts(only);
   const manifest = readManifest();
   mkdirSync(AUDIO_DIR, { recursive: true });
-  makeMissingImages(posts, manifest, force);
+  await makeMissingImages(posts, manifest, force);
   console.log(`${posts.filter((post) => hasEpisodeImage(post, manifest)).length} article(s) avec image d'épisode.`);
 }
 
@@ -553,6 +709,7 @@ async function main() {
   if (flag('--text')) return showText(value('--text'));
   if (flag('--voices')) return listVoices();
   if (flag('--images')) return images({ only: value('--only'), force: flag('--force') });
+  if (flag('--upload')) return uploadAll({ only: value('--only') });
   if (flag('--sample')) return sample(value('--sample')?.split(',') ?? SAMPLE_VOICES);
   return generate({ only: value('--only'), force: flag('--force'), dryRun: flag('--dry-run') });
 }
