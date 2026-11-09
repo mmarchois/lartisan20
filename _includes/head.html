@@ -49,6 +49,7 @@
 
 <!-- RSS Feed -->
 {% feed_meta %}
+{% if site.data.audio.size > 0 %}<link rel="alternate" type="application/rss+xml" title="Podcast de l'artisan 2.0" href="{{ site.url }}/podcast.xml">{% endif %}
 
 <!-- Données structurées : entité L'artisan 2.0 (Electrician) + WebSite, sur toutes les pages -->
 {% include schema-organization.html %}

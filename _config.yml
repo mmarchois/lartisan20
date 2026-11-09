@@ -49,6 +49,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - scripts
   - vendor
   - .sass-cache
   - .jekyll-cache

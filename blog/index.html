@@ -61,7 +61,8 @@ crumb: "Blog"
 
             <div class="blog-articles">
                 {% for post in site.posts %}
-                <article class="blog-article reveal" data-theme="{{ post.category | slugify }}">
+                {% assign post_audio = site.data.audio[post.slug] %}
+                <article class="blog-article reveal{% if post_audio %} blog-article--audio{% endif %}" data-theme="{{ post.category | slugify }}">
                     <a href="{{ site.baseurl }}{{ post.url }}" class="blog-article-link">
                         {% if post.image %}
                         {% assign post_image_url = post.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
@@ -111,6 +112,10 @@ crumb: "Blog"
                         </div>
                         <div class="blog-article-accent"></div>
                     </a>
+                    {% if post_audio %}
+                    {% assign post_artwork = post.image | default: '/images/og-image.png' | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' | prepend: site.url %}
+                    {% include audio-player.html audio=post_audio title=post.title artwork=post_artwork compact=true %}
+                    {% endif %}
                 </article>
                 {% endfor %}
             </div>
@@ -118,5 +123,6 @@ crumb: "Blog"
             <p class="blog-no-results" hidden>Aucun article pour ce thème.</p>
         </div>
     </section>
+    {% if site.data.audio.size > 0 %}<script src="{{ site.baseurl }}/js/audio-player.js" defer></script>{% endif %}
 
 </div>

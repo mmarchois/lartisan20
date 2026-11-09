@@ -3,6 +3,8 @@
 <head>
     {% include head.html %}
     {% assign rt_words = content | strip_html | number_of_words %}{% assign rt_min = rt_words | plus: 199 | divided_by: 200 %}
+    {% comment %} Version audio : générée par scripts/generate-audio.mjs, décrite dans _data/audio.json {% endcomment %}
+    {% assign audio = site.data.audio[page.slug] %}{% if audio %}{% assign audio_min = audio.duration | divided_by: 60 %}{% assign audio_sec = audio.duration | modulo: 60 %}{% endif %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -33,7 +35,16 @@
         "timeRequired": "PT{{ rt_min }}M",
         "wordCount": {{ content | strip_html | number_of_words }}{% if page.keywords %},
         "keywords": {{ page.keywords | jsonify }}{% endif %}{% if page.category %},
-        "articleSection": {{ page.category | jsonify }}{% endif %}
+        "articleSection": {{ page.category | jsonify }}{% endif %}{% if audio %},
+        "audio": {
+            "@type": "AudioObject",
+            "name": {{ page.title | jsonify }},
+            "description": "Version audio de l'article, lue par une voix de synthèse.",
+            "contentUrl": "{{ site.url }}{{ audio.src }}",
+            "encodingFormat": "audio/mpeg",
+            "duration": "PT{{ audio_min }}M{{ audio_sec }}S",
+            "inLanguage": "fr-FR"
+        }{% endif %}
     }
     </script>
 </head>
@@ -79,6 +90,11 @@
                     <hr class="page-hero__rule" aria-hidden="true">
 
                     {% if page.excerpt %}<p class="page-hero__lead">{{ page.excerpt | strip_html }}</p>{% endif %}
+
+                    {% if audio %}
+                    {% assign artwork = page.image | default: '/images/og-image.png' | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' | prepend: site.url %}
+                    {% include audio-player.html audio=audio title=page.title artwork=artwork %}
+                    {% endif %}
                 </div>
             </section>
 
@@ -153,5 +169,6 @@
     <a href="#main-content" class="back-to-top" id="back-to-top" aria-label="Retour en haut de page">↑</a>
 
     {% include scripts.html %}
+    {% if audio %}<script src="{{ site.baseurl }}/js/audio-player.js" defer></script>{% endif %}
 </body>
 </html>

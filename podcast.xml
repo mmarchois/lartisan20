@@ -1,0 +1,47 @@
+---
+layout: null
+sitemap: false
+permalink: /podcast.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Podcast de l'artisan 2.0</title>
+    <link>{{ site.url }}/blog/</link>
+    <atom:link href="{{ site.url }}/podcast.xml" rel="self" type="application/rss+xml"/>
+    <language>fr-fr</language>
+    <copyright>{{ site.author | xml_escape }}</copyright>
+    <description>Les articles du blog de L'artisan 2.0 en version audio : la reconversion d'un ingénieur vers l'électricité, racontée chantier après chantier. Chaque épisode est la lecture d'un article par une voix de synthèse.</description>
+    <itunes:author>{{ site.author | xml_escape }}</itunes:author>
+    <itunes:summary>Les articles du blog de L'artisan 2.0 en version audio : la reconversion d'un ingénieur vers l'électricité, racontée chantier après chantier. Chaque épisode est la lecture d'un article par une voix de synthèse.</itunes:summary>
+    <itunes:owner>
+        <itunes:name>{{ site.author | xml_escape }}</itunes:name>
+        <itunes:email>{{ site.email }}</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ site.url }}/images/podcast-cover.jpg"/>
+    <image>
+        <url>{{ site.url }}/images/podcast-cover.jpg</url>
+        <title>Podcast de l'artisan 2.0</title>
+        <link>{{ site.url }}/blog/</link>
+    </image>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:category text="Leisure">
+        <itunes:category text="Home &amp; Garden"/>
+    </itunes:category>
+{% for post in site.posts %}{% assign episode = site.data.audio[post.slug] %}{% if episode %}
+    <item>
+        <title>{{ post.title | strip_html | xml_escape }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid isPermaLink="false">{{ site.url }}{{ episode.src }}</guid>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <description>{{ post.excerpt | strip_html | strip | xml_escape }} Article complet : {{ site.url }}{{ post.url }}</description>
+        <enclosure url="{{ site.url }}{{ episode.src }}" length="{{ episode.bytes }}" type="audio/mpeg"/>
+        <itunes:duration>{{ episode.duration }}</itunes:duration>
+{% if episode.image %}        <itunes:image href="{{ site.url }}{{ episode.image }}"/>
+{% endif %}        <itunes:explicit>false</itunes:explicit>
+        <itunes:episodeType>full</itunes:episodeType>
+    </item>
+{% endif %}{% endfor %}
+</channel>
+</rss>

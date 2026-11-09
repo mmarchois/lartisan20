@@ -6489,6 +6489,12 @@ a.service-card:hover {
     line-height: 1.7;
     margin: 0;
     font-weight: 400;
+    /* Description tronquée à 3 lignes dans la liste (le texte complet reste dans la page) */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
 }
 
 .blog-article-footer {
@@ -6533,6 +6539,7 @@ a.service-card:hover {
 .blog-article:hover .blog-article-accent {
     opacity: 1;
 }
+
 
 /* Blog : filtre par thème */
 .blog-filter {
@@ -7051,6 +7058,7 @@ a.service-card:hover {
         height: 240px;
     }
 
+
     .blog-hero {
         padding: 9rem 1.25rem 4rem;
     }
@@ -7061,6 +7069,8 @@ a.service-card:hover {
 
     .blog-article-excerpt {
         font-size: 1rem;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
     }
 
     .blog-post {
@@ -7315,9 +7325,9 @@ a.service-card:hover {
 .home-hero__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.5rem, 7vw, 6rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.25rem, 5.5vw, 4.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
     margin: 0;
     color: var(--hr-text-on-dark);
     max-width: 18ch;
@@ -9123,6 +9133,197 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
     }
 }
 
+/* ---------- Lecteur audio des articles (même rendu sur tous les navigateurs) ---------- */
+.audio-player { --progress: 0%; }
+.audio-player.is-ready audio { display: none; }
+.audio-player:not(.is-ready) .audio-player__ui,
+.audio-player:not(.is-ready) .audio-player__pill { display: none; }
+.audio-player:not(.is-ready) audio { display: block; width: 100%; margin-top: 2rem; }
+.audio-player__icon {
+    width: 1em;
+    height: 1em;
+    flex: none;
+    fill: currentColor;
+}
+.audio-player__icon--pause { display: none; }
+.audio-player.is-playing .audio-player__icon--play { display: none; }
+.audio-player.is-playing .audio-player__icon--pause { display: block; }
+
+/* Version complète, dans le bandeau sombre de l'article : grille bouton + en-tête / barre / pied */
+.audio-player__ui {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr);
+    grid-template-areas:
+        "toggle head"
+        "toggle seek"
+        "toggle foot";
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+    align-items: center;
+    max-width: 70ch;
+    margin-top: 2.75rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--hr-border-on-dark);
+    border-radius: 18px;
+    background: var(--hr-bg-dark-alt);
+}
+.audio-player__toggle {
+    grid-area: toggle;
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--hr-accent);
+    color: var(--hr-bg-dark);
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.audio-player__toggle:hover { transform: scale(1.06); }
+.audio-player__toggle:focus-visible { outline: 2px solid var(--hr-text-on-dark); outline-offset: 3px; }
+.audio-player__toggle .audio-player__icon--play { margin-left: 0.12em; }
+.audio-player__head,
+.audio-player__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 0;
+    font-family: var(--hr-mono);
+    color: var(--hr-text-on-dark);
+}
+.audio-player__head {
+    grid-area: head;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.audio-player__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+    font-weight: 600;
+    color: var(--hr-accent);
+    white-space: nowrap;
+}
+.audio-player__eyebrow .meta-icon { width: 1.25em; height: 1.25em; }
+.audio-player__time { flex: none; font-variant-numeric: tabular-nums; letter-spacing: 0.06em; }
+.audio-player__time-sep { margin: 0 0.35em; color: var(--hr-text-on-dark-muted); }
+.audio-player__seek {
+    grid-area: seek;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    margin: 0.25rem 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--hr-accent) var(--progress), rgba(250, 250, 247, 0.18) var(--progress));
+    cursor: pointer;
+}
+.audio-player__seek::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--hr-bg-dark-alt);
+    background: var(--hr-accent);
+}
+.audio-player__seek::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--hr-bg-dark-alt);
+    background: var(--hr-accent);
+}
+.audio-player__seek::-moz-range-track { height: 4px; background: transparent; }
+.audio-player__seek:focus-visible { outline: 2px solid var(--hr-text-on-dark); outline-offset: 6px; }
+.audio-player__foot {
+    grid-area: foot;
+    font-size: 0.78rem;
+    color: var(--hr-text-on-dark-muted);
+}
+.audio-player__note-short { display: none; }
+.audio-player__note a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.audio-player__note a:hover { color: var(--hr-accent); }
+.audio-player__speed {
+    flex: none;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--hr-border-on-dark);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--hr-text-on-dark);
+    font-family: var(--hr-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+.audio-player__speed:hover { border-color: var(--hr-accent); color: var(--hr-accent); }
+@media (max-width: 640px) {
+    /* Le bouton lecture descend sur la ligne du pied : l'en-tête et la barre prennent toute la largeur */
+    .audio-player__ui {
+        grid-template-columns: 48px minmax(0, 1fr);
+        grid-template-areas:
+            "head head"
+            "seek seek"
+            "toggle foot";
+        column-gap: 0.9rem;
+        row-gap: 0.7rem;
+        margin-top: 2rem;
+        padding: 1rem 1.1rem 1.1rem;
+        border-radius: 14px;
+    }
+    .audio-player__toggle { width: 48px; height: 48px; font-size: 1.4rem; }
+    .audio-player__head { font-size: 0.66rem; letter-spacing: 0.08em; }
+    .audio-player__eyebrow { gap: 0.45rem; }
+    .audio-player__foot { font-size: 0.74rem; gap: 0.75rem; }
+    .audio-player__note { display: flex; flex-direction: column; gap: 0.15rem; line-height: 1.3; }
+    .audio-player__note-long,
+    .audio-player__note-sep { display: none; }
+    .audio-player__note-short { display: inline; }
+}
+
+/* Version compacte : pastille dans la liste du blog, sur la ligne « Lire l'article » */
+.audio-player--compact.is-ready {
+    position: absolute;
+    right: calc(4px + 2rem);
+    bottom: calc(3rem - 9px);
+}
+.audio-player__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    height: 36px;
+    padding: 0 1rem 0 0.8rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent-primary-light) var(--progress), #fff var(--progress));
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.audio-player__pill:hover { border-color: var(--accent-primary); box-shadow: var(--shadow-accent); }
+.audio-player__pill:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+.audio-player__pill .audio-player__icon { font-size: 1.05rem; color: var(--accent-primary-hover); }
+.audio-player__pill-time { font-variant-numeric: tabular-nums; }
+.audio-player--compact.is-started .audio-player__pill-label { display: none; }
+.audio-player--compact:not(.is-started) .audio-player__pill-time { display: none; }
+@media (max-width: 768px) {
+    /* Sur mobile, la pastille passe sous « Lire l'article », en pleine largeur, comme un bouton secondaire */
+    .blog-article--audio .blog-article-link { padding-bottom: 0.5rem; }
+    .audio-player--compact.is-ready { position: static; padding: 0 0 2rem; }
+    .audio-player--compact .audio-player__pill { width: 100%; height: 44px; justify-content: center; }
+}
+
 /* Fil d'Ariane (include breadcrumb.html) */
 .breadcrumb {
     font-family: var(--hr-mono);
@@ -9198,9 +9399,9 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
 .page-hero__title {
     font-family: var(--hr-display);
     font-weight: 700;
-    font-size: clamp(2.5rem, 7vw, 6rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.25rem, 5.5vw, 4.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
     margin: 0;
     max-width: 18ch;
 }
