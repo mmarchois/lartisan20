@@ -54,7 +54,7 @@ crumb: "Blog"
     <section class="page-section page-section--light blog-listing-wrapper">
         <div class="page-section__inner">
 
-            {% assign theme_order = "Électricité,Rénovation,Isolation,Domotique,BTP,Reconversion,Hors série" | split: "," %}
+            {% assign theme_order = "Électricité,Rénovation,Isolation,Domotique,BTP,Reconversion" | split: "," %}
             {% comment %} Toute catégorie absente de la liste ci-dessus est ajoutée automatiquement en fin de rangée. {% endcomment %}
             {% assign all_categories = site.posts | map: "category" | compact | uniq %}
             {% for c in all_categories %}{% unless theme_order contains c %}{% assign theme_order = theme_order | push: c %}{% endunless %}{% endfor %}
