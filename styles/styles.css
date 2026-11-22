@@ -9338,7 +9338,7 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 0.35rem 0.55rem;
 }
@@ -9346,6 +9346,11 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
+    flex: 0 0 auto;
+}
+/* Seul le dernier élément (titre de la page) peut rétrécir : il n'est tronqué que si la ligne manque de place. */
+.breadcrumb__item--current {
+    flex: 0 1 auto;
     min-width: 0;
 }
 .breadcrumb__item a {
@@ -9366,7 +9371,7 @@ body:has(.page .page-hero--dark) nav .nav-lumo {
 }
 .breadcrumb__item--current span {
     display: inline-block;
-    max-width: 40ch;
+    max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

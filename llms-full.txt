@@ -13,7 +13,7 @@ Ce fichier complète {{ site.url }}/llms.txt (résumé et liens) avec le texte i
 
 - Nom : L'artisan 2.0 (aussi écrit Artisan 2.0, L'Artisan 2.0, lartisan20)
 - Fondateur et intervenant unique : Mathieu Marchois, 15 ans d'architecture logicielle, en reconversion dans l'électricité générale (CAP Électricien préparé en candidat libre, plus d'un an de chantiers)
-- Statut : SASU (Mathieu Marchois SASU) au capital de 1 000 €, SIREN 133 059 311, RCS Bobigny, TVA intracommunautaire FR53 133059311. Pas encore électricien diplômé : pas d'attestation Consuel, orientation vers un électricien diplômé pour les chantiers qui l'exigent. Travaux selon la norme NF C 15-100, assurance responsabilité civile professionnelle.
+- Statut : SASU (Mathieu Marchois SASU) au capital de 1 000 €, SIREN 133 059 311, SIRET 133 059 311 00018, RCS Bobigny, TVA intracommunautaire FR53 133059311. Pas encore électricien diplômé : pas d'attestation Consuel, orientation vers un électricien diplômé pour les chantiers qui l'exigent. Travaux selon la norme NF C 15-100, assurance responsabilité civile professionnelle.
 - Adresse : 55 rue Eugène Berthoud, 93400 Saint-Ouen-sur-Seine
 - Téléphone : {{ site.phone }} · Email : {{ site.email }} · Site : {{ site.url }}/
 - Horaires : lundi au vendredi, 8 h à 17 h. Réponse sous 24 h. Devis gratuit et détaillé, prix annoncé avant intervention.

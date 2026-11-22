@@ -207,6 +207,14 @@
     "hash": "378ff6904dd1a885",
     "image": "/blog/une-semaine-chez-une-cliente-qui-regarde-les-artisans-de-haut.jpg"
   },
+  "une-semaine-d-electricite-du-reperage-au-depannage": {
+    "src": "/blog/une-semaine-d-electricite-du-reperage-au-depannage.mp3",
+    "duration": 607,
+    "bytes": 7287840,
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "hash": "636f1acc971d7044",
+    "image": "/blog/une-semaine-d-electricite-du-reperage-au-depannage.jpg"
+  },
   "une-semaine-de-charpente-dans-le-nord-remplacer-les-fermes-sans-demonter-le-toit": {
     "src": "/blog/une-semaine-de-charpente-dans-le-nord-remplacer-les-fermes-sans-demonter-le-toit.mp3",
     "duration": 452,

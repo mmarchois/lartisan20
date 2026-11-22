@@ -14,7 +14,7 @@ Ce fichier suit la convention llms.txt (https://llmstxt.org). Version intégrale
 - Nom : L'artisan 2.0 (aussi écrit Artisan 2.0, L'Artisan 2.0, lartisan20)
 - Activité : électricité générale pour les particuliers (logements, maisons, appartements, dépendances)
 - Fondateur et intervenant unique : Mathieu Marchois
-- Statut : SASU (Mathieu Marchois SASU) au capital de 1 000 €, SIREN 133 059 311, RCS Bobigny, TVA intracommunautaire FR53 133059311
+- Statut : SASU (Mathieu Marchois SASU) au capital de 1 000 €, SIREN 133 059 311, SIRET 133 059 311 00018, RCS Bobigny, TVA intracommunautaire FR53 133059311
 - Adresse : 55 rue Eugène Berthoud, 93400 Saint-Ouen-sur-Seine, France
 - Téléphone : {{ site.phone }} (international : {{ site.phone_e164 }})
 - Email : {{ site.email }}
