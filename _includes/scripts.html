@@ -66,6 +66,102 @@
         }
     });
 
+    // Hero de la home : « Par exemple », les savoir-faire défilent sous le titre et le circuit correspondant
+    // s'enclenche dans le schéma (_includes/home-schema.html, qui porte la liste dans data-exemples).
+    (function () {
+        const word = document.querySelector('.home-hero__proof-word');
+        const wrap = document.querySelector('.home-hero__schema');
+        if (!word || !wrap) return;
+
+        // [texte, numéro de circuit], dans l'ordre de défilement
+        const examples = (wrap.dataset.exemples || '').split('|').map(item => item.split(':')).filter(item => item.length === 2);
+        if (examples.length === 0) return;
+
+        const hero = wrap.closest('.home-hero');
+        const parts = Array.from(wrap.querySelectorAll('[data-circuit]'));
+        const labels = wrap.querySelectorAll('.sc-etiquette');
+        const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let index = 0;
+        let visible = true;
+        let timer = null;
+
+        // Enclenche un circuit : manette levée, courant dans le fil, outil animé, cartouche à jour.
+        function switchOn(circuit) {
+            parts.forEach(part => part.classList.toggle('is-on', part.dataset.circuit === circuit));
+            const module = wrap.querySelector('.sc-module[data-circuit="' + circuit + '"]');
+            if (module) labels.forEach(label => { label.textContent = 'Q' + circuit + ' · ' + module.dataset.nom; });
+        }
+
+        function show(i, instant) {
+            index = i;
+            const [text, circuit] = examples[i];
+            if (instant) {
+                word.textContent = text;
+                switchOn(circuit);
+                return;
+            }
+            word.classList.add('is-out');
+            setTimeout(() => {
+                word.textContent = text;
+                word.classList.remove('is-out');
+                switchOn(circuit);
+            }, 300);
+        }
+
+        function start() {
+            clearInterval(timer);
+            if (calm) return;
+            timer = setInterval(() => {
+                if (visible && !document.hidden) show((index + 1) % examples.length);
+            }, 2800);
+        }
+
+        // Un clic sur un disjoncteur ou sur un outil enclenche son circuit, puis le défilement reprend.
+        wrap.addEventListener('click', event => {
+            const part = event.target.closest('[data-circuit]');
+            if (!part) return;
+            const first = examples.findIndex(item => item[1] === part.dataset.circuit);
+            if (first === -1) return;
+            const same = examples[index][1] === part.dataset.circuit;
+            show(same ? index : first, true);
+            start();
+        });
+
+        // La bulle du niveau suit le pointeur.
+        if (hero && !calm) {
+            let waiting = false;
+            hero.addEventListener('pointermove', event => {
+                if (waiting) return;
+                waiting = true;
+                requestAnimationFrame(() => {
+                    const box = hero.getBoundingClientRect();
+                    wrap.style.setProperty('--bulle', (((event.clientX - box.left) / box.width - 0.5) * 2).toFixed(2));
+                    waiting = false;
+                });
+            }, { passive: true });
+        }
+
+        // Hors de l'écran : pas de défilement, et le courant se fige (classe .is-veille).
+        if ('IntersectionObserver' in window && hero) {
+            new IntersectionObserver(entries => {
+                visible = entries[0].isIntersecting;
+                wrap.classList.toggle('is-veille', !visible);
+            }).observe(hero);
+        }
+
+        // Mouvement réduit : le premier circuit reste enclenché, sans défilement.
+        if (calm) {
+            switchOn(examples[0][1]);
+            return;
+        }
+
+        // Le premier circuit s'enclenche une fois le schéma dessiné, puis ça défile.
+        setTimeout(() => {
+            switchOn(examples[0][1]);
+            start();
+        }, 1700);
+    })();
+
     // Carrousel (prestations + réalisations)
     document.querySelectorAll('.prestation-carousel, .realisation-slider').forEach(carousel => {
         const slides = carousel.querySelector('.carousel-slides');

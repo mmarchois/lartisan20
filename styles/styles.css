@@ -7237,69 +7237,19 @@ a.service-card:hover {
     z-index: 2;
 }
 
-/* Boucle de câble + prise (motif carte / covering). Taille fixe => aucune déformation. */
-.home-hero__cable {
+/* Quadrillage de plan, visible surtout vers la droite, derrière les outils. */
+.home-hero::before {
+    content: "";
     position: absolute;
-    height: auto;
-    z-index: 1;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--hr-border-on-dark) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hr-border-on-dark) 1px, transparent 1px);
+    background-size: 56px 56px;
+    opacity: 0.55;
+    -webkit-mask-image: linear-gradient(115deg, transparent 42%, #000 100%);
+    mask-image: linear-gradient(115deg, transparent 42%, #000 100%);
     pointer-events: none;
-    overflow: visible;
-}
-
-/* Desktop : câble qui descend de haut dans l'espace vide à droite, à hauteur du CTA */
-.home-hero__cable--lg {
-    right: clamp(48px, 9vw, 200px);
-    bottom: 22%;
-    width: clamp(120px, 13vw, 188px);
-}
-
-/* Mobile : câble en trois morceaux (voir index.html), masqué hors téléphone */
-.home-hero__cable-sm { display: none; }
-
-/* Téléphones uniquement. Tablettes + desktop gardent le câble ferré à droite. */
-@media (max-width: 600px) {
-    .home-hero__cable--lg { display: none; }
-    .home-hero__cable-sm {
-        --cw: clamp(56px, 16vw, 66px);   /* largeur du câble (viewBox large de 90) */
-        --cr: clamp(6px, 3vw, 16px);     /* marge droite */
-        --ct: clamp(132px, 18vh, 162px); /* haut : coude juste sous le bandeau */
-        --cb: 293px;                     /* bas : prise à hauteur du téléphone (CTA empilés) */
-        display: block;
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        opacity: 0.6;
-    }
-    .home-hero__cable-sm > * {
-        position: absolute;
-        right: var(--cr);
-    }
-    .home-hero__cable-sm-top {
-        top: var(--ct);
-        width: var(--cw);
-        height: calc(var(--cw) * 44 / 90);
-        overflow: visible;
-    }
-    .home-hero__cable-sm-bottom {
-        bottom: var(--cb);
-        width: var(--cw);
-        height: calc(var(--cw) * 150 / 90);
-        overflow: visible;
-    }
-    /* Trait vertical : centré sur x = 76/90 du câble, épaisseur 3.8/90, chevauche les SVG de 2px */
-    .home-hero__cable-sm-line {
-        top: calc(var(--ct) + var(--cw) * 44 / 90 - 2px);
-        bottom: calc(var(--cb) + var(--cw) * 150 / 90 - 2px);
-        right: calc(var(--cr) + var(--cw) * 12.1 / 90);
-        width: calc(var(--cw) * 3.8 / 90);
-        background: #E8B547;
-    }
-    /* CTA empilés : la boucle du câble tombe à droite du téléphone, jamais dessus */
-    .home-hero__cta-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 
 .home-hero__eyebrow {
@@ -7343,12 +7293,235 @@ a.service-card:hover {
     white-space: nowrap;
 }
 
-.home-hero__rule {
-    width: 88px;
-    height: 2px;
-    background: var(--hr-accent);
-    border: 0;
-    margin: 2rem 0 2.5rem;
+/* À gauche le titre, l'exemple, l'accroche, les CTA et la note Google ; à droite le schéma animé.
+   Le titre traverse les deux colonnes : le schéma, composé en « L », loge son tableau à droite du titre
+   (son coin haut gauche est vide) et étale ses outils en dessous. */
+.home-hero__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
+}
+.home-hero__body > * { grid-column: 1; }
+.home-hero__body > .home-hero__title {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+}
+.home-hero__body > .home-hero__google { justify-self: start; }
+
+/* « Par exemple → … » : les savoir-faire défilent (voir scripts.html). Décoratif, masqué aux lecteurs d'écran. */
+.home-hero__proof {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem 0.9rem;
+    min-height: 1.3em;
+    margin: 1.75rem 0 1.75rem;
+    font-family: var(--hr-display);
+    font-weight: 600;
+    font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    color: var(--hr-text-on-dark);
+}
+.home-hero__proof-label {
+    font-family: var(--hr-mono);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--hr-text-on-dark-muted);
+}
+.home-hero__proof-word {
+    display: inline-block;
+    white-space: nowrap;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+.home-hero__proof-word::before {
+    content: "→ ";
+    color: var(--hr-accent);
+}
+.home-hero__proof-word.is-out {
+    opacity: 0;
+    transform: translateY(0.4em);
+}
+
+/* Schéma animé (_includes/home-schema.html) : un tableau, quatre disjoncteurs, un fil par circuit
+   jusqu'à un outil. La classe .is-on, posée par scripts.html sur le disjoncteur, le fil et l'outil
+   du circuit en cours, monte la manette, fait passer le courant et anime l'outil.
+   Les dessins sont en unités du viewBox (560 x 580) : les px ci-dessous suivent l'échelle du schéma.
+   Largeur calée sur la place libre à droite du titre : vers 38vw, le tableau toucherait le titre. */
+.home-hero__schema {
+    grid-column: 2;
+    grid-row: 1 / span 5;
+    align-self: center;
+    width: clamp(300px, 35vw, 520px);
+    --sc-clair: var(--hr-text-on-dark);
+    --sc-or: var(--hr-accent);
+    --sc-gris: var(--hr-text-on-dark-muted);
+    --sc-fond: var(--hr-bg-dark);
+    --sc-fond-alt: #1d1d20;
+    --sc-ombre: rgba(15, 15, 16, 0.14);
+}
+.home-schema {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    font-family: var(--hr-mono);
+}
+.sc-clair { fill: var(--sc-clair); }
+.sc-or { fill: var(--sc-or); }
+.sc-gris { fill: var(--sc-gris); }
+.sc-fond { fill: var(--sc-fond); }
+.sc-fond-alt { fill: var(--sc-fond-alt); }
+.sc-ombre { fill: var(--sc-ombre); }
+.sc-trait-or, .sc-trait-gris { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.sc-trait-or { stroke: var(--sc-or); }
+.sc-trait-gris { stroke: var(--sc-gris); }
+
+/* Annotations : cartouche, repères des modules, gravures */
+.sc-texte {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    fill: var(--sc-gris);
+}
+.sc-texte--repere { text-anchor: middle; }
+.sc-texte--circuit { font-size: 12.5px; font-weight: 500; fill: var(--sc-or); }
+.sc-gravure { font-size: 8.5px; font-weight: 700; fill: var(--sc-fond); }
+.sc-gravure--test { font-size: 10px; text-anchor: middle; }
+
+/* Tableau */
+.sc-coffret {
+    fill: rgba(250, 250, 247, 0.035);
+    stroke: var(--hr-border-on-dark);
+    stroke-width: 1.5;
+}
+.sc-tableau .sc-gris { opacity: 0.55; }
+.sc-bandeau { fill: var(--sc-fond-alt); stroke: var(--hr-border-on-dark); stroke-width: 1; }
+.sc-bandeau-texte--fin { text-anchor: end; }
+.sc-cartouche { display: none; }
+.sc-face { fill: rgba(255, 255, 255, 0.55); stroke: var(--sc-ombre); stroke-width: 1; }
+.sc-module[data-circuit], .sc-outil { cursor: pointer; }
+.sc-manette {
+    fill: var(--sc-gris);
+    transform: translateY(10px);
+    transition: transform 0.16s cubic-bezier(0.3, 1.8, 0.5, 1), fill 0.16s ease;
+}
+.sc-voyant { fill: var(--sc-gris); transition: fill 0.16s ease; }
+.sc-module.is-on .sc-manette { fill: var(--sc-or); transform: none; }
+.sc-module.is-on .sc-voyant { fill: var(--sc-or); }
+
+/* Fils : gris au repos, le courant passe en pointillés dorés dans le circuit enclenché */
+.sc-fil {
+    fill: none;
+    stroke: var(--sc-clair);
+    stroke-opacity: 0.22;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.sc-fil--arrivee { stroke: var(--sc-or); stroke-opacity: 0.7; }
+.sc-courant {
+    fill: none;
+    stroke: var(--sc-or);
+    stroke-width: 3.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 9 9;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.sc-noeud {
+    fill: var(--sc-fond);
+    stroke: var(--sc-clair);
+    stroke-opacity: 0.4;
+    stroke-width: 2;
+    transition: fill 0.25s ease, stroke 0.25s ease, stroke-opacity 0.25s ease;
+}
+.sc-halo {
+    fill: none;
+    stroke: var(--sc-or);
+    stroke-width: 11;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.sc-circuit.is-on .sc-halo { opacity: 0.16; }
+.sc-circuit.is-on .sc-courant {
+    opacity: 1;
+    animation: sc-flux 0.55s linear infinite;
+}
+.sc-circuit.is-on .sc-noeud { fill: var(--sc-or); stroke: var(--sc-or); stroke-opacity: 1; }
+@keyframes sc-flux {
+    to { stroke-dashoffset: -18; }
+}
+.home-hero__schema.is-veille .sc-courant { animation-play-state: paused; }
+
+
+/* Pince : les mâchoires striées s'ouvrent au repos et coupent deux fois */
+.sc-strie { fill: none; stroke: var(--sc-fond); stroke-opacity: 0.28; stroke-width: 2; }
+.sc-pince-a { transform: rotate(-3.5deg); }
+.sc-pince-b { transform: rotate(3.5deg); }
+.sc-outil.is-on .sc-pince-a { animation: sc-coupe-a 1s ease 0.2s; }
+.sc-outil.is-on .sc-pince-b { animation: sc-coupe-b 1s ease 0.2s; }
+@keyframes sc-coupe-a {
+    0%, 100% { transform: rotate(-3.5deg); }
+    20%, 60% { transform: rotate(0); }
+    40%, 80% { transform: rotate(-8deg); }
+}
+@keyframes sc-coupe-b {
+    0%, 100% { transform: rotate(3.5deg); }
+    20%, 60% { transform: rotate(0); }
+    40%, 80% { transform: rotate(8deg); }
+}
+
+/* Tournevis : les rainures du manche défilent, il visse */
+.sc-outil.is-on .sc-rainures { animation: sc-visse 0.3s linear 0.2s 5; }
+@keyframes sc-visse {
+    to { transform: translateX(12px); }
+}
+
+/* Multimètre : le sélecteur tourne, l'écran passe de 0.0 à 230 V */
+.sc-lcd, .sc-lcd-unite { font-weight: 700; fill: var(--sc-fond); }
+.sc-lcd { font-size: 23px; text-anchor: end; letter-spacing: -0.02em; transition: opacity 0.15s ease 0.35s; }
+.sc-lcd-unite { font-size: 10px; }
+.sc-lcd--on { opacity: 0; }
+.sc-outil.is-on .sc-lcd--on { opacity: 1; }
+.sc-outil.is-on .sc-lcd--off { opacity: 0; }
+.sc-graduation { fill: none; stroke: var(--sc-clair); stroke-opacity: 0.45; stroke-width: 2; stroke-linecap: round; }
+.sc-selecteur { transform: rotate(-75deg); transition: transform 0.4s cubic-bezier(0.3, 1.5, 0.5, 1); }
+.sc-outil.is-on .sc-selecteur { transform: rotate(25deg); }
+
+/* Niveau : la bulle suit le pointeur (--bulle, de -1 à 1) et se cale au centre quand son circuit s'enclenche */
+.sc-bulle {
+    transform: translateX(calc(var(--bulle, -0.6) * 15px));
+    transition: transform 0.9s cubic-bezier(0.3, 1.9, 0.4, 1);
+}
+.sc-outil.is-on .sc-bulle { transform: none; }
+
+/* Arrivée : le tableau se pose, les fils se tirent, les outils apparaissent */
+.sc-tableau { animation: sc-apparait 0.5s ease 0.15s backwards; }
+.sc-fil[pathLength] { animation: sc-tire 0.7s ease backwards; animation-delay: calc(var(--i) * 90ms + 500ms); }
+.sc-noeud, .sc-outil, .sc-cartouche { animation: sc-apparait 0.45s ease backwards; }
+.sc-noeud, .sc-outil { animation-delay: calc(var(--i) * 90ms + 1050ms); }
+.sc-cartouche { animation-delay: 0.6s; }
+@keyframes sc-apparait {
+    from { opacity: 0; transform: translateY(8px); }
+}
+@keyframes sc-tire {
+    from { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    to { stroke-dasharray: 1; stroke-dashoffset: 0; }
+}
+
+/* Petits écrans larges : le schéma est plus petit, les annotations grossissent pour rester lisibles */
+@media (min-width: 901px) and (max-width: 1250px) {
+    .sc-texte { font-size: 13px; letter-spacing: 0.1em; }
+    .sc-texte--circuit { font-size: 14px; }
+    .sc-gravure { display: none; }
 }
 
 .home-hero__tagline {
@@ -7592,6 +7765,35 @@ a.service-card:hover {
         font-weight: 700;
     }
     .home-hero__trust-sep { display: none; }
+}
+
+/* Tablettes et téléphones : une seule colonne, les CTA restent sous l'accroche
+   et le schéma passe après la note Google. */
+@media (max-width: 900px) {
+    .home-hero__body { grid-template-columns: minmax(0, 1fr); }
+    .home-hero__body > .home-hero__title { grid-column: 1; grid-row: auto; }
+    .home-hero__schema {
+        grid-column: 1;
+        grid-row: auto;
+        order: 1;
+        width: min(100%, 500px);
+        margin-bottom: 2.5rem;
+    }
+    /* Le coin haut gauche du schéma est libre : le cartouche s'y affiche, le bandeau du tableau se vide. */
+    .sc-cartouche { display: block; }
+    .sc-bandeau-texte { display: none; }
+}
+@media (max-width: 600px) {
+    .home-hero__proof { margin: 1.5rem 0 1.5rem; font-size: 1.15rem; }
+    .home-hero__proof-label { font-size: 0.7rem; letter-spacing: 0.12em; }
+    .home-hero__schema { margin-bottom: 2.25rem; }
+    .sc-texte { font-size: 14.5px; letter-spacing: 0.08em; }
+    .sc-texte--circuit { font-size: 15px; letter-spacing: 0.05em; }
+    .sc-gravure { display: none; }
+}
+/* Très petits écrans : l'intitulé passe au-dessus de l'exemple pour qu'il tienne toujours sur une ligne. */
+@media (max-width: 380px) {
+    .home-hero__proof { flex-direction: column; gap: 0.2rem; min-height: 3.2em; }
 }
 
 /* Petits écrans : le badge tient sur une ligne */

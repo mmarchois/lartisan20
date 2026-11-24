@@ -1,0 +1,203 @@
+{% comment %}
+  Schéma animé du hero de la home (décoratif) : un tableau, quatre disjoncteurs, un fil par circuit
+  jusqu'à un outil. Composition en « L » : le tableau en haut à droite (à côté du titre sur grand écran,
+  le coin haut gauche du dessin reste vide pour lui), les outils en dessous sur toute la largeur. Le circuit de l'exemple affiché sous le titre s'enclenche : la manette monte,
+  le courant passe dans le fil et l'outil s'anime (voir scripts.html et styles.css, classes .sc-*).
+  - data-exemples : liste « texte:circuit » séparée par des barres, dans l'ordre de défilement.
+  - data-circuit / data-nom : numéro du circuit et intitulé affiché dans le cartouche.
+  Un clic sur un disjoncteur ou sur un outil enclenche son circuit.
+{% endcomment %}
+<div class="home-hero__schema" aria-hidden="true"
+     data-exemples="remplacer un tableau:2|trouver une panne:3|poser un luminaire:4|tirer une ligne:1|mettre aux normes:2|ajouter des prises:4|câbler une cuisine:1">
+    <svg class="home-schema" viewBox="0 0 560 580" focusable="false">
+        <defs>
+            <clipPath id="sc-clip-manche"><rect x="-15" y="16" width="30" height="34"/></clipPath>
+        </defs>
+
+        <!-- Cartouche (tablettes et téléphones, où le coin haut gauche est libre) : norme + circuit en cours -->
+        <g class="sc-cartouche">
+            <rect class="sc-or" x="8" y="44" width="2.5" height="56"/>
+            <text class="sc-texte" x="22" y="62">NF C 15-100</text>
+            <text class="sc-texte sc-texte--circuit" x="22" y="90"><tspan class="sc-etiquette">Q2 · RÉNOVATION</tspan></text>
+        </g>
+
+        <!-- Arrivée du courant (phase + neutre) -->
+        <path class="sc-fil sc-fil--arrivee" d="M237 0V40M289 0V40"/>
+
+        <!-- Les fils : un par circuit, du disjoncteur à l'outil -->
+        <g class="sc-circuit" data-circuit="1" style="--i:0">
+            <path class="sc-fil" pathLength="1" d="M347 142V198Q347 210 335 210H82Q70 210 70 222V252"/>
+            <path class="sc-halo" d="M347 142V198Q347 210 335 210H82Q70 210 70 222V252"/>
+            <path class="sc-courant" d="M347 142V198Q347 210 335 210H82Q70 210 70 222V252"/>
+            <circle class="sc-noeud" cx="70" cy="252" r="5.5"/>
+        </g>
+        <g class="sc-circuit" data-circuit="2" style="--i:1">
+            <path class="sc-fil" pathLength="1" d="M403 142V218Q403 230 391 230H227Q215 230 215 242V258"/>
+            <path class="sc-halo" d="M403 142V218Q403 230 391 230H227Q215 230 215 242V258"/>
+            <path class="sc-courant" d="M403 142V218Q403 230 391 230H227Q215 230 215 242V258"/>
+            <circle class="sc-noeud" cx="215" cy="258" r="5.5"/>
+        </g>
+        <g class="sc-circuit" data-circuit="3" style="--i:2">
+            <path class="sc-fil" pathLength="1" d="M459 142V224Q459 236 447 236H432Q420 236 420 248V262"/>
+            <path class="sc-halo" d="M459 142V224Q459 236 447 236H432Q420 236 420 248V262"/>
+            <path class="sc-courant" d="M459 142V224Q459 236 447 236H432Q420 236 420 248V262"/>
+            <circle class="sc-noeud" cx="420" cy="262" r="5.5"/>
+        </g>
+        <g class="sc-circuit" data-circuit="4" style="--i:3">
+            <path class="sc-fil" pathLength="1" d="M515 142V194Q515 206 527 206H534Q546 206 546 218V538Q546 550 534 550H532"/>
+            <path class="sc-halo" d="M515 142V194Q515 206 527 206H534Q546 206 546 218V538Q546 550 534 550H532"/>
+            <path class="sc-courant" d="M515 142V194Q515 206 527 206H534Q546 206 546 218V538Q546 550 534 550H532"/>
+            <circle class="sc-noeud" cx="532" cy="550" r="5.5"/>
+        </g>
+
+        <!-- Le tableau : coffret, rail DIN, interrupteur différentiel, quatre disjoncteurs et bandeau porte-étiquettes -->
+        <g class="sc-tableau">
+            <rect class="sc-coffret" x="196" y="6" width="358" height="178" rx="12"/>
+            <rect class="sc-gris" x="202" y="83" width="346" height="14" rx="2"/>
+            <text class="sc-texte sc-texte--repere" x="263" y="24">ID</text>
+            <text class="sc-texte sc-texte--repere" x="347" y="24">Q1</text>
+            <text class="sc-texte sc-texte--repere" x="403" y="24">Q2</text>
+            <text class="sc-texte sc-texte--repere" x="459" y="24">Q3</text>
+            <text class="sc-texte sc-texte--repere" x="515" y="24">Q4</text>
+
+            <!-- Bandeau porte-étiquettes : norme à gauche, circuit en cours à droite (grand écran) -->
+            <rect class="sc-bandeau" x="210" y="154" width="330" height="22" rx="4"/>
+            <text class="sc-texte sc-bandeau-texte" x="220" y="169">NF C 15-100</text>
+            <text class="sc-texte sc-texte--circuit sc-bandeau-texte sc-bandeau-texte--fin" x="530" y="169"><tspan class="sc-etiquette">Q2 · RÉNOVATION</tspan></text>
+
+            <!-- Interrupteur différentiel 30 mA (deux modules), toujours enclenché -->
+            <g class="sc-module sc-module--id is-on" transform="translate(210 32)">
+                <rect class="sc-clair" width="106" height="116" rx="5"/>
+                <rect class="sc-ombre" x="4" y="4" width="46" height="20" rx="4"/>
+                <rect class="sc-ombre" x="56" y="4" width="46" height="20" rx="4"/>
+                <rect class="sc-ombre" x="4" y="92" width="46" height="20" rx="4"/>
+                <rect class="sc-ombre" x="56" y="92" width="46" height="20" rx="4"/>
+                <circle class="sc-fond" cx="27" cy="14" r="5.5"/><rect class="sc-clair" x="22.5" y="13.2" width="9" height="1.6"/>
+                <circle class="sc-fond" cx="79" cy="14" r="5.5"/><rect class="sc-clair" x="74.5" y="13.2" width="9" height="1.6"/>
+                <circle class="sc-fond" cx="27" cy="102" r="5.5"/><rect class="sc-clair" x="22.5" y="101.2" width="9" height="1.6"/>
+                <circle class="sc-fond" cx="79" cy="102" r="5.5"/><rect class="sc-clair" x="74.5" y="101.2" width="9" height="1.6"/>
+                <rect class="sc-face" x="3" y="31" width="100" height="54" rx="4"/>
+                <rect class="sc-fond" x="12" y="37" width="46" height="26" rx="4"/>
+                <rect class="sc-manette" x="14" y="39" width="42" height="12" rx="3"/>
+                <circle class="sc-or" cx="82" cy="50" r="9"/>
+                <text class="sc-gravure sc-gravure--test" x="82" y="53.6">T</text>
+                <text class="sc-gravure" x="12" y="77">40 A</text>
+                <text class="sc-gravure" x="56" y="77">30 mA</text>
+            </g>
+
+            {% assign calibres = "C20,C16,C10,C16" | split: "," %}
+            {% assign noms = "INSTALLATION,RÉNOVATION,DÉPANNAGE,POSE" | split: "," %}
+            {% for calibre in calibres %}
+            {% assign x = forloop.index0 | times: 56 | plus: 322 %}
+            <g class="sc-module" data-circuit="{{ forloop.index }}" data-nom="{{ noms[forloop.index0] }}" style="--i:{{ forloop.index0 }}" transform="translate({{ x }} 32)">
+                <rect class="sc-clair" width="50" height="116" rx="5"/>
+                <rect class="sc-ombre" x="4" y="4" width="42" height="20" rx="4"/>
+                <rect class="sc-ombre" x="4" y="92" width="42" height="20" rx="4"/>
+                <circle class="sc-fond" cx="25" cy="14" r="5.5"/><rect class="sc-clair" x="20.5" y="13.2" width="9" height="1.6"/>
+                <circle class="sc-fond" cx="25" cy="102" r="5.5"/><rect class="sc-clair" x="20.5" y="101.2" width="9" height="1.6"/>
+                <rect class="sc-face" x="3" y="31" width="44" height="54" rx="4"/>
+                <rect class="sc-fond" x="16" y="37" width="18" height="26" rx="4"/>
+                <rect class="sc-manette" x="18" y="39" width="14" height="12" rx="3"/>
+                <rect class="sc-voyant" x="9" y="70.5" width="7" height="5.5" rx="1.5"/>
+                <text class="sc-gravure" x="20" y="77">{{ calibre }}</text>
+            </g>
+            {% endfor %}
+        </g>
+
+        <!-- Q1 : la pince -->
+        <g class="sc-outil sc-outil--pince" data-circuit="1" style="--i:0">
+            <g transform="translate(70 352) rotate(8) scale(1.3)">
+                <g class="sc-pince-a">
+                    <path class="sc-trait-or" stroke-width="16" d="M6 8C14 36 22 62 20 92"/>
+                    <circle class="sc-or" cx="8" cy="16" r="9.5"/>
+                    <path class="sc-clair" d="M-1.5 4V-72H-8Q-19 -52 -19 -27Q-19 -10 -9 4z"/>
+                    <path class="sc-strie" d="M-1.5 -66H-7M-1.5 -59H-7M-1.5 -52H-7M-1.5 -45H-7"/>
+                </g>
+                <g class="sc-pince-b">
+                    <path class="sc-trait-or" stroke-width="16" d="M-6 8C-14 36 -22 62 -20 92"/>
+                    <circle class="sc-or" cx="-8" cy="16" r="9.5"/>
+                    <path class="sc-clair" d="M1.5 4V-72H8Q19 -52 19 -27Q19 -10 9 4z"/>
+                    <path class="sc-strie" d="M1.5 -66H7M1.5 -59H7M1.5 -52H7M1.5 -45H7"/>
+                </g>
+                <circle class="sc-clair" cx="0" cy="0" r="12"/>
+                <circle class="sc-fond" cx="0" cy="0" r="4.2"/>
+            </g>
+        </g>
+
+        <!-- Q2 : le tournevis, suspendu à son fil -->
+        <g class="sc-outil sc-outil--tournevis" data-circuit="2" style="--i:1">
+            <g transform="translate(215 264) rotate(12) scale(1.3)">
+                <path class="sc-clair" d="M-2.6 140H2.6V158L4.6 170H-4.6L-2.6 158z"/>
+                <rect class="sc-gris" x="-4.6" y="70" width="9.2" height="74" rx="3"/>
+                <rect class="sc-or" x="-15" y="0" width="30" height="64" rx="13"/>
+                <g clip-path="url(#sc-clip-manche)">
+                    <g class="sc-rainures">
+                        <rect class="sc-ombre" x="-27" y="16" width="5" height="34"/>
+                        <rect class="sc-ombre" x="-15" y="16" width="5" height="34"/>
+                        <rect class="sc-ombre" x="-3" y="16" width="5" height="34"/>
+                        <rect class="sc-ombre" x="9" y="16" width="5" height="34"/>
+                    </g>
+                </g>
+                <rect class="sc-gris" x="-9.5" y="60" width="19" height="13" rx="4"/>
+            </g>
+        </g>
+
+        <!-- Q3 : le multimètre -->
+        <g class="sc-outil sc-outil--multimetre" data-circuit="3" style="--i:2">
+            <g transform="translate(420 378) scale(1.3)">
+                <path class="sc-trait-gris" stroke-width="4" d="M0 68C0 98 -66 100 -70 62"/>
+                <path class="sc-trait-or" stroke-width="4" d="M24 68C24 100 78 100 80 62"/>
+                <rect class="sc-clair" x="-71" y="2" width="2" height="18"/>
+                <rect class="sc-clair" x="79" y="2" width="2" height="18"/>
+                <rect class="sc-gris" x="-74.5" y="18" width="9" height="46" rx="4.5"/>
+                <rect class="sc-or" x="75.5" y="18" width="9" height="46" rx="4.5"/>
+                <rect class="sc-or" x="-52" y="-84" width="104" height="168" rx="18"/>
+                <rect class="sc-fond-alt" x="-43" y="-75" width="86" height="150" rx="11"/>
+                <rect class="sc-clair" x="-35" y="-66" width="70" height="36" rx="5"/>
+                <text class="sc-lcd sc-lcd--off" x="17" y="-39.5">0.0</text>
+                <text class="sc-lcd sc-lcd--on" x="17" y="-39.5">230</text>
+                <text class="sc-lcd-unite" x="20" y="-39.5">V</text>
+                <rect class="sc-gris" x="-35" y="-23" width="20" height="6" rx="3"/>
+                <rect class="sc-gris" x="-10" y="-23" width="20" height="6" rx="3"/>
+                <rect class="sc-gris" x="15" y="-23" width="20" height="6" rx="3"/>
+                <g transform="translate(0 24)">
+                    <path class="sc-graduation" d="M0 -31V-35M13.1 -28.1L14.8 -31.7M23.7 -19.9L26.8 -22.5M29.9 -8L33.8 -9.1M-13.1 -28.1L-14.8 -31.7M-23.7 -19.9L-26.8 -22.5M-29.9 -8L-33.8 -9.1"/>
+                    <circle class="sc-gris" cx="0" cy="0" r="27"/>
+                    <circle class="sc-clair" cx="0" cy="0" r="20"/>
+                    <g class="sc-selecteur">
+                        <rect class="sc-fond" x="-3" y="-19" width="6" height="21" rx="3"/>
+                    </g>
+                </g>
+                <circle class="sc-gris" cx="-24" cy="64" r="6.5"/><circle class="sc-fond" cx="-24" cy="64" r="3"/>
+                <circle class="sc-clair" cx="0" cy="64" r="6.5"/><circle class="sc-fond" cx="0" cy="64" r="3"/>
+                <circle class="sc-or" cx="24" cy="64" r="6.5"/><circle class="sc-fond" cx="24" cy="64" r="3"/>
+            </g>
+        </g>
+
+        <!-- Q4 : le niveau, dont la bulle se cale au centre -->
+        <g class="sc-outil sc-outil--niveau" data-circuit="4" style="--i:3">
+            <g transform="translate(277 550) scale(.988)">
+                <rect class="sc-or" x="-250" y="-20" width="500" height="40" rx="5"/>
+                <rect class="sc-ombre" x="-234" y="-20" width="468" height="6"/>
+                <rect class="sc-gris" x="-250" y="-20" width="16" height="40" rx="5"/>
+                <rect class="sc-gris" x="234" y="-20" width="16" height="40" rx="5"/>
+                <rect class="sc-fond" x="-150" y="-6" width="70" height="14" rx="7"/>
+                <rect class="sc-fond" x="80" y="-6" width="70" height="14" rx="7"/>
+                <circle class="sc-fond" cx="-196" cy="1" r="12"/>
+                <rect class="sc-clair" x="-200" y="-8" width="8" height="18" rx="4"/>
+                <circle class="sc-or" cx="-196" cy="-3" r="2.6"/>
+                <circle class="sc-fond" cx="196" cy="1" r="12"/>
+                <rect class="sc-clair" x="192" y="-8" width="8" height="18" rx="4" transform="rotate(45 196 1)"/>
+                <circle class="sc-or" cx="199.2" cy="-2.2" r="2.6"/>
+                <rect class="sc-fond" x="-44" y="-12" width="88" height="26" rx="6"/>
+                <rect class="sc-clair" x="-34" y="-7" width="68" height="16" rx="8"/>
+                <rect class="sc-fond" x="-11.5" y="-7" width="2" height="16"/>
+                <rect class="sc-fond" x="9.5" y="-7" width="2" height="16"/>
+                <g class="sc-bulle">
+                    <ellipse class="sc-or" cx="0" cy="1" rx="8.2" ry="5.6"/>
+                    <circle class="sc-clair" cx="-2.6" cy="-0.8" r="1.5"/>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
