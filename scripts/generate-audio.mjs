@@ -98,7 +98,7 @@ const UNITS = [
   ['mA', 'milliampères'], ['MΩ', 'mégohms'], ['kΩ', 'kilohms'], ['Ω', 'ohms'],
   ['mm', 'millimètres'], ['cm', 'centimètres'], ['km', 'kilomètres'], ['kg', 'kilogrammes'],
   ['°C', 'degrés'], ['°', 'degrés'],
-  ['€/h', 'euros de l\'heure'],
+  ['€/h', 'euros de l\'heure'], ['Nm', 'newtons-mètres'],
   ['W', 'watts'], ['V', 'volts'], ['A', 'ampères'], ['m', 'mètres'], ['h', 'heures'],
 ];
 
@@ -127,6 +127,7 @@ function normalize(text) {
   t = t.replace(/\bNF ?C ?15-100\b/g, `${SPELL_OPEN}NFC${SPELL_CLOSE} quinze cent`);
   t = t.replace(/\b24 ?h ?\/ ?24\b/g, '24 heures sur 24');
   t = t.replace(/\b7 ?j ?\/ ?7\b/g, '7 jours sur 7');
+  t = t.replace(/([ÉEé]pisode) (\d+) ?\/ ?(\d+)(?!\d)/g, '$1 $2 sur $3'); // « épisode 1/4 »
   t = t.replace(/\bHT\b/g, 'hors taxes');
   t = t.replace(/\bTTC\b/g, 'toutes taxes comprises');
 
@@ -135,6 +136,8 @@ function normalize(text) {
     const re = new RegExp(`(?<![A-Za-z\\d-])(\\d[\\d,.]*) ?${escapeRegex(unit)}(?![\\wÀ-ÿ²])`, 'g');
     t = t.replace(re, `$1 ${spoken}`);
   }
+  // « 4 Nm (newtons-mètres) » : l'unité déjà dite en toutes lettres n'est pas répétée.
+  t = t.replace(/(\p{L}[\p{L}\- ]*?) \(\1\)/gu, '$1');
 
   // Formules et symboles
   t = t.replace(/ = /g, ' égale ');

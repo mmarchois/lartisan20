@@ -1,0 +1,12 @@
+{%- comment -%}
+  Photo d'article qui ne s'affiche que si le fichier existe dans le dépôt :
+  on peut préparer l'emplacement dans l'article avant d'avoir la photo.
+  Paramètres : src (chemin depuis la racine du site), alt, caption.
+  Pas de guillemets doubles dans alt ni dans caption.
+  Le rendu est le même que celui d'une image Markdown suivie de sa légende.
+{%- endcomment -%}
+{%- assign photo_file = site.static_files | where: "path", include.src | first -%}
+{%- if photo_file -%}
+![{{ include.alt }}]({{ include.src }})
+{% if include.caption %}*{{ include.caption }}*{% endif %}
+{%- endif -%}

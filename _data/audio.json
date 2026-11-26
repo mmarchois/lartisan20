@@ -135,6 +135,21 @@
     "hash": "655e9488a31df346",
     "image": "/blog/maison-du-lot-premieres-cloisons-et-raccordement-des-boites-de-derivation.jpg"
   },
+  "mes-outils-d-electricien-ce-qu-il-y-a-dans-mon-sac": {
+    "src": "/blog/mes-outils-d-electricien-ce-qu-il-y-a-dans-mon-sac.mp3",
+    "duration": 720,
+    "bytes": 8635104,
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "hash": "08af05cccb8a529c",
+    "image": "/blog/mes-outils-d-electricien-ce-qu-il-y-a-dans-mon-sac.jpg"
+  },
+  "mes-outils-d-electricien-les-indispensables-sur-un-chantier": {
+    "src": "/blog/mes-outils-d-electricien-les-indispensables-sur-un-chantier.mp3",
+    "duration": 427,
+    "bytes": 5126976,
+    "voice": "fr-FR-RemyMultilingualNeural",
+    "hash": "fa186ea6df73d169"
+  },
   "mon-cap-electricien-en-candidat-libre-100-en-ligne": {
     "src": "/blog/mon-cap-electricien-en-candidat-libre-100-en-ligne.mp3",
     "duration": 535,

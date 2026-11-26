@@ -6599,6 +6599,110 @@ a.service-card:hover {
     border-bottom: none;
 }
 
+/* Blog : filtre et pagination pilotés par l'URL (?theme=…&page=…) */
+a.blog-filter__chip {
+    text-decoration: none;
+}
+
+/* Le haut de liste ne passe pas sous la barre de navigation quand on change de page */
+.blog-filter {
+    scroll-margin-top: 6rem;
+}
+
+/* Barre d'outils : thèmes à gauche, compteur à droite, filet en dessous */
+.blog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.blog-toolbar .blog-filter {
+    margin: 0;
+}
+
+.blog-status {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.blog-status[hidden] {
+    display: none;
+}
+
+/* La liste suit directement le filet de la barre d'outils */
+.blog-toolbar + .blog-articles {
+    margin-top: 0;
+}
+
+.blog-article[hidden] {
+    display: none;
+}
+
+/* Avant que le script ait lu l'URL, seule la première page est affichée : pas de saut de mise en page */
+.blog-js .blog-articles:not(.is-ready) > .blog-article--beyond {
+    display: none;
+}
+
+.blog-articles:focus {
+    outline: none;
+}
+
+.blog-pager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.blog-pager[hidden] {
+    display: none;
+}
+
+.blog-pager__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    padding: 0 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    transition: all 0.25s ease;
+}
+
+.blog-pager__link:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.blog-pager__link.is-current {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: #fff;
+}
+
+.blog-pager__gap {
+    color: var(--text-muted);
+    padding: 0 0.25rem;
+}
+
 /* Blog Post */
 .blog-post {
     background: var(--bg-white);

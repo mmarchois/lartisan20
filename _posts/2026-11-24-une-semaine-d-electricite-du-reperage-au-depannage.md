@@ -8,6 +8,7 @@ date: 2026-11-24
 published: true
 excerpt: "Cette semaine, j'ai passé pas mal de temps sur les chantiers et principalement en électricité. J'ai commencé dans une grande maison en meulière de plus de 300 m², avec quatre tableaux électriques et pas mal de choses à reprendre. Ensuite, direction Boulogne-Billancourt pour chercher l'origine d'une panne électrique intermittente dans un appartement. Et pour finir, une surprise qui n'avait rien à voir avec l'électricité : en ouvrant un mur porteur, on a découvert une vieille ossature en chêne."
 image: /images/blog/meudon/reparage_ancien_tableau.webp
+image_fit: contain
 ---
 
 Cette semaine, j'ai passé pas mal de temps sur les chantiers et principalement en électricité. C'est plutôt une bonne nouvelle pour moi : c'est quand même le métier vers lequel je suis en train de me reconvertir !

@@ -103,7 +103,7 @@
             {% assign image_url = page.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
             <section class="page-section page-section--light" style="padding-top:3rem;padding-bottom:0;">
                 <div class="page-section__inner reveal" style="max-width:70ch;margin:0 auto;">
-                    <img src="{{ site.baseurl }}{{ image_url }}" alt="{{ page.title }}" loading="eager" fetchpriority="high" style="width:100%;height:auto;max-height:60vh;object-fit:cover;display:block;">
+                    <img src="{{ site.baseurl }}{{ image_url }}" alt="{{ page.title }}" loading="eager" fetchpriority="high" style="width:100%;height:auto;max-height:60vh;object-fit:{{ page.image_fit | default: 'cover' }};display:block;">
                 </div>
             </section>
             {% endif %}

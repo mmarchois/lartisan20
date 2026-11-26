@@ -267,36 +267,144 @@
         });
     }
 
-    // Blog : filtre par thème (côté client, sans pagination)
+    // Blog : filtre par thème et pagination, pilotés par l'URL (/blog/?theme=electricite&page=2).
+    // L'URL est la seule source de vérité : chaque clic la met à jour, puis l'affichage en découle.
+    // Les liens restent de vrais liens (partage, nouvel onglet, précédent/suivant du navigateur).
     (function () {
         const listing = document.querySelector('.blog-articles');
         if (!listing) return;
 
         const articles = Array.from(listing.querySelectorAll('.blog-article'));
+        const filter = document.querySelector('.blog-filter');
         const chips = Array.from(document.querySelectorAll('.blog-filter__chip'));
         const noResults = document.querySelector('.blog-no-results');
+        const status = document.querySelector('.blog-status');
+        const pager = document.querySelector('.blog-pager');
+        const perPage = Math.max(1, parseInt(listing.dataset.perPage, 10) || 10);
+        const themes = chips.map(c => c.dataset.theme);
+        const baseTitle = document.title;
 
-        function applyFilter(theme) {
-            const visible = [];
-            articles.forEach(a => {
-                const show = theme === 'tous' || a.dataset.theme === theme;
-                a.style.display = show ? '' : 'none';
-                a.classList.remove('is-last-visible');
-                if (show) visible.push(a);
-            });
-            if (visible.length) visible[visible.length - 1].classList.add('is-last-visible');
-            if (noResults) noResults.hidden = visible.length !== 0;
+        // Thème et page demandés par l'URL, ramenés à des valeurs valides
+        function readState() {
+            const params = new URLSearchParams(window.location.search);
+            const theme = themes.includes(params.get('theme')) ? params.get('theme') : 'tous';
+            const matching = articles.filter(a => theme === 'tous' || a.dataset.theme === theme);
+            const pageCount = Math.max(1, Math.ceil(matching.length / perPage));
+            const asked = parseInt(params.get('page'), 10);
+            const page = Math.min(pageCount, Math.max(1, Number.isFinite(asked) ? asked : 1));
+            return { theme, page, pageCount, matching };
         }
 
-        chips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
-                chip.classList.add('is-active');
-                chip.setAttribute('aria-pressed', 'true');
-                applyFilter(chip.dataset.theme);
-            });
-        });
+        // Adresse d'un thème et d'une page. Les valeurs par défaut n'apparaissent pas (/blog/ = tous, page 1).
+        function urlFor(theme, page) {
+            const params = new URLSearchParams(window.location.search);
+            params.delete('theme');
+            params.delete('page');
+            if (theme !== 'tous') params.set('theme', theme);
+            if (page > 1) params.set('page', page);
+            const query = params.toString();
+            return window.location.pathname + (query ? '?' + query : '');
+        }
 
-        applyFilter('tous');
+        // Numéros à afficher : tous jusqu'à 7 pages, sinon la première, la dernière et les voisines
+        function pageNumbers(page, pageCount) {
+            if (pageCount <= 7) return Array.from({ length: pageCount }, (_, i) => i + 1);
+            const wanted = new Set([1, pageCount, page - 1, page, page + 1]);
+            const numbers = [];
+            for (let n = 1; n <= pageCount; n++) {
+                if (!wanted.has(n)) continue;
+                if (numbers.length && n - numbers[numbers.length - 1] > 1) numbers.push(null);
+                numbers.push(n);
+            }
+            return numbers;
+        }
+
+        function pagerLink(label, theme, page, options) {
+            const link = document.createElement('a');
+            link.className = 'blog-pager__link' + (options.current ? ' is-current' : '');
+            link.href = urlFor(theme, page);
+            link.dataset.page = page;
+            link.textContent = label;
+            if (options.rel) link.rel = options.rel;
+            if (options.current) link.setAttribute('aria-current', 'page');
+            if (options.label) link.setAttribute('aria-label', options.label);
+            return link;
+        }
+
+        function render() {
+            const { theme, page, pageCount, matching } = readState();
+            const first = (page - 1) * perPage;
+            const shown = matching.slice(first, first + perPage);
+
+            articles.forEach(a => {
+                a.hidden = !shown.includes(a);
+                a.classList.remove('is-last-visible');
+            });
+            shown.forEach(a => a.classList.add('active'));
+            if (shown.length) shown[shown.length - 1].classList.add('is-last-visible');
+            if (noResults) noResults.hidden = matching.length !== 0;
+
+            chips.forEach(chip => {
+                const active = chip.dataset.theme === theme;
+                chip.classList.toggle('is-active', active);
+                if (active) chip.setAttribute('aria-current', 'true'); else chip.removeAttribute('aria-current');
+                chip.href = urlFor(chip.dataset.theme, 1);
+            });
+
+            if (status) {
+                status.hidden = pageCount < 2;
+                status.textContent = 'Articles ' + (first + 1) + ' à ' + (first + shown.length) + ' sur ' + matching.length;
+            }
+
+            if (pager) {
+                pager.hidden = pageCount < 2;
+                pager.textContent = '';
+                if (page > 1) pager.appendChild(pagerLink('← Précédent', theme, page - 1, { rel: 'prev', label: 'Page précédente' }));
+                pageNumbers(page, pageCount).forEach(n => {
+                    if (n === null) {
+                        const gap = document.createElement('span');
+                        gap.className = 'blog-pager__gap';
+                        gap.setAttribute('aria-hidden', 'true');
+                        gap.textContent = '…';
+                        pager.appendChild(gap);
+                    } else {
+                        pager.appendChild(pagerLink(String(n), theme, n, {
+                            current: n === page,
+                            label: n === page ? 'Page ' + n + ', page actuelle' : 'Page ' + n,
+                        }));
+                    }
+                });
+                if (page < pageCount) pager.appendChild(pagerLink('Suivant →', theme, page + 1, { rel: 'next', label: 'Page suivante' }));
+            }
+
+            document.title = page > 1 ? baseTitle + ' (page ' + page + ')' : baseTitle;
+
+            // Une adresse invalide (thème inconnu, page hors limites) est remplacée par l'adresse réelle
+            const canonical = urlFor(theme, page);
+            if (canonical !== window.location.pathname + window.location.search) {
+                history.replaceState(null, '', canonical + window.location.hash);
+            }
+            listing.classList.add('is-ready');
+        }
+
+        // Clic sur un thème ou une page : on change l'adresse sans recharger, puis on réaffiche
+        function navigate(event, toTop) {
+            const link = event.target.closest('a');
+            if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            if (link.href !== window.location.href) history.pushState(null, '', link.href);
+            render();
+            if (toTop && filter) {
+                const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                filter.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+                listing.focus({ preventScroll: true });
+            }
+        }
+
+        if (filter) filter.addEventListener('click', event => navigate(event, false));
+        if (pager) pager.addEventListener('click', event => navigate(event, true));
+        window.addEventListener('popstate', render);
+
+        render();
     })();
 </script>

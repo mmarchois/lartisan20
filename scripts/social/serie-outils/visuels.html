@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Teasing : mon calendrier de l'Avent</title>
+<!--
+  Visuel unique d'annonce du calendrier de l'Avent « Mes outils d'électricien » (1080 x 1350).
+  Export : sh scripts/social/serie-outils/export.sh
+-->
+<style>
+  :root { --sapin: #14281f; --sapin-2: #1b3528; --papier: #f3ead8; --encre: #14281f; --rouge: #b8322a; --or: #E8B547; --creme: #fbf6ea; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1080px; height: 1350px; overflow: hidden; background: var(--sapin); color: var(--creme);
+         font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .frame { position: relative; width: 100%; height: 100%; padding: 0 80px 70px; display: flex; flex-direction: column; }
+  .flake { position: absolute; }
+  .garland { position: absolute; left: 0; top: 0; width: 1080px; height: 190px; }
+
+  .head { margin-top: 196px; display: flex; flex-direction: column; gap: 22px; }
+  .kicker { font-family: 'JetBrains Mono'; font-weight: 600; font-size: 22px; letter-spacing: 4px; text-transform: uppercase; color: var(--or); }
+  h1 { font-family: 'Inter Tight'; font-weight: 700; font-size: 100px; line-height: 0.98; letter-spacing: -3px; }
+  h1 span { color: var(--or); }
+  .lead { font-size: 30px; line-height: 1.4; color: #dfe6df; max-width: 900px; }
+
+  .frame { padding: 0 64px 64px; }
+  .head { padding: 0 16px; }
+  .days { margin-top: auto; display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 12px;
+          font-family: 'JetBrains Mono'; font-weight: 600; font-size: 20px; letter-spacing: 1px; color: #a9b8ad; text-align: center; }
+  .days .tue { color: var(--or); }
+  .cal { display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 132px; gap: 10px; }
+  .cell { position: relative; border-radius: 8px; background: var(--papier); color: var(--encre); padding: 9px 11px;
+          font-family: 'Inter Tight'; font-weight: 700; font-size: 32px; letter-spacing: -1px; }
+  .cell.off { background: transparent; border: 1.5px solid rgba(243, 234, 216, 0.16); color: rgba(243, 234, 216, 0.3); }
+  .cell.noel { background: var(--or); color: var(--sapin); }
+  .cell.noel .lbl { position: absolute; left: 11px; bottom: 10px; font-family: 'Inter'; font-weight: 700; font-size: 14px; letter-spacing: 0; }
+  .cell.noel svg { position: absolute; right: 12px; bottom: 9px; width: 54px; height: 70px; }
+  .cell.ep { background: var(--rouge); color: var(--creme); box-shadow: 0 0 0 3px rgba(232, 181, 71, 0.55); }
+  .cell.ep .lbl { position: absolute; left: 11px; right: 6px; bottom: 10px; font-family: 'Inter'; font-weight: 600; font-size: 14px;
+                  line-height: 1.15; letter-spacing: 0; }
+  .cell.ep svg { position: absolute; right: 7px; top: 9px; width: 40px; height: 30px; }
+
+  .foot { margin-top: 40px; display: flex; align-items: center; justify-content: space-between; font-size: 24px; color: #dfe6df; }
+  .brand { display: flex; align-items: center; gap: 14px; font-family: 'Inter Tight'; font-weight: 700; font-size: 28px; color: var(--creme); }
+  .brand svg { width: 42px; height: 44px; }
+  .brand b { color: var(--or); }
+</style>
+</head>
+<body>
+<div class="frame" id="root"></div>
+<script>
+const EP = { 1: 'Mon sac', 8: 'Les<br>indispensables', 15: 'Électroportatif', 22: 'Le vélo cargo' };
+
+// Nœud doré posé sur les cases des épisodes
+const bow = `<svg viewBox="0 0 46 34" aria-hidden="true"><g fill="none" stroke="#E8B547" stroke-width="4" stroke-linejoin="round">
+  <path d="M23 15 C14 2, 4 6, 8 14 C11 20, 18 18, 23 15 Z"/><path d="M23 15 C32 2, 42 6, 38 14 C35 20, 28 18, 23 15 Z"/>
+  <path d="M21 17 L14 31 M25 17 L32 31" stroke-linecap="round"/></g><circle cx="23" cy="15" r="4" fill="#E8B547"/></svg>`;
+
+// Guirlande lumineuse : un câble en deux festons et des ampoules
+function garland() {
+  const swags = [[[-30, 30], [270, 150], [540, 46]], [[540, 46], [810, 150], [1110, 30]]];
+  const at = ([a, c, b], t) => [0, 1].map(i => (1 - t) ** 2 * a[i] + 2 * (1 - t) * t * c[i] + t ** 2 * b[i]);
+  const colors = ['#e2483b', '#E8B547', '#fff2cf', '#5fb36a'];
+  let bulbs = '', k = 0;
+  swags.forEach(s => [0.12, 0.27, 0.42, 0.58, 0.73, 0.88].forEach(t => {
+    const [x, y] = at(s, t), c = colors[k++ % 4], r = (k % 2 ? -8 : 7);
+    bulbs += `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${r})">
+      <rect x="-6" y="0" width="12" height="11" rx="2" fill="#2b2b2b"/>
+      <ellipse cx="0" cy="27" rx="10" ry="16" fill="${c}"/>
+      <ellipse cx="-3.5" cy="22" rx="3" ry="6" fill="#ffffff" opacity="0.45"/></g>`;
+  }));
+  const d = swags.map(([a, c, b], i) => `${i ? '' : `M${a[0]} ${a[1]} `}Q${c[0]} ${c[1]} ${b[0]} ${b[1]}`).join(' ');
+  return `<svg class="garland" viewBox="0 0 1080 190" aria-hidden="true"><path d="${d}" fill="none" stroke="#0b0f0c" stroke-width="4"/>${bulbs}</svg>`;
+}
+
+const picto = `<svg viewBox="230 220 585 650" aria-hidden="true"><g fill="#E8B547" stroke="#E8B547" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M522.3,848.2c-13.5,0-27-3.5-39.1-10.4l-199.3-115.1c-24.1-13.9-39.1-39.8-39.1-67.6v-230.1c0-27.8,15-53.7,39.1-67.6l199.3-115.1c24.1-13.9,54-13.9,78.1,0l199.3,115.1c24.1,13.9,39.1,39.8,39.1,67.6v230.1c0,27.8-15,53.7-39.1,67.6l-199.3,115.1c-12,7-25.5,10.4-39.1,10.4ZM522.3,247.9c-10.7,0-21.4,2.8-31,8.3l-199.3,115.1c-19.1,11-31,31.6-31,53.7v230.1c0,22.1,11.9,42.6,31,53.7l199.3,115.1c19.1,11,42.9,11,62,0l199.3-115.1c19.1-11,31-31.6,31-53.7v-230.1c0-22.1-11.9-42.6-31-53.7l-199.3-115.1c-9.6-5.5-20.3-8.3-31-8.3Z"/>
+  <path d="M522.3,570c-4.5,0-8.1-3.6-8.1-8.1v-191.9c0-4.5,3.6-8.1,8.1-8.1s8.1,3.6,8.1,8.1v191.9c0,4.5-3.6,8.1-8.1,8.1Z"/>
+  <path d="M641.1,618.1h-229.1c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h229.1c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
+  <path d="M607.4,681.9h-161.5c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h161.5c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/>
+  <path d="M676.4,547.1h-308.2c-4.5,0-8.1-3.6-8.1-8.1s3.6-8.1,8.1-8.1h308.2c4.5,0,8.1,3.6,8.1,8.1s-3.6,8.1-8.1,8.1Z"/></g></svg>`;
+
+// Petits flocons dans les zones libres (titre, marges, pied de page)
+const FLAKES = [[800, 200, 34, 0.5], [930, 265, 22, 0.35], [1010, 190, 18, 0.3], [870, 360, 16, 0.28], [985, 395, 30, 0.45],
+  [760, 300, 14, 0.25], [940, 520, 18, 0.3], [600, 215, 14, 0.22], [1030, 590, 14, 0.25], [22, 700, 16, 0.25],
+  [30, 990, 14, 0.22], [1040, 860, 16, 0.25], [520, 1250, 18, 0.3], [660, 1290, 13, 0.22], [400, 1300, 14, 0.2], [40, 560, 20, 0.3]];
+const flake = ([x, y, sz, o]) => `<svg class="flake" style="left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;opacity:${o}" viewBox="-12 -12 24 24" aria-hidden="true">
+  <g stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" fill="none">${[0, 60, 120].map(r => `<g transform="rotate(${r})">
+  <path d="M0 -11V11M0 -7l-3 -3M0 -7l3 -3M0 7l-3 3M0 7l3 3"/></g>`).join('')}</g></svg>`;
+
+// Décembre 2026 : le 1er tombe un mardi, les quatre épisodes sont donc dans la colonne du mardi
+const star = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8B547" d="M12 1.5l3 7.2 7.8.6-6 5.1 1.9 7.6L12 17.9 5.3 22l1.9-7.6-6-5.1 7.8-.6z"/></svg>`;
+const tree = `<svg viewBox="0 0 40 52" aria-hidden="true"><g fill="#14281f">
+  <path d="M20 6 L31 20 H26 L35 32 H28 L38 44 H2 L12 32 H5 L14 20 H9 Z"/><rect x="17" y="44" width="6" height="7" rx="1"/></g>
+  <path d="M20 0.5 l1.6 3.4 3.7.4-2.8 2.5.8 3.6L20 8.6l-3.3 1.8.8-3.6-2.8-2.5 3.7-.4z" fill="#b8322a"/></svg>`;
+const slots = [{ d: 30, off: true }]
+  .concat(Array.from({ length: 27 }, (_, i) => ({ d: i + 1, off: i + 1 > 25 })));
+const cells = slots.map(({ d, off }) => off ? `<div class="cell off">${d}</div>`
+  : d === 25 ? `<div class="cell noel">${d}${tree}<span class="lbl">Noël</span></div>`
+  : EP[d] ? `<div class="cell ep">${d}${bow}<span class="lbl">${EP[d]}</span></div>`
+  : `<div class="cell">${d}</div>`).join('');
+const days = ['lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.', 'dim.'].map(j => `<span${j === 'mar.' ? ' class="tue"' : ''}>${j}</span>`).join('');
+
+document.getElementById('root').innerHTML = `${FLAKES.map(flake).join('')}${garland()}
+  <div class="head">
+    <p class="kicker">Mes outils d’électricien</p>
+    <h1>Mon calendrier<br>de l’<span>Avent</span>.</h1>
+    <p class="lead">Quatre épisodes sur le blog, un chaque mardi de décembre jusqu’à Noël.</p>
+  </div>
+  <div class="days">${days}</div><div class="cal">${cells}</div>
+  <div class="foot"><div class="brand">${picto}<span>L’ARTISAN <b>2.0</b></span></div><span>lartisan20.fr/blog</span></div>`
+  .replace(/ ([:;?!])/g, ' $1');
+</script>
+</body>
+</html>

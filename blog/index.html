@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Blog | L'artisan 2.0 - Ma reconversion dans l'électricité"
-description: "Les coulisses de ma reconversion : chantiers terrain, apprentissages et quotidien. D'ingénieur à artisan électricien, suivez l'aventure."
+title: "Blog : électricité, rénovation et reconversion | L'artisan 2.0"
+description: "Pour faire une installation électrique propre, il faut connaître tout ce qui compose un chantier. Alors je passe aussi par la plomberie, la maçonnerie, le placo, l'isolation ou la charpente. Retours de chantier, pannes expliquées et choix de matériel, par un ingénieur qui devient électricien."
 keywords: "reconversion électricien, parcours reconversion, chantier électrique, blog reconversion, apprenti électricien"
-og_title: "Blog - Ma reconversion dans l'électricité | L'artisan 2.0"
-og_description: "Les coulisses de ma reconversion : chantiers terrain, apprentissages au quotidien."
+og_title: "Mon carnet de chantier | Blog L'artisan 2.0"
+og_description: "Pour faire une installation électrique propre, il faut connaître tout ce qui compose un chantier. Alors je passe aussi par la plomberie, la maçonnerie, le placo, l'isolation ou la charpente."
 crumb: "Blog"
 ---
 
@@ -13,7 +13,7 @@ crumb: "Blog"
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Blog - L'artisan 2.0",
-    "description": "Les coulisses de ma reconversion : chantiers terrain, apprentissages et quotidien.",
+    "description": "Pour faire une installation électrique propre, il faut connaître tout ce qui compose un chantier. Alors je passe aussi par la plomberie, la maçonnerie, le placo, l'isolation ou la charpente.",
     "url": "{{ site.url }}/blog/",
     "publisher": { "@id": "{{ site.url }}/#organization" },
     "inLanguage": "fr-FR"
@@ -26,11 +26,10 @@ crumb: "Blog"
     <section class="page-hero page-hero--dark">
         <div class="page-hero__inner">
             {% include breadcrumb.html %}
-            <p class="page-hero__eyebrow">Blog — D'ingénieur à artisan</p>
-            <h1 class="page-hero__title">Ma reconversion dans l'<em>électricité</em>.</h1>
+            <h1 class="page-hero__title">Mon carnet de <em>chantier</em>.</h1>
             <hr class="page-hero__rule" aria-hidden="true">
             <p class="page-hero__lead">
-                Les coulisses de ma reconversion : chantiers terrain, apprentissages au quotidien.
+                Pour faire une installation électrique propre, il faut connaître tout ce qui compose un chantier. Alors je passe aussi par la plomberie, la maçonnerie, le placo, l'isolation ou la charpente.
             </p>
             <div class="page-hero__cta-row">
                 {% if site.podcast_spotify != "" %}
@@ -54,24 +53,37 @@ crumb: "Blog"
     <section class="page-section page-section--light blog-listing-wrapper">
         <div class="page-section__inner">
 
-            {% assign theme_order = "Électricité,Rénovation,Isolation,Domotique,BTP,Reconversion" | split: "," %}
+            {% assign theme_order = "Électricité,Rénovation,Domotique,BTP,Reconversion" | split: "," %}
             {% comment %} Toute catégorie absente de la liste ci-dessus est ajoutée automatiquement en fin de rangée. {% endcomment %}
             {% assign all_categories = site.posts | map: "category" | compact | uniq %}
             {% for c in all_categories %}{% unless theme_order contains c %}{% assign theme_order = theme_order | push: c %}{% endunless %}{% endfor %}
-            <div class="blog-filter reveal" role="group" aria-label="Filtrer les articles par thème">
-                <button type="button" class="blog-filter__chip is-active" data-theme="tous" aria-pressed="true">Tous <span class="blog-filter__count">{{ site.posts | size }}</span></button>
+            {% comment %}
+              Filtre et pagination pilotés par l'URL : /blog/?theme=electricite&page=2
+              Tous les articles restent dans le HTML (référencement, navigation sans JavaScript) ;
+              le script de _includes/scripts.html n'affiche que le thème et la page demandés.
+              Nombre d'articles par page : per_page ci-dessous, seule valeur à changer.
+            {% endcomment %}
+            {% assign per_page = 10 %}
+            <script>document.documentElement.classList.add('blog-js');</script>
+
+            <div class="blog-toolbar">
+            <div class="blog-filter" role="navigation" aria-label="Filtrer les articles par thème">
+                <a href="{{ site.baseurl }}/blog/" class="blog-filter__chip is-active" data-theme="tous" aria-current="true">Tous <span class="blog-filter__count">{{ site.posts | size }}</span></a>
                 {% for t in theme_order %}
                 {% assign tcount = site.posts | where: "category", t | size %}
                 {% if tcount > 0 %}
-                <button type="button" class="blog-filter__chip" data-theme="{{ t | slugify }}" aria-pressed="false">{{ t }} <span class="blog-filter__count">{{ tcount }}</span></button>
+                <a href="{{ site.baseurl }}/blog/?theme={{ t | slugify: 'latin' }}" class="blog-filter__chip" data-theme="{{ t | slugify: 'latin' }}">{{ t }} <span class="blog-filter__count">{{ tcount }}</span></a>
                 {% endif %}
                 {% endfor %}
             </div>
 
-            <div class="blog-articles">
+                <p class="blog-status" aria-live="polite" hidden></p>
+            </div>
+
+            <div class="blog-articles" data-per-page="{{ per_page }}" tabindex="-1">
                 {% for post in site.posts %}
                 {% assign post_audio = site.data.audio[post.slug] %}
-                <article class="blog-article reveal{% if post_audio %} blog-article--audio{% endif %}" data-theme="{{ post.category | slugify }}">
+                <article class="blog-article reveal{% if post_audio %} blog-article--audio{% endif %}{% if forloop.index > per_page %} blog-article--beyond{% endif %}" data-theme="{{ post.category | slugify: 'latin' }}">
                     <a href="{{ site.baseurl }}{{ post.url }}" class="blog-article-link">
                         {% if post.image %}
                         {% assign post_image_url = post.image | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
@@ -130,6 +142,8 @@ crumb: "Blog"
             </div>
 
             <p class="blog-no-results" hidden>Aucun article pour ce thème.</p>
+
+            <div class="blog-pager" role="navigation" aria-label="Pagination des articles" hidden></div>
         </div>
     </section>
     {% if site.data.audio.size > 0 %}<script src="{{ site.baseurl }}/js/audio-player.js" defer></script>{% endif %}

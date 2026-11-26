@@ -3,7 +3,7 @@ layout: blog
 title: "Rénovation électrique : Parfois, la meilleure façon d'avancer, c'est de tout démolir"
 description: "Retour sur un chantier de rénovation qu'on m'a confié : une maison sur 3 étages. Je travaille avec un artisan expérimenté. Après une semaine de diagnostic, le verdict est tombé : tout refaire. Découvrez pourquoi repartir de zéro est parfois la meilleure solution."
 keywords: "rénovation électrique, diagnostic électrique, norme NF C 15-100, installation électrique dangereuse, rénovation complète, sécurité électrique"
-category: "Rénovation"
+category: "Électricité"
 chantier: "Rénovation maison 3 étages (Paris)"
 date: 2026-01-24
 last_modified_at: 2026-10-20
